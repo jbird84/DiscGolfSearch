@@ -7,27 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var brands: Set<String> = Set()
+    var brandSlugs: Set<String> = Set()
     var selectedIndices: Set<Int> = [] // Keep track of selected indice
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        collectionView.register(BrandCell.self, forCellWithReuseIdentifier: "BrandCell")
-        
+        setupCollectionView()
         APIManager.shared.fetchDiscGolfData(param: "disc") { discs, error in
             if let error = error {
                 print("Error fetching data: \(error.localizedDescription)")
             } else if let discs = discs {
                 for disc in discs {
                     self.brands.insert(disc.brand)
+                    self.brandSlugs.insert(disc.brandSlug)
                 }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
@@ -35,6 +33,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
         
+        // Add a "Select All" button to the navigation bar
+        let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
+        navigationItem.rightBarButtonItem = selectAllButton
+    }
+    
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(BrandCell.self, forCellWithReuseIdentifier: "BrandCell")
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
         let padding: CGFloat = 2.0 // Adjust the padding as needed
@@ -49,11 +56,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         
         collectionView.collectionViewLayout = flowLayout
-        
-        // Add a "Select All" button to the navigation bar
-        let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
-        navigationItem.rightBarButtonItem = selectAllButton
     }
+
+    @objc func selectAllTapped() {
+        // Toggle the selection state for all brand names
+        print(brandSlugs)
+        if selectedIndices.count == brands.count {
+            selectedIndices.removeAll() // Deselect all if all are currently selected
+        } else {
+            // Select all items by adding all indices to 'selectedIndices'
+            selectedIndices = Set(0..<brands.count)
+        }
+        
+        collectionView.reloadData() // Reload the collection view to reflect the changes
+    }
+    
+}
+
+
+//MARK: - ColectionView Delegate Methods
+extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return brands.count
@@ -86,19 +108,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.reloadItems(at: [indexPath])
     }
-
-    @objc func selectAllTapped() {
-        // Toggle the selection state for all brand names
-        
-        if selectedIndices.count == brands.count {
-            selectedIndices.removeAll() // Deselect all if all are currently selected
-        } else {
-            // Select all items by adding all indices to 'selectedIndices'
-            selectedIndices = Set(0..<brands.count)
-        }
-        
-        collectionView.reloadData() // Reload the collection view to reflect the changes
-    }
-    
 }
 

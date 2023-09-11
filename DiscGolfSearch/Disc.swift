@@ -20,6 +20,8 @@ struct DiscGolfDisc: Codable {
     let stability: String
     let link: String
     let pic: String
+    let nameSlug: String
+    let brandSlug: String
     let color: String
     let backgroundColor: String
 
@@ -35,6 +37,8 @@ struct DiscGolfDisc: Codable {
         case stability
         case link
         case pic
+        case nameSlug = "name_slug"
+        case brandSlug = "brand_slug"
         case color
         case backgroundColor = "background_color"
     }
