@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var allDisc: [DiscGolfDisc] = []
     var brands: Set<String> = Set()
     var brandSlugs: Set<String> = Set()
     var selectedIndices: Set<Int> = [] // Keep track of selected indice
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
             if let error = error {
                 print("Error fetching data: \(error.localizedDescription)")
             } else if let discs = discs {
+                self.allDisc = discs
                 for disc in discs {
                     self.brands.insert(disc.brand)
                     self.brandSlugs.insert(disc.brandSlug)
@@ -57,17 +59,23 @@ class ViewController: UIViewController {
         
         collectionView.collectionViewLayout = flowLayout
     }
-
+    
+    
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        print(brandSlugs)
+    }
+    
     @objc func selectAllTapped() {
         // Toggle the selection state for all brand names
-        print(brandSlugs)
         if selectedIndices.count == brands.count {
             selectedIndices.removeAll() // Deselect all if all are currently selected
+            brandSlugs.removeAll()
         } else {
             // Select all items by adding all indices to 'selectedIndices'
             selectedIndices = Set(0..<brands.count)
+            brandSlugs = Set(brands)
         }
-        
+        print(brandSlugs)
         collectionView.reloadData() // Reload the collection view to reflect the changes
     }
     
@@ -102,8 +110,15 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
         // Toggle the selection state for the tapped cell's index
         if selectedIndices.contains(indexPath.item) {
             selectedIndices.remove(indexPath.item)
+            
+            let sortedBrands = brands.sorted()
+            let brandSlug = sortedBrands[indexPath.item]
+            brandSlugs.remove(brandSlug)
         } else {
             selectedIndices.insert(indexPath.item)
+            let sortedBrands = brands.sorted()
+            let brandSlug = sortedBrands[indexPath.item]
+            brandSlugs.insert(brandSlug)
         }
         
         collectionView.reloadItems(at: [indexPath])

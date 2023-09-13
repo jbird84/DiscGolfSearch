@@ -40,6 +40,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                     <color key="baseForegroundColor" red="0.39801613000000002" green="0.76732165399999996" blue="0.4187364227" alpha="0.53704470199999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="u3j-9l-yng" eventType="touchUpInside" id="F6f-L8-Hrh"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5l8-Rn-5oH">
                                 <rect key="frame" x="0.0" y="143" width="393" height="571.33333333333337"/>
