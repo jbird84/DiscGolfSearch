@@ -16,6 +16,10 @@
 		DADB72352AADFD890083B13B /* Disc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72342AADFD890083B13B /* Disc.swift */; };
 		DADB72372AAE051C0083B13B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72362AAE051C0083B13B /* APIManager.swift */; };
 		DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72382AAE0FD50083B13B /* BrandCell.swift */; };
+		DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB723A2AB32C780083B13B /* DiscListViewController.swift */; };
+		DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB723D2AB33F630083B13B /* Data+Ext.swift */; };
+		DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72402AB351AB0083B13B /* DiscCell.swift */; };
+		DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72452AB69C780083B13B /* DiscViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		DADB72342AADFD890083B13B /* Disc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disc.swift; sourceTree = "<group>"; };
 		DADB72362AAE051C0083B13B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DADB72382AAE0FD50083B13B /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
+		DADB723A2AB32C780083B13B /* DiscListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscListViewController.swift; sourceTree = "<group>"; };
+		DADB723D2AB33F630083B13B /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
+		DADB72402AB351AB0083B13B /* DiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscCell.swift; sourceTree = "<group>"; };
+		DADB72452AB69C780083B13B /* DiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +70,62 @@
 		DADB721F2AADFCDC0083B13B /* DiscGolfSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DADB72442AB69C3E0083B13B /* Views */,
+				DADB72432AB69C280083B13B /* Models */,
+				DADB72422AB69C160083B13B /* Managers */,
+				DADB723F2AB3517D0083B13B /* Cells */,
+				DADB723C2AB33F480083B13B /* Extensions */,
 				DADB72202AADFCDC0083B13B /* AppDelegate.swift */,
 				DADB72222AADFCDC0083B13B /* SceneDelegate.swift */,
-				DADB72242AADFCDC0083B13B /* ViewController.swift */,
 				DADB72262AADFCDC0083B13B /* Main.storyboard */,
 				DADB72292AADFCDF0083B13B /* Assets.xcassets */,
 				DADB722B2AADFCDF0083B13B /* LaunchScreen.storyboard */,
 				DADB722E2AADFCDF0083B13B /* Info.plist */,
-				DADB72342AADFD890083B13B /* Disc.swift */,
-				DADB72362AAE051C0083B13B /* APIManager.swift */,
-				DADB72382AAE0FD50083B13B /* BrandCell.swift */,
 			);
 			path = DiscGolfSearch;
+			sourceTree = "<group>";
+		};
+		DADB723C2AB33F480083B13B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DADB723D2AB33F630083B13B /* Data+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DADB723F2AB3517D0083B13B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DADB72382AAE0FD50083B13B /* BrandCell.swift */,
+				DADB72402AB351AB0083B13B /* DiscCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DADB72422AB69C160083B13B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DADB72362AAE051C0083B13B /* APIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DADB72432AB69C280083B13B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DADB72342AADFD890083B13B /* Disc.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DADB72442AB69C3E0083B13B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DADB72242AADFCDC0083B13B /* ViewController.swift */,
+				DADB723A2AB32C780083B13B /* DiscListViewController.swift */,
+				DADB72452AB69C780083B13B /* DiscViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +200,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
+				DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */,
 				DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */,
+				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
+				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
+				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

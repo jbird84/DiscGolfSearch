@@ -9,4 +9,7 @@ import UIKit
 
 class DiscCell: UICollectionViewCell {
     
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var discNameLabel: UILabel!
+    
 }

@@ -146,4 +146,14 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let disc = filteredDiscs[indexPath.item]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "discVC") as? DiscViewController {
+            vc.disc = disc
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
