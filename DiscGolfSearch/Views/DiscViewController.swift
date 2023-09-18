@@ -1,13 +1,13 @@
 //
-//  DiscListViewController.swift
+//  DiscViewController.swift
 //  DiscGolfSearch
 //
-//  Created by Kinney Kare on 9/14/23.
+//  Created by Kinney Kare on 9/16/23.
 //
 
 import UIKit
 
-class DiscListViewController: UIViewController {
+class DiscViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var allDisc: [DiscGolfDisc] = []
     var brands: Set<String> = Set()
-    var brandSlugs: Set<String> = Set()
+    var brandSlugs: Set<String> = []
     var selectedIndices: Set<Int> = [] // Keep track of selected indice
     
     override func viewDidLoad() {
@@ -27,7 +27,6 @@ class ViewController: UIViewController {
                 self.allDisc = discs
                 for disc in discs {
                     self.brands.insert(disc.brand)
-                    self.brandSlugs.insert(disc.brandSlug)
                 }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
@@ -62,8 +61,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func searchButtonPressed(_ sender: Any) {
-        print(brandSlugs)
+         print(brandSlugs)
+        //print(brandSlugs.count)
+        // print(allDisc)
+        
+        let selectedCompanyDiscs = allDisc.filter { disc in
+            return brandSlugs.contains(disc.brandSlug)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+        if let vc = storyboard.instantiateViewController(withIdentifier: "discList") as? DiscListViewController {
+            vc.selectedCompanyDiscs = selectedCompanyDiscs
+            vc.filteredDiscs = selectedCompanyDiscs
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
+    
     
     @objc func selectAllTapped() {
         // Toggle the selection state for all brand names
@@ -73,9 +86,11 @@ class ViewController: UIViewController {
         } else {
             // Select all items by adding all indices to 'selectedIndices'
             selectedIndices = Set(0..<brands.count)
-            brandSlugs = Set(brands)
+            brandSlugs = Set(selectedIndices.map { index in
+                let sortedBrands = brands.sorted()
+                return sortedBrands[index]
+            })
         }
-        print(brandSlugs)
         collectionView.reloadData() // Reload the collection view to reflect the changes
     }
     
@@ -91,7 +106,7 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BrandCell", for: indexPath) as! BrandCell
-
+        
         // Configure the cell with the brand name and selection state
         let sortedBrands = brands.sorted()
         let brand = sortedBrands[indexPath.item]
@@ -112,13 +127,15 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
             selectedIndices.remove(indexPath.item)
             
             let sortedBrands = brands.sorted()
-            let brandSlug = sortedBrands[indexPath.item]
-            brandSlugs.remove(brandSlug)
-        } else {
-            selectedIndices.insert(indexPath.item)
-            let sortedBrands = brands.sorted()
-            let brandSlug = sortedBrands[indexPath.item]
-            brandSlugs.insert(brandSlug)
+                let brand = sortedBrands[indexPath.item]
+                let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
+                brandSlugs.remove(brandSlug)
+            } else {
+                selectedIndices.insert(indexPath.item)
+                let sortedBrands = brands.sorted()
+                let brand = sortedBrands[indexPath.item]
+                let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
+                brandSlugs.insert(brandSlug)
         }
         
         collectionView.reloadItems(at: [indexPath])
