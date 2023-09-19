@@ -75,10 +75,11 @@ class DiscListViewController: UIViewController {
         if let tappedButton = sender.view as? UIButton {
             
             // Reset the background color of the previously selected button
-            selectedButton?.backgroundColor = .gray
+            
+            selectedButton?.isSelected = false
             
             // Change the background color of the tapped button
-            tappedButton.backgroundColor = .blue
+            tappedButton.isSelected = true
             
             // Update the selected button reference
             selectedButton = tappedButton
@@ -108,6 +109,27 @@ class DiscListViewController: UIViewController {
                 // Add more properties as needed
                 print("------")
             }
+    }
+    
+    private func resetButtons() {
+        let buttons = [
+            oneToThreeSpeedButton,
+            fourSpeedButton,
+            fiveSpeedButton,
+            sixSpeedButton,
+            sevenSpeedButton,
+            eightSpeedButton,
+            nineSpeedButton,
+            tenSpeedButton,
+            elevenSpeedButton,
+            twelveSpeedButton,
+            thirteenSpeedButton,
+            fourteenSpeedButton
+        ]
+        
+        for button in buttons {
+            button?.isSelected = false
+        }
     }
     
     private func setupCollectionView() {
