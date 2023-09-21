@@ -24,7 +24,7 @@ class BrandCell: UICollectionViewCell {
          didSet {
              // Update the cell's background color based on the selection state
              if isSelected {
-                 backgroundColor = .orange // Change to the selected color you want
+                 backgroundColor = .systemBlue // Change to the selected color you want
              } else {
                  backgroundColor = .clear // Change to the default/unselected color you want
              }

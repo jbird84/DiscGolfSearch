@@ -113,7 +113,7 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
         cell.titleLabel.text = brand
         
         if selectedIndices.contains(indexPath.item) {
-            cell.backgroundColor = .orange // Change to the selected color you want
+            cell.backgroundColor = .systemBlue // Change to the selected color you want
         } else {
             cell.backgroundColor = .clear // Change to the default/unselected color you want
         }
