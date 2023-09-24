@@ -32,6 +32,21 @@ class APIManager {
               completion(nil, error)
           }
       }
+    
+    // Function to download an image from a web link
+        func downloadImage(from url: URL, completion: @escaping (Data?) -> Void) {
+            let task = URLSession.shared.dataTask(with: url) { data, _, error in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                    completion(nil)
+                    return
+                }
+                
+                completion(data)
+            }
+            
+            task.resume()
+        }
 }
 
 enum discParams {

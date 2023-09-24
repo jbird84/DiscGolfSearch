@@ -20,6 +20,9 @@
 		DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB723D2AB33F630083B13B /* Data+Ext.swift */; };
 		DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72402AB351AB0083B13B /* DiscCell.swift */; };
 		DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72452AB69C780083B13B /* DiscViewController.swift */; };
+		DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */ = {isa = PBXBuildFile; fileRef = DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */; };
+		DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */; };
+		DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		DADB723D2AB33F630083B13B /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		DADB72402AB351AB0083B13B /* DiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscCell.swift; sourceTree = "<group>"; };
 		DADB72452AB69C780083B13B /* DiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscViewController.swift; sourceTree = "<group>"; };
+		DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscTypes.xib; sourceTree = "<group>"; };
+		DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscTypesView.swift; sourceTree = "<group>"; };
+		DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				DADB72342AADFD890083B13B /* Disc.swift */,
+				DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 				DADB72242AADFCDC0083B13B /* ViewController.swift */,
 				DADB723A2AB32C780083B13B /* DiscListViewController.swift */,
 				DADB72452AB69C780083B13B /* DiscViewController.swift */,
+				DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */,
+				DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 			files = (
 				DADB722D2AADFCDF0083B13B /* LaunchScreen.storyboard in Resources */,
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
+				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,11 +210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
+				DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */,
 				DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */,
 				DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
+				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */,
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
@@ -368,6 +380,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +409,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

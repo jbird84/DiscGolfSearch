@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     var allDisc: [DiscGolfDisc] = []
     var brands: Set<String> = Set()
     var brandSlugs: Set<String> = []
@@ -18,7 +19,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCollectionView()
         APIManager.shared.fetchDiscGolfData(param: "disc") { discs, error in
             if let error = error {
@@ -60,20 +60,27 @@ class ViewController: UIViewController {
     }
     
     
+    
     @IBAction func searchButtonPressed(_ sender: Any) {
-         print(brandSlugs)
+        print("Selected Brand Slugs: \(brandSlugs)")
         //print(brandSlugs.count)
         // print(allDisc)
         
-        let selectedCompanyDiscs = allDisc.filter { disc in
+        let selectedCompanyDiscs: [DiscGolfDisc] = allDisc.filter { disc in
             return brandSlugs.contains(disc.brandSlug)
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
-        if let vc = storyboard.instantiateViewController(withIdentifier: "discList") as? DiscListViewController {
-            vc.selectedCompanyDiscs = selectedCompanyDiscs
-            vc.filteredDiscs = selectedCompanyDiscs
-            navigationController?.pushViewController(vc, animated: true)
+        // Check if there are any selected discs to display
+        if selectedCompanyDiscs.isEmpty {
+            // Handle the case where no discs match the selected brands
+            print("No discs match the selected brands.")
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+            if let vc = storyboard.instantiateViewController(withIdentifier: "discList") as? DiscListViewController {
+                vc.selectedCompanyDiscs = selectedCompanyDiscs
+                vc.filteredDiscs = selectedCompanyDiscs
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
     
@@ -86,9 +93,11 @@ class ViewController: UIViewController {
         } else {
             // Select all items by adding all indices to 'selectedIndices'
             selectedIndices = Set(0..<brands.count)
-            brandSlugs = Set(selectedIndices.map { index in
-                let sortedBrands = brands.sorted()
-                return sortedBrands[index]
+            
+            // Clear the brandSlugs set and then add all brand slugs
+            brandSlugs.removeAll()
+            brandSlugs = Set(brands.map { brand in
+                return brand.lowercased().replacingOccurrences(of: " ", with: "-")
             })
         }
         collectionView.reloadData() // Reload the collection view to reflect the changes
