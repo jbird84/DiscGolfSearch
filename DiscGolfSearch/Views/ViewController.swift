@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    var allDisc: [DiscGolfDisc] = []
+    var allDiscs: [DiscGolfDisc] = []
     var brands: Set<String> = Set()
     var brandSlugs: Set<String> = []
     var selectedIndices: Set<Int> = [] // Keep track of selected indice
@@ -20,19 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        APIManager.shared.fetchDiscGolfData(param: "disc") { discs, error in
-            if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
-            } else if let discs = discs {
-                self.allDisc = discs
-                for disc in discs {
-                    self.brands.insert(disc.brand)
-                }
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            }
-        }
+        getDiscData()
         
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
@@ -59,6 +48,59 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = flowLayout
     }
     
+    private func getDiscData() {
+        SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
+        APIManager.shared.fetchDiscGolfData(param: "disc") { discs, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
+                print("Error fetching data: \(error.localizedDescription)")
+            } else if let discs = discs {
+                self.allDiscs = discs
+                self.saveAllDiscsToUserDefaults()
+                for disc in discs {
+                    self.brands.insert(disc.brand)
+                }
+            }
+             
+             DispatchQueue.main.async {
+                 SwiftSpinner.hide()
+                 self.collectionView.reloadData()
+             }
+         }
+    }
+    
+    private func saveAllDiscsToUserDefaults() {
+        do {
+            let encoder = JSONEncoder()
+            
+            let data = try encoder.encode(allDiscs)
+            
+            UserDefaults.standard.setValue(data, forKey: "allDiscs")
+            
+        } catch {
+            print("Unable to Encode all discs (\(error)")
+        }
+    }
+    
+    private func showAlert() {
+        let popup = UIAlertController(title: "Site is down ☹️", message: "It looks like the site where the disc data comes from is currently down. Please close app and check back in later.", preferredStyle: .alert)
+
+        let ok = UIAlertAction(title: "OK", style: .default) { _ in
+          // Handle the OK button tap
+        }
+        
+        let retry = UIAlertAction(title: "Refresh App", style: .default) { _ in
+            self.getDiscData()
+        }
+
+        popup.addAction(ok)
+        popup.addAction(retry)
+
+        present(popup, animated: true, completion: nil)
+    }
+    
     
     
     @IBAction func searchButtonPressed(_ sender: Any) {
@@ -66,7 +108,7 @@ class ViewController: UIViewController {
         //print(brandSlugs.count)
         // print(allDisc)
         
-        let selectedCompanyDiscs: [DiscGolfDisc] = allDisc.filter { disc in
+        let selectedCompanyDiscs: [DiscGolfDisc] = allDiscs.filter { disc in
             return brandSlugs.contains(disc.brandSlug)
         }
         
@@ -136,15 +178,15 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
             selectedIndices.remove(indexPath.item)
             
             let sortedBrands = brands.sorted()
-                let brand = sortedBrands[indexPath.item]
-                let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
-                brandSlugs.remove(brandSlug)
-            } else {
-                selectedIndices.insert(indexPath.item)
-                let sortedBrands = brands.sorted()
-                let brand = sortedBrands[indexPath.item]
-                let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
-                brandSlugs.insert(brandSlug)
+            let brand = sortedBrands[indexPath.item]
+            let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
+            brandSlugs.remove(brandSlug)
+        } else {
+            selectedIndices.insert(indexPath.item)
+            let sortedBrands = brands.sorted()
+            let brand = sortedBrands[indexPath.item]
+            let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
+            brandSlugs.insert(brandSlug)
         }
         
         collectionView.reloadItems(at: [indexPath])

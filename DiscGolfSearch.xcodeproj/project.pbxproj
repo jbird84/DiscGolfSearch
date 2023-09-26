@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA18B73B2AC1310C00A02B89 /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = DA18B73A2AC1310C00A02B89 /* SwiftSpinner */; };
 		DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72202AADFCDC0083B13B /* AppDelegate.swift */; };
 		DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72222AADFCDC0083B13B /* SceneDelegate.swift */; };
 		DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72242AADFCDC0083B13B /* ViewController.swift */; };
@@ -23,6 +24,8 @@
 		DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */ = {isa = PBXBuildFile; fileRef = DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */; };
 		DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */; };
 		DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */; };
+		DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */; };
+		DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,8 @@
 		DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscTypes.xib; sourceTree = "<group>"; };
 		DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscTypesView.swift; sourceTree = "<group>"; };
 		DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscImageNames.swift; sourceTree = "<group>"; };
+		DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDiscViewController.swift; sourceTree = "<group>"; };
+		DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDiscCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA18B73B2AC1310C00A02B89 /* SwiftSpinner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,7 @@
 			children = (
 				DADB72382AAE0FD50083B13B /* BrandCell.swift */,
 				DADB72402AB351AB0083B13B /* DiscCell.swift */,
+				DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 				DADB72452AB69C780083B13B /* DiscViewController.swift */,
 				DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */,
 				DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */,
+				DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +161,9 @@
 			dependencies = (
 			);
 			name = DiscGolfSearch;
+			packageProductDependencies = (
+				DA18B73A2AC1310C00A02B89 /* SwiftSpinner */,
+			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +192,9 @@
 				Base,
 			);
 			mainGroup = DADB72142AADFCDC0083B13B;
+			packageReferences = (
+				DA18B7392AC1310B00A02B89 /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
+			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,9 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
+				DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */,
 				DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */,
 				DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */,
 				DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */,
+				DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
@@ -445,6 +461,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA18B7392AC1310B00A02B89 /* XCRemoteSwiftPackageReference "SwiftSpinner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/icanzilb/SwiftSpinner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA18B73A2AC1310C00A02B89 /* SwiftSpinner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA18B7392AC1310B00A02B89 /* XCRemoteSwiftPackageReference "SwiftSpinner" */;
+			productName = SwiftSpinner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DADB72152AADFCDC0083B13B /* Project object */;
 }

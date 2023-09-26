@@ -225,7 +225,7 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
         
         let disc = filteredDiscs[indexPath.item]
         
-        cell.companyNameLabel.text = disc.brand
+        cell.companyNameLabel.text = disc.displayedBrand
         cell.discNameLabel.text = disc.name
         cell.speedlabel.text = disc.speed
         cell.glideLabel.text = disc.glide
