@@ -574,11 +574,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cON-yW-zbe">
-                                <rect key="frame" x="0.0" y="586.33333333333337" width="393" height="165"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Discs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-vf-U7l">
+                                <rect key="frame" x="0.0" y="589.33333333333337" width="393" height="55"/>
+                                <color key="backgroundColor" red="0.044113014979999997" green="0.044113014979999997" blue="0.044113014979999997" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="Gqr-PA-ydW"/>
+                                    <constraint firstAttribute="height" constant="55" id="0RS-vu-Lt0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cON-yW-zbe">
+                                <rect key="frame" x="0.0" y="644.33333333333337" width="393" height="165"/>
+                                <color key="backgroundColor" red="0.044113014979999997" green="0.044113014979999997" blue="0.044113014979999997" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="FUc-eX-WnB"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dcL-8v-feM">
                                     <size key="itemSize" width="128" height="128"/>
@@ -681,14 +691,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="G9W-S1-1Pc" firstAttribute="top" secondItem="63b-sH-XPQ" secondAttribute="bottom" constant="10" id="2Hk-x6-PVd"/>
+                            <constraint firstAttribute="trailing" secondItem="5vA-vf-U7l" secondAttribute="trailing" id="5LO-eP-y53"/>
                             <constraint firstItem="63b-sH-XPQ" firstAttribute="leading" secondItem="IgI-zH-wYy" secondAttribute="leading" constant="42" id="F8N-3D-2au"/>
                             <constraint firstItem="63b-sH-XPQ" firstAttribute="top" secondItem="IgI-zH-wYy" secondAttribute="top" constant="10" id="K7C-9a-HjY"/>
-                            <constraint firstItem="cON-yW-zbe" firstAttribute="top" secondItem="G9W-S1-1Pc" secondAttribute="bottom" constant="5" id="LyP-i7-cV0"/>
-                            <constraint firstItem="cON-yW-zbe" firstAttribute="leading" secondItem="IgI-zH-wYy" secondAttribute="leading" id="eEv-SS-kgt"/>
+                            <constraint firstItem="cON-yW-zbe" firstAttribute="top" secondItem="5vA-vf-U7l" secondAttribute="bottom" id="Tjg-C9-NTe"/>
+                            <constraint firstItem="5vA-vf-U7l" firstAttribute="top" secondItem="G9W-S1-1Pc" secondAttribute="bottom" constant="8" id="Z5L-sh-dtO"/>
+                            <constraint firstAttribute="trailing" secondItem="cON-yW-zbe" secondAttribute="trailing" id="bys-24-LAy"/>
+                            <constraint firstItem="cON-yW-zbe" firstAttribute="leading" secondItem="XxK-Yf-PY4" secondAttribute="leading" id="dkI-fP-Pg5"/>
                             <constraint firstItem="G9W-S1-1Pc" firstAttribute="leading" secondItem="IgI-zH-wYy" secondAttribute="leading" constant="5" id="eVv-MJ-7kS"/>
                             <constraint firstItem="IgI-zH-wYy" firstAttribute="trailing" secondItem="63b-sH-XPQ" secondAttribute="trailing" constant="42" id="gqX-CV-1Iq"/>
                             <constraint firstItem="IgI-zH-wYy" firstAttribute="trailing" secondItem="G9W-S1-1Pc" secondAttribute="trailing" constant="5" id="hdD-1l-ita"/>
-                            <constraint firstItem="IgI-zH-wYy" firstAttribute="trailing" secondItem="cON-yW-zbe" secondAttribute="trailing" id="xX1-kf-gWc"/>
+                            <constraint firstItem="5vA-vf-U7l" firstAttribute="leading" secondItem="XxK-Yf-PY4" secondAttribute="leading" id="q39-iX-rQL"/>
                         </constraints>
                     </view>
                     <connections>

@@ -183,6 +183,15 @@ struct DiscImageNames {
             "the-duke":"https://imagizer.imageshack.com/img922/534/DsbUJ5.png"
    
         ],
+        "Elevation Disc Golf": [
+            "arowana": "https://imagizer.imageshack.com/img924/4883/GF6Pl4.png",
+            "binx-newcomer": "https://imagizer.imageshack.com/img922/2891/L7YI4G.png",
+            "binx-ecoflex": "https://imagizer.imageshack.com/img922/7968/YKJtWy.png",
+            "gecko":"https://imagizer.imageshack.com/img923/8159/ARWYIi.png",
+            "interceptor":"https://imagizer.imageshack.com/img924/1706/MXlB3l.png",
+            "koi":"https://imagizer.imageshack.com/img922/9048/PvEieo.png",
+            "og-binx":"https://imagizer.imageshack.com/img924/2774/W0CrQA.png"
+        ],
         "Co3": [
             "disc1": "https://example.com/co3/disc1",
             "disc2": "https://example.com/co3/disc2",

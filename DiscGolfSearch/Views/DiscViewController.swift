@@ -17,7 +17,7 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var fadeLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var discView: UIView!
-    
+        
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
     var disc: DiscGolfDisc?
@@ -30,6 +30,7 @@ class DiscViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         if let disc = disc {
             
             //Get current disc speed, glide turn and fade:
@@ -39,7 +40,7 @@ class DiscViewController: UIViewController {
                   let selectedFade = Double(disc.fade) else {
                 return
             }
-            
+            getImageFromLink(imageView: discImageView, disc: disc, cell: nil)
             // Load the stored discs from UserDefaults
             if let savedDiscsData = UserDefaults.standard.data(forKey: "allDiscs") {
                 if let allDiscs = try? JSONDecoder().decode([DiscGolfDisc].self, from: savedDiscsData) {
@@ -65,7 +66,6 @@ class DiscViewController: UIViewController {
                 }
             }
             
-            getImageFromLink(imageView: discImageView, disc: disc, cell: nil)
             discNameLabel.text = disc.name
             speedLabel.text = disc.speed
             glideLabel.text = disc.glide
@@ -77,6 +77,7 @@ class DiscViewController: UIViewController {
             companyNameLabel.text = "By: \(disc.brand)"
         }
     }
+
     
     private func setupCollectionView() {
         simularDiscsCollectionView.dataSource = self
@@ -95,7 +96,6 @@ class DiscViewController: UIViewController {
         
         simularDiscsCollectionView.collectionViewLayout = flowLayout
     }
-    
     
     private func setupFlightDiscImageView() {
         flightDiscImageView.image = UIImage(named: "blankDisc")
@@ -133,12 +133,7 @@ class DiscViewController: UIViewController {
                 APIManager.shared.downloadImage(from: imageURL) { imageData in
                     
                     DispatchQueue.main.async {
-                        cell?.companyNameLabel.text = disc.displayedBrand
-                        cell?.discNameLabel.text = disc.name
-                        cell?.speedlabel.text = disc.speed
-                        cell?.glideLabel.text = disc.glide
-                        cell?.turnLabel.text = disc.turn
-                        cell?.fadeLabel.text = disc.fade
+                        
                         if let imageData = imageData {
                             if let image = UIImage(data: imageData) {
                                 imageView.image = image
@@ -160,7 +155,7 @@ class DiscViewController: UIViewController {
                 }
                 
             } else {
-                //imageView.image = UIImage(named: "blankDisc")
+                imageView.image = UIImage(named: "blankDisc")
                 
             }
             
@@ -197,6 +192,15 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "discCell", for: indexPath) as! DiscCell
         
         let disc = similarDiscs[indexPath.item]
+        
+        // Clear the image first
+        cell.discImageView.image = UIImage(named: "blankDisc")
+        cell.companyNameLabel.text = disc.displayedBrand
+        cell.discNameLabel.text = disc.name
+        cell.speedlabel.text = disc.speed
+        cell.glideLabel.text = disc.glide
+        cell.turnLabel.text = disc.turn
+        cell.fadeLabel.text = disc.fade
         
         getImageFromLink(imageView: cell.discImageView, disc: disc, cell: cell)
             return cell

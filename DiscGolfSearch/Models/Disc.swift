@@ -31,6 +31,7 @@ struct DiscGolfDisc: Codable {
             "Daredevil Discs": "Daredevil",
             "Disc Golf UK": "DG UK",
             "Dynamic Discs": "Dynamic",
+            "Elevation Disc Golf": "Elevation",
             "Hooligan Discs": "Hooligan",
             "Infinite Discs": "Infinite",
             "Lone Star Discs": "Lone Star",
