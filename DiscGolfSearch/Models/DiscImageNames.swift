@@ -220,6 +220,19 @@ struct DiscImageNames {
             "virus": "https://imagizer.imageshack.com/img922/9262/bZ3pMN.png",
             "wrath": "https://imagizer.imageshack.com/img923/6576/i5hC2u.png"
         ],
+        "Streamline": [
+            "ascend": "https://imagizer.imageshack.com/img924/7803/If3tG5.png",
+            "drift": "https://imagizer.imageshack.com/img923/1438/dWA93n.png",
+            "echo": "https://imagizer.imageshack.com/img924/939/X4d21e.png",
+            "electron-stabilizer": "https://imagizer.imageshack.com/img923/1893/YtUJtQ.png",
+            "flare": "https://imagizer.imageshack.com/img924/9138/75m6GD.png",
+            "jet": "https://imagizer.imageshack.com/img922/300/e8UKPD.png",
+            "lift": "https://imagizer.imageshack.com/img924/8975/gH2cvS.png",
+            "pilot": "https://imagizer.imageshack.com/img922/2904/03YVFC.png",
+            "runway": "https://imagizer.imageshack.com/img923/8770/RS3cAp.png",
+            "stabilizer": "https://imagizer.imageshack.com/img924/7586/AzfXIs.png",
+            "trace": "https://imagizer.imageshack.com/img924/7531/vbl4Vh.png"
+        ],
         "Co3": [
             "disc1": "https://example.com/co3/disc1",
             "disc2": "https://example.com/co3/disc2",
