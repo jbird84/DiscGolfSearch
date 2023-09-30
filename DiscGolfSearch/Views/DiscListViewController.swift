@@ -69,9 +69,6 @@ class DiscListViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     
     @objc func toggleDiscTypesView(_ sender: UIBarButtonItem) {
         if discTypesView == nil {

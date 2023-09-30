@@ -30,52 +30,8 @@ class DiscViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        if let disc = disc {
-            
-            //Get current disc speed, glide turn and fade:
-            guard let selectedSpeed = Double(disc.speed),
-                  let selectedGlide = Double(disc.glide),
-                  let selectedTurn = Double(disc.turn),
-                  let selectedFade = Double(disc.fade) else {
-                return
-            }
-            getImageFromLink(imageView: discImageView, disc: disc, cell: nil)
-            // Load the stored discs from UserDefaults
-            if let savedDiscsData = UserDefaults.standard.data(forKey: "allDiscs") {
-                if let allDiscs = try? JSONDecoder().decode([DiscGolfDisc].self, from: savedDiscsData) {
-                    // Filter the discs based on the selected disc's values (+1 or -1)
-                    similarDiscs = allDiscs.filter { disc in
-                        guard let speed = Double(disc.speed),
-                              let glide = Double(disc.glide),
-                              let turn = Double(disc.turn),
-                              let fade = Double(disc.fade) else {
-                            return false
-                        }
-                        
-                        // Check if the values are within +/- 1 of the selected disc
-                        return abs(speed - selectedSpeed) <= 1 &&
-                        abs(glide - selectedGlide) <= 1 &&
-                        abs(turn - selectedTurn) <= 1 &&
-                        abs(fade - selectedFade) <= 1
-                    }
-                    
-                    // Now, you have a list of similar discs in the 'similarDiscs' array
-                    // You can use this array to display the similar discs in your UI
-                    print("SIMMMM \(similarDiscs.count)")
-                }
-            }
-            
-            discNameLabel.text = disc.name
-            speedLabel.text = disc.speed
-            glideLabel.text = disc.glide
-            turnLabel.text = disc.turn
-            fadeLabel.text = disc.fade
-            
-            startRotation()
-            setupFlightDiscImageView()
-            companyNameLabel.text = "By: \(disc.brand)"
-        }
+        super.viewWillAppear(animated)
+        createSimilarDiscsCollection()
     }
 
     
@@ -125,6 +81,65 @@ class DiscViewController: UIViewController {
         // Apply animations to the disc image view's layer
         flightDiscImageView.layer.add(animation, forKey: "flightPathAnimation")
         flightDiscImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+    }
+    
+    private func createSimilarDiscsCollection() {
+        if let selectedDisc = disc {
+            
+            //Get current disc speed, glide turn and fade:
+            guard let selectedSpeed = Double(selectedDisc.speed),
+                  let selectedGlide = Double(selectedDisc.glide),
+                  let selectedTurn = Double(selectedDisc.turn),
+                  let selectedFade = Double(selectedDisc.fade) else {
+                return
+            }
+            getImageFromLink(imageView: discImageView, disc: selectedDisc, cell: nil)
+            // Load the stored discs from UserDefaults
+            if let savedDiscsData = UserDefaults.standard.data(forKey: "allDiscs") {
+                if let allDiscs = try? JSONDecoder().decode([DiscGolfDisc].self, from: savedDiscsData) {
+                    // Filter the discs based on the selected disc's values (+1 or -1)
+                    similarDiscs = allDiscs.filter { disc in
+                        
+                        guard let speed = Double(disc.speed),
+                              let glide = Double(disc.glide),
+                              let turn = Double(disc.turn),
+                              let fade = Double(disc.fade) else {
+                            return false
+                        }
+                        
+                        // Check if the values are within +/- 1 of the selected disc
+                        let isSimilarFlight =
+                        abs(speed - selectedSpeed) <= 1 &&
+                        abs(glide - selectedGlide) <= 1 &&
+                        abs(turn - selectedTurn) <= 1 &&
+                        abs(fade - selectedFade) <= 1
+                        
+                        //Chck to make sure discs have same stability
+                        let isSameStability = disc.stability == selectedDisc.stability
+                        
+                        //Check to make sure current disc does not appear in the simular discs collection.
+                        let isSelectedDiscName = disc.name == selectedDisc.name
+                        
+                        //return the simular discs collection
+                        return isSimilarFlight && isSameStability && !isSelectedDiscName
+                    }
+                    
+                    // Now, you have a list of similar discs in the 'similarDiscs' array
+                    // You can use this array to display the similar discs in your UI
+                    print("SIMMMM \(similarDiscs.count)")
+                }
+            }
+            
+            discNameLabel.text = selectedDisc.name
+            speedLabel.text = selectedDisc.speed
+            glideLabel.text = selectedDisc.glide
+            turnLabel.text = selectedDisc.turn
+            fadeLabel.text = selectedDisc.fade
+            
+            startRotation()
+            setupFlightDiscImageView()
+            companyNameLabel.text = "By: \(selectedDisc.brand)"
+        }
     }
     
     private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc, cell: DiscCell?) {

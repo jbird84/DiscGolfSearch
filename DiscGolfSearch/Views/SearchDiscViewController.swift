@@ -25,6 +25,7 @@ class SearchDiscViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let savedDiscsData = UserDefaults.standard.data(forKey: "allDiscs") {
             // Attempt to decode the data into an array of DiscGolfDisc objects
             if let savedDiscs = try? JSONDecoder().decode([DiscGolfDisc].self, from: savedDiscsData) {
