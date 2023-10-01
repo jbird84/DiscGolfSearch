@@ -20,6 +20,7 @@ class DiscViewController: UIViewController {
         
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
+    
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
@@ -158,6 +159,8 @@ class DiscViewController: UIViewController {
                                 cell?.glideLabel.text = ""
                                 cell?.turnLabel.text = ""
                                 cell?.fadeLabel.text = ""
+                                cell?.similarDiscNameBottomLabel.text =  disc.name
+                                
                             } else {
                                 print("Failed to create UIImage from image data")
                                 
@@ -216,6 +219,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.glideLabel.text = disc.glide
         cell.turnLabel.text = disc.turn
         cell.fadeLabel.text = disc.fade
+        cell.similarDiscNameBottomLabel.text = ""
         
         getImageFromLink(imageView: cell.discImageView, disc: disc, cell: cell)
             return cell

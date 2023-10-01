@@ -15,5 +15,5 @@ class DiscCell: UICollectionViewCell {
     @IBOutlet weak var glideLabel: UILabel!
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var fadeLabel: UILabel!
-    
+    @IBOutlet weak var similarDiscNameBottomLabel: UILabel!
 }
