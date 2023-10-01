@@ -20,7 +20,6 @@ class DiscViewController: UIViewController {
         
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
-    
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
@@ -32,7 +31,7 @@ class DiscViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        createSimilarDiscsCollection()
+        createSimilarDiscsCollection(disc: disc)
     }
 
     
@@ -84,7 +83,7 @@ class DiscViewController: UIViewController {
         flightDiscImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     
-    private func createSimilarDiscsCollection() {
+    private func createSimilarDiscsCollection(disc: DiscGolfDisc?) {
         if let selectedDisc = disc {
             
             //Get current disc speed, glide turn and fade:
@@ -94,7 +93,7 @@ class DiscViewController: UIViewController {
                   let selectedFade = Double(selectedDisc.fade) else {
                 return
             }
-            getImageFromLink(imageView: discImageView, disc: selectedDisc, cell: nil)
+            getImageFromLink(imageView: discImageView, disc: selectedDisc)
             // Load the stored discs from UserDefaults
             if let savedDiscsData = UserDefaults.standard.data(forKey: "allDiscs") {
                 if let allDiscs = try? JSONDecoder().decode([DiscGolfDisc].self, from: savedDiscsData) {
@@ -141,9 +140,17 @@ class DiscViewController: UIViewController {
             setupFlightDiscImageView()
             companyNameLabel.text = "By: \(selectedDisc.brand)"
         }
+  
+            self.simularDiscsCollectionView.reloadData()
+        
+        // Scroll to the first item
+           if similarDiscs.count > 0 {
+               let indexPath = IndexPath(item: 0, section: 0)
+               simularDiscsCollectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+           }
     }
     
-    private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc, cell: DiscCell?) {
+    private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc) {
         if let webLink = DiscImageNames.webLink(for: disc.brand, disc: disc.nameSlug) {
             if let imageURL = URL(string: webLink) {
                 APIManager.shared.downloadImage(from: imageURL) { imageData in
@@ -153,13 +160,7 @@ class DiscViewController: UIViewController {
                         if let imageData = imageData {
                             if let image = UIImage(data: imageData) {
                                 imageView.image = image
-                                cell?.companyNameLabel.text = ""
-                                cell?.discNameLabel.text = ""
-                                cell?.speedlabel.text = ""
-                                cell?.glideLabel.text = ""
-                                cell?.turnLabel.text = ""
-                                cell?.fadeLabel.text = ""
-                                cell?.similarDiscNameBottomLabel.text =  disc.name
+                                
                                 
                             } else {
                                 print("Failed to create UIImage from image data")
@@ -176,6 +177,9 @@ class DiscViewController: UIViewController {
                 imageView.image = UIImage(named: "blankDisc")
                 
             }
+            
+        } else {
+            imageView.image = UIImage(named: "nowLoadingBlankDisc")
             
         }
        
@@ -211,18 +215,18 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let disc = similarDiscs[indexPath.item]
         
-        // Clear the image first
-        cell.discImageView.image = UIImage(named: "blankDisc")
-        cell.companyNameLabel.text = disc.displayedBrand
-        cell.discNameLabel.text = disc.name
-        cell.speedlabel.text = disc.speed
-        cell.glideLabel.text = disc.glide
-        cell.turnLabel.text = disc.turn
-        cell.fadeLabel.text = disc.fade
-        cell.similarDiscNameBottomLabel.text = ""
+        cell.similarDiscNameBottomLabel.text =  disc.name
         
-        getImageFromLink(imageView: cell.discImageView, disc: disc, cell: cell)
+        getImageFromLink(imageView: cell.discImageView, disc: disc)
             return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let disc = similarDiscs[indexPath.item]
+        
+        DispatchQueue.main.async {
+            self.createSimilarDiscsCollection(disc: disc)
+        }
     }
 }

@@ -181,7 +181,7 @@ struct DiscImageNames {
             "the-count":"https://imagizer.imageshack.com/img923/4467/w4FLdD.png",
             "the-duchess":"https://imagizer.imageshack.com/img924/6622/BUHa1i.png",
             "the-duke":"https://imagizer.imageshack.com/img922/534/DsbUJ5.png"
-   
+            
         ],
         "Elevation Disc Golf": [
             "arowana": "https://imagizer.imageshack.com/img924/4883/GF6Pl4.png",
@@ -407,6 +407,58 @@ struct DiscImageNames {
             "stig": "https://imagizer.imageshack.com/img922/5905/7a8Jpm.png",
             "svea": "https://imagizer.imageshack.com/img924/6033/jXIptI.png",
             "vass": "https://imagizer.imageshack.com/img922/7815/HQ7Q3M.png"
+        ],
+        "Gateway": [
+            "apache":"https://imagizer.imageshack.com/img922/7610/Y7nJ7z.png",
+            "apache-retooled":"https://imagizer.imageshack.com/img923/7330/sR3ShB.png",
+            "apex":"https://imagizer.imageshack.com/img923/1294/dZiKqf.png",
+            "assassin":"https://imagizer.imageshack.com/img922/5140/utmXg2.png",
+            "blade":"https://imagizer.imageshack.com/img923/4615/UNWJWF.png",
+            "blaze":"https://imagizer.imageshack.com/img924/4114/hcTPfu.png",
+            "chief":"https://imagizer.imageshack.com/img924/2509/78CvSq.png",
+            "chief-os":"https://imagizer.imageshack.com/img924/5515/pIY5VZ.png",
+            "demon":"https://imagizer.imageshack.com/img923/6363/KNOTCw.png",
+            "devil-hawk":"https://imagizer.imageshack.com/img924/9499/c5Ka53.png",
+            "diablo": "https://imagizer.imageshack.com/img924/880/KFZpWJ.png",
+            "diablo-dt": "https://imagizer.imageshack.com/img923/6061/FSgUHQ.png",
+            "element": "https://imagizer.imageshack.com/img924/408/Lz8aes.png",
+            "g-one": "https://imagizer.imageshack.com/img922/9087/OQ2jPy.png",
+            "houdini": "https://imagizer.imageshack.com/img923/6868/3yGXWC.png",
+            "illusion": "https://imagizer.imageshack.com/img924/4626/WphNbo.png",
+            "journey": "https://imagizer.imageshack.com/img922/535/wYjvmO.png",
+            "karma": "https://imagizer.imageshack.com/img924/4327/j3vT7j.png",
+            "magic": "https://imagizer.imageshack.com/img924/2910/F0ItjK.png",
+            "mystic": "https://imagizer.imageshack.com/img923/3430/rCZfSh.png",
+            "ninja": "https://imagizer.imageshack.com/img924/1551/KqzywU.png",
+            "prophecy": "https://imagizer.imageshack.com/img922/8829/Gp4rk5.png",
+            "rage": "https://imagizer.imageshack.com/img923/3114/6yvUeE.png",
+            "sabre": "https://imagizer.imageshack.com/img922/2592/ElfNgr.png",
+            "samurai": "https://imagizer.imageshack.com/img922/7197/6xlxT9.png",
+            "scout": "https://imagizer.imageshack.com/img924/5609/umSDLI.png",
+            "shaman": "https://imagizer.imageshack.com/img924/6163/jRSFYb.png",
+            "slayer": "https://imagizer.imageshack.com/img924/5192/owlvWH.png",
+            "spear": "https://imagizer.imageshack.com/img923/2011/GLo6UH.png",
+            "speed-demon": "https://imagizer.imageshack.com/img924/3869/uHwBUi.png",
+            "spell": "https://imagizer.imageshack.com/img922/6492/gBQ5TU.png",
+            "spirit": "https://imagizer.imageshack.com/img922/5609/FWkqBZ.png",
+            "voodoo": "https://imagizer.imageshack.com/img923/7291/CfNm14.png",
+            "war-spear": "https://imagizer.imageshack.com/img923/4600/s6VA25.png",
+            "warlock": "https://imagizer.imageshack.com/img924/6701/vcYaEX.png",
+            "warrior-gateway": "https://imagizer.imageshack.com/img924/3452/xe02WQ.png",
+            "wizard": "https://imagizer.imageshack.com/img924/3261/8gR1PM.png"
+        ],
+        "Sacred Discs": [
+            "arrowhead":"https://imagizer.imageshack.com/img924/3594/rvUDbl.png",
+            "gnome":"https://imagizer.imageshack.com/img922/4720/9fbQTV.png",
+            "oracle":"https://imagizer.imageshack.com/img924/2188/vftt7h.png",
+            "starship":"https://imagizer.imageshack.com/img924/1830/fkr0GA.png"
+        ],
+        "AquaFlight": [
+            "dragonfly":"https://imagizer.imageshack.com/img924/1941/sxqypL.png",
+            "osprey":"https://imagizer.imageshack.com/img922/6974/LTt6Kk.png",
+            "peace-frog":"https://imagizer.imageshack.com/img923/9562/Df9Oe6.png",
+            "pelican":"https://imagizer.imageshack.com/img922/4539/wqDu00.png",
+            "swift":"https://imagizer.imageshack.com/img923/739/LkB78s.png"
         ],
         "Co3": [
             "disc1": "https://example.com/co3/disc1",
