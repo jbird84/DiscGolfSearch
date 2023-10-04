@@ -15,6 +15,13 @@ class DiscTypesView: UIView {
     @IBOutlet weak var understableDiscImageView: UIImageView!
     @IBOutlet weak var veryUnderstableDiscImageView: UIImageView!
     
+    @IBOutlet weak var veryOverstableLabel: UILabel!
+    @IBOutlet weak var overstableLabel: UILabel!
+    @IBOutlet weak var stableLabel: UILabel!
+    @IBOutlet weak var understableLabel: UILabel!
+    @IBOutlet weak var veryUnderstableLabel: UILabel!
+    
+    weak var navigationController: UINavigationController?
     
     override func awakeFromNib() {
            super.awakeFromNib()
@@ -24,5 +31,30 @@ class DiscTypesView: UIView {
         stableDiscImageView.image = UIImage(named: "blankDisc")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
         understableDiscImageView.image = UIImage(named: "blankDisc")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
         veryUnderstableDiscImageView.image = UIImage(named: "blankDisc")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
-    }
+    
+        // Add tap gesture recognizers to labels
+            addTapGesture(to: veryOverstableLabel)
+            addTapGesture(to: overstableLabel)
+            addTapGesture(to: stableLabel)
+            addTapGesture(to: understableLabel)
+            addTapGesture(to: veryUnderstableLabel)
+        }
+        
+        private func addTapGesture(to label: UILabel) {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+            label.isUserInteractionEnabled = true
+            label.addGestureRecognizer(tapGesture)
+        }
+        
+        @objc private func labelTapped(_ gesture: UITapGestureRecognizer) {
+            // Handle label tap here
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
+                // Push to StabilityViewController
+                // You can pass any relevant data to StabilityViewController here if needed
+                // For example, you can set a property in the StabilityViewController to indicate which label was tapped.
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        
 }

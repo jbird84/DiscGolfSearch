@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA18B73B2AC1310C00A02B89 /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = DA18B73A2AC1310C00A02B89 /* SwiftSpinner */; };
+		DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */; };
 		DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72202AADFCDC0083B13B /* AppDelegate.swift */; };
 		DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72222AADFCDC0083B13B /* SceneDelegate.swift */; };
 		DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72242AADFCDC0083B13B /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityViewController.swift; sourceTree = "<group>"; };
 		DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscGolfSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADB72202AADFCDC0083B13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADB72222AADFCDC0083B13B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */,
 				DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */,
 				DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */,
+				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */,
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
 				DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */,
 				DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */,

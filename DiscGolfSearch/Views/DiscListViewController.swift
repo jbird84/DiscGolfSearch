@@ -25,7 +25,7 @@ class DiscListViewController: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var discTypesView: UIView?
+    var discTypesView: DiscTypesView?
     var selectedButton: UIButton? // To keep track of the selected button
     var selectedCompanyDiscs: [DiscGolfDisc] = []
     var filteredDiscs: [DiscGolfDisc] = []
@@ -73,9 +73,9 @@ class DiscListViewController: UIViewController {
     @objc func toggleDiscTypesView(_ sender: UIBarButtonItem) {
         if discTypesView == nil {
             // Load the DiscTypes.xib view if it's not already loaded
-            if let loadedView = Bundle.main.loadNibNamed("DiscTypes", owner: self, options: nil)?.first as? UIView {
+            if let loadedView = Bundle.main.loadNibNamed("DiscTypes", owner: self, options: nil)?.first as? DiscTypesView {
                 discTypesView = loadedView
-                
+                discTypesView?.navigationController = self.navigationController // Set the navigation controller reference
                 // Calculate the width as the screen width minus 20
                 let viewWidth = 139
                 let viewHeight = 556
