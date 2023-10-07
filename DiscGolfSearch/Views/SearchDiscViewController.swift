@@ -77,6 +77,7 @@ extension SearchDiscViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "discVC") as? DiscViewController {
             vc.disc = disc
+            self.searchBar.text = ""
             navigationController?.pushViewController(vc, animated: true)
         }
     }

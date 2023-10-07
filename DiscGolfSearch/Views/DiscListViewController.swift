@@ -229,8 +229,8 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
         cell.turnLabel.text = disc.turn
         cell.fadeLabel.text = disc.fade
         
-        if let stability = Stability(rawValue: disc.stability) {
-            cell.discImageView.image = UIImage(named: "blankDisc")?.withTintColor(setDiscColorBasedOnStability(stability: stability), renderingMode: .alwaysOriginal)
+        if let stability = K.Stability(rawValue: disc.stability) {
+            cell.discImageView.image = UIImage(named: "blankDisc")?.withTintColor(K.setDiscColorBasedOnStability(stability: stability), renderingMode: .alwaysOriginal)
         }
         return cell
     }
@@ -244,28 +244,5 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
             vc.disc = disc
             navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    private func setDiscColorBasedOnStability(stability: Stability) -> UIColor {
-        switch stability {
-        case .veryOverstable:
-            return UIColor.systemBlue
-        case .overstable:
-            return UIColor.systemGreen
-        case .stable:
-            return UIColor.systemOrange
-        case .understable:
-            return UIColor.systemRed
-        case .veryUnderstable:
-            return UIColor.systemTeal
-        }
-    }
-    
-    enum Stability: String {
-        case veryOverstable = "Very Overstable"
-        case overstable = "Overstable"
-        case stable = "Stable"
-        case understable = "Understable"
-        case veryUnderstable = "Very Understable"
     }
 }

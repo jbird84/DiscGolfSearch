@@ -17,7 +17,12 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var fadeLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var discView: UIView!
-        
+    
+    @IBOutlet weak var flightRatingsSpeedLabel: UILabel!
+    @IBOutlet weak var flightRatingsGlideLabel: UILabel!
+    @IBOutlet weak var flightRatingsTurnLabel: UILabel!
+    @IBOutlet weak var flightRatingsFadeLabel: UILabel!
+    
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
     var disc: DiscGolfDisc?
@@ -27,6 +32,7 @@ class DiscViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupFlightRatingsTapGestures()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,6 +137,7 @@ class DiscViewController: UIViewController {
             }
             
             discNameLabel.text = selectedDisc.name
+            discNameLabel.textColor = K.setDiscColorBasedOnStability(stability: K.Stability(rawValue: selectedDisc.stability) ?? .theDefault)
             speedLabel.text = selectedDisc.speed
             glideLabel.text = selectedDisc.glide
             turnLabel.text = selectedDisc.turn
@@ -149,6 +156,46 @@ class DiscViewController: UIViewController {
                simularDiscsCollectionView.scrollToItem(at: indexPath, at: .left, animated: false)
            }
     }
+    
+    private func setupFlightRatingsTapGestures() {
+            let flightRatingsLabels = [flightRatingsSpeedLabel, flightRatingsGlideLabel, flightRatingsTurnLabel, flightRatingsFadeLabel]
+            
+            for (index, label) in flightRatingsLabels.enumerated() {
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(flightRatingLabelTapped(_:)))
+                label?.tag = index // Set a unique tag for each label
+                label?.isUserInteractionEnabled = true
+                label?.addGestureRecognizer(tapGesture)
+            }
+        }
+    
+    @objc private func flightRatingLabelTapped(_ sender: UITapGestureRecognizer) {
+            guard let tappedLabel = sender.view as? UILabel else { return }
+            
+            switch tappedLabel.tag {
+            case 0:
+                // Speed label tapped
+                navigateToFlightNumberViewController(with: 1)
+            case 1:
+                // Glide label tapped
+                navigateToFlightNumberViewController(with: 2)
+            case 2:
+                // Turn label tapped
+                navigateToFlightNumberViewController(with: 3)
+            case 3:
+                // Fade label tapped
+                navigateToFlightNumberViewController(with: 4)
+            default:
+                break
+            }
+        }
+        
+        private func navigateToFlightNumberViewController(with flightDigit: Int) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let flightNumberVC = storyboard.instantiateViewController(withIdentifier: "flight") as? FlightNumbersViewController {
+                flightNumberVC.flightDigit = flightDigit
+                navigationController?.pushViewController(flightNumberVC, animated: true)
+            }
+        }
     
     private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc) {
         if let webLink = DiscImageNames.webLink(for: disc.brand, disc: disc.nameSlug) {
@@ -216,7 +263,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let disc = similarDiscs[indexPath.item]
         
         cell.similarDiscNameBottomLabel.text =  disc.name
-        
+
         getImageFromLink(imageView: cell.discImageView, disc: disc)
             return cell
         

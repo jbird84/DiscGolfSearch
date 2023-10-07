@@ -307,7 +307,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-ZD-c94">
                                                     <rect key="frame" x="16" y="25.000000000000007" width="128" height="86.666666666666686"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
                                                             <rect key="frame" x="6" y="0.0" width="116" height="42.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="115.67" id="13q-cS-u3S"/>
@@ -316,7 +316,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
                                                             <rect key="frame" x="25" y="45.333333333333329" width="78" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -331,13 +331,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
                                                                     <rect key="frame" x="22.666666666666664" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
                                                                     <rect key="frame" x="45.333333333333336" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -490,7 +490,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="525" id="dum-UJ-Toh"/>
                                                 </constraints>
-                                                <mutableString key="text">*Predictable Flight: Overstable discs in disc golf follow a reliable flight path, starting straight and ending with a sharp left curve (for right-handed throwers).
+                                                <string key="text">*Predictable Flight: Overstable discs in disc golf follow a reliable flight path, starting straight and ending with a sharp left curve (for right-handed throwers).
 
 *High Fade: They have a strong tendency to curve left (fade) at the end of their flight, offering precise control.
 
@@ -500,7 +500,7 @@
 
 *For All Skill Levels: Suitable for both beginners and experienced players, they provide consistency and reliability.
 
-*Versatile Tools: Disc golfers carry overstable discs to handle specific course challenges and make controlled approach shots.</mutableString>
+*Versatile Tools: Disc golfers carry overstable discs to handle specific course challenges and make controlled approach shots.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -527,7 +527,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="534" id="Ad6-aM-afM"/>
                                                 </constraints>
-                                                <mutableString key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
+                                                <string key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
 
 *Consistent Fade: They have a moderate and predictable fade, smoothly curving at the end of their flight.
 
@@ -537,7 +537,7 @@
 
 *Reliable in Wind: Stable discs are dependable even in mild wind conditions, offering consistent performance.
 
-*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</mutableString>
+*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -571,7 +571,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBS-Wl-N5r">
                                                 <rect key="frame" x="3" y="3210" width="387" height="439.33333333333348"/>
-                                                <mutableString key="text">*Smooth Curves: Understable discs in disc golf veer right (for right-handed throwers) before curving back left at the end of their flight.
+                                                <string key="text">*Smooth Curves: Understable discs in disc golf veer right (for right-handed throwers) before curving back left at the end of their flight.
 
 *Low Fade: They exhibit minimal leftward curve (fade), making them ideal for long, straight shots.
 
@@ -581,7 +581,7 @@
 
 *Hyzer Flip: Skilled players can use understable discs for the "hyzer flip" technique, creating graceful S-curve shots.
 
-*Versatile Choices: These discs are versatile and can suit various shot types, making them a valuable part of a disc golfer's toolkit.</mutableString>
+*Versatile Choices: These discs are versatile and can suit various shot types, making them a valuable part of a disc golfer's toolkit.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -598,7 +598,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-LN-gjX">
                                                 <rect key="frame" x="2" y="3744.3333333333335" width="389" height="754.33333333333348"/>
-                                                <mutableString key="text">Understable Discs:
+                                                <string key="text">Understable Discs:
 
 Hyzer Flip: This is a throw where you release the disc with an anhyzer angle, causing it to flip up to flat and glide right (for right-handed backhand throwers). It's a great choice for long, controlled drives.
 
@@ -614,7 +614,7 @@ Stable Discs:
 
 Straight Shot: Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.
 
-Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.</mutableString>
+Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -797,7 +797,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-Pf-0Ib">
                                                                         <rect key="frame" x="0.0" y="47" width="39" height="15.666666666666664"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" systemColor="tintColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -817,7 +817,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o88-CP-Qso">
                                                                         <rect key="frame" x="0.0" y="47" width="31.333333333333332" height="15.666666666666664"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" systemColor="tintColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -837,7 +837,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4c-Rj-Ipe">
                                                                         <rect key="frame" x="0.0" y="47" width="27.333333333333332" height="15.666666666666664"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" systemColor="tintColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -857,7 +857,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU1-Ha-W0G">
                                                                         <rect key="frame" x="0.0" y="47" width="29.333333333333332" height="15.666666666666664"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" systemColor="tintColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -885,7 +885,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                             <constraint firstAttribute="height" constant="50" id="fkm-N1-af1"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                                        <color key="textColor" systemColor="systemGray4Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cON-yW-zbe">
@@ -1042,6 +1042,10 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                         <outlet property="discNameLabel" destination="3rz-Id-awQ" id="rlB-LR-WLm"/>
                         <outlet property="discView" destination="63b-sH-XPQ" id="CkN-OH-JdM"/>
                         <outlet property="fadeLabel" destination="pdW-R0-KjZ" id="xgx-v2-Bxp"/>
+                        <outlet property="flightRatingsFadeLabel" destination="MU1-Ha-W0G" id="2kI-C8-KdO"/>
+                        <outlet property="flightRatingsGlideLabel" destination="o88-CP-Qso" id="hex-jJ-Wue"/>
+                        <outlet property="flightRatingsSpeedLabel" destination="3wL-Pf-0Ib" id="8zY-Mj-cej"/>
+                        <outlet property="flightRatingsTurnLabel" destination="c4c-Rj-Ipe" id="C7R-CB-avz"/>
                         <outlet property="glideLabel" destination="jhD-hQ-IRs" id="Axo-OO-ouq"/>
                         <outlet property="simularDiscsCollectionView" destination="cON-yW-zbe" id="PVI-Hq-MYg"/>
                         <outlet property="speedLabel" destination="eZh-aa-NRH" id="KYS-3u-R8c"/>
@@ -1051,6 +1055,62 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p1-r3-TkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4162.5954198473282" y="-525.35211267605632"/>
+        </scene>
+        <!--Flight Numbers View Controller-->
+        <scene sceneID="zhl-84-wMb">
+            <objects>
+                <viewController storyboardIdentifier="flight" id="bGY-6q-1xt" customClass="FlightNumbersViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O9D-Hc-waS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="superBK" translatesAutoresizingMaskIntoConstraints="NO" id="eSO-jk-2UN">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-wx-3Ky">
+                                <rect key="frame" x="10" y="74" width="373" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46999999999999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TIK-Hu-D0W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pj-Ie6">
+                                <rect key="frame" x="10" y="154" width="373" height="20.333333333333343"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.46999999999999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ya6-cD-2Gs"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VNB-wx-3Ky" firstAttribute="top" secondItem="Ya6-cD-2Gs" secondAttribute="top" constant="15" id="7ab-sc-iRH"/>
+                            <constraint firstItem="eSO-jk-2UN" firstAttribute="top" secondItem="O9D-Hc-waS" secondAttribute="top" id="BDz-qk-gfV"/>
+                            <constraint firstItem="Ya6-cD-2Gs" firstAttribute="trailing" secondItem="KBd-pj-Ie6" secondAttribute="trailing" constant="10" id="HdV-bd-ne7"/>
+                            <constraint firstAttribute="bottom" secondItem="eSO-jk-2UN" secondAttribute="bottom" id="Ocq-A6-AmM"/>
+                            <constraint firstItem="eSO-jk-2UN" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" id="P69-MM-sjI"/>
+                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="top" secondItem="VNB-wx-3Ky" secondAttribute="bottom" constant="30" id="Qnu-Lr-kSF"/>
+                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" constant="10" id="UA4-DG-fLc"/>
+                            <constraint firstItem="Ya6-cD-2Gs" firstAttribute="trailing" secondItem="VNB-wx-3Ky" secondAttribute="trailing" constant="10" id="dOD-Vz-Mxv"/>
+                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ya6-cD-2Gs" secondAttribute="bottom" id="gyQ-sj-atl"/>
+                            <constraint firstItem="VNB-wx-3Ky" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" constant="10" id="i0o-ZU-XqP"/>
+                            <constraint firstItem="eSO-jk-2UN" firstAttribute="trailing" secondItem="Ya6-cD-2Gs" secondAttribute="trailing" id="uR3-Sg-GoU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="KBd-pj-Ie6" id="Qd7-Ln-VyJ"/>
+                        <outlet property="flightNumberCategoryLabel" destination="VNB-wx-3Ky" id="eXK-ZM-Z1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKe-NJ-GBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5198" y="-681"/>
         </scene>
         <!--Disc-->
         <scene sceneID="IqZ-fn-U2b">
@@ -1080,9 +1140,13 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="nowLoadingBlankDisc" width="166.66667175292969" height="166.33332824707031"/>
         <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="22" height="64.333335876464844"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1098,6 +1162,9 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
