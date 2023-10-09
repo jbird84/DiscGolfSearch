@@ -1002,17 +1002,25 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                     <constraint firstAttribute="height" constant="270" id="H8r-ju-VAZ"/>
                                                 </constraints>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-Pt-yFq">
+                                                <rect key="frame" x="0.0" y="770.33333333333348" width="393" height="529.66666666666652"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="dLu-ZN-rpY" firstAttribute="leading" secondItem="15c-t3-dft" secondAttribute="leading" id="1db-O3-jGA"/>
+                                            <constraint firstAttribute="bottom" secondItem="3yn-Pt-yFq" secondAttribute="bottom" id="5d2-jl-pKb"/>
                                             <constraint firstItem="G9W-S1-1Pc" firstAttribute="top" secondItem="63b-sH-XPQ" secondAttribute="bottom" constant="8" id="9Rh-2q-Zxs"/>
+                                            <constraint firstItem="3yn-Pt-yFq" firstAttribute="leading" secondItem="15c-t3-dft" secondAttribute="leading" id="CFi-05-MPt"/>
                                             <constraint firstItem="63b-sH-XPQ" firstAttribute="centerX" secondItem="15c-t3-dft" secondAttribute="centerX" id="CKd-IM-ChN"/>
                                             <constraint firstAttribute="trailing" secondItem="dLu-ZN-rpY" secondAttribute="trailing" id="ENb-N2-tpt"/>
                                             <constraint firstItem="63b-sH-XPQ" firstAttribute="top" secondItem="15c-t3-dft" secondAttribute="top" constant="8" id="MF6-hf-nFO"/>
                                             <constraint firstItem="G9W-S1-1Pc" firstAttribute="centerX" secondItem="fzQ-XJ-vqU" secondAttribute="centerX" id="Oiz-uS-BR3"/>
                                             <constraint firstAttribute="height" constant="1300" id="Wrq-Wt-7n1"/>
+                                            <constraint firstItem="3yn-Pt-yFq" firstAttribute="top" secondItem="dLu-ZN-rpY" secondAttribute="bottom" id="YNL-71-IBd"/>
                                             <constraint firstItem="dLu-ZN-rpY" firstAttribute="top" secondItem="G9W-S1-1Pc" secondAttribute="bottom" constant="13" id="cVm-wD-LbN"/>
+                                            <constraint firstAttribute="trailing" secondItem="3yn-Pt-yFq" secondAttribute="trailing" id="yNy-rT-cfX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1142,6 +1150,9 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
         <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="22" height="64.333335876464844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
