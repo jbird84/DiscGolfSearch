@@ -33,6 +33,9 @@ class DiscViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupFlightRatingsTapGestures()
+        // Add a "Select All" button to the navigation bar
+        let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
+        navigationItem.rightBarButtonItem = selectAllButton
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -167,6 +170,10 @@ class DiscViewController: UIViewController {
                 label?.addGestureRecognizer(tapGesture)
             }
         }
+    
+    @objc private func addDiscTapped() {
+        print("hello")
+    }
     
     @objc private func flightRatingLabelTapped(_ sender: UITapGestureRecognizer) {
             guard let tappedLabel = sender.view as? UILabel else { return }
