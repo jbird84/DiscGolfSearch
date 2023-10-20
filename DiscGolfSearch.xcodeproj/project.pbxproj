@@ -30,6 +30,7 @@
 		DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */; };
 		DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */; };
 		DAE673562ADE05B800C42F84 /* AddDiscView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE673552ADE05B800C42F84 /* AddDiscView.xib */; };
+		DAE673592AE300E800C42F84 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DAE673582AE300E800C42F84 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA18B73B2AC1310C00A02B89 /* SwiftSpinner in Frameworks */,
+				DAE673592AE300E800C42F84 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +185,7 @@
 			name = DiscGolfSearch;
 			packageProductDependencies = (
 				DA18B73A2AC1310C00A02B89 /* SwiftSpinner */,
+				DAE673582AE300E800C42F84 /* Lottie */,
 			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
@@ -214,6 +217,7 @@
 			mainGroup = DADB72142AADFCDC0083B13B;
 			packageReferences = (
 				DA18B7392AC1310B00A02B89 /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
+				DAE673572AE300E800C42F84 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
@@ -495,6 +499,14 @@
 				minimumVersion = 2.2.0;
 			};
 		};
+		DAE673572AE300E800C42F84 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -502,6 +514,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA18B7392AC1310B00A02B89 /* XCRemoteSwiftPackageReference "SwiftSpinner" */;
 			productName = SwiftSpinner;
+		};
+		DAE673582AE300E800C42F84 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAE673572AE300E800C42F84 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -86,16 +86,11 @@ class ViewController: UIViewController {
     
     private func showAlert() {
         let popup = UIAlertController(title: "Site is down ☹️", message: "It looks like the site where the disc data comes from is currently down. Please close app and check back in later.", preferredStyle: .alert)
-
-        let ok = UIAlertAction(title: "OK", style: .default) { _ in
-          // Handle the OK button tap
-        }
         
-        let retry = UIAlertAction(title: "Refresh App", style: .default) { _ in
+        let retry = UIAlertAction(title: "Try Refreshing", style: .default) { _ in
             self.getDiscData()
         }
-
-        popup.addAction(ok)
+        
         popup.addAction(retry)
 
         present(popup, animated: true, completion: nil)

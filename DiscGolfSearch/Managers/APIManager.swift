@@ -47,7 +47,22 @@ class APIManager {
             
             task.resume()
         }
+    
+    // Function to download a Lottie animation file from a web link
+       func downloadLottieFile(from url: URL, completion: @escaping (Data?) -> Void) {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               if let data = data {
+                   completion(data)
+               } else {
+                   completion(nil)
+                   if let error = error {
+                       print("Error downloading Lottie animation: \(error)")
+                   }
+               }
+           }.resume()
+       }
 }
+
 
 enum discParams {
     

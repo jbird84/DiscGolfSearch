@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class DiscViewController: UIViewController {
     
@@ -25,6 +26,10 @@ class DiscViewController: UIViewController {
     
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
+    //LottieView:
+    @IBOutlet weak var discAnimationView: LottieAnimationView!
+    
+    
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
@@ -33,6 +38,7 @@ class DiscViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupFlightRatingsTapGestures()
+        setupFlightPathAnimationView()
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
@@ -42,7 +48,7 @@ class DiscViewController: UIViewController {
         super.viewWillAppear(animated)
         createSimilarDiscsCollection(disc: disc)
     }
-
+    
     
     private func setupCollectionView() {
         simularDiscsCollectionView.dataSource = self
@@ -150,59 +156,77 @@ class DiscViewController: UIViewController {
             setupFlightDiscImageView()
             companyNameLabel.text = "By: \(selectedDisc.brand)"
         }
-  
-            self.simularDiscsCollectionView.reloadData()
+        
+        self.simularDiscsCollectionView.reloadData()
         
         // Scroll to the first item
-           if similarDiscs.count > 0 {
-               let indexPath = IndexPath(item: 0, section: 0)
-               simularDiscsCollectionView.scrollToItem(at: indexPath, at: .left, animated: false)
-           }
+        if similarDiscs.count > 0 {
+            let indexPath = IndexPath(item: 0, section: 0)
+            simularDiscsCollectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        }
+    }
+    
+    private func setupFlightPathAnimationView() {
+        
+        if let lottieURL = URL(string: "https://storage.cloud.google.com/disc-animation/vibram-lace.json") {
+            APIManager.shared.downloadLottieFile(from: lottieURL) { lottieData in
+                if let lottieData = lottieData {
+                    // Use the downloaded Lottie animation data
+                    DispatchQueue.main.async {
+                        self.discAnimationView.animation = try? LottieAnimation.from(data: lottieData)
+                        self.discAnimationView.backgroundBehavior = .continuePlaying
+                        self.discAnimationView.play()
+                    }
+                } else {
+                    // Handle the case where the Lottie animation download failed
+                }
+            }
+        }
     }
     
     private func setupFlightRatingsTapGestures() {
-            let flightRatingsLabels = [flightRatingsSpeedLabel, flightRatingsGlideLabel, flightRatingsTurnLabel, flightRatingsFadeLabel]
-            
-            for (index, label) in flightRatingsLabels.enumerated() {
-                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(flightRatingLabelTapped(_:)))
-                label?.tag = index // Set a unique tag for each label
-                label?.isUserInteractionEnabled = true
-                label?.addGestureRecognizer(tapGesture)
-            }
+        let flightRatingsLabels = [flightRatingsSpeedLabel, flightRatingsGlideLabel, flightRatingsTurnLabel, flightRatingsFadeLabel]
+        
+        for (index, label) in flightRatingsLabels.enumerated() {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(flightRatingLabelTapped(_:)))
+            label?.tag = index // Set a unique tag for each label
+            label?.isUserInteractionEnabled = true
+            label?.addGestureRecognizer(tapGesture)
         }
+    }
     
     @objc private func addDiscTapped() {
         print("hello")
     }
     
     @objc private func flightRatingLabelTapped(_ sender: UITapGestureRecognizer) {
-            guard let tappedLabel = sender.view as? UILabel else { return }
-            
-            switch tappedLabel.tag {
-            case 0:
-                // Speed label tapped
-                navigateToFlightNumberViewController(with: 1)
-            case 1:
-                // Glide label tapped
-                navigateToFlightNumberViewController(with: 2)
-            case 2:
-                // Turn label tapped
-                navigateToFlightNumberViewController(with: 3)
-            case 3:
-                // Fade label tapped
-                navigateToFlightNumberViewController(with: 4)
-            default:
-                break
-            }
-        }
+        guard let tappedLabel = sender.view as? UILabel else { return }
         
-        private func navigateToFlightNumberViewController(with flightDigit: Int) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let flightNumberVC = storyboard.instantiateViewController(withIdentifier: "flight") as? FlightNumbersViewController {
-                flightNumberVC.flightDigit = flightDigit
-                navigationController?.pushViewController(flightNumberVC, animated: true)
-            }
+        switch tappedLabel.tag {
+        case 0:
+            // Speed label tapped
+            navigateToFlightNumberViewController(with: 1)
+        case 1:
+            // Glide label tapped
+            navigateToFlightNumberViewController(with: 2)
+        case 2:
+            // Turn label tapped
+            navigateToFlightNumberViewController(with: 3)
+        case 3:
+            // Fade label tapped
+            navigateToFlightNumberViewController(with: 4)
+        default:
+            break
         }
+    }
+    
+    private func navigateToFlightNumberViewController(with flightDigit: Int) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let flightNumberVC = storyboard.instantiateViewController(withIdentifier: "flight") as? FlightNumbersViewController {
+            flightNumberVC.flightDigit = flightDigit
+            navigationController?.pushViewController(flightNumberVC, animated: true)
+        }
+    }
     
     private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc) {
         if let webLink = DiscImageNames.webLink(for: disc.brand, disc: disc.nameSlug) {
@@ -236,7 +260,7 @@ class DiscViewController: UIViewController {
             imageView.image = UIImage(named: "nowLoadingBlankDisc")
             
         }
-       
+        
     }
     
     private func startRotation() {
@@ -270,9 +294,9 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let disc = similarDiscs[indexPath.item]
         
         cell.similarDiscNameBottomLabel.text =  disc.name
-
+        
         getImageFromLink(imageView: cell.discImageView, disc: disc)
-            return cell
+        return cell
         
     }
     
