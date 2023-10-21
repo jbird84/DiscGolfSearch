@@ -27,8 +27,13 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
     //LottieView:
-    @IBOutlet weak var discAnimationView: LottieAnimationView!
+    @IBOutlet weak var discAnimationView: UIView!
     
+    private lazy var animationView: LottieAnimationView = {
+        let view = LottieAnimationView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
@@ -39,6 +44,7 @@ class DiscViewController: UIViewController {
         setupCollectionView()
         setupFlightRatingsTapGestures()
         setupFlightPathAnimationView()
+        setupAnimationView() 
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
@@ -168,20 +174,26 @@ class DiscViewController: UIViewController {
     
     private func setupFlightPathAnimationView() {
         
-        if let lottieURL = URL(string: "https://storage.cloud.google.com/disc-animation/vibram-lace.json") {
-            APIManager.shared.downloadLottieFile(from: lottieURL) { lottieData in
-                if let lottieData = lottieData {
-                    // Use the downloaded Lottie animation data
-                    DispatchQueue.main.async {
-                        self.discAnimationView.animation = try? LottieAnimation.from(data: lottieData)
-                        self.discAnimationView.backgroundBehavior = .continuePlaying
-                        self.discAnimationView.play()
-                    }
-                } else {
-                    // Handle the case where the Lottie animation download failed
-                }
-            }
-        }
+        guard let url = URL(string: "https://storage.cloud.google.com/disc-animation/vibram-vice.json") else { return }
+        
+        LottieAnimation.loadedFrom(url: url, closure: { animation in
+            self.animationView.animation = animation
+            self.animationView.contentMode = .scaleToFill
+            self.animationView.loopMode = .playOnce
+            self.animationView.animationSpeed = 0.5
+            self.animationView.play()
+        }, animationCache: DefaultAnimationCache.sharedCache)
+    }
+    
+    private func setupAnimationView() {
+        view.addSubview(animationView)
+        
+        NSLayoutConstraint.activate([
+            animationView.leadingAnchor.constraint(equalTo: discAnimationView.leadingAnchor, constant: 0),
+            animationView.trailingAnchor.constraint(equalTo: discAnimationView.trailingAnchor, constant: 0),
+            animationView.topAnchor.constraint(equalTo: discAnimationView.topAnchor, constant: 0),
+            animationView.bottomAnchor.constraint(equalTo: discAnimationView.bottomAnchor, constant: 0)
+        ])
     }
     
     private func setupFlightRatingsTapGestures() {
