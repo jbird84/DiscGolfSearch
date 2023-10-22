@@ -545,6 +545,10 @@ struct DiscImageNames {
             "walker": "https://imagizer.imageshack.com/img923/4552/LiKy3A.png",
             "warbird": "https://imagizer.imageshack.com/img924/1946/GlsrAL.png"
         ],
+        "Trash Panda": [
+            "inner-core": "https://imagizer.imageshack.com/img923/575/AFlJwT.png",
+            "dune": "https://imagizer.imageshack.com/img923/5674/6wS3Iy.png"
+        ],
         "Co3": [
             "disc1": "https://example.com/co3/disc1",
             "disc2": "https://example.com/co3/disc2",

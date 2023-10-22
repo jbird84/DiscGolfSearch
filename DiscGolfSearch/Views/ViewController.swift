@@ -99,11 +99,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func searchButtonPressed(_ sender: Any) {
-        print("Selected Brand Slugs: \(brandSlugs)")
-        
-        //print(brandSlugs.count)
-        // print(allDisc)
-        
         let selectedCompanyDiscs: [DiscGolfDisc] = allDiscs.filter { disc in
             return brandSlugs.contains(disc.brandSlug)
         }

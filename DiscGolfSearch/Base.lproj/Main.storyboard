@@ -880,7 +880,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Discs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-vf-U7l">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
-                                                        <color key="backgroundColor" red="0.19089331800000001" green="0.19089331800000001" blue="0.19089331800000001" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.07676374097979799" green="0.07676374097979799" blue="0.07676374097979799" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="fkm-N1-af1"/>
                                                         </constraints>
@@ -890,7 +890,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cON-yW-zbe">
                                                         <rect key="frame" x="0.0" y="50" width="393" height="220"/>
-                                                        <color key="backgroundColor" red="0.19089331800000001" green="0.19089331800000001" blue="0.19089331800000001" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.076763740979999995" green="0.076763740979999995" blue="0.076763740979999995" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dcL-8v-feM">
                                                             <size key="itemSize" width="160" height="183"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

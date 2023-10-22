@@ -44,7 +44,7 @@ class DiscViewController: UIViewController {
         setupCollectionView()
         setupFlightRatingsTapGestures()
         setupFlightPathAnimationView()
-        setupAnimationView() 
+        setupAnimationView()
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
@@ -174,13 +174,13 @@ class DiscViewController: UIViewController {
     
     private func setupFlightPathAnimationView() {
         
-        guard let url = URL(string: "https://storage.cloud.google.com/disc-animation/vibram-vice.json") else { return }
+        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
         
         LottieAnimation.loadedFrom(url: url, closure: { animation in
             self.animationView.animation = animation
-            self.animationView.contentMode = .scaleToFill
-            self.animationView.loopMode = .playOnce
-            self.animationView.animationSpeed = 0.5
+            self.animationView.contentMode = .scaleAspectFit
+            self.animationView.loopMode = .repeat(3)
+            self.animationView.animationSpeed = 1.0
             self.animationView.play()
         }, animationCache: DefaultAnimationCache.sharedCache)
     }
@@ -317,6 +317,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         DispatchQueue.main.async {
             self.createSimilarDiscsCollection(disc: disc)
+            self.setupFlightPathAnimationView()
         }
     }
 }
