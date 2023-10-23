@@ -179,7 +179,7 @@ class DiscViewController: UIViewController {
         LottieAnimation.loadedFrom(url: url, closure: { animation in
             self.animationView.animation = animation
             self.animationView.contentMode = .scaleAspectFit
-            self.animationView.loopMode = .repeat(3)
+            self.animationView.loopMode = .loop
             self.animationView.animationSpeed = 1.0
             self.animationView.play()
         }, animationCache: DefaultAnimationCache.sharedCache)
