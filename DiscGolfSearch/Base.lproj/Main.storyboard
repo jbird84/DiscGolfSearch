@@ -89,6 +89,34 @@
             <point key="canvasLocation" x="1236" y="285"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="GJL-M1-prK">
+            <objects>
+                <viewController id="pvq-Xv-i0W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lDK-cG-3fg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pocketGuide" translatesAutoresizingMaskIntoConstraints="NO" id="Kxj-mb-HdE">
+                                <rect key="frame" x="0.0" y="40" width="393" height="729"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eL7-ds-JYL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eL7-ds-JYL" firstAttribute="trailing" secondItem="Kxj-mb-HdE" secondAttribute="trailing" id="NuZ-UY-okX"/>
+                            <constraint firstItem="Kxj-mb-HdE" firstAttribute="top" secondItem="eL7-ds-JYL" secondAttribute="top" constant="-63" id="d8H-QA-EfL"/>
+                            <constraint firstItem="eL7-ds-JYL" firstAttribute="bottom" secondItem="Kxj-mb-HdE" secondAttribute="bottom" id="j0J-gA-UQj"/>
+                            <constraint firstItem="Kxj-mb-HdE" firstAttribute="leading" secondItem="eL7-ds-JYL" secondAttribute="leading" id="kpN-kC-M6w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nT6-pZ-aKM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyC-K3-CTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="987"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="fDd-1k-ofI">
             <objects>
                 <viewController id="u3j-9l-yng" customClass="ViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,13 +359,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
                                                                     <rect key="frame" x="22.666666666666664" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
                                                                     <rect key="frame" x="45.333333333333336" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -714,6 +742,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                     <connections>
                         <segue destination="jXM-39-aMP" kind="relationship" relationship="viewControllers" id="QQR-rF-cVG"/>
                         <segue destination="VIS-zw-TlW" kind="relationship" relationship="viewControllers" id="oWU-c8-q5s"/>
+                        <segue destination="Mzp-TE-NHA" kind="relationship" relationship="viewControllers" id="QKd-Lv-nxl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4R-Co-HOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1261,6 +1290,26 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
             </objects>
             <point key="canvasLocation" x="309" y="285"/>
         </scene>
+        <!--Ref-Guide-->
+        <scene sceneID="8yO-6w-W2X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mzp-TE-NHA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ref-Guide" image="note.text" catalog="system" selectedImage="note.text" id="UCM-94-zmf"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7Qk-Gs-kyU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qT0-fV-fS8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pvq-Xv-i0W" kind="relationship" relationship="rootViewController" id="vxQ-i2-dyd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upa-AK-FRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="988"/>
+        </scene>
     </scenes>
     <resources>
         <image name="OverstableDisc" width="166.66667175292969" height="166.66667175292969"/>
@@ -1268,36 +1317,38 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="finalStabPath" width="166.66667175292969" height="166.66667175292969"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="nowLoadingBlankDisc" width="166.66667175292969" height="166.33332824707031"/>
         <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
         <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
