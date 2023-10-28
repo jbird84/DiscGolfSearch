@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */; };
+		DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */; };
 		DA18B73B2AC1310C00A02B89 /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = DA18B73A2AC1310C00A02B89 /* SwiftSpinner */; };
 		DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */; };
 		DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD482102ACCFDCB0051D89A /* Constants.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiscToView.xib; sourceTree = "<group>"; };
+		DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToView.swift; sourceTree = "<group>"; };
 		DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityViewController.swift; sourceTree = "<group>"; };
 		DAD482102ACCFDCB0051D89A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNumbersViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		DADB721F2AADFCDC0083B13B /* DiscGolfSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DAD4820F2ACCFDB60051D89A /* Helpers */,
 				DADB72442AB69C3E0083B13B /* Views */,
 				DADB72432AB69C280083B13B /* Models */,
 				DADB72422AB69C160083B13B /* Managers */,
@@ -153,7 +158,6 @@
 		DADB72442AB69C3E0083B13B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAD4820F2ACCFDB60051D89A /* Helpers */,
 				DADB72242AADFCDC0083B13B /* ViewController.swift */,
 				DADB723A2AB32C780083B13B /* DiscListViewController.swift */,
 				DADB72452AB69C780083B13B /* DiscViewController.swift */,
@@ -163,6 +167,8 @@
 				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
 				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
 				DAE673552ADE05B800C42F84 /* AddDiscView.xib */,
+				DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */,
+				DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			files = (
 				DAE673562ADE05B800C42F84 /* AddDiscView.xib in Resources */,
 				DADB722D2AADFCDF0083B13B /* LaunchScreen.storyboard in Resources */,
+				DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */,
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
@@ -248,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */,
 				DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */,
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
 				DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */,

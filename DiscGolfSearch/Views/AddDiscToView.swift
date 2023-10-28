@@ -9,12 +9,14 @@ import UIKit
 
 class AddDiscToView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @IBAction func addToCartTapped(_ sender: Any) {
+        print("Added Disc To Cart!")
     }
-    */
-
+    
+    
+    @IBAction func addToBagTapped(_ sender: Any) {
+        print("Added Disc To Bag!")
+    }
+    
 }

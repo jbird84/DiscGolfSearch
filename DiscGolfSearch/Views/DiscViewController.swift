@@ -19,6 +19,8 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var discView: UIView!
     
+    @IBOutlet weak var mainView: UIView!
+    
     @IBOutlet weak var flightRatingsSpeedLabel: UILabel!
     @IBOutlet weak var flightRatingsGlideLabel: UILabel!
     @IBOutlet weak var flightRatingsTurnLabel: UILabel!
@@ -35,6 +37,8 @@ class DiscViewController: UIViewController {
         return view
     }()
     
+    var dropDownView = UIView()
+    
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
@@ -45,6 +49,8 @@ class DiscViewController: UIViewController {
         setupFlightRatingsTapGestures()
         setupFlightPathAnimationView()
         setupAnimationView()
+        setupAddDiscToView()
+
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
@@ -55,6 +61,19 @@ class DiscViewController: UIViewController {
         createSimilarDiscsCollection(disc: disc)
     }
     
+    private func setupAddDiscToView() {
+         dropDownView = Bundle.main.loadNibNamed("AddDiscToView", owner: nil, options: nil)!.first as! UIView
+        
+        dropDownView.translatesAutoresizingMaskIntoConstraints = false
+        mainView.addSubview(dropDownView)
+        dropDownView.isHidden = true
+        
+        
+        dropDownView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
+        dropDownView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 25).isActive = true
+        dropDownView.widthAnchor.constraint(equalToConstant: 249).isActive = true
+        dropDownView.heightAnchor.constraint(equalToConstant: 115).isActive = true
+    }
     
     private func setupCollectionView() {
         simularDiscsCollectionView.dataSource = self
@@ -208,7 +227,7 @@ class DiscViewController: UIViewController {
     }
     
     @objc private func addDiscTapped() {
-        print("hello")
+        dropDownView.isHidden.toggle()
     }
     
     @objc private func flightRatingLabelTapped(_ sender: UITapGestureRecognizer) {
