@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDiscToView" customModule="DiscGolfSearch" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="249" height="115"/>
+            <rect key="frame" x="0.0" y="0.0" width="249" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-km-AQs">
-                    <rect key="frame" x="29" y="15" width="191" height="85"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-km-AQs">
+                    <rect key="frame" x="29" y="5.6666666666666714" width="191" height="119"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEM-q6-XJL">
                             <rect key="frame" x="0.0" y="0.0" width="191" height="35"/>
@@ -33,7 +33,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4s-xw-zfA">
-                            <rect key="frame" x="0.0" y="50" width="191" height="35"/>
+                            <rect key="frame" x="0.0" y="42" width="191" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="191" id="Cxb-ta-Aob"/>
                                 <constraint firstAttribute="height" constant="35" id="LnN-gf-mrY"/>
@@ -47,13 +47,32 @@
                                 <action selector="addToBagTapped:" destination="-1" eventType="touchUpInside" id="vVu-oH-qfH"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bts-wy-nfu">
+                            <rect key="frame" x="0.0" y="84" width="191" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="191" id="hrh-EM-2zO"/>
+                                <constraint firstAttribute="height" constant="35" id="mWw-If-n7u"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Cancel">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" red="0.20967488370000001" green="0.20967488370000001" blue="0.20967488370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="addToBagTapped:" destination="-1" eventType="touchUpInside" id="VHz-gE-M5y"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Lws-km-AQs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HiK-zQ-hoo"/>
+                <constraint firstItem="Lws-km-AQs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gG6-1a-Uhn"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="413" y="-121"/>
+            <point key="canvasLocation" x="412.97709923664121" y="-116.19718309859155"/>
         </view>
     </objects>
 </document>
