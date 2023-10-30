@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDiscToView" customModule="DiscGolfSearch" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddDiscToView" customModule="DiscGolfSearch" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="249" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -59,7 +59,7 @@
                                 <color key="baseBackgroundColor" red="0.20967488370000001" green="0.20967488370000001" blue="0.20967488370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="addToBagTapped:" destination="-1" eventType="touchUpInside" id="VHz-gE-M5y"/>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="vUu-x3-c1O"/>
                             </connections>
                         </button>
                     </subviews>

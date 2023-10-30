@@ -7,6 +7,8 @@
 
 import UIKit
 
+protocol CancelTa
+
 class AddDiscToView: UIView {
 
     
@@ -18,5 +20,10 @@ class AddDiscToView: UIView {
     @IBAction func addToBagTapped(_ sender: Any) {
         print("Added Disc To Bag!")
     }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        print("Cancel Tapped")
+    }
+    
     
 }
