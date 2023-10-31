@@ -7,10 +7,13 @@
 
 import UIKit
 
-protocol CancelTa
+protocol CancelTappedDelegate {
+    func dissmiss()
+}
 
 class AddDiscToView: UIView {
 
+    var delegate: CancelTappedDelegate?
     
     @IBAction func addToCartTapped(_ sender: Any) {
         print("Added Disc To Cart!")
@@ -23,7 +26,7 @@ class AddDiscToView: UIView {
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         print("Cancel Tapped")
+        delegate?.dissmiss()
     }
-    
     
 }

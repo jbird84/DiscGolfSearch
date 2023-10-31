@@ -37,7 +37,7 @@ class DiscViewController: UIViewController {
         return view
     }()
     
-    var dropDownView = UIView()
+    var dropDownView: AddDiscToView!
     
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
@@ -45,6 +45,7 @@ class DiscViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupCollectionView()
         setupFlightRatingsTapGestures()
         setupFlightPathAnimationView()
@@ -62,12 +63,12 @@ class DiscViewController: UIViewController {
     }
     
     private func setupAddDiscToView() {
-         dropDownView = Bundle.main.loadNibNamed("AddDiscToView", owner: nil, options: nil)!.first as! UIView
+        dropDownView = Bundle.main.loadNibNamed("AddDiscToView", owner: nil, options: nil)!.first as? AddDiscToView
         
+        dropDownView.delegate = self
         dropDownView.translatesAutoresizingMaskIntoConstraints = false
         mainView.addSubview(dropDownView)
         dropDownView.isHidden = true
-        
         
         dropDownView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
         dropDownView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 25).isActive = true
@@ -338,5 +339,11 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
             self.createSimilarDiscsCollection(disc: disc)
             self.setupFlightPathAnimationView()
         }
+    }
+}
+
+extension DiscViewController: CancelTappedDelegate {
+    func dissmiss() {
+        dropDownView.isHidden = true
     }
 }
