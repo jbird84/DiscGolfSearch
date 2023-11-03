@@ -17,13 +17,11 @@ class AddDiscToView: UIView {
     
     @IBAction func addToCartTapped(_ sender: Any) {
        
-        //Send user to fillout form then pop to view
         print("Added Disc To Cart!")
     }
     
     
     @IBAction func addToBagTapped(_ sender: Any) {
-        //Send user to fillout form then pop to view
         print("Added Disc To Bag!")
     }
     
