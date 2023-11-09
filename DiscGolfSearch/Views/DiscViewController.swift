@@ -333,10 +333,10 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let disc = similarDiscs[indexPath.item]
+         disc = similarDiscs[indexPath.item]
         
         DispatchQueue.main.async {
-            self.createSimilarDiscsCollection(disc: disc)
+            self.createSimilarDiscsCollection(disc: self.disc)
             self.setupFlightPathAnimationView()
         }
     }
