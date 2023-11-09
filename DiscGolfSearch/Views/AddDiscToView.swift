@@ -7,18 +7,21 @@
 
 import UIKit
 
-protocol CancelTappedDelegate {
+protocol AddDiscToViewDelegate {
     func dissmiss()
+    func saveDiscToSwiftData()
 }
 
 class AddDiscToView: UIView {
 
-    var delegate: CancelTappedDelegate?
+    var delegate: AddDiscToViewDelegate?
     
     @IBAction func addToCartTapped(_ sender: Any) {
        
         //Send user to fillout form then pop to view
         print("Added Disc To Cart!")
+        delegate?.saveDiscToSwiftData()
+        delegate?.dissmiss()
     }
     
     

@@ -342,7 +342,27 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-extension DiscViewController: CancelTappedDelegate {
+extension DiscViewController: AddDiscToViewDelegate {
+    func saveDiscToSwiftData() {
+
+        guard let disc = disc else {
+            K.showAlertWithRetryOption(title: "Issues Getting Disc Data", message: "We ran into a problem attempting to get the disc's data.", presentingViewController: self) { [weak self] _ in
+                guard let self else { return }
+                self.saveDiscToSwiftData()
+            }
+            return
+        }
+        
+        if let image = discImageView.image {
+            if let imageData = image.pngData() {
+                DatabaseService.shared.saveDisc(discName: disc.name, discImageData: imageData, discStability: disc.stability, discSpeed: disc.speed, discGlide: disc.glide, discTurn: disc.turn, discFade: disc.fade, discBrand: disc.brand, viewController: self)
+            }
+        } else {
+            K.showAlert(title: "Issues Saving Disc", message: "We ran into a problem attempting to save the disc.", presentingViewController: self)
+        }
+    }
+    
+    
     func dissmiss() {
         dropDownView.isHidden = true
     }
