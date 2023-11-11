@@ -17,6 +17,12 @@ class CartViewController: UIViewController {
         super.viewWillAppear(animated)
        getDiscs()
         setupTableView()
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        navigationItem.title = "My Cart"
     }
     
     private func setupTableView()  {
