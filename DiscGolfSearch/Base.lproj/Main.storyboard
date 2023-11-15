@@ -232,7 +232,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-Hu-lIo">
-                                <rect key="frame" x="16" y="67" width="361" height="40"/>
+                                <rect key="frame" x="16" y="67" width="361" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jRZ-pW-bHY"/>
                                 </constraints>
@@ -249,6 +249,7 @@
                             <constraint firstItem="Ubq-Hu-lIo" firstAttribute="leading" secondItem="dv4-ky-uga" secondAttribute="leading" constant="16" id="8QX-Ri-g4b"/>
                             <constraint firstItem="dv4-ky-uga" firstAttribute="trailing" secondItem="Ubq-Hu-lIo" secondAttribute="trailing" constant="16" id="TMq-1k-zhZ"/>
                             <constraint firstItem="Ubq-Hu-lIo" firstAttribute="top" secondItem="dv4-ky-uga" secondAttribute="top" constant="8" id="atm-7S-iAA"/>
+                            <constraint firstItem="L38-6b-JqB" firstAttribute="top" secondItem="Ubq-Hu-lIo" secondAttribute="bottom" constant="3" id="hfM-BD-i2F"/>
                             <constraint firstItem="L38-6b-JqB" firstAttribute="top" secondItem="Ubq-Hu-lIo" secondAttribute="top" constant="48" id="lTB-2H-iOH"/>
                             <constraint firstItem="L38-6b-JqB" firstAttribute="leading" secondItem="dv4-ky-uga" secondAttribute="leading" id="qf8-zs-shP"/>
                         </constraints>
@@ -263,22 +264,108 @@
             </objects>
             <point key="canvasLocation" x="2141.2213740458014" y="986.61971830985919"/>
         </scene>
-        <!--Bag-->
+        <!--Bag List View Controller-->
         <scene sceneID="CiT-tN-K8T">
             <objects>
-                <viewController id="5TJ-G5-A3m" sceneMemberID="viewController">
+                <viewController id="5TJ-G5-A3m" customClass="BagListViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GBM-Dd-LZs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ybp-HP-zlZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bagList" rowHeight="82" id="Hw3-dO-nby" customClass="BagListTableViewCell" customModule="DiscGolfSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hw3-dO-nby" id="EoE-Sc-0PK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTX-jK-Kef">
+                                                    <rect key="frame" x="10" y="16" width="50" height="50"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bag" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-nd-MZp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="2r6-6L-VYw"/>
+                                                        <constraint firstAttribute="height" constant="50" id="JxM-uD-D57"/>
+                                                        <constraint firstItem="hfW-nd-MZp" firstAttribute="leading" secondItem="zTX-jK-Kef" secondAttribute="leading" id="Vaz-PV-CkD"/>
+                                                        <constraint firstItem="hfW-nd-MZp" firstAttribute="top" secondItem="zTX-jK-Kef" secondAttribute="top" id="ahL-Z7-eix"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hfW-nd-MZp" secondAttribute="trailing" id="dCU-Zp-4dk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hfW-nd-MZp" secondAttribute="bottom" id="vKC-pU-97s"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-J4-Aaz">
+                                                    <rect key="frame" x="80" y="16" width="288" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woods Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48M-Qd-SNx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="19.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-jI-Ig3">
+                                                            <rect key="frame" x="0.0" y="29.666666666666664" width="132.33333333333334" height="20.333333333333336"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Used for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-VY-m0x">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Woods " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTi-3W-sbN">
+                                                                    <rect key="frame" x="75" y="0.0" width="57.333333333333343" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jna-J4-Aaz" firstAttribute="leading" secondItem="zTX-jK-Kef" secondAttribute="trailing" constant="20" id="3eN-PU-D9b"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jna-J4-Aaz" secondAttribute="trailing" constant="5" id="52E-Mg-WKe"/>
+                                                <constraint firstItem="zTX-jK-Kef" firstAttribute="leading" secondItem="EoE-Sc-0PK" secondAttribute="leading" constant="10" id="ee0-a9-nph"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Jna-J4-Aaz" secondAttribute="bottom" constant="5" id="kgH-Hn-7Mx"/>
+                                                <constraint firstItem="zTX-jK-Kef" firstAttribute="centerY" secondItem="EoE-Sc-0PK" secondAttribute="centerY" id="mgJ-2j-QDv"/>
+                                                <constraint firstItem="Jna-J4-Aaz" firstAttribute="top" secondItem="EoE-Sc-0PK" secondAttribute="topMargin" constant="5" id="y1L-S7-gDj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bagImageView" destination="hfW-nd-MZp" id="fRW-k6-jLE"/>
+                                            <outlet property="bagNameLabel" destination="48M-Qd-SNx" id="RuV-EO-vU1"/>
+                                            <outlet property="bagUseLabel" destination="RTi-3W-sbN" id="ZW7-Li-0ak"/>
+                                            <outlet property="colorView" destination="zTX-jK-Kef" id="ZKl-dl-9fL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7jB-6z-nbl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ybp-HP-zlZ" firstAttribute="top" secondItem="7jB-6z-nbl" secondAttribute="top" id="B5E-6O-0v5"/>
+                            <constraint firstItem="ybp-HP-zlZ" firstAttribute="trailing" secondItem="7jB-6z-nbl" secondAttribute="trailing" id="Fpl-Kg-lW2"/>
+                            <constraint firstItem="7jB-6z-nbl" firstAttribute="bottom" secondItem="ybp-HP-zlZ" secondAttribute="bottom" id="Nyd-St-JY3"/>
+                            <constraint firstItem="ybp-HP-zlZ" firstAttribute="leading" secondItem="7jB-6z-nbl" secondAttribute="leading" id="ff4-VY-RdH"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bag" image="backpack" catalog="system" id="n20-pF-ehz"/>
                     <navigationItem key="navigationItem" id="aas-6Q-gr4"/>
+                    <connections>
+                        <outlet property="navBarItem" destination="aas-6Q-gr4" id="4w3-ZP-t4n"/>
+                        <outlet property="tableView" destination="ybp-HP-zlZ" id="drO-Mo-GGo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFx-uk-kLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2141" y="1731"/>
+            <point key="canvasLocation" x="3066.4122137404579" y="1730.9859154929579"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fDd-1k-ofI">
@@ -909,7 +996,7 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                         <segue destination="VIS-zw-TlW" kind="relationship" relationship="viewControllers" id="oWU-c8-q5s"/>
                         <segue destination="Mzp-TE-NHA" kind="relationship" relationship="viewControllers" id="QKd-Lv-nxl"/>
                         <segue destination="HVK-PX-cE8" kind="relationship" relationship="viewControllers" id="3oB-ub-gDn"/>
-                        <segue destination="5TJ-G5-A3m" kind="relationship" relationship="viewControllers" id="lCi-wV-B5s"/>
+                        <segue destination="utw-9m-zZj" kind="relationship" relationship="viewControllers" id="lCi-wV-B5s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4R-Co-HOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1496,32 +1583,33 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
             </objects>
             <point key="canvasLocation" x="1218" y="987"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VpN-LR-aSD">
+        <!--Bag-->
+        <scene sceneID="TZ0-re-83h">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TfV-by-khf" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="utw-9m-zZj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bag" image="backpack" catalog="system" id="n20-pF-ehz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="20E-Jn-Q9h">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="97j-xV-zeN">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5TJ-G5-A3m" kind="relationship" relationship="rootViewController" id="BLy-Ts-e5m"/>
+                        <segue destination="5TJ-G5-A3m" kind="relationship" relationship="rootViewController" id="4Fn-So-NTJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4g0-cm-zXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCp-bY-O3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="1731"/>
+            <point key="canvasLocation" x="2139.6946564885498" y="1730.9859154929579"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lCi-wV-B5s"/>
         <segue reference="3oB-ub-gDn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="OverstableDisc" width="166.66667175292969" height="166.66667175292969"/>
         <image name="backpack" catalog="system" width="100" height="128"/>
+        <image name="bag" width="217" height="299.33334350585938"/>
         <image name="blankDisc" width="500" height="500"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="circle.fill" catalog="system" width="128" height="123"/>

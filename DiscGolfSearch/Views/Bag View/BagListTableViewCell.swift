@@ -9,6 +9,11 @@ import UIKit
 
 class BagListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var bagNameLabel: UILabel!
+    @IBOutlet weak var bagUseLabel: UILabel!
+    @IBOutlet weak var bagImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
