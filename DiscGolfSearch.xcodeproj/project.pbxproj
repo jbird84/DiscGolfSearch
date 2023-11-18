@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */; };
 		DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */; };
+		DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272192B055BDC005A107C /* ViewController+Ext.swift */; };
+		DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721B2B05B713005A107C /* GridColorPicker.swift */; };
 		DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D342B016EA20050840A /* BagListTableViewCell.swift */; };
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* Bag.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiscToView.xib; sourceTree = "<group>"; };
 		DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToView.swift; sourceTree = "<group>"; };
+		DA2272192B055BDC005A107C /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		DA22721B2B05B713005A107C /* GridColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColorPicker.swift; sourceTree = "<group>"; };
 		DA363D342B016EA20050840A /* BagListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewCell.swift; sourceTree = "<group>"; };
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
+				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				DADB723D2AB33F630083B13B /* Data+Ext.swift */,
 				DA363D3D2B0183960050840A /* Color+Ext.swift */,
 				DAEE2C962B01D481005D289D /* ImageView+Ext.swift */,
+				DA2272192B055BDC005A107C /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */,
 				DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
+				DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */,
 				DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */,
 				DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
@@ -353,6 +360,7 @@
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
+				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

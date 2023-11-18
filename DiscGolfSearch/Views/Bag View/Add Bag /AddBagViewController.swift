@@ -9,7 +9,7 @@ import UIKit
 import Eureka
 
 class AddBagViewController: FormViewController {
-
+    
     
     private enum CellTags: String {
         case bagName
@@ -18,15 +18,15 @@ class AddBagViewController: FormViewController {
     }
     
     private var selectedColor: String = "#808080" // Default color
-    
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     // Add a slider and an image view
     private let colorPickerButton = UIButton()
     
     private let colorImageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.contentMode = .scaleAspectFit
-            return imageView
-        }()
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,29 +38,49 @@ class AddBagViewController: FormViewController {
     private func setupView() {
         let addNewBagButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveBag))
         navigationItem.rightBarButtonItem = addNewBagButton
-        }
+        
+        //setup bag imageView
+        
+        // Set the plus sign image to the image view
+        imageView.image = UIImage(named: "bag")
+        imageView.setImageColor(color: UIColor.systemGray2)
+        
+        // Calculate the center of the screen
+        let centerX = view.bounds.midX
+        let centerY = view.bounds.midY
+        
+        // Set the center of the image view to the center of the screen
+        imageView.center = CGPoint(x: centerX, y: centerY)
+        
+        // Add the image view to the view hierarchy
+        view.addSubview(imageView)
+    }
     
     private func createForm() {
         form
-        +++ Section("Create a Bag")
+        +++ Section(header: "Create a Bag", footer: "The color of the bag image below is your bags color.")
         
         <<< NameRow(CellTags.bagName.rawValue) {
             $0.title =  "Bag Name"
         }
         
         <<< NameRow(CellTags.bagType.rawValue) {
-            $0.title =  "Bag used for what?"
+            $0.title =  "Bag Used For"
         }
         
-        <<< PushRow() {
-            $0.title = "PushRow"
-            $0.options = [💁🏻, 🍐, 👦🏼, 🐗, 🐼, 🐻]
-            $0.value = 👦🏼
-            $0.selectorTitle = "Choose an Emoji!"
-            }.onPresent { from, to in
-                to.dismissOnSelection = false
-                to.dismissOnChange = false
-        }
+        
+        <<< LabelRow(CellTags.bagColor.rawValue) {
+            $0.title = "Tap to change your bags color"
+        }.cellUpdate({ [weak self] cell, row in
+            cell.accessoryView = self?.createDisclousureIndicatorView()
+        }).onCellSelection({ [weak self] cell, row in
+            
+            let gridColorPickerVC = GridColorPickerViewController()
+            gridColorPickerVC.delegate = self
+            self?.present(gridColorPickerVC, animated: true, completion: nil)
+        })
+        
+        
     }
     
     @objc private func saveBag() {
@@ -68,12 +88,22 @@ class AddBagViewController: FormViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc private func didTapSelectColor() {
-        
-    }
- 
-
+    
 }
+
+//Grid Color Picker Delegates
+extension AddBagViewController: GridColorPickerDelegate {
+    func colorWasSelected(selectedColor: UIColor) {
+        let color = selectedColor
+        self.selectedColor = color.toHexString()
+        imageView.setImageColor(color: color)
+    }
+    
+     
+  
+}
+
+
 
 
 
