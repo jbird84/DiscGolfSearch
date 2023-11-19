@@ -355,7 +355,7 @@ extension DiscViewController: AddDiscToViewDelegate {
         
         if let image = discImageView.image {
             if let imageData = image.pngData() {
-                DatabaseService.shared.saveDisc(discName: disc.name, discImageData: imageData, discStability: disc.stability, discSpeed: disc.speed, discGlide: disc.glide, discTurn: disc.turn, discFade: disc.fade, discBrand: disc.brand, viewController: self)
+                DiscDatabaseService.shared.saveDisc(discName: disc.name, discImageData: imageData, discStability: disc.stability, discSpeed: disc.speed, discGlide: disc.glide, discTurn: disc.turn, discFade: disc.fade, discBrand: disc.brand, viewController: self)
             }
         } else {
             K.showAlert(title: "Issues Saving Disc", message: "We ran into a problem attempting to save the disc.", presentingViewController: self)
