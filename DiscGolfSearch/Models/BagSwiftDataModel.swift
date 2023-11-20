@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import SwiftData
 
 
-struct Bag: Codable {
-    let bagHexColor: String
-    let bagTitle: String
-    let bagType: String
+@Model
+class BagSwiftDataModel {
+    @Attribute(.unique) var id: String
+    var bagHexColor: String
+    var bagTitle: String
+    var bagType: String
+    
+    init(id: String, bagHexColor: String, bagTitle: String, bagType: String) {
+        self.id = id
+        self.bagHexColor = bagHexColor
+        self.bagTitle = bagTitle
+        self.bagType = bagType
+    }
 }

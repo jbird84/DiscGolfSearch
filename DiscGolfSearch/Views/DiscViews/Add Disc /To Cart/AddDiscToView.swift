@@ -10,6 +10,7 @@ import UIKit
 protocol AddDiscToViewDelegate {
     func dissmiss()
     func saveDiscToSwiftData()
+    func saveDiscToBag()
 }
 
 class AddDiscToView: UIView {
@@ -28,6 +29,7 @@ class AddDiscToView: UIView {
     @IBAction func addToBagTapped(_ sender: Any) {
         //Send user to fillout form then pop to view
         print("Added Disc To Bag!")
+        delegate?.saveDiscToBag()
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

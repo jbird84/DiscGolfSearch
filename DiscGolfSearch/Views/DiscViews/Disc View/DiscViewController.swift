@@ -51,7 +51,7 @@ class DiscViewController: UIViewController {
         setupFlightPathAnimationView()
         setupAnimationView()
         setupAddDiscToView()
-
+        
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
@@ -333,7 +333,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         disc = similarDiscs[indexPath.item]
+        disc = similarDiscs[indexPath.item]
         
         DispatchQueue.main.async {
             self.createSimilarDiscsCollection(disc: self.disc)
@@ -343,8 +343,17 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension DiscViewController: AddDiscToViewDelegate {
+    func saveDiscToBag() {
+        let storyboard = UIStoryboard(name: "AddDiscToBag", bundle: nil)
+        
+        if let vc = storyboard.instantiateViewController(withIdentifier: "addDiscToBagVC") as? AddDiscToBagViewController, let disc = disc {
+            vc.disc = disc
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func saveDiscToSwiftData() {
-
+        
         guard let disc = disc else {
             K.showAlertWithRetryOption(title: "Issues Getting Disc Data", message: "We ran into a problem attempting to get the disc's data.", presentingViewController: self) { [weak self] _ in
                 guard let self else { return }

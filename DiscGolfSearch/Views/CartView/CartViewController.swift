@@ -31,7 +31,7 @@ class CartViewController: UIViewController {
     }
     
     private func getDiscs() {
-        DatabaseService.shared.fetchDiscCartList { [weak self] discs, error in
+        DiscDatabaseService.shared.fetchDiscCartList { [weak self] discs, error in
             if let data = discs, error == nil {
                 self?.discs = data
                 self?.tableView.reloadData()
@@ -75,7 +75,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 
                 K.showAlertWithDeleteAction(title: "Disc will be deleted", message: "Are you sure you want to delete the selected disc?", presentingViewController: self) { [weak self] _ in
                     guard let self else { return }
-                    DatabaseService.shared.deleteDiscFromCartView(disc: self.discs[indexPath.row])
+                    DiscDatabaseService.shared.deleteDiscFromCartView(disc: self.discs[indexPath.row])
                     self.discs.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                 }

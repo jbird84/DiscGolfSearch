@@ -24,6 +24,11 @@ struct DiscGolfDisc: Codable {
     let brandSlug: String
     let color: String
     let backgroundColor: String
+    var usedFor: String = "Backhand"
+    var plasticType: String = "N/A"
+    var discWeight: String = "0.0"
+    var discColor: String = "#FF0000"
+    
     
     var displayedBrand: String {
         let brandMapping: [String: String] = [
@@ -61,5 +66,9 @@ struct DiscGolfDisc: Codable {
         case brandSlug = "brand_slug"
         case color
         case backgroundColor = "background_color"
+        case usedFor
+        case plasticType
+        case discWeight
+        case discColor
     }
 }

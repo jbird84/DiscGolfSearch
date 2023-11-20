@@ -17,6 +17,8 @@ class AddBagViewController: FormViewController {
         case bagColor
     }
     
+    private var bagName: String?
+    private var bagType: String?
     private var selectedColor: String = "#808080" // Default color
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     // Add a slider and an image view
@@ -62,11 +64,15 @@ class AddBagViewController: FormViewController {
         
         <<< NameRow(CellTags.bagName.rawValue) {
             $0.title =  "Bag Name"
-        }
+        }.onChange({ [weak self] row in
+            self?.bagName = row.value
+        })
         
         <<< NameRow(CellTags.bagType.rawValue) {
             $0.title =  "Bag Used For"
-        }
+        }.onChange({ [weak self] row in
+            self?.bagType = row.value
+        })
         
         
         <<< LabelRow(CellTags.bagColor.rawValue) {
@@ -84,11 +90,22 @@ class AddBagViewController: FormViewController {
     }
     
     @objc private func saveBag() {
+        
         print("Bag Saved")
-        navigationController?.popViewController(animated: true)
+        if bagName == nil {
+            K.showAlert(title: "Bag Name Empty", message: "Please add a name for this bag.", presentingViewController: self)
+            return
+        }
+        if bagType == nil {
+            K.showAlert(title: "Bag Type Empty", message: "Please add what this bag is used for.", presentingViewController: self)
+            return
+        }
+        
+        if let bagName = bagName, let bagType = bagType {
+            BagDatabaseService.shared.saveBag(bagName: bagName, bagType: bagType, bagHexColor: selectedColor, viewController: self)
+            navigationController?.popViewController(animated: true)
+        }
     }
-    
-    
 }
 
 //Grid Color Picker Delegates

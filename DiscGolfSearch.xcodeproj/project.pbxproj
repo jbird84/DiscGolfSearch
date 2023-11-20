@@ -11,11 +11,15 @@
 		DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */; };
 		DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272192B055BDC005A107C /* ViewController+Ext.swift */; };
 		DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721B2B05B713005A107C /* GridColorPicker.swift */; };
+		DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721D2B08DC13005A107C /* BagDatabaseService.swift */; };
+		DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */; };
+		DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2272292B099D52005A107C /* AddDiscToBag.storyboard */; };
+		DA22722C2B09BA81005A107C /* AddDiscToBagFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */; };
 		DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D342B016EA20050840A /* BagListTableViewCell.swift */; };
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
-		DA363D3C2B0181C10050840A /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* Bag.swift */; };
+		DA363D3C2B0181C10050840A /* BagSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagSwiftDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
-		DABE00CC2AF7CE7800C2ABEB /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DatabaseService.swift */; };
+		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
 		DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */; };
@@ -54,11 +58,15 @@
 		DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToView.swift; sourceTree = "<group>"; };
 		DA2272192B055BDC005A107C /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		DA22721B2B05B713005A107C /* GridColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColorPicker.swift; sourceTree = "<group>"; };
+		DA22721D2B08DC13005A107C /* BagDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDatabaseService.swift; sourceTree = "<group>"; };
+		DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToBagViewController.swift; sourceTree = "<group>"; };
+		DA2272292B099D52005A107C /* AddDiscToBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDiscToBag.storyboard; sourceTree = "<group>"; };
+		DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToBagFormViewController.swift; sourceTree = "<group>"; };
 		DA363D342B016EA20050840A /* BagListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewCell.swift; sourceTree = "<group>"; };
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
-		DA363D3B2B0181C10050840A /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		DA363D3B2B0181C10050840A /* BagSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagSwiftDataModel.swift; sourceTree = "<group>"; };
 		DA363D3D2B0183960050840A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
-		DABE00CB2AF7CE7800C2ABEB /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDatabaseService.swift; sourceTree = "<group>"; };
 		DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscSwiftDataModel.swift; sourceTree = "<group>"; };
 		DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,6 +113,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA22721F2B099A9D005A107C /* Disc View */ = {
+			isa = PBXGroup;
+			children = (
+				DADB72452AB69C780083B13B /* DiscViewController.swift */,
+			);
+			path = "Disc View";
+			sourceTree = "<group>";
+		};
+		DA2272202B099AD4005A107C /* DiscViews */ = {
+			isa = PBXGroup;
+			children = (
+				DA2272242B099B57005A107C /* Search Discs */,
+				DA2272232B099B32005A107C /* Disc Types */,
+				DA2272222B099B0F005A107C /* Disc List */,
+				DA2272212B099AE5005A107C /* Add Disc  */,
+				DA22721F2B099A9D005A107C /* Disc View */,
+			);
+			path = DiscViews;
+			sourceTree = "<group>";
+		};
+		DA2272212B099AE5005A107C /* Add Disc  */ = {
+			isa = PBXGroup;
+			children = (
+				DA2272262B099B96005A107C /* To Bag */,
+				DA2272252B099B75005A107C /* To Cart */,
+			);
+			path = "Add Disc ";
+			sourceTree = "<group>";
+		};
+		DA2272222B099B0F005A107C /* Disc List */ = {
+			isa = PBXGroup;
+			children = (
+				DADB723A2AB32C780083B13B /* DiscListViewController.swift */,
+			);
+			path = "Disc List";
+			sourceTree = "<group>";
+		};
+		DA2272232B099B32005A107C /* Disc Types */ = {
+			isa = PBXGroup;
+			children = (
+				DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */,
+				DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */,
+			);
+			path = "Disc Types";
+			sourceTree = "<group>";
+		};
+		DA2272242B099B57005A107C /* Search Discs */ = {
+			isa = PBXGroup;
+			children = (
+				DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */,
+			);
+			path = "Search Discs";
+			sourceTree = "<group>";
+		};
+		DA2272252B099B75005A107C /* To Cart */ = {
+			isa = PBXGroup;
+			children = (
+				DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */,
+				DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */,
+			);
+			path = "To Cart";
+			sourceTree = "<group>";
+		};
+		DA2272262B099B96005A107C /* To Bag */ = {
+			isa = PBXGroup;
+			children = (
+				DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */,
+				DA2272292B099D52005A107C /* AddDiscToBag.storyboard */,
+				DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */,
+			);
+			path = "To Bag";
+			sourceTree = "<group>";
+		};
+		DA22722D2B0A5088005A107C /* Eureka Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Eureka Files";
+			sourceTree = "<group>";
+		};
 		DA363D332B016E5B0050840A /* Bag View */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +206,8 @@
 		DABE00CA2AF7CE6600C2ABEB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DABE00CB2AF7CE7800C2ABEB /* DatabaseService.swift */,
+				DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */,
+				DA22721D2B08DC13005A107C /* BagDatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -135,6 +224,7 @@
 		DAD4820F2ACCFDB60051D89A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DA22722D2B0A5088005A107C /* Eureka Files */,
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 			);
@@ -212,7 +302,7 @@
 				DADB72342AADFD890083B13B /* Disc.swift */,
 				DADBE24F2ABE00FA00E2095A /* DiscImageNames.swift */,
 				DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */,
-				DA363D3B2B0181C10050840A /* Bag.swift */,
+				DA363D3B2B0181C10050840A /* BagSwiftDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,18 +310,12 @@
 		DADB72442AB69C3E0083B13B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA2272202B099AD4005A107C /* DiscViews */,
 				DA363D332B016E5B0050840A /* Bag View */,
 				DABE00D12AF9CE5600C2ABEB /* CartView */,
 				DADB72242AADFCDC0083B13B /* ViewController.swift */,
-				DADB723A2AB32C780083B13B /* DiscListViewController.swift */,
-				DADB72452AB69C780083B13B /* DiscViewController.swift */,
-				DADBE24B2ABCDBDF00E2095A /* DiscTypes.xib */,
-				DADBE24D2ABDC42200E2095A /* DiscTypesView.swift */,
-				DADBE2512AC0C8C700E2095A /* SearchDiscViewController.swift */,
 				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
 				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
-				DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */,
-				DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +404,7 @@
 				DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */,
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
+				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,15 +422,18 @@
 				DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */,
 				DA363D372B016EC30050840A /* BagListViewController.swift in Sources */,
 				DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */,
-				DA363D3C2B0181C10050840A /* Bag.swift in Sources */,
+				DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */,
+				DA363D3C2B0181C10050840A /* BagSwiftDataModel.swift in Sources */,
 				DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */,
 				DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */,
-				DABE00CC2AF7CE7800C2ABEB /* DatabaseService.swift in Sources */,
+				DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */,
+				DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */,
 				DADBE2502ABE00FA00E2095A /* DiscImageNames.swift in Sources */,
 				DADB72462AB69C780083B13B /* DiscViewController.swift in Sources */,
 				DAEE2C972B01D481005D289D /* ImageView+Ext.swift in Sources */,
 				DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */,
 				DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */,
+				DA22722C2B09BA81005A107C /* AddDiscToBagFormViewController.swift in Sources */,
 				DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */,
 				DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
@@ -438,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -495,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

@@ -54,9 +54,17 @@ struct K {
         presentingViewController.present(popup, animated: true, completion: nil)
     }
     
+    static func showAlertWithAction(title: String, message: String, presentingViewController: UIViewController, actionTitle: String, action: @escaping (UIAlertAction) -> Void) {
+        let popup = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .default, handler: action)
+        popup.addAction(action)
+        presentingViewController.present(popup, animated: true, completion: nil)
+    }
     
     static func showAlert(title: String, message: String, presentingViewController: UIViewController) {
         let popup = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        popup.addAction(ok)
         presentingViewController.present(popup, animated: true, completion: nil)
     }
     

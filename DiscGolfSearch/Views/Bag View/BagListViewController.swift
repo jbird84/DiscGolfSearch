@@ -14,11 +14,16 @@ class BagListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var bagItems: [Bag] = []
+    var bagItems: [BagSwiftDataModel] = []
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getBags()
     }
     
 
@@ -32,24 +37,22 @@ setupView()
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         
-        bagItems = [
-            Bag(bagHexColor: "#FF5733", bagTitle: "For the woods", bagType: "Woods"),
-            Bag(bagHexColor: "#3498db", bagTitle: "Main Bag", bagType: "Take and win anywhere"),
-            Bag(bagHexColor: "#27ae60", bagTitle: "Open Fields Galore", bagType: "For open courses"),
-            Bag(bagHexColor: "#e74c3c", bagTitle: "Putt & Tricks", bagType: "Close range courses"),
-            Bag(bagHexColor: "#8e44ad", bagTitle: "Backup Bag", bagType: "When I want to mix it up.")
-        ]
-
-
-
-
-
-
     }
     
     @objc func addNewBag() {
         let vc = UIStoryboard(name: "AddBag", bundle: nil).instantiateViewController(identifier: "addBag") as! AddBagViewController
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func getBags() {
+        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
+            if let data = bags, error == nil {
+                self?.bagItems = data
+                self?.tableView.reloadData()
+            } else if let error = error {
+                print("There was a problem getting your bags. Error: \(error)")
+            }
+        }
     }
 
 }
@@ -69,8 +72,21 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            K.showAlertWithDeleteAction(title: "Selected Bag Will Be Deleted", message: "Are you sure you want to delete this bag?", presentingViewController: self) { [weak self] _ in
+                guard let self else { return }
+                BagDatabaseService.shared.deleteBagFromBagView(bag: self.bagItems[indexPath.row])
+                self.bagItems.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
+    }
+    
 }
 
+//MARK: - Empty Dataset Delegates
 extension BagListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
