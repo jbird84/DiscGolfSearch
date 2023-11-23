@@ -36,7 +36,7 @@ class AddDiscToBagViewController: UIViewController {
     
     private func setupView() {
         // Add a "SAVE" button to the navigation bar
-        let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveTapped))
+        let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButtonTapped))
         navigationItem.rightBarButtonItem = saveButton
         
         pickerView.delegate = self
@@ -55,7 +55,7 @@ class AddDiscToBagViewController: UIViewController {
         }
     }
     
-    @objc private func saveTapped() {
+    @objc private func saveButtonTapped() {
         delegate?.saveDisc()
     }
 }
