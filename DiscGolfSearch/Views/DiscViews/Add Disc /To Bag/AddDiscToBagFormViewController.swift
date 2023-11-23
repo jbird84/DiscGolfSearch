@@ -16,18 +16,35 @@ class AddDiscToBagFormViewController: FormViewController {
         case usedFor
         case discPlastic
         case discWeight
+        case selectBag
         case selectColor
     }
     
     var disc: DiscGolfDisc?
+    var bags: [BagSwiftDataModel] = []
     var selectedColor: String = "#FF0000" // Default color
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .dark
+        getBags()
         createForm()
     }
     
+    private func getBags() {
+        BagDatabaseService.shared.fetchDiscBagList { bags, error in
+            if error == nil, bags == [] || bags == nil  {
+                K.showAlertWithAction(title: "No Bags Created", message: "You need to add a bag before you can add a disc to your bags. Click the bag tab and tap the + to add your first bag.", presentingViewController: self, actionTitle: "Go Back") { [weak self] _ in
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                if let theBags = bags {
+                    self.bags = theBags
+                }
+            }
+        }
+    }
     
     private func createForm() {
         form
@@ -61,7 +78,7 @@ class AddDiscToBagFormViewController: FormViewController {
             $0.title =  "Plastic Type"
             $0.placeholder = "N/A"
         }.onChange({ [weak self] row in
-            self?.disc?.plasticType = row.value ?? "N/A"
+           self?.disc?.plasticType = row.value ?? "N/A"
         })
         
         <<< DecimalRow(CellTags.discWeight.rawValue) {
@@ -81,6 +98,13 @@ class AddDiscToBagFormViewController: FormViewController {
             gridColorPickerVC.delegate = self
             self?.present(gridColorPickerVC, animated: true, completion: nil)
         })
+        
+        <<< PushRow<String>(CellTags.selectBag.rawValue) { row in
+                        row.title = "Select Bag"
+                        row.selectorTitle = "Choose a Bag"
+                        row.options = bags.map { $0.bagTitle }
+                        row.value = bags.first?.bagTitle
+                    }
         
         +++ Section("Speed, Glide, Turn, Fade")
         <<< SegmentedRow<String>(){

@@ -14,7 +14,6 @@ protocol SaveDisctoBagDelegate: AnyObject {
 
 class AddDiscToBagViewController: UIViewController {
     
-    @IBOutlet weak var pickerView: UIPickerView!
     
     var disc: DiscGolfDisc?
     var bags: [BagSwiftDataModel] = []
@@ -30,6 +29,7 @@ class AddDiscToBagViewController: UIViewController {
         if segue.identifier == "addBagToFormSegue", let disc = disc {
             let destVC = segue.destination as! AddDiscToBagFormViewController
             destVC.disc = disc
+            destVC.bags = bags
             self.delegate = destVC
         }
     }
@@ -38,21 +38,6 @@ class AddDiscToBagViewController: UIViewController {
         // Add a "SAVE" button to the navigation bar
         let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButtonTapped))
         navigationItem.rightBarButtonItem = saveButton
-        
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        BagDatabaseService.shared.fetchDiscBagList { bags, error in
-            if error == nil, bags == [] || bags == nil  {
-                K.showAlertWithAction(title: "No Bags Created", message: "You need to add a bag before you can add a disc to your bags. Click the bag tab and tap the + to add your first bag.", presentingViewController: self, actionTitle: "Go Back") { [weak self] _ in
-                    self?.navigationController?.popViewController(animated: true)
-                }
-            } else {
-                if let theBags = bags {
-                    self.bags = theBags
-                }
-            }
-        }
     }
     
     @objc private func saveButtonTapped() {
@@ -61,20 +46,4 @@ class AddDiscToBagViewController: UIViewController {
 }
 
 
-//MARK: PickerView Delegates
-extension AddDiscToBagViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return bags.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return bags[row].bagTitle
-    }
-    
-    
-}
+

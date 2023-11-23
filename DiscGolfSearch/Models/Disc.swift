@@ -24,10 +24,10 @@ struct DiscGolfDisc: Codable {
     let brandSlug: String
     let color: String
     let backgroundColor: String
-    var usedFor: String = "Backhand"
-    var plasticType: String = "N/A"
-    var discWeight: String = "0.0"
-    var discColor: String = "#FF0000"
+    var usedFor: String? = "Backhand"
+    var plasticType: String? = "N/A"
+    var discWeight: String? = "0.0"
+    var discColor: String? = "#FF0000"
     
     
     var displayedBrand: String {
