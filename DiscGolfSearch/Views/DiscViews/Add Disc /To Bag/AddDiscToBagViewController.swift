@@ -8,30 +8,26 @@
 import UIKit
 import Eureka
 
-protocol SaveDisctoBagDelegate: AnyObject {
-    func saveDisc()
-}
-
-class AddDiscToBagViewController: UIViewController {
+class AddDiscToBagViewController: FormViewController {
     
+    enum CellTags: String {
+        case discName
+        case discBrand
+        case usedFor
+        case discPlastic
+        case discWeight
+        case selectColor
+    }
     
     var disc: DiscGolfDisc?
     var bags: [BagSwiftDataModel] = []
-    var delegate: SaveDisctoBagDelegate?
+    var selectedColor: String = "#FF0000" // Default color
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        createForm()
         // Do any additional setup after loading the view.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addBagToFormSegue", let disc = disc {
-            let destVC = segue.destination as! AddDiscToBagFormViewController
-            destVC.disc = disc
-            destVC.bags = bags
-            self.delegate = destVC
-        }
     }
     
     private func setupView() {
@@ -40,10 +36,82 @@ class AddDiscToBagViewController: UIViewController {
         navigationItem.rightBarButtonItem = saveButton
     }
     
+        private func createForm() {
+            form
+            +++ Section("Disc Details")
+    
+            <<< LabelRow(CellTags.discName.rawValue) {
+                $0.title =  "Disc Name"
+                $0.value = disc?.name
+            }
+    
+            <<< LabelRow(CellTags.discBrand.rawValue) {
+                $0.title =  "Company"
+                $0.value = disc?.brand
+            }
+    
+            <<< AlertRow<String>(CellTags.usedFor.rawValue) {
+                $0.title = "Used For"
+                $0.selectorTitle = "Mainly Used For:"
+                $0.cancelTitle = "Cancel"
+                $0.options = ["General Use", "Roller", "Backhand", "Flick (Forehand)", "Hyzer","Anhyzer", "Tomahawk", "Thumber", "Approach",        "Putt", "Skip Shot", "Scoober", "Grenade", "Flex Shot", "Turnover", "Stall Shot", "Turbo Putt", "Power Grip", "Fan Grip",
+                    "Crane Shot", "Flex Forehand", "Sky Roller", "Wind Breaker", "Roller Putt", "Low Ceiling Shot", "Jump Putt"]
+                $0.value = "Backhand"
+            }.onChange { [weak self] row in
+                self?.disc?.usedFor = row.value ?? "Backhand"
+            }.cellUpdate({ [weak self] cell, row in
+                cell.accessoryView = self?.createDisclousureIndicatorView()
+            })
+    
+    
+            <<< NameRow(CellTags.discPlastic.rawValue) {
+                $0.title =  "Plastic Type"
+                $0.placeholder = "N/A"
+            }.onChange({ [weak self] row in
+                self?.disc?.plasticType = row.value ?? "N/A"
+            })
+    
+            <<< DecimalRow(CellTags.discWeight.rawValue) {
+                $0.title =  "Disc Weight (g)"
+                $0.placeholder = "0.0"
+            }.onChange({ [weak self] row in
+                self?.disc?.discWeight = String(row.value ?? 0.0)
+            })
+    
+            <<< LabelRow(CellTags.selectColor.rawValue) {
+                $0.title = "Tap to change color"
+            }.cellUpdate({ [weak self] cell, row in
+                cell.accessoryView = self?.createCircleColorView(with: UIColor(hex: self!.selectedColor ))
+            }).onCellSelection({ [weak self] cell, row in
+    
+                let gridColorPickerVC = GridColorPickerViewController()
+                gridColorPickerVC.delegate = self
+                self?.present(gridColorPickerVC, animated: true, completion: nil)
+            })
+    
+            +++ Section("Speed, Glide, Turn, Fade")
+            <<< SegmentedRow<String>(){
+                $0.options = [disc?.speed ?? "NA", disc?.glide ?? "NA", disc?.turn ?? "NA", disc?.fade ?? "NA"]
+                $0.value = "Three"
+                }
+        }
+    
     @objc private func saveButtonTapped() {
-        delegate?.saveDisc()
+        
     }
 }
 
+//MARK: Grid Color Picker Delegates
+extension AddDiscToBagViewController: GridColorPickerDelegate {
+    func colorWasSelected(selectedColor: UIColor) {
+        let color = selectedColor
+        self.selectedColor = color.toHexString()
+        self.disc?.discColor = color.toHexString()
+
+        if let labelRow = form.rowBy(tag: CellTags.selectColor.rawValue) as? LabelRow {
+            labelRow.updateCell()
+        }
+     }
+}
 
 

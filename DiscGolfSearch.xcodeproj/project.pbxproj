@@ -14,7 +14,6 @@
 		DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721D2B08DC13005A107C /* BagDatabaseService.swift */; };
 		DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */; };
 		DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2272292B099D52005A107C /* AddDiscToBag.storyboard */; };
-		DA22722C2B09BA81005A107C /* AddDiscToBagFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */; };
 		DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D342B016EA20050840A /* BagListTableViewCell.swift */; };
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* BagSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagSwiftDataModel.swift */; };
@@ -61,7 +60,6 @@
 		DA22721D2B08DC13005A107C /* BagDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDatabaseService.swift; sourceTree = "<group>"; };
 		DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToBagViewController.swift; sourceTree = "<group>"; };
 		DA2272292B099D52005A107C /* AddDiscToBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDiscToBag.storyboard; sourceTree = "<group>"; };
-		DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToBagFormViewController.swift; sourceTree = "<group>"; };
 		DA363D342B016EA20050840A /* BagListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewCell.swift; sourceTree = "<group>"; };
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* BagSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagSwiftDataModel.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 			children = (
 				DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */,
 				DA2272292B099D52005A107C /* AddDiscToBag.storyboard */,
-				DA22722B2B09BA81005A107C /* AddDiscToBagFormViewController.swift */,
 			);
 			path = "To Bag";
 			sourceTree = "<group>";
@@ -433,7 +430,6 @@
 				DAEE2C972B01D481005D289D /* ImageView+Ext.swift in Sources */,
 				DADB72252AADFCDC0083B13B /* ViewController.swift in Sources */,
 				DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */,
-				DA22722C2B09BA81005A107C /* AddDiscToBagFormViewController.swift in Sources */,
 				DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */,
 				DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
