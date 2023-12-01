@@ -17,15 +17,18 @@ class AddDiscToBagViewController: FormViewController {
         case discPlastic
         case discWeight
         case selectColor
+        case selectBag
     }
     
     var disc: DiscGolfDisc?
     var bags: [BagSwiftDataModel] = []
     var selectedColor: String = "#FF0000" // Default color
+    var selectedBag: BagSwiftDataModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        getBags()
         createForm()
         // Do any additional setup after loading the view.
     }
@@ -34,6 +37,17 @@ class AddDiscToBagViewController: FormViewController {
         // Add a "SAVE" button to the navigation bar
         let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButtonTapped))
         navigationItem.rightBarButtonItem = saveButton
+    }
+    
+    private func getBags() {
+        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
+            if let data = bags, error == nil {
+                self?.bags = data
+                self?.tableView.reloadData()
+            } else if let error = error {
+                print("There was a problem getting your bags. Error: \(error)")
+            }
+        }
     }
     
         private func createForm() {
@@ -88,6 +102,22 @@ class AddDiscToBagViewController: FormViewController {
                 gridColorPickerVC.delegate = self
                 self?.present(gridColorPickerVC, animated: true, completion: nil)
             })
+            
+            +++ Section("Select Bag")
+                    
+                    <<< PickerInlineRow<String>(CellTags.selectBag.rawValue) {
+                        $0.title = "Bag"
+                        $0.options = bags.map { $0.bagTitle }
+                        $0.value = bags.first?.bagTitle // Set default value if available
+                        $0.displayValueFor = { value in
+                            return value
+                        }
+                    }.onChange { [weak self] row in
+                        if let selectedBagTitle = row.value,
+                            let selectedBag = self?.bags.first(where: { $0.bagTitle == selectedBagTitle }) {
+                            self?.selectedBag = selectedBag
+                        }
+                    }
     
             +++ Section("Speed, Glide, Turn, Fade")
             <<< SegmentedRow<String>(){

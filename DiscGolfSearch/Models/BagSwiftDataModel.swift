@@ -15,6 +15,7 @@ class BagSwiftDataModel {
     var bagHexColor: String
     var bagTitle: String
     var bagType: String
+    var discs: [DiscGolfDisc] = []
     
     init(id: String, bagHexColor: String, bagTitle: String, bagType: String) {
         self.id = id
