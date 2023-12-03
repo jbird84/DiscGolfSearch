@@ -1,2 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23C5047e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier=""/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23C5047e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BagEntity" representedClassName="BagEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="bag_disc" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="bag_hex_color" optional="YES" attributeType="String"/>
+        <attribute name="bag_title" optional="YES" attributeType="String"/>
+        <attribute name="bag_type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DiscEntity" representedClassName="DiscEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="discGolfDisc_background_color" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_brand" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_brand_slug" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_category" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_color" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_disc_color" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_fade" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_glide" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_id" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_link" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_name" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_name_slug" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_pic" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_plastic" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_speed" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_stability" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_turn" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_usedFor" optional="YES" attributeType="String"/>
+        <attribute name="discGolfDisc_weight" optional="YES" attributeType="String"/>
+    </entity>
+</model>
