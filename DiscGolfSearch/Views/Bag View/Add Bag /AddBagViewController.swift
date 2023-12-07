@@ -7,6 +7,7 @@
 
 import UIKit
 import Eureka
+import CoreData
 
 class AddBagViewController: FormViewController {
     
@@ -17,6 +18,7 @@ class AddBagViewController: FormViewController {
         case bagColor
     }
     
+        
     private var bagName: String?
     private var bagType: String?
     private var selectedColor: String = "#808080" // Default color
@@ -101,8 +103,18 @@ class AddBagViewController: FormViewController {
             return
         }
         
+        // Generate a random id
+        let randomId = Int64(arc4random_uniform(UInt32.max))
+        
         if let bagName = bagName, let bagType = bagType {
-            BagDatabaseService.shared.saveBag(bagName: bagName, bagType: bagType, bagHexColor: selectedColor, viewController: self)
+            // Create a new entity
+                if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "BagEntity", into: coreDataManager.managedContext) as? BagEntity {
+                    newEntity.setValue(randomId, forKey: "bag_disc")
+                    newEntity.setValue(selectedColor, forKey: "bag_hex_color")
+                    newEntity.setValue(bagName, forKey: "bag_title")
+                    newEntity.setValue(bagType, forKey: "bag_type")
+                    coreDataManager.saveContext()
+                }
             navigationController?.popViewController(animated: true)
         }
     }

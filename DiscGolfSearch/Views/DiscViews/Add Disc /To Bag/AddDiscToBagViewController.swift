@@ -21,9 +21,9 @@ class AddDiscToBagViewController: FormViewController {
     }
     
     var disc: DiscGolfDisc?
-    var bags: [BagSwiftDataModel] = []
+    var bags: [BagDataModel] = []
     var selectedColor: String = "#FF0000" // Default color
-    var selectedBag: BagSwiftDataModel?
+    var selectedBag: BagDataModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +40,15 @@ class AddDiscToBagViewController: FormViewController {
     }
     
     private func getBags() {
-        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
-            if let data = bags, error == nil {
-                self?.bags = data
-                self?.tableView.reloadData()
-            } else if let error = error {
-                print("There was a problem getting your bags. Error: \(error)")
-            }
-        }
+        //TODO: Fetch bags from core data
+//        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
+//            if let data = bags, error == nil {
+//                self?.bags = data
+//                self?.tableView.reloadData()
+//            } else if let error = error {
+//                print("There was a problem getting your bags. Error: \(error)")
+//            }
+//        }
     }
     
         private func createForm() {

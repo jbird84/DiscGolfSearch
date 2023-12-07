@@ -5,4 +5,54 @@
 //  Created by Kinney Kare on 12/4/23.
 //
 
-import Foundation
+import UIKit
+import CoreData
+
+class CoreDataManager {
+    
+    private let modelName: String
+    let persistentContainer: NSPersistentCloudKitContainer
+       
+       // MARK: - Initialization
+       
+       init(modelName: String, persistentContainer: NSPersistentCloudKitContainer) {
+           self.modelName = modelName
+           self.persistentContainer = persistentContainer
+       }
+    
+    // MARK: - Core Data Operations
+        func saveContext() {
+            guard persistentContainer.viewContext.hasChanges else { return }
+            
+            do {
+                try persistentContainer.viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+        
+        // MARK: - Fetch Request
+        func fetch<T: NSManagedObject>(_ objectType: T.Type, predicate: NSPredicate? = nil) -> [T] {
+            let entityName = String(describing: objectType)
+            let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+            
+            if let predicate = predicate {
+                fetchRequest.predicate = predicate
+            }
+            
+            do {
+                let result = try persistentContainer.viewContext.fetch(fetchRequest)
+                return result
+            } catch {
+                print("Error fetching data: \(error.localizedDescription)")
+                return []
+            }
+        }
+        
+        // MARK: - Delete
+        func delete(_ object: NSManagedObject) {
+            persistentContainer.viewContext.delete(object)
+            saveContext()
+        }
+    }

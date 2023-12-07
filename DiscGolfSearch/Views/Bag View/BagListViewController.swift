@@ -7,18 +7,19 @@
 
 import UIKit
 import DZNEmptyDataSet
+import CoreData
 
 class BagListViewController: UIViewController {
-
-    @IBOutlet weak var navBarItem: UINavigationItem!
     
+    @IBOutlet weak var navBarItem: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     
-    var bagItems: [BagSwiftDataModel] = []
- 
+    var bagItems: [BagDataModel] = []
+    let coreDataManager = CoreDataManager(modelName: "BagDataModel")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-setupView()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +27,7 @@ setupView()
         getBags()
     }
     
-
+    
     private func setupView() {
         let addNewBagButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addNewBag))
         navBarItem.rightBarButtonItem = addNewBagButton
@@ -45,21 +46,22 @@ setupView()
     }
     
     private func getBags() {
-        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
-            if let data = bags, error == nil {
-                self?.bagItems = data
-                self?.tableView.reloadData()
-            } else if let error = error {
-                print("There was a problem getting your bags. Error: \(error)")
+        // Fetch entities
+        let entities = coreDataManager.fetch(BagEntity.self)
+        
+        // Convert BagEntity instances to BagDataModel instances
+        if !entities.isEmpty {
+            self.bagItems = entities.map { entity in
+                return BagDataModel(id: entity.bag_disc, bagHexColor: entity.bag_hex_color!, bagTitle: entity.bag_title!, bagType: entity.bag_type!)
             }
+            self.tableView.reloadData()
         }
     }
-
 }
 
 //MARK: - TableView Delegate Methods
 extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bagItems.count
     }
@@ -76,10 +78,20 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             K.showAlertWithDeleteAction(title: "Selected Bag Will Be Deleted", message: "Are you sure you want to delete this bag?", presentingViewController: self) { [weak self] _ in
-                guard let self else { return }
-                BagDatabaseService.shared.deleteBagFromBagView(bag: self.bagItems[indexPath.row])
-                self.bagItems.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
+                guard let self = self else { return }
+
+                // Get the BagDataModel to be deleted
+                let bagDataModelToDelete = self.bagItems[indexPath.row]
+
+                // Convert BagDataModel to NSManagedObject
+                if let bagEntityToDelete = self.coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
+                    // Delete the object from Core Data
+                    self.coreDataManager.delete(bagEntityToDelete)
+
+                    // Update the data source and table view
+                    self.bagItems.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
             }
         }
     }
@@ -107,7 +119,7 @@ extension BagListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
             return UIColor.secondaryLabel
         }
     }
-
+    
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         let str = "Tap the + button above to create your first bag."
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
