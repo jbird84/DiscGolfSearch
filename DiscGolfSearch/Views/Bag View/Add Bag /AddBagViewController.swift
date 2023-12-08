@@ -18,7 +18,8 @@ class AddBagViewController: FormViewController {
         case bagColor
     }
     
-        
+    var coreDataManager: CoreDataManager!
+    
     private var bagName: String?
     private var bagType: String?
     private var selectedColor: String = "#808080" // Default color
@@ -34,6 +35,11 @@ class AddBagViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Access the shared instance of CoreDataManager from AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate not found")
+        }
+        coreDataManager = appDelegate.coreDataManager
         createForm()
         setupView()
     }
@@ -108,13 +114,13 @@ class AddBagViewController: FormViewController {
         
         if let bagName = bagName, let bagType = bagType {
             // Create a new entity
-                if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "BagEntity", into: coreDataManager.managedContext) as? BagEntity {
-                    newEntity.setValue(randomId, forKey: "bag_disc")
-                    newEntity.setValue(selectedColor, forKey: "bag_hex_color")
-                    newEntity.setValue(bagName, forKey: "bag_title")
-                    newEntity.setValue(bagType, forKey: "bag_type")
-                    coreDataManager.saveContext()
-                }
+            if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "BagEntity", into: coreDataManager.managedContext) as? BagEntity {
+                newEntity.setValue(randomId, forKey: "bag_disc")
+                newEntity.setValue(selectedColor, forKey: "bag_hex_color")
+                newEntity.setValue(bagName, forKey: "bag_title")
+                newEntity.setValue(bagType, forKey: "bag_type")
+                coreDataManager.saveContext()
+            }
             navigationController?.popViewController(animated: true)
         }
     }
@@ -128,8 +134,8 @@ extension AddBagViewController: GridColorPickerDelegate {
         imageView.setImageColor(color: color)
     }
     
-     
-  
+    
+    
 }
 
 

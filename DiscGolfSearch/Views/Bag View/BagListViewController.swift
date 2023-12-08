@@ -15,7 +15,8 @@ class BagListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var bagItems: [BagDataModel] = []
-    let coreDataManager = CoreDataManager(modelName: "BagDataModel")
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ class BagListViewController: UIViewController {
     
     private func getBags() {
         // Fetch entities
-        let entities = coreDataManager.fetch(BagEntity.self)
+        let entities = appDelegate.coreDataManager.fetch(BagEntity.self)
         
         // Convert BagEntity instances to BagDataModel instances
         if !entities.isEmpty {
@@ -84,9 +85,10 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
                 let bagDataModelToDelete = self.bagItems[indexPath.row]
 
                 // Convert BagDataModel to NSManagedObject
-                if let bagEntityToDelete = self.coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
+                if let bagEntityToDelete = appDelegate.coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
+                    
                     // Delete the object from Core Data
-                    self.coreDataManager.delete(bagEntityToDelete)
+                    appDelegate.coreDataManager.delete(bagEntityToDelete)
 
                     // Update the data source and table view
                     self.bagItems.remove(at: indexPath.row)
