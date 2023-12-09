@@ -115,7 +115,7 @@ class AddBagViewController: FormViewController {
         if let bagName = bagName, let bagType = bagType {
             // Create a new entity
             if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "BagEntity", into: coreDataManager.managedContext) as? BagEntity {
-                newEntity.setValue(randomId, forKey: "bag_disc")
+                newEntity.setValue(randomId, forKey: "id")
                 newEntity.setValue(selectedColor, forKey: "bag_hex_color")
                 newEntity.setValue(bagName, forKey: "bag_title")
                 newEntity.setValue(bagType, forKey: "bag_type")

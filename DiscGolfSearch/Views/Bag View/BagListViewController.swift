@@ -16,10 +16,14 @@ class BagListViewController: UIViewController {
     
     var bagItems: [BagDataModel] = []
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var coreDataManager: CoreDataManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate not found")
+        }
+        coreDataManager = appDelegate.coreDataManager
         setupView()
     }
     
@@ -48,12 +52,12 @@ class BagListViewController: UIViewController {
     
     private func getBags() {
         // Fetch entities
-        let entities = appDelegate.coreDataManager.fetch(BagEntity.self)
+        let entities = coreDataManager.fetch(BagEntity.self)
         
         // Convert BagEntity instances to BagDataModel instances
         if !entities.isEmpty {
             self.bagItems = entities.map { entity in
-                return BagDataModel(id: entity.bag_disc, bagHexColor: entity.bag_hex_color!, bagTitle: entity.bag_title!, bagType: entity.bag_type!)
+                return BagDataModel(id: entity.id, bagHexColor: entity.bag_hex_color!, bagTitle: entity.bag_title!, bagType: entity.bag_type!)
             }
             self.tableView.reloadData()
         }
@@ -85,10 +89,10 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
                 let bagDataModelToDelete = self.bagItems[indexPath.row]
 
                 // Convert BagDataModel to NSManagedObject
-                if let bagEntityToDelete = appDelegate.coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
+                if let bagEntityToDelete = coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
                     
                     // Delete the object from Core Data
-                    appDelegate.coreDataManager.delete(bagEntityToDelete)
+                    coreDataManager.delete(bagEntityToDelete)
 
                     // Update the data source and table view
                     self.bagItems.remove(at: indexPath.row)
@@ -97,7 +101,6 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
 }
 
 //MARK: - Empty Dataset Delegates
