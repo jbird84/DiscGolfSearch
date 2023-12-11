@@ -348,6 +348,7 @@ extension DiscViewController: AddDiscToViewDelegate {
         
         if let vc = storyboard.instantiateViewController(withIdentifier: "addDiscToBagVC") as? AddDiscToBagViewController, let disc = disc {
             vc.disc = disc
+            vc.hidesBottomBarWhenPushed = true 
             navigationController?.pushViewController(vc, animated: true)
         }
     }

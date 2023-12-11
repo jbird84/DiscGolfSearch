@@ -53,8 +53,12 @@ class AddDiscToBagViewController: FormViewController {
         // Convert BagEntity objects to BagDataModel
         bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
         
-        // Reload the form to update the picker row
-        tableView?.reloadData()
+        if bags.isEmpty {
+            K.showAlert(title: "No Bags Found", message: "Please go to the bag tab and create your first bag.", presentingViewController: self)
+        } else {
+            // Reload the form to update the picker row
+            tableView?.reloadData()
+        }
     }
     
         private func createForm() {
@@ -111,21 +115,18 @@ class AddDiscToBagViewController: FormViewController {
             })
             
             +++ Section("Select Bag")
-                    
-                    <<< PickerInlineRow<String>(CellTags.selectBag.rawValue) {
-                        $0.title = "Bag"
-                        $0.options = bags.map { $0.bagTitle }
-                        $0.value = bags.first?.bagTitle // Set default value if available
-                        $0.displayValueFor = { value in
-                            return value
-                        }
-                    }.onChange { [weak self] row in
-                        if let selectedBagTitle = row.value,
-                            let selectedBag = self?.bags.first(where: { $0.bagTitle == selectedBagTitle }) {
-                            self?.selectedBag = selectedBag
-                        }
+                <<< PushRow<String>(CellTags.selectBag.rawValue) {
+                    $0.title = "Bag"
+                    $0.options = bags.map { $0.bagTitle }
+                    $0.value = bags.first?.bagTitle // Set default value if available
+                    $0.selectorTitle = "Select a Bag"
+                }.onChange { [weak self] row in
+                    if let selectedBagTitle = row.value,
+                        let selectedBag = self?.bags.first(where: { $0.bagTitle == selectedBagTitle }) {
+                        self?.selectedBag = selectedBag
                     }
-    
+            }
+            
             +++ Section("Speed, Glide, Turn, Fade")
             <<< SegmentedRow<String>(){
                 $0.options = [disc?.speed ?? "NA", disc?.glide ?? "NA", disc?.turn ?? "NA", disc?.fade ?? "NA"]
