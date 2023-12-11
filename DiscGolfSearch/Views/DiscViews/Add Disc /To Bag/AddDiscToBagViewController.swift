@@ -20,6 +20,8 @@ class AddDiscToBagViewController: FormViewController {
         case selectBag
     }
     
+    var coreDataManager: CoreDataManager!
+    
     var disc: DiscGolfDisc?
     var bags: [BagDataModel] = []
     var selectedColor: String = "#FF0000" // Default color
@@ -37,18 +39,22 @@ class AddDiscToBagViewController: FormViewController {
         // Add a "SAVE" button to the navigation bar
         let saveButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveButtonTapped))
         navigationItem.rightBarButtonItem = saveButton
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate not found")
+        }
+        coreDataManager = appDelegate.coreDataManager
     }
     
     private func getBags() {
-        //TODO: Fetch bags from core data
-//        BagDatabaseService.shared.fetchDiscBagList { [weak self] bags, error in
-//            if let data = bags, error == nil {
-//                self?.bags = data
-//                self?.tableView.reloadData()
-//            } else if let error = error {
-//                print("There was a problem getting your bags. Error: \(error)")
-//            }
-//        }
+        // Fetch bags from core data
+        let bagsFromCoreData = coreDataManager.fetch(BagEntity.self)
+
+        // Convert BagEntity objects to BagDataModel
+        bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
+        
+        // Reload the form to update the picker row
+        tableView?.reloadData()
     }
     
         private func createForm() {
