@@ -30,6 +30,7 @@ class AddDiscToView: UIView {
         //Send user to fillout form then pop to view
         print("Added Disc To Bag!")
         delegate?.saveDiscToBag()
+        delegate?.dissmiss()
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

@@ -55,6 +55,7 @@ class AddDiscToBagViewController: FormViewController {
         
         if bags.isEmpty {
             K.showAlert(title: "No Bags Found", message: "Please go to the bag tab and create your first bag.", presentingViewController: self)
+            navigationController?.popViewController(animated: true)
         } else {
             // Reload the form to update the picker row
             tableView?.reloadData()
