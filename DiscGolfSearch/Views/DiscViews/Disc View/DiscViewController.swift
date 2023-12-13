@@ -349,6 +349,7 @@ extension DiscViewController: AddDiscToViewDelegate {
         if let vc = storyboard.instantiateViewController(withIdentifier: "addDiscToBagVC") as? AddDiscToBagViewController, let disc = disc {
             vc.disc = disc
             vc.hidesBottomBarWhenPushed = true 
+            vc.overrideUserInterfaceStyle = .dark  // Set the overrideUserInterfaceStyle to .dark
             navigationController?.pushViewController(vc, animated: true)
         }
     }
