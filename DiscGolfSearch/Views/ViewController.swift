@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         getDiscData()
-        print("This is a test")
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
         navigationItem.rightBarButtonItem = selectAllButton
