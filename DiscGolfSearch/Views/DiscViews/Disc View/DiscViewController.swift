@@ -261,38 +261,35 @@ class DiscViewController: UIViewController {
     }
     
     private func getImageFromLink(imageView: UIImageView, disc: DiscGolfDisc) {
+        imageView.image = UIImage(named: "nowLoadingBlankDisc")
         if let webLink = DiscImageNames.webLink(for: disc.brand, disc: disc.nameSlug) {
             if let imageURL = URL(string: webLink) {
                 APIManager.shared.downloadImage(from: imageURL) { imageData in
-                    
                     DispatchQueue.main.async {
-                        
                         if let imageData = imageData {
                             if let image = UIImage(data: imageData) {
                                 imageView.image = image
-                                
-                                
                             } else {
                                 print("Failed to create UIImage from image data")
-                                
+                                imageView.image = UIImage(named: "noDisc")
                             }
-                            
                         } else {
                             print("Failed to download image")
+                            imageView.image = UIImage(named: "noDisc")
                         }
                     }
                 }
-                
             } else {
-                imageView.image = UIImage(named: "blankDisc")
-                
+                DispatchQueue.main.async {
+                    print("Failed to create URL from web link")
+                    imageView.image = UIImage(named: "nowLoadingBlankDisc")
+                }
             }
-            
         } else {
-            imageView.image = UIImage(named: "nowLoadingBlankDisc")
-            
+            DispatchQueue.main.async {
+                imageView.image = UIImage(named: "noDisc")
+            }
         }
-        
     }
     
     private func startRotation() {
