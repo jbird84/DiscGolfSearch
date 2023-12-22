@@ -55,6 +55,7 @@ class DiscViewController: UIViewController {
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
+        navigationController?.navigationBar.backgroundColor = .clear
     }
     
     override func viewWillAppear(_ animated: Bool) {
