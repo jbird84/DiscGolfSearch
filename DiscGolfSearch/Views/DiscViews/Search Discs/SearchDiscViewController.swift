@@ -20,6 +20,7 @@ class SearchDiscViewController: UIViewController {
         
         setupNavigationBar()
         searchBar.delegate = self
+        searchBar.placeholder = "Start typing a disc name"
         tableView.dataSource = self
         tableView.delegate = self
     }
