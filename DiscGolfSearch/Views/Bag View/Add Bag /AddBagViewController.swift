@@ -54,6 +54,7 @@ class AddBagViewController: FormViewController {
         // Set the plus sign image to the image view
         imageView.image = UIImage(named: "bag")
         imageView.setImageColor(color: UIColor.systemGray2)
+    
         
         // Calculate the center of the screen
         let centerX = view.bounds.midX

@@ -97,6 +97,7 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
                     // Update the data source and table view
                     self.bagItems.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .automatic)
+                    tableView.reloadData()
                 }
             }
         }
@@ -130,5 +131,4 @@ extension BagListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
-    
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class CartViewController: UIViewController {
     
@@ -16,8 +17,8 @@ class CartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        getDiscs()
-        setupTableView()
-        setupNavigationBar()
+       setupTableView()
+       setupNavigationBar()
     }
     
     private func setupNavigationBar() {
@@ -28,6 +29,8 @@ class CartViewController: UIViewController {
     private func setupTableView()  {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
     }
     
     private func getDiscs() {
@@ -81,5 +84,33 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+}
+
+//MARK: - Empty Dataset Delegates
+extension CartViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "noCart")
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Your Cart Is Empty"
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
+        if userInterfaceStyle != .dark {
+            return UIColor.label
+        } else {
+            return UIColor.secondaryLabel
+        }
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Go to the disc tab, find a disc, click the + button and tap \"Add Disc To Cart\" to add your first disc to your cart.."
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
 }
