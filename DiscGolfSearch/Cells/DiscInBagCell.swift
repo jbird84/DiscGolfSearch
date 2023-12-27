@@ -9,6 +9,11 @@ import UIKit
 
 class DiscInBagCell: UITableViewCell {
 
+    @IBOutlet weak var discImageColorImageView: UIImageView!
+    @IBOutlet weak var discNameLabel: UILabel!
+    @IBOutlet weak var usedForLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -80,6 +80,16 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bag = bagItems[indexPath.item]
+        
+        let storyboard = UIStoryboard(name: "Bag", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "bagVC") as? BagViewController {
+            vc.bag = bag
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             K.showAlertWithDeleteAction(title: "Selected Bag Will Be Deleted", message: "Are you sure you want to delete this bag?", presentingViewController: self) { [weak self] _ in

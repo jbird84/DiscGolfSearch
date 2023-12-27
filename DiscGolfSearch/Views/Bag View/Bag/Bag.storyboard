@@ -1,28 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bag View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bagVC" id="Y6W-OH-hqX" customClass="BagViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-Pq-Obk">
+                                <rect key="frame" x="16" y="63" width="361" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vAq-g3-a7q"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Disc List"/>
+                                    <segment title="Disc Chart"/>
+                                    <segment title="Disc Path"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tzQ-Dn-2pU">
+                                <rect key="frame" x="0.0" y="113" width="393" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discInBagCell" rowHeight="87" id="NtB-Du-DZa" customClass="DiscInBagCell" customModule="DiscGolfSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NtB-Du-DZa" id="OH2-g1-eRN">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dej-lQ-7BJ">
+                                                    <rect key="frame" x="20" y="9.6666666666666643" width="70" height="68.666666666666686"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="iDW-ln-Las"/>
+                                                        <constraint firstAttribute="width" constant="70" id="xDp-JP-SIg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CHH-3s-Cuc">
+                                                    <rect key="frame" x="98" y="19.000000000000004" width="265" height="49.333333333333343"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disc Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Uy-NK0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="45b-lD-ozi">
+                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="265" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Used For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp5-Gj-25V">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="Ijl-CP-fRT"/>
+                                                                        <constraint firstAttribute="width" constant="85" id="p4K-Z8-Q6B"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backhand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIA-9q-kbY">
+                                                                    <rect key="frame" x="78" y="0.0" width="187" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="187" id="rT4-Ro-46N"/>
+                                                                        <constraint firstAttribute="height" constant="21" id="xZz-K6-9R3"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dej-lQ-7BJ" firstAttribute="leading" secondItem="OH2-g1-eRN" secondAttribute="leading" constant="20" symbolic="YES" id="7nz-80-mQi"/>
+                                                <constraint firstItem="dej-lQ-7BJ" firstAttribute="centerY" secondItem="OH2-g1-eRN" secondAttribute="centerY" id="EPg-PM-hrs"/>
+                                                <constraint firstItem="CHH-3s-Cuc" firstAttribute="centerY" secondItem="OH2-g1-eRN" secondAttribute="centerY" id="eSJ-6t-IXa"/>
+                                                <constraint firstItem="CHH-3s-Cuc" firstAttribute="leading" secondItem="dej-lQ-7BJ" secondAttribute="trailing" constant="8" symbolic="YES" id="xMG-7V-Kok"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="discImageColorImageView" destination="dej-lQ-7BJ" id="baf-W9-COF"/>
+                                            <outlet property="discNameLabel" destination="pmD-Uy-NK0" id="aZd-cz-IYb"/>
+                                            <outlet property="usedForLabel" destination="PIA-9q-kbY" id="ZXJ-3u-Wl4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tzQ-Dn-2pU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3ay-57-Xg1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tzQ-Dn-2pU" secondAttribute="bottom" id="6ND-2C-Qif"/>
+                            <constraint firstItem="AUm-Pq-Obk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="Mql-gn-Ozx"/>
+                            <constraint firstItem="tzQ-Dn-2pU" firstAttribute="top" secondItem="AUm-Pq-Obk" secondAttribute="bottom" constant="10" id="hHt-PI-vej"/>
+                            <constraint firstItem="AUm-Pq-Obk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="hbd-Jk-3Cx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AUm-Pq-Obk" secondAttribute="trailing" constant="16" id="nxJ-3d-Sed"/>
+                            <constraint firstItem="tzQ-Dn-2pU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xoJ-6i-cdm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segControl" destination="AUm-Pq-Obk" id="EDI-mv-gq1"/>
+                        <outlet property="tableView" destination="tzQ-Dn-2pU" id="Lv6-JH-hIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-37.404580152671755" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

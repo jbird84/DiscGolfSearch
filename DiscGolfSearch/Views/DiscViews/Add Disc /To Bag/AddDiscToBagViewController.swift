@@ -7,6 +7,7 @@
 
 import UIKit
 import Eureka
+import CoreData
 
 class AddDiscToBagViewController: FormViewController {
     
@@ -21,7 +22,6 @@ class AddDiscToBagViewController: FormViewController {
     }
     
     var coreDataManager: CoreDataManager!
-    
     var disc: DiscGolfDisc?
     var bags: [BagDataModel] = []
     var selectedColor: String = "#FF0000" // Default color
@@ -49,7 +49,7 @@ class AddDiscToBagViewController: FormViewController {
     private func getBags() {
         // Fetch bags from core data
         let bagsFromCoreData = coreDataManager.fetch(BagEntity.self)
-
+        
         // Convert BagEntity objects to BagDataModel
         bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
         
@@ -62,81 +62,109 @@ class AddDiscToBagViewController: FormViewController {
         }
     }
     
-        private func createForm() {
-            form
-            +++ Section("Disc Details")
-    
-            <<< LabelRow(CellTags.discName.rawValue) {
-                $0.title =  "Disc Name"
-                $0.value = disc?.name
-            }
-    
-            <<< LabelRow(CellTags.discBrand.rawValue) {
-                $0.title =  "Company"
-                $0.value = disc?.brand
-            }
-    
-            <<< AlertRow<String>(CellTags.usedFor.rawValue) {
-                $0.title = "Used For"
-                $0.selectorTitle = "Mainly Used For:"
-                $0.cancelTitle = "Cancel"
-                $0.options = ["General Use", "Roller", "Backhand", "Flick (Forehand)", "Hyzer","Anhyzer", "Tomahawk", "Thumber", "Approach",        "Putt", "Skip Shot", "Scoober", "Grenade", "Flex Shot", "Turnover", "Stall Shot", "Turbo Putt", "Power Grip", "Fan Grip",
-                    "Crane Shot", "Flex Forehand", "Sky Roller", "Wind Breaker", "Roller Putt", "Low Ceiling Shot", "Jump Putt"]
-                $0.value = "Backhand"
-            }.onChange { [weak self] row in
-                self?.disc?.usedFor = row.value ?? "Backhand"
-            }.cellUpdate({ [weak self] cell, row in
-                cell.accessoryView = self?.createDisclousureIndicatorView()
-            })
-    
-    
-            <<< NameRow(CellTags.discPlastic.rawValue) {
-                $0.title =  "Plastic Type"
-                $0.placeholder = "N/A"
-            }.onChange({ [weak self] row in
-                self?.disc?.plasticType = row.value ?? "N/A"
-            })
-    
-            <<< DecimalRow(CellTags.discWeight.rawValue) {
-                $0.title =  "Disc Weight (g)"
-                $0.placeholder = "0.0"
-            }.onChange({ [weak self] row in
-                self?.disc?.discWeight = String(row.value ?? 0.0)
-            })
-    
-            <<< LabelRow(CellTags.selectColor.rawValue) {
-                $0.title = "Tap to change color"
-            }.cellUpdate({ [weak self] cell, row in
-                cell.accessoryView = self?.createCircleColorView(with: UIColor(hex: self!.selectedColor ))
-            }).onCellSelection({ [weak self] cell, row in
-    
-                let gridColorPickerVC = GridColorPickerViewController()
-                gridColorPickerVC.delegate = self
-                self?.present(gridColorPickerVC, animated: true, completion: nil)
-            })
-            
-            +++ Section("Select Bag")
-                <<< PushRow<String>(CellTags.selectBag.rawValue) {
-                    $0.title = "Bag"
-                    $0.options = bags.map { $0.bagTitle }
-                    $0.value = bags.first?.bagTitle // Set default value if available
-                    $0.selectorTitle = "Select a Bag"
-                }.onChange { [weak self] row in
-                    if let selectedBagTitle = row.value,
-                        let selectedBag = self?.bags.first(where: { $0.bagTitle == selectedBagTitle }) {
-                        self?.selectedBag = selectedBag
-                    }
-            }
-            
-            +++ Section("Speed, Glide, Turn, Fade")
-            <<< SegmentedRow<String>(){
-                $0.options = [disc?.speed ?? "NA", disc?.glide ?? "NA", disc?.turn ?? "NA", disc?.fade ?? "NA"]
-                $0.value = "Three"
-                }
+    private func createForm() {
+        form
+        +++ Section("Disc Details")
+        
+        <<< LabelRow(CellTags.discName.rawValue) {
+            $0.title =  "Disc Name"
+            $0.value = disc?.name
         }
+        
+        <<< LabelRow(CellTags.discBrand.rawValue) {
+            $0.title =  "Company"
+            $0.value = disc?.brand
+        }
+        
+        <<< AlertRow<String>(CellTags.usedFor.rawValue) {
+            $0.title = "Used For"
+            $0.selectorTitle = "Mainly Used For:"
+            $0.cancelTitle = "Cancel"
+            $0.options = ["General Use", "Roller", "Backhand", "Flick (Forehand)", "Hyzer","Anhyzer", "Tomahawk", "Thumber", "Approach",        "Putt", "Skip Shot", "Scoober", "Grenade", "Flex Shot", "Turnover", "Stall Shot", "Turbo Putt", "Power Grip", "Fan Grip",
+                          "Crane Shot", "Flex Forehand", "Sky Roller", "Wind Breaker", "Roller Putt", "Low Ceiling Shot", "Jump Putt"]
+            $0.value = "Backhand"
+        }.onChange { [weak self] row in
+            self?.disc?.usedFor = row.value ?? "Backhand"
+        }.cellUpdate({ [weak self] cell, row in
+            cell.accessoryView = self?.createDisclousureIndicatorView()
+        })
+        
+        
+        <<< NameRow(CellTags.discPlastic.rawValue) {
+            $0.title =  "Plastic Type"
+            $0.placeholder = "N/A"
+        }.onChange({ [weak self] row in
+            self?.disc?.plasticType = row.value ?? "N/A"
+        })
+        
+        <<< DecimalRow(CellTags.discWeight.rawValue) {
+            $0.title =  "Disc Weight (g)"
+            $0.placeholder = "0.0"
+        }.onChange({ [weak self] row in
+            self?.disc?.discWeight = String(row.value ?? 0.0)
+        })
+        
+        <<< LabelRow(CellTags.selectColor.rawValue) {
+            $0.title = "Tap to change color"
+        }.cellUpdate({ [weak self] cell, row in
+            cell.accessoryView = self?.createCircleColorView(with: UIColor(hex: self!.selectedColor ))
+        }).onCellSelection({ [weak self] cell, row in
+            
+            let gridColorPickerVC = GridColorPickerViewController()
+            gridColorPickerVC.delegate = self
+            self?.present(gridColorPickerVC, animated: true, completion: nil)
+        })
+        
+        +++ Section("Select Bag")
+        <<< PushRow<String>(CellTags.selectBag.rawValue) {
+            $0.title = "Bag"
+            $0.options = bags.map { $0.bagTitle }
+            $0.value = bags.first?.bagTitle // Set default value if available
+            $0.selectorTitle = "Select a Bag"
+        }.onChange { [weak self] row in
+            if let selectedBagTitle = row.value,
+               let selectedBag = self?.bags.first(where: { $0.bagTitle == selectedBagTitle }) {
+                self?.selectedBag = selectedBag
+            }
+        }
+        
+        +++ Section("Speed, Glide, Turn, Fade")
+        <<< SegmentedRow<String>(){
+            $0.options = [disc?.speed ?? "NA", disc?.glide ?? "NA", disc?.turn ?? "NA", disc?.fade ?? "NA"]
+            $0.value = "Three"
+        }
+    }
     
     @objc private func saveButtonTapped() {
         
+        // Generate a random id
+        let randomId = Int64(arc4random_uniform(UInt32.max))
+        
+        if let currentDisc = disc {
+            // Create a new entity
+            if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "DiscEntity", into: coreDataManager.managedContext) as? DiscEntity {
+                newEntity.setValue(randomId, forKey: "discGolfDisc_id")
+                newEntity.setValue(currentDisc.name, forKey: "discGolfDisc_name")
+                newEntity.setValue(currentDisc.brand, forKey: "discGolfDisc_brand")
+                newEntity.setValue(currentDisc.usedFor, forKey: "discGolfDisc_usedFor")
+                newEntity.setValue(currentDisc.plasticType, forKey: "discGolfDisc_plastic")
+                newEntity.setValue(currentDisc.discWeight, forKey: "discGolfDisc_weight")
+                newEntity.setValue(selectedBag, forKey: "discGolfDisc_bag_name")
+                newEntity.setValue(selectedColor, forKey: "discGolfDisc_color")
+                newEntity.setValue(currentDisc.speed, forKey: "discGolfDisc_speed")
+                newEntity.setValue(currentDisc.turn, forKey: "discGolfDisc_turn")
+                newEntity.setValue(currentDisc.fade, forKey: "discGolfDisc_fade")
+                newEntity.setValue(currentDisc.glide, forKey: "discGolfDisc_glide")
+                newEntity.setValue(currentDisc.brandSlug, forKey: "discGolfDisc_brand_slug")
+                newEntity.setValue(currentDisc.category, forKey: "discGolfDisc_category")
+                newEntity.setValue(currentDisc.link, forKey: "discGolfDisc_link")
+                newEntity.setValue(currentDisc.nameSlug, forKey: "discGolfDisc_name_slug")
+                newEntity.setValue(currentDisc.pic, forKey: "discGolfDisc_pic")
+                newEntity.setValue(currentDisc.stability, forKey: "discGolfDisc_stability")
+                coreDataManager.saveContext()
+            }
+            navigationController?.popViewController(animated: true)
+        }
     }
 }
 
@@ -146,11 +174,11 @@ extension AddDiscToBagViewController: GridColorPickerDelegate {
         let color = selectedColor
         self.selectedColor = color.toHexString()
         self.disc?.discColor = color.toHexString()
-
+        
         if let labelRow = form.rowBy(tag: CellTags.selectColor.rawValue) as? LabelRow {
             labelRow.updateCell()
         }
-     }
+    }
 }
 
 
