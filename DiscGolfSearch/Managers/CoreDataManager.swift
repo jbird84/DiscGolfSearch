@@ -40,7 +40,7 @@ class CoreDataManager {
     
     // MARK: - Fetch Request
     
-    func fetch<T: NSManagedObject>(_ objectType: T.Type, predicate: NSPredicate? = nil) -> [T] {
+    func fetch<T: NSManagedObject>(_ objectType: T.Type, predicate: NSPredicate? = nil) -> Result<[T], Error>  {
         let entityName = String(describing: objectType)
         let fetchRequest = NSFetchRequest<T>(entityName: entityName)
         
@@ -50,10 +50,10 @@ class CoreDataManager {
         
         do {
             let result = try persistentContainer.viewContext.fetch(fetchRequest)
-            return result
+            return .success(result)
         } catch {
             print("Error fetching data: \(error.localizedDescription)")
-            return []
+            return .failure(error)
         }
     }
     

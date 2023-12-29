@@ -52,14 +52,21 @@ class BagListViewController: UIViewController {
     
     private func getBags() {
         // Fetch entities
-        let entities = coreDataManager.fetch(BagEntity.self)
+        let result = coreDataManager.fetch(BagEntity.self)
         
-        // Convert BagEntity instances to BagDataModel instances
-        if !entities.isEmpty {
-            self.bagItems = entities.map { entity in
-                return BagDataModel(id: entity.id, bagHexColor: entity.bag_hex_color!, bagTitle: entity.bag_title!, bagType: entity.bag_type!)
+        switch result {
+        case .success(let entities):
+            // Convert BagEntity instances to BagDataModel instances
+            if !entities.isEmpty {
+                self.bagItems = entities.map { entity in
+                    return BagDataModel(id: entity.id, bagHexColor: entity.bag_hex_color!, bagTitle: entity.bag_title!, bagType: entity.bag_type!)
+                }
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
+        case .failure(let error):
+            // Handle the error appropriately, e.g., show an alert or log the error
+            print("Error fetching bags: \(error.localizedDescription)")
+            K.showAlert(title: "Error", message: "Failed to fetch bags. Please try again later.", presentingViewController: self)
         }
     }
 }
@@ -98,16 +105,22 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
                 // Get the BagDataModel to be deleted
                 let bagDataModelToDelete = self.bagItems[indexPath.row]
 
-                // Convert BagDataModel to NSManagedObject
-                if let bagEntityToDelete = coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)).first {
-                    
-                    // Delete the object from Core Data
-                    coreDataManager.delete(bagEntityToDelete)
+                // Fetch BagEntity instances for deletion
+                switch coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)) {
+                case .success(let bagEntities):
+                    if let bagEntityToDelete = bagEntities.first {
+                        // Delete the object from Core Data
+                        coreDataManager.delete(bagEntityToDelete)
 
-                    // Update the data source and table view
-                    self.bagItems.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                    tableView.reloadData()
+                        // Update the data source and table view
+                        self.bagItems.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .automatic)
+                        tableView.reloadData()
+                    }
+                case .failure(let error):
+                    // Handle the error appropriately, e.g., show an alert or log the error
+                    print("Error fetching bag entities for deletion: \(error.localizedDescription)")
+                    K.showAlert(title: "Error", message: "Failed to delete bag. Please try again later.", presentingViewController: self)
                 }
             }
         }

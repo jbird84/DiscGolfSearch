@@ -48,17 +48,24 @@ class AddDiscToBagViewController: FormViewController {
     
     private func getBags() {
         // Fetch bags from core data
-        let bagsFromCoreData = coreDataManager.fetch(BagEntity.self)
+        let result = coreDataManager.fetch(BagEntity.self)
         
-        // Convert BagEntity objects to BagDataModel
-        bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
-        
-        if bags.isEmpty {
-            K.showAlert(title: "No Bags Found", message: "Please go to the bag tab and create your first bag.", presentingViewController: self)
-            navigationController?.popViewController(animated: true)
-        } else {
-            // Reload the form to update the picker row
-            tableView?.reloadData()
+        switch result {
+        case .success(let bagsFromCoreData):
+            // Convert BagEntity objects to BagDataModel
+            bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
+            
+            if bags.isEmpty {
+                K.showAlert(title: "No Bags Found", message: "Please go to the bag tab and create your first bag.", presentingViewController: self)
+                navigationController?.popViewController(animated: true)
+            } else {
+                selectedBag = bags.first
+                tableView?.reloadData()
+            }
+        case .failure(let error):
+            // Handle the error appropriately, e.g., show an alert or log the error
+            print("Error fetching bags: \(error.localizedDescription)")
+            K.showAlert(title: "Error", message: "Failed to fetch bags. Please try again later.", presentingViewController: self)
         }
     }
     
@@ -137,19 +144,16 @@ class AddDiscToBagViewController: FormViewController {
     
     @objc private func saveButtonTapped() {
         
-        // Generate a random id
-        let randomId = Int64(arc4random_uniform(UInt32.max))
-        
-        if let currentDisc = disc {
+        if let currentDisc = disc, let selectedBag = selectedBag {
             // Create a new entity
             if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "DiscEntity", into: coreDataManager.managedContext) as? DiscEntity {
-                newEntity.setValue(randomId, forKey: "discGolfDisc_id")
+                newEntity.setValue(selectedBag.id, forKey: "discGolfDisc_id")
                 newEntity.setValue(currentDisc.name, forKey: "discGolfDisc_name")
                 newEntity.setValue(currentDisc.brand, forKey: "discGolfDisc_brand")
                 newEntity.setValue(currentDisc.usedFor, forKey: "discGolfDisc_usedFor")
                 newEntity.setValue(currentDisc.plasticType, forKey: "discGolfDisc_plastic")
                 newEntity.setValue(currentDisc.discWeight, forKey: "discGolfDisc_weight")
-                newEntity.setValue(selectedBag, forKey: "discGolfDisc_bag_name")
+                newEntity.setValue(selectedBag.bagTitle, forKey: "discGolfDisc_bag_name")
                 newEntity.setValue(selectedColor, forKey: "discGolfDisc_color")
                 newEntity.setValue(currentDisc.speed, forKey: "discGolfDisc_speed")
                 newEntity.setValue(currentDisc.turn, forKey: "discGolfDisc_turn")
