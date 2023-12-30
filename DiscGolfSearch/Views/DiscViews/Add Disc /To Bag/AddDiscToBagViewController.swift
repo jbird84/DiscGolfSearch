@@ -63,7 +63,6 @@ class AddDiscToBagViewController: FormViewController {
                 tableView?.reloadData()
             }
         case .failure(let error):
-            // Handle the error appropriately, e.g., show an alert or log the error
             print("Error fetching bags: \(error.localizedDescription)")
             K.showAlert(title: "Error", message: "Failed to fetch bags. Please try again later.", presentingViewController: self)
         }
