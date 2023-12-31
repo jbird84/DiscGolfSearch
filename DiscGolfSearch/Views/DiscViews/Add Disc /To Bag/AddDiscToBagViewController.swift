@@ -32,7 +32,6 @@ class AddDiscToBagViewController: FormViewController {
         setupView()
         getBags()
         createForm()
-        // Do any additional setup after loading the view.
     }
     
     private func setupView() {
