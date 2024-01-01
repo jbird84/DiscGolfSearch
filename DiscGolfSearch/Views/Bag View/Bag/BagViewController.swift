@@ -47,7 +47,7 @@ class BagViewController: UIViewController {
         switch result {
         case .success(let discsFromCoreData):
             // Convert DiscEntity instances to DiscDataModel instances
-            discs = discsFromCoreData.map { DiscDataModel(id: $0.discGolfDisc_id, selectedColor: $0.discGolfDisc_color!, name: $0.discGolfDisc_name!, nameSlug: $0.discGolfDisc_name_slug!, category: $0.discGolfDisc_category!, link: $0.discGolfDisc_link!, pic: $0.discGolfDisc_pic!, plastic: $0.discGolfDisc_plastic ?? "NA", stability: $0.discGolfDisc_stability!, speed: $0.discGolfDisc_speed!, glide: $0.discGolfDisc_glide!, turn: $0.discGolfDisc_turn!, fade: $0.discGolfDisc_fade!, brand: $0.discGolfDisc_brand!, bagName: $0.discGolfDisc_bag_name!, usedFor: $0.discGolfDisc_usedFor!, weight: $0.discGolfDisc_weight ?? "NA") }
+            discs = discsFromCoreData.map { DiscDataModel(id: $0.disc_id, selectedColor: $0.disc_color!, name: $0.disc_name!, nameSlug: $0.name_slug!, category: $0.category!, link: $0.link!, pic: $0.pic!, plastic: $0.plastic ?? "NA", stability: $0.stability!, speed: $0.speed!, glide: $0.glide!, turn: $0.turn!, fade: $0.fade!, brand: $0.brand!, bagName: $0.bag_name!, usedFor: $0.usedFor!, weight: $0.disc_weight ?? "NA") }
             
             tableView.reloadData()
         case .failure(let error):

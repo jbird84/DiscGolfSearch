@@ -43,6 +43,10 @@ class AddDiscToBagViewController: FormViewController {
             fatalError("AppDelegate not found")
         }
         coreDataManager = appDelegate.coreDataManager
+        
+        disc?.usedFor = "Back Hand"
+        disc?.plasticType = "Unknown"
+        disc?.discWeight = "Unknown"
     }
     
     private func getBags() {
@@ -145,24 +149,23 @@ class AddDiscToBagViewController: FormViewController {
         if let currentDisc = disc, let selectedBag = selectedBag {
             // Create a new entity
             if let newEntity = NSEntityDescription.insertNewObject(forEntityName: "DiscEntity", into: coreDataManager.managedContext) as? DiscEntity {
-                newEntity.setValue(selectedBag.id, forKey: "discGolfDisc_id")
-                newEntity.setValue(currentDisc.name, forKey: "discGolfDisc_name")
-                newEntity.setValue(currentDisc.brand, forKey: "discGolfDisc_brand")
-                newEntity.setValue(currentDisc.usedFor, forKey: "discGolfDisc_usedFor")
-                newEntity.setValue(currentDisc.plasticType, forKey: "discGolfDisc_plastic")
-                newEntity.setValue(currentDisc.discWeight, forKey: "discGolfDisc_weight")
-                newEntity.setValue(selectedBag.bagTitle, forKey: "discGolfDisc_bag_name")
-                newEntity.setValue(selectedColor, forKey: "discGolfDisc_color")
-                newEntity.setValue(currentDisc.speed, forKey: "discGolfDisc_speed")
-                newEntity.setValue(currentDisc.turn, forKey: "discGolfDisc_turn")
-                newEntity.setValue(currentDisc.fade, forKey: "discGolfDisc_fade")
-                newEntity.setValue(currentDisc.glide, forKey: "discGolfDisc_glide")
-                newEntity.setValue(currentDisc.brandSlug, forKey: "discGolfDisc_brand_slug")
-                newEntity.setValue(currentDisc.category, forKey: "discGolfDisc_category")
-                newEntity.setValue(currentDisc.link, forKey: "discGolfDisc_link")
-                newEntity.setValue(currentDisc.nameSlug, forKey: "discGolfDisc_name_slug")
-                newEntity.setValue(currentDisc.pic, forKey: "discGolfDisc_pic")
-                newEntity.setValue(currentDisc.stability, forKey: "discGolfDisc_stability")
+                newEntity.disc_id = selectedBag.id
+                newEntity.disc_color = selectedColor
+                newEntity.disc_name = currentDisc.name
+                newEntity.name_slug = currentDisc.nameSlug
+                newEntity.category = currentDisc.category
+                newEntity.link = currentDisc.link
+                newEntity.pic = currentDisc.pic
+                newEntity.plastic = currentDisc.plasticType
+                newEntity.stability = currentDisc.stability
+                newEntity.speed = currentDisc.speed
+                newEntity.glide = currentDisc.glide
+                newEntity.turn = currentDisc.turn
+                newEntity.fade = currentDisc.fade
+                newEntity.brand = currentDisc.brand
+                newEntity.bag_name = selectedBag.bagTitle
+                newEntity.usedFor = currentDisc.usedFor
+                newEntity.disc_weight = currentDisc.discWeight
                 coreDataManager.saveContext()
             }
             navigationController?.popViewController(animated: true)
