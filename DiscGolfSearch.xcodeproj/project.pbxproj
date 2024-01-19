@@ -22,6 +22,9 @@
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
+		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
+		DAA5A09C2B5A0FC1005BAE1C /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = DAA5A09B2B5A0FC1005BAE1C /* DGCharts */; };
+		DAA5A09E2B5A0FC1005BAE1C /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */; };
 		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
@@ -74,6 +77,7 @@
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* BagDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDataModel.swift; sourceTree = "<group>"; };
 		DA363D3D2B0183960050840A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraphView.swift; sourceTree = "<group>"; };
 		DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDatabaseService.swift; sourceTree = "<group>"; };
 		DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscSwiftDataModel.swift; sourceTree = "<group>"; };
 		DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +119,9 @@
 			files = (
 				DAEE2C8C2B01B89B005D289D /* DZNEmptyDataSet in Frameworks */,
 				DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */,
+				DAA5A09C2B5A0FC1005BAE1C /* DGCharts in Frameworks */,
 				DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */,
+				DAA5A09E2B5A0FC1005BAE1C /* DGChartsDynamic in Frameworks */,
 				DAEE2C952B01B8E9005D289D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,12 +220,21 @@
 		DA363D332B016E5B0050840A /* Bag View */ = {
 			isa = PBXGroup;
 			children = (
+				DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */,
 				DA1DF40F2B39053600CA783F /* Bag */,
 				DAEE2C982B025B93005D289D /* Add Bag  */,
 				DA363D342B016EA20050840A /* BagListTableViewCell.swift */,
 				DA363D362B016EC30050840A /* BagListViewController.swift */,
 			);
 			path = "Bag View";
+			sourceTree = "<group>";
+		};
+		DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */,
+			);
+			path = "Bag Seg Controller Views";
 			sourceTree = "<group>";
 		};
 		DABE00CA2AF7CE6600C2ABEB /* Services */ = {
@@ -373,6 +388,8 @@
 				DAEE2C8E2B01B8AD005D289D /* Eureka */,
 				DAEE2C912B01B8B6005D289D /* SwiftSpinner */,
 				DAEE2C942B01B8E9005D289D /* Lottie */,
+				DAA5A09B2B5A0FC1005BAE1C /* DGCharts */,
+				DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */,
 			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
@@ -407,6 +424,7 @@
 				DAEE2C8D2B01B8AD005D289D /* XCRemoteSwiftPackageReference "Eureka" */,
 				DAEE2C902B01B8B6005D289D /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
 				DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
@@ -477,6 +495,7 @@
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
+				DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -611,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -703,6 +722,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
@@ -738,6 +765,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DAA5A09B2B5A0FC1005BAE1C /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
 		DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;

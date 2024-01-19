@@ -18,6 +18,8 @@ class BagViewController: UIViewController {
     var allDiscs: [DiscDataModel] = []
     var currentBagDiscs: [DiscDataModel] = []
     
+    var scatterChartView: ScatterChart!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -38,6 +40,34 @@ class BagViewController: UIViewController {
             fatalError("AppDelegate not found")
         }
         coreDataManager = appDelegate.coreDataManager
+        
+        segControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
+    }
+    
+    // Function to handle segmented control value changed event
+        @objc private func segmentedControlValueChanged() {
+            if segControl.selectedSegmentIndex == 1 {
+                // Show blank view
+                showScatterChart()
+                
+                // Print "swift rocks"
+                print("swift rocks")
+            }
+        }
+    
+    private func showScatterChart() {
+        scatterChartView = ScatterChart(frame: view.bounds)
+        scatterChartView.discs = currentBagDiscs
+        view.addSubview(scatterChartView)
+        tableView.isHidden = true
+        // Add constraints to fill the parent view
+        scatterChartView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scatterChartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
+            scatterChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            scatterChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scatterChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
     
     private func getDiscs() {
