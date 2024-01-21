@@ -23,8 +23,6 @@
 		DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
 		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
-		DAA5A09C2B5A0FC1005BAE1C /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = DAA5A09B2B5A0FC1005BAE1C /* DGCharts */; };
-		DAA5A09E2B5A0FC1005BAE1C /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */; };
 		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
@@ -60,6 +58,19 @@
 		DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE2C992B025BB6005D289D /* AddBag.storyboard */; };
 		DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA71532C2B5C8E7300413408 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiscToView.xib; sourceTree = "<group>"; };
@@ -119,9 +130,7 @@
 			files = (
 				DAEE2C8C2B01B89B005D289D /* DZNEmptyDataSet in Frameworks */,
 				DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */,
-				DAA5A09C2B5A0FC1005BAE1C /* DGCharts in Frameworks */,
 				DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */,
-				DAA5A09E2B5A0FC1005BAE1C /* DGChartsDynamic in Frameworks */,
 				DAEE2C952B01B8E9005D289D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +386,7 @@
 				DADB72192AADFCDC0083B13B /* Sources */,
 				DADB721A2AADFCDC0083B13B /* Frameworks */,
 				DADB721B2AADFCDC0083B13B /* Resources */,
+				DA71532C2B5C8E7300413408 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,8 +398,6 @@
 				DAEE2C8E2B01B8AD005D289D /* Eureka */,
 				DAEE2C912B01B8B6005D289D /* SwiftSpinner */,
 				DAEE2C942B01B8E9005D289D /* Lottie */,
-				DAA5A09B2B5A0FC1005BAE1C /* DGCharts */,
-				DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */,
 			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
@@ -424,7 +432,6 @@
 				DAEE2C8D2B01B8AD005D289D /* XCRemoteSwiftPackageReference "Eureka" */,
 				DAEE2C902B01B8B6005D289D /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
 				DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
@@ -650,12 +657,13 @@
 				DEVELOPMENT_TEAM = R7SHSK6MNC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiscGolfSearch/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +671,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KinneyKare.DiscGolfSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,12 +691,13 @@
 				DEVELOPMENT_TEAM = R7SHSK6MNC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiscGolfSearch/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +705,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.KinneyKare.DiscGolfSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -722,14 +739,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
@@ -765,16 +774,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DAA5A09B2B5A0FC1005BAE1C /* DGCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGCharts;
-		};
-		DAA5A09D2B5A0FC1005BAE1C /* DGChartsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAA5A09A2B5A0FC1005BAE1C /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGChartsDynamic;
-		};
 		DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;

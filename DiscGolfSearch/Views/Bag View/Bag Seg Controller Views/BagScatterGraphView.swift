@@ -31,7 +31,7 @@ class ScatterChart: UIView {
         // Create entries for each disc
         var entries: [ChartDataEntry] = []
         
-        for (index, disc) in discs.enumerated() {
+        for (_, disc) in discs.enumerated() {
             let entry = ChartDataEntry(x: (Double(disc.turn) ?? 0) + (Double(disc.fade) ?? 0), y: Double(disc.speed) ?? 0)
             entries.append(entry)
         }
