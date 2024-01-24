@@ -48,19 +48,14 @@ class DiscViewController: UIViewController {
         
         setupCollectionView()
         setupFlightRatingsTapGestures()
-        setupFlightPathAnimationView()
+        //setupFlightPathAnimationView()
         setupAnimationView()
         setupAddDiscToView()
-        
+        createSimilarDiscsCollection(disc: disc)
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         navigationItem.rightBarButtonItem = selectAllButton
         navigationController?.navigationBar.backgroundColor = .clear
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        createSimilarDiscsCollection(disc: disc)
     }
     
     private func setupAddDiscToView() {
@@ -193,18 +188,18 @@ class DiscViewController: UIViewController {
         }
     }
     
-    private func setupFlightPathAnimationView() {
-        
-        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
-        
-        LottieAnimation.loadedFrom(url: url, closure: { animation in
-            self.animationView.animation = animation
-            self.animationView.contentMode = .scaleAspectFit
-            self.animationView.loopMode = .loop
-            self.animationView.animationSpeed = 1.0
-            self.animationView.play()
-        }, animationCache: DefaultAnimationCache.sharedCache)
-    }
+//    private func setupFlightPathAnimationView() {
+//        
+//        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
+//        
+//        LottieAnimation.loadedFrom(url: url, closure: { animation in
+//            self.animationView.animation = animation
+//            self.animationView.contentMode = .scaleAspectFit
+//            self.animationView.loopMode = .loop
+//            self.animationView.animationSpeed = 1.0
+//            self.animationView.play()
+//        }, animationCache: DefaultAnimationCache.sharedCache)
+//    }
     
     private func setupAnimationView() {
         view.addSubview(animationView)
@@ -335,7 +330,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         DispatchQueue.main.async {
             self.createSimilarDiscsCollection(disc: self.disc)
-            self.setupFlightPathAnimationView()
+           // self.setupFlightPathAnimationView()
         }
     }
 }
