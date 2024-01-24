@@ -8,7 +8,7 @@
 import UIKit
 
 
-struct DiscDataModel {
+struct DiscDataModel: Identifiable {
     let id: Int64
     let selectedColor: String
     let name: String

@@ -57,6 +57,7 @@
 		DAEE2C972B01D481005D289D /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C962B01D481005D289D /* ImageView+Ext.swift */; };
 		DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE2C992B025BB6005D289D /* AddBag.storyboard */; };
 		DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */; };
+		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -121,6 +122,7 @@
 		DAEE2C962B01D481005D289D /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
 		DAEE2C992B025BB6005D289D /* AddBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBag.storyboard; sourceTree = "<group>"; };
 		DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagViewController.swift; sourceTree = "<group>"; };
+		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */,
+				DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */,
 			);
 			path = "Bag Seg Controller Views";
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
+				DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */,
 				DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

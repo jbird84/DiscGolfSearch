@@ -7,6 +7,7 @@
 
 import UIKit
 import DZNEmptyDataSet
+import SwiftUI
 
 class BagViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class BagViewController: UIViewController {
     var allDiscs: [DiscDataModel] = []
     var currentBagDiscs: [DiscDataModel] = []
     
-    var scatterChartView: ScatterChart!
+   // var scatterChartView: ScatterChart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,18 +57,31 @@ class BagViewController: UIViewController {
         }
     
     private func showScatterChart() {
-        scatterChartView = ScatterChart(frame: view.bounds)
-        scatterChartView.discs = currentBagDiscs
-        view.addSubview(scatterChartView)
+        let controller = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
+        guard let chartView = controller.view else { return }
+        
+        view.addSubview(chartView)
         tableView.isHidden = true
-        // Add constraints to fill the parent view
-        scatterChartView.translatesAutoresizingMaskIntoConstraints = false
+        chartView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            scatterChartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
-            scatterChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            scatterChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scatterChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
+            chartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
+            chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            chartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+                ])
+        //The code below is using a third party "Charts" licrary
+//        scatterChartView = ScatterChart(frame: view.bounds)
+//        scatterChartView.discs = currentBagDiscs
+//        view.addSubview(scatterChartView)
+//        tableView.isHidden = true
+//        // Add constraints to fill the parent view
+//        scatterChartView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            scatterChartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
+//            scatterChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+//            scatterChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            scatterChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+//        ])
     }
     
     private func getDiscs() {
