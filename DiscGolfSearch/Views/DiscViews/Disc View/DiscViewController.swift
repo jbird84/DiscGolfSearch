@@ -188,18 +188,18 @@ class DiscViewController: UIViewController {
         }
     }
     
-//    private func setupFlightPathAnimationView() {
-//        
-//        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
-//        
-//        LottieAnimation.loadedFrom(url: url, closure: { animation in
-//            self.animationView.animation = animation
-//            self.animationView.contentMode = .scaleAspectFit
-//            self.animationView.loopMode = .loop
-//            self.animationView.animationSpeed = 1.0
-//            self.animationView.play()
-//        }, animationCache: DefaultAnimationCache.sharedCache)
-//    }
+    private func setupFlightPathAnimationView() {
+        
+        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
+        
+        LottieAnimation.loadedFrom(url: url, closure: { animation in
+            self.animationView.animation = animation
+            self.animationView.contentMode = .scaleAspectFit
+            self.animationView.loopMode = .loop
+            self.animationView.animationSpeed = 1.0
+            self.animationView.play()
+        }, animationCache: DefaultAnimationCache.sharedCache)
+    }
     
     private func setupAnimationView() {
         view.addSubview(animationView)
