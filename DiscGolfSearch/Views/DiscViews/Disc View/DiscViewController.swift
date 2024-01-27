@@ -48,7 +48,7 @@ class DiscViewController: UIViewController {
         
         setupCollectionView()
         setupFlightRatingsTapGestures()
-        //setupFlightPathAnimationView()
+        setupFlightPathAnimationView()
         setupAnimationView()
         setupAddDiscToView()
         createSimilarDiscsCollection(disc: disc)
@@ -89,36 +89,7 @@ class DiscViewController: UIViewController {
         
         simularDiscsCollectionView.collectionViewLayout = flowLayout
     }
-    
-    private func setupFlightDiscImageView() {
-        flightDiscImageView.image = UIImage(named: "blankDisc")
-        discImageView.frame = CGRect(x: 0, y: -150, width: 50, height: 50) // Set the initial frame
-        view.addSubview(flightDiscImageView)
-        
-        // Create the flight path
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 50, y: 200)) // Start point
-        path.addQuadCurve(to: CGPoint(x: 300, y: 200), controlPoint: CGPoint(x: 175, y: 0)) // Quad curve
-        
-        // Create the animation
-        let animation = CAKeyframeAnimation(keyPath: "position")
-        animation.path = path.cgPath
-        animation.duration = 30.0 // Duration of the animation
-        animation.timingFunction = CAMediaTimingFunction(name: .linear)
-        animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
-        
-        // Add rotation animation
-        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.fromValue = 0
-        rotationAnimation.toValue = 2.0 * .pi
-        rotationAnimation.duration = 5.0
-        rotationAnimation.repeatCount = .infinity
-        
-        // Apply animations to the disc image view's layer
-        flightDiscImageView.layer.add(animation, forKey: "flightPathAnimation")
-        flightDiscImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
-    }
+
     
     private func createSimilarDiscsCollection(disc: DiscGolfDisc?) {
         if let selectedDisc = disc {
@@ -175,7 +146,6 @@ class DiscViewController: UIViewController {
             fadeLabel.text = selectedDisc.fade
             
             startRotation()
-            setupFlightDiscImageView()
             companyNameLabel.text = "By: \(selectedDisc.brand)"
         }
         
@@ -189,16 +159,10 @@ class DiscViewController: UIViewController {
     }
     
     private func setupFlightPathAnimationView() {
+        if let currentDisc = disc, let image = UIImage(named: "superBK") {
+            AnimationHelper.shared.setupFlightPathAnimationView(discCompanyName: currentDisc.brand, discName: currentDisc.nameSlug, animationView: animationView, defaultImage: image)
+        }
         
-        guard let url = URL(string: "https://storage.googleapis.com/disc-animation/vibram-vice.json") else { return }
-        
-        LottieAnimation.loadedFrom(url: url, closure: { animation in
-            self.animationView.animation = animation
-            self.animationView.contentMode = .scaleAspectFit
-            self.animationView.loopMode = .loop
-            self.animationView.animationSpeed = 1.0
-            self.animationView.play()
-        }, animationCache: DefaultAnimationCache.sharedCache)
     }
     
     private func setupAnimationView() {
@@ -330,7 +294,7 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         DispatchQueue.main.async {
             self.createSimilarDiscsCollection(disc: self.disc)
-           // self.setupFlightPathAnimationView()
+            self.setupFlightPathAnimationView()
         }
     }
 }

@@ -24,11 +24,11 @@ struct BagScatterGraph: View {
         }
         .chartXAxisLabel(position: .top, alignment: .trailing) {
             Text("Stability Fade + Glide")
+               .padding(.trailing, 15)
         }
-        .chartYAxisLabel(position: .leading, alignment: .center) {
+
+        .chartYAxisLabel(position: .leading, alignment: .trailing) {
             Text("Speed")
-                .rotationEffect(Angle(degrees: -360), anchor: .leading) // Rotate around the leading edge
-                    .padding(.leading, 10) // Add some padding to prevent truncation
         }
     }
 }
