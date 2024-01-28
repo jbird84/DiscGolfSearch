@@ -49,7 +49,8 @@ class ViewController: UIViewController {
     
     private func getDiscData() {
         SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
-        APIManager.shared.fetchDiscGolfData(param: "disc") { discs, error in
+        APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
+            guard let self = self else { return }
             if let error = error {
                 DispatchQueue.main.async {
                     self.showAlert()
