@@ -1,4 +1,4 @@
-//
+///Users/kinneykare/Downloads/CRAVE_AXIOM DISCS.json
 //  AnimationHelper.swift
 //  DiscGolfSearch
 //
@@ -28,7 +28,7 @@ class AnimationHelper {
             //"ponderosa":"https://imagizer.imageshack.com/img924/1954/SxLVjp.png",
             "redwood":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/REDWOOD_ABOVE%20GROUND%20LEVEL.json",
             "spruce":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/SPRUCE_ABOVE%20GROUND%20LEVEL.json",
-            "sycamore":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/SPRUCE_ABOVE%20GROUND%20LEVEL.json"
+            "sycamore":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/SYCAMORE_ABOVE%20GROUND%20LEVEL.json"
         ],
         "Axiom Discs": [
             "alias": "https://storage.googleapis.com/disc-animation/Axiom/ALIAS_AXIOM%20DISCS.json",
