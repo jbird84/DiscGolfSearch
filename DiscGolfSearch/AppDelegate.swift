@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Lottie
 
 @main
  class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,7 @@ import CoreData
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
+        LottieConfiguration.shared.renderingEngine = .automatic
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     

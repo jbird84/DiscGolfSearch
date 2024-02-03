@@ -38,7 +38,6 @@ class DiscViewController: UIViewController {
     }()
     
     var dropDownView: AddDiscToView!
-    
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
@@ -159,10 +158,9 @@ class DiscViewController: UIViewController {
     }
     
     private func setupFlightPathAnimationView() {
-        if let currentDisc = disc, let image = UIImage(named: "superBK") {
-            AnimationHelper.shared.setupFlightPathAnimationView(discCompanyName: currentDisc.brand, discName: currentDisc.nameSlug, animationView: animationView, defaultImage: image)
+        if let currentDisc = disc {
+            AnimationHelper.shared.setupFlightPathAnimationView(currentDisc: currentDisc, discCompanyName: currentDisc.brand, discName: currentDisc.nameSlug, animationView: animationView)
         }
-        
     }
     
     private func setupAnimationView() {

@@ -137,14 +137,14 @@ class AnimationHelper {
     
     private init() {}
         
-        func setupFlightPathAnimationView(discCompanyName: String, discName: String, animationView: LottieAnimationView, defaultImage: UIImage? = nil) {
+    func setupFlightPathAnimationView(currentDisc: DiscGolfDisc, discCompanyName: String, discName: String, animationView: LottieAnimationView) {
             // Check if the disc company and disc name exist in the dictionary
             guard let companyDiscs = discURLs[discCompanyName],
                   let url = companyDiscs[discName] else {
                 // Handle the case when the combination of disc company and disc name is not found
-                if let defaultImage = defaultImage {
+                getFlightPathImageFromLink(disc: currentDisc) { image in
                     // Show the default image if provided
-                    let imageView = UIImageView(image: defaultImage)
+                    let imageView = UIImageView(image: image)
                     imageView.frame = animationView.bounds
                     animationView.addSubview(imageView)
                 }
@@ -153,13 +153,37 @@ class AnimationHelper {
             
             // Load and play the animation using the obtained URL
             guard let animationURL = URL(string: url) else { return }
-            
-            LottieAnimation.loadedFrom(url: animationURL, closure: { animation in
-                animationView.animation = animation
-                animationView.contentMode = .scaleAspectFit
-                animationView.loopMode = .loop
-                animationView.animationSpeed = 1.0
-                animationView.play()
-            }, animationCache: DefaultAnimationCache.sharedCache)
+            DispatchQueue.main.async {
+                LottieAnimation.loadedFrom(url: animationURL, closure: { animation in
+                    animationView.animation = animation
+                    animationView.contentMode = .scaleAspectFit
+                    animationView.loopMode = .loop
+                    animationView.animationSpeed = 1.5
+                    animationView.play()
+                }, animationCache: DefaultAnimationCache.sharedCache)
+            }
         }
+    
+    //TODO: Replacce images wiht images relating to not getting a discPath back.
+    private func getFlightPathImageFromLink(disc: DiscGolfDisc, completion: @escaping (UIImage?) -> Void) {
+        let weblink = disc.pic
+        if let imageURL = URL(string: weblink) {
+            APIManager.shared.downloadImage(from: imageURL) { imageData in
+                DispatchQueue.main.async {
+                    if let imageData = imageData, let image = UIImage(data: imageData) {
+                        completion(image)
+                    } else {
+                        print("Failed to create UIImage from image data")
+                        completion(UIImage(named: "noDisc"))
+                    }
+                }
+            }
+        } else {
+            DispatchQueue.main.async {
+                print("Failed to create URL from web link")
+                completion(UIImage(named: "nowLoadingBlankDisc"))
+            }
+        }
+    }
+    
     }
