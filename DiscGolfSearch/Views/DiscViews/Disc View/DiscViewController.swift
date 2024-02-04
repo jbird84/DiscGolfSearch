@@ -164,7 +164,7 @@ class DiscViewController: UIViewController {
     }
     
     private func setupAnimationView() {
-        view.addSubview(animationView)
+        discAnimationView.addSubview(animationView)
         
         NSLayoutConstraint.activate([
             animationView.leadingAnchor.constraint(equalTo: discAnimationView.leadingAnchor, constant: 0),
