@@ -408,6 +408,7 @@ struct DiscImageNames {
             "svea": "https://imagizer.imageshack.com/img924/6033/jXIptI.png",
             "vass": "https://imagizer.imageshack.com/img922/7815/HQ7Q3M.png"
         ],
+        //TODO: Add the disc ether image to this list.
         "Gateway": [
             "apache":"https://imagizer.imageshack.com/img922/7610/Y7nJ7z.png",
             "apache-retooled":"https://imagizer.imageshack.com/img923/7330/sR3ShB.png",
@@ -422,6 +423,7 @@ struct DiscImageNames {
             "diablo": "https://imagizer.imageshack.com/img924/880/KFZpWJ.png",
             "diablo-dt": "https://imagizer.imageshack.com/img923/6061/FSgUHQ.png",
             "element": "https://imagizer.imageshack.com/img924/408/Lz8aes.png",
+            "ether": "https://i.ibb.co/3Md8JFL/ether-gateway-discs.png",
             "g-one": "https://imagizer.imageshack.com/img922/9087/OQ2jPy.png",
             "houdini": "https://imagizer.imageshack.com/img923/6868/3yGXWC.png",
             "illusion": "https://imagizer.imageshack.com/img924/4626/WphNbo.png",
@@ -432,6 +434,7 @@ struct DiscImageNames {
             "ninja": "https://imagizer.imageshack.com/img924/1551/KqzywU.png",
             "prophecy": "https://imagizer.imageshack.com/img922/8829/Gp4rk5.png",
             "rage": "https://imagizer.imageshack.com/img923/3114/6yvUeE.png",
+            "realm": "https://i.ibb.co/zGn6JgR/realm-gateway.png",
             "sabre": "https://imagizer.imageshack.com/img922/2592/ElfNgr.png",
             "samurai": "https://imagizer.imageshack.com/img922/7197/6xlxT9.png",
             "scout": "https://imagizer.imageshack.com/img924/5609/umSDLI.png",
