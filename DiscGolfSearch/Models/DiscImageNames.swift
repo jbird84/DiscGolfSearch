@@ -15,6 +15,7 @@ struct DiscImageNames {
             "anubis":"https://imagizer.imageshack.com/img924/569/6gvgVj.png",
             "aztec":"https://imagizer.imageshack.com/img924/489/fdCE7i.png",
             "centurion":"https://imagizer.imageshack.com/img922/602/3pJnG2.png",
+            "conqueror": "https://i.ibb.co/X4J89QD/Conq-removebg-preview.png",
             "chariot":"https://imagizer.imageshack.com/img924/1542/RoGDvm.png",
             "cohort":"https://imagizer.imageshack.com/img922/9666/Ak1jNE.png",
             "czar":"https://imagizer.imageshack.com/img924/8859/84mD5T.png",
@@ -342,6 +343,7 @@ struct DiscImageNames {
             "stiletto": "https://imagizer.imageshack.com/img923/1097/UXGnU1.png",
             "striker": "https://imagizer.imageshack.com/img922/355/XDV6LT.png",
             "trust": "https://imagizer.imageshack.com/img924/1465/nA9kFm.png",
+            "trident": "https://i.ibb.co/nDpSnk3/trident-lat64.png",
             "xxx": "https://imagizer.imageshack.com/img922/7489/9LeQLl.png",
             "zion": "https://imagizer.imageshack.com/img923/4927/JbVqFm.png"
         ],
