@@ -615,6 +615,13 @@ class AnimationHelper {
             "trust": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_TRUST.json",
             "xxx": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20XXX.json",
         //    "zion": ""
+        ],
+        "Lightning": [
+            "1-driver": "https://storage.googleapis.com/disc-animation/Lightening%20/Lightning_%20DRIVER.json",
+            "1-flyer": "https://storage.googleapis.com/disc-animation/Lightening%20/Lightning_%20FLYER.json",
+            "1-helix": "https://storage.googleapis.com/disc-animation/Lightening%20/Lightning_%20HELIX.json",
+            "1-hookshot": "https://storage.googleapis.com/disc-animation/Lightening%20/Lightning_HOOKSHOT.json",
+            "1-hyzer": "https://storage.googleapis.com/disc-animation/Lightening%20/Lightning_%20HYZER.json"
         ]
     ]
     
