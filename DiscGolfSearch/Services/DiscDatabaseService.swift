@@ -27,7 +27,6 @@ class DiscDatabaseService {
         }
     }
     
-    //MARK: DISCS
     //MARK: Saving Disc To Cart
     func saveDisc(discName: String, discImageData: Data, discStability: String, discSpeed: String, discGlide: String, discTurn: String, discFade: String, discBrand: String, viewController: UIViewController) {
         

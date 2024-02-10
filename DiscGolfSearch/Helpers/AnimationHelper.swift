@@ -647,7 +647,6 @@ class AnimationHelper {
             }
         }
     
-    //TODO: Replacce images wiht images relating to not getting a discPath back.
     private func getFlightPathImageFromLink(disc: DiscGolfDisc, completion: @escaping (UIImage?) -> Void) {
         let weblink = disc.pic
         if let imageURL = URL(string: weblink) {
@@ -657,14 +656,14 @@ class AnimationHelper {
                         completion(image)
                     } else {
                         print("Failed to create UIImage from image data")
-                        completion(UIImage(named: "noDisc"))
+                        completion(UIImage(named: "noFlightPath"))
                     }
                 }
             }
         } else {
             DispatchQueue.main.async {
                 print("Failed to create URL from web link")
-                completion(UIImage(named: "nowLoadingBlankDisc"))
+                completion(UIImage(named: "noFlightPath"))
             }
         }
     }

@@ -10,17 +10,17 @@ import CoreData
 import Lottie
 
 @main
- class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
-            let container = NSPersistentCloudKitContainer(name: "DiscGolfSearch")
-            container.loadPersistentStores(completionHandler: { (_, error) in
-                if let error = error as NSError? {
-                    fatalError("Unresolved error \(error), \(error.userInfo)")
-                }
-            })
-            return container
-        }()
+        let container = NSPersistentCloudKitContainer(name: "DiscGolfSearch")
+        container.loadPersistentStores(completionHandler: { (_, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
     
     lazy var coreDataManager: CoreDataManager = {
         return CoreDataManager(modelName: "DiscGolfSearch", persistentContainer: persistentContainer)
