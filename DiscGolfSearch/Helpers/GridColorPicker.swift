@@ -79,7 +79,6 @@ class GridColorPickerViewController: UIViewController, UICollectionViewDataSourc
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedColor = colors[indexPath.item]
-        // Handle the selected color as needed
         delegate?.colorWasSelected(selectedColor: selectedColor)
         print("Selected color: \(selectedColor)")
         dismiss(animated: true, completion: nil)
