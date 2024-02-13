@@ -51,8 +51,7 @@ class DiscTypesView: UIView {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
                 // Push to StabilityViewController
-                // You can pass any relevant data to StabilityViewController here if needed
-                // For example, you can set a property in the StabilityViewController to indicate which label was tapped.
+            
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
