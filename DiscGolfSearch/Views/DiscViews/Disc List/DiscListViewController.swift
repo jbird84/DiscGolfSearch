@@ -155,7 +155,6 @@ class DiscListViewController: UIViewController {
             print("Brand: \(disc.brand)")
             print("Category: \(disc.category)")
             print("Speed: \(disc.speed)")
-            // Add more properties as needed
             print("------")
         }
     }

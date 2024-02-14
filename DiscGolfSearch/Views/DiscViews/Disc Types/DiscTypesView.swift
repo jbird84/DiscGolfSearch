@@ -47,11 +47,9 @@ class DiscTypesView: UIView {
         }
         
         @objc private func labelTapped(_ gesture: UITapGestureRecognizer) {
-            // Handle label tap here
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
                 // Push to StabilityViewController
-            
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
