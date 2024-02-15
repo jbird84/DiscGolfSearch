@@ -692,6 +692,9 @@ class AnimationHelper {
             "vela": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20VELA.json",
             "veteran": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_VETERAN.json"
         ],
+        "Mint Discs": [
+            "lasso": "https://storage.googleapis.com/disc-animation/Mint%20Disc_Lasso.json"
+        ],
         "Other": [
            // "alpas": "",
             "andro-c": "https://storage.googleapis.com/disc-animation/Other/Other_ANDRO%20C.json",
