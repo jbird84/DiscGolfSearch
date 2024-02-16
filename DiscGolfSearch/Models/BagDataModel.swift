@@ -12,7 +12,6 @@ struct BagDataModel {
     let bagHexColor: String
     let bagTitle: String
     let bagType: String
-  //  let discs: [DiscGolfDisc]
     
     init(id: Int64, bagHexColor: String, bagTitle: String, bagType: String) {
         self.id = id
