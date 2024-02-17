@@ -19,7 +19,8 @@ class BagViewController: UIViewController {
     var allDiscs: [DiscDataModel] = []
     var currentBagDiscs: [DiscDataModel] = []
     
-   // var scatterChartView: ScatterChart!
+    private var chartView: UIView?
+    private var scatterChartView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,29 +47,33 @@ class BagViewController: UIViewController {
     }
     
     // Function to handle segmented control value changed event
-        @objc private func segmentedControlValueChanged() {
-            if segControl.selectedSegmentIndex == 1 {
-                // Show blank view
-                showScatterChart()
-                
-                // Print "swift rocks"
-                print("swift rocks")
-            }
+    @objc private func segmentedControlValueChanged() {
+        switch segControl.selectedSegmentIndex {
+        case 0:
+            showDiscList()
+        case 1:
+            showScatterChart()
+        default:
+            break
         }
-    
+    }
+
+    private func showDiscList() {
+        tableView.isHidden = false
+        scatterChartView?.isHidden = true
+    }
+
     private func showScatterChart() {
-        let controller = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
-        guard let chartView = controller.view else { return }
+        if let scatterChartView = scatterChartView {
+            // Reuse existing scatter chart view
+            scatterChartView.isHidden = false
+        } else {
+            createScatterGraph()
+        }
         
-        view.addSubview(chartView)
+        // Hide table view
         tableView.isHidden = true
-        chartView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            chartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
-            chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            chartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-                ])
+    
         //The code below is using a third party "Charts" licrary
 //        scatterChartView = ScatterChart(frame: view.bounds)
 //        scatterChartView.discs = currentBagDiscs
@@ -101,6 +106,27 @@ class BagViewController: UIViewController {
         }
     }
 
+    private func createScatterGraph() {
+        // Create scatter chart view if it doesn't exist
+        let controller = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
+        guard let newChartView = controller.view else { return }
+
+        view.addSubview(newChartView)
+        scatterChartView = newChartView
+
+        newChartView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            newChartView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 15),
+            newChartView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            newChartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            newChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+
+        // Ensure the scatter chart view is correctly sized and laid out
+        controller.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        controller.view.layoutIfNeeded()
+    }
+    
     private func filterDiscByBagId() {
         guard let bagId = bag?.id else { return }
     
