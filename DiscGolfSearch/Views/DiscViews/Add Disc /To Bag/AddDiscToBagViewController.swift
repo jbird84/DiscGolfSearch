@@ -19,6 +19,10 @@ class AddDiscToBagViewController: FormViewController {
         case discWeight
         case selectColor
         case selectBag
+        case discSpeed
+        case discGlide
+        case discTurn
+        case discFade
     }
     
     var coreDataManager: CoreDataManager!
@@ -31,7 +35,10 @@ class AddDiscToBagViewController: FormViewController {
         super.viewDidLoad()
         setupView()
         getBags()
-        createForm()
+        
+        if let discData = disc {
+            createForm(disc: discData)
+        }
     }
     
     private func setupView() {
@@ -71,18 +78,18 @@ class AddDiscToBagViewController: FormViewController {
         }
     }
     
-    private func createForm() {
+    private func createForm(disc: DiscGolfDisc) {
         form
         +++ Section("Disc Details")
         
         <<< LabelRow(CellTags.discName.rawValue) {
             $0.title =  "Disc Name"
-            $0.value = disc?.name
+            $0.value = disc.name
         }
         
         <<< LabelRow(CellTags.discBrand.rawValue) {
             $0.title =  "Company"
-            $0.value = disc?.brand
+            $0.value = disc.brand
         }
         
         <<< AlertRow<String>(CellTags.usedFor.rawValue) {
@@ -137,11 +144,51 @@ class AddDiscToBagViewController: FormViewController {
             }
         }
         
-        +++ Section("Speed, Glide, Turn, Fade")
-        <<< SegmentedRow<String>(){
-            $0.options = [disc?.speed ?? "NA", disc?.glide ?? "NA", disc?.turn ?? "NA", disc?.fade ?? "NA"]
-            $0.value = "Three"
-        }
+        +++ Section("Flight Numbers [S, G, T, F]")
+        <<< PushRow<Int>(CellTags.discSpeed.rawValue) {
+            $0.title = "Speed"
+            $0.options = Array(1...14)
+            $0.value = Int(disc.speed)
+            $0.displayValueFor = { value in
+                guard let value = value else { return nil }
+                return String(value)
+            }
+        }.onChange({ [weak self] row in
+            self?.disc?.speed = String(row.value ?? 0)
+        })
+        <<< PushRow<Int>(CellTags.discGlide.rawValue) {
+            $0.title = "Glide"
+            $0.options = Array(1...7)
+            $0.value = Int(disc.glide)
+            $0.displayValueFor = { value in
+                guard let value = value else { return nil }
+                return String(value)
+            }
+        }.onChange({ [weak self] row in
+            self?.disc?.glide = String(row.value ?? 0)
+        })
+        <<< PushRow<Int>(CellTags.discTurn.rawValue) {
+            $0.title = "Turn"
+            $0.options = Array(-5...1)
+            $0.value = Int(disc.turn)
+            $0.displayValueFor = { value in
+                guard let value = value else { return nil }
+                return String(value)
+            }
+        }.onChange({ [weak self] row in
+            self?.disc?.turn = String(row.value ?? 0)
+        })
+        <<< PushRow<Int>(CellTags.discFade.rawValue) {
+            $0.title = "Fade"
+            $0.options = Array(0...5)
+            $0.value = Int(disc.fade)
+            $0.displayValueFor = { value in
+                guard let value = value else { return nil }
+                return String(value)
+            }
+        }.onChange({ [weak self] row in
+            self?.disc?.fade = String(row.value ?? 0)
+        })
     }
     
     @objc private func saveButtonTapped() {
@@ -187,3 +234,30 @@ extension AddDiscToBagViewController: GridColorPickerDelegate {
 }
 
 
+final class NumericRow: Row<NumericCell>, RowType {
+    required init(tag: String?) {
+        super.init(tag: tag)
+        cellProvider = CellProvider<NumericCell>(nibName: "NumericCell")
+        value = 0
+    }
+}
+
+final class NumericCell: Cell<Double>, CellType {
+    @IBOutlet private weak var textField: UITextField!
+
+    override func setup() {
+        super.setup()
+        textField.keyboardType = .numbersAndPunctuation
+        textField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+    }
+
+    override func update() {
+        super.update()
+        textField.text = row.displayValueFor?(row.value)
+    }
+
+    @objc private func editingChanged() {
+        guard let text = textField.text, let value = Double(text) else { return }
+        row.value = value
+    }
+}

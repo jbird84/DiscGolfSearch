@@ -13,10 +13,10 @@ struct DiscGolfDisc: Codable {
     let name: String
     let brand: String
     let category: String
-    let speed: String
-    let glide: String
-    let turn: String
-    let fade: String
+    var speed: String
+    var glide: String
+    var turn: String
+    var fade: String
     let stability: String
     let link: String
     let pic: String
