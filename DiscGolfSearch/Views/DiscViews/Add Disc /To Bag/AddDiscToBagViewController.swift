@@ -145,49 +145,49 @@ class AddDiscToBagViewController: FormViewController {
         }
         
         +++ Section("Flight Numbers [S, G, T, F]")
-        <<< PushRow<Int>(CellTags.discSpeed.rawValue) {
+        <<< PushRow<String>(CellTags.discSpeed.rawValue) {
             $0.title = "Speed"
-            $0.options = Array(1...14)
-            $0.value = Int(disc.speed)
+            $0.options = K.FlightNumbers.speed
+            $0.value = disc.speed
             $0.displayValueFor = { value in
                 guard let value = value else { return nil }
                 return String(value)
             }
         }.onChange({ [weak self] row in
-            self?.disc?.speed = String(row.value ?? 0)
+            self?.disc?.speed = row.value ?? "1"
         })
-        <<< PushRow<Int>(CellTags.discGlide.rawValue) {
+        <<< PushRow<String>(CellTags.discGlide.rawValue) {
             $0.title = "Glide"
-            $0.options = Array(1...7)
-            $0.value = Int(disc.glide)
+            $0.options = K.FlightNumbers.glide
+            $0.value = disc.glide
             $0.displayValueFor = { value in
                 guard let value = value else { return nil }
                 return String(value)
             }
         }.onChange({ [weak self] row in
-            self?.disc?.glide = String(row.value ?? 0)
+            self?.disc?.glide = row.value ?? "1"
         })
-        <<< PushRow<Int>(CellTags.discTurn.rawValue) {
+        <<< PushRow<String>(CellTags.discTurn.rawValue) {
             $0.title = "Turn"
-            $0.options = Array(-5...1)
-            $0.value = Int(disc.turn)
+            $0.options = K.FlightNumbers.turn
+            $0.value = disc.turn
             $0.displayValueFor = { value in
                 guard let value = value else { return nil }
                 return String(value)
             }
         }.onChange({ [weak self] row in
-            self?.disc?.turn = String(row.value ?? 0)
+            self?.disc?.turn = row.value ?? "0"
         })
-        <<< PushRow<Int>(CellTags.discFade.rawValue) {
+        <<< PushRow<String>(CellTags.discFade.rawValue) {
             $0.title = "Fade"
-            $0.options = Array(0...5)
-            $0.value = Int(disc.fade)
+            $0.options = K.FlightNumbers.fade
+            $0.value = disc.fade
             $0.displayValueFor = { value in
                 guard let value = value else { return nil }
                 return String(value)
             }
         }.onChange({ [weak self] row in
-            self?.disc?.fade = String(row.value ?? 0)
+            self?.disc?.fade = row.value ?? "0"
         })
     }
     

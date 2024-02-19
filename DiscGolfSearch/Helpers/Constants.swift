@@ -10,6 +10,13 @@ import UIKit
 
 struct K {
     
+    enum FlightNumbers {
+        static let speed = ["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5", "13", "13.5", "14"]
+        static let glide = ["1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7"]
+        static let turn = ["-5", "-4.5", "-4", "-3.5", "-3", "-2.5", "-2", "-1.5", "-1", "-0.5", "0", "0.5", "1"]
+        static let fade = ["0", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5"]
+    }
+
     static func setDiscColorBasedOnStability(stability: Stability) -> UIColor {
         switch stability {
         case .veryOverstable:
