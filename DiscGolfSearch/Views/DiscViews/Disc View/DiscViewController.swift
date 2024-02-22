@@ -88,7 +88,7 @@ class DiscViewController: UIViewController {
         
         simularDiscsCollectionView.collectionViewLayout = flowLayout
     }
-
+    
     
     private func createSimilarDiscsCollection(disc: DiscGolfDisc?) {
         if let selectedDisc = disc {
@@ -324,7 +324,8 @@ extension DiscViewController: AddDiscToViewDelegate {
                 DiscDatabaseService.shared.saveDisc(discName: disc.name, discImageData: imageData, discStability: disc.stability, discSpeed: disc.speed, discGlide: disc.glide, discTurn: disc.turn, discFade: disc.fade, discBrand: disc.brand, viewController: self)
             }
         } else {
-            K.showAlert(title: "Issues Saving Disc", message: "We ran into a problem attempting to save the disc.", presentingViewController: self)
+            AlertPresenter.instance.showAlert(title: "Issues Saving Disc", body: "We ran into a problem attempting to save the disc.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
+            }
         }
     }
     

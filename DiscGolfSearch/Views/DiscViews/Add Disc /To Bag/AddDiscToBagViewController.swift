@@ -66,15 +66,17 @@ class AddDiscToBagViewController: FormViewController {
             bags = bagsFromCoreData.map { BagDataModel(id: $0.id, bagHexColor: $0.bag_hex_color!, bagTitle: $0.bag_title!, bagType: $0.bag_type!)}
             
             if bags.isEmpty {
-                K.showAlert(title: "No Bags Found", message: "Please go to the bag tab and create your first bag.", presentingViewController: self)
-                navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
+                AlertPresenter.instance.showAlert(title: "No Bags Found", body: "Please go to the bag tab and create your first bag.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
+                }
             } else {
                 selectedBag = bags.first
                 tableView?.reloadData()
             }
         case .failure(let error):
             print("Error fetching bags: \(error.localizedDescription)")
-            K.showAlert(title: "Error", message: "Failed to fetch bags. Please try again later.", presentingViewController: self)
+            AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch bags. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
+            }
         }
     }
     
@@ -216,6 +218,8 @@ class AddDiscToBagViewController: FormViewController {
                 coreDataManager.saveContext()
             }
             navigationController?.popViewController(animated: true)
+            AlertPresenter.instance.showAlert(title: "Success", body: "Disc Added To Bag Successfully!", iconImage: UIImage(systemName: "checkmark.circle.fill")!, bannerColor: .green) {
+            }
         }
     }
 }

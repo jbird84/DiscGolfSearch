@@ -5,4 +5,26 @@
 //  Created by Kinney Kare on 2/19/24.
 //
 
-import Foundation
+import UIKit
+import SwiftMessages
+
+
+final class AlertPresenter: AlertPresenterProtocol {
+    
+    static public let instance: AlertPresenter = AlertPresenter()
+    
+    private init() {}
+    
+    @MainActor func showAlert(title: String, body: String, iconImage: UIImage, bannerColor: UIColor, handler: (() -> Void)?) {
+        let view = MessageView.viewFromNib(layout: .messageView)
+        view.configureTheme(.success)
+        view.configureDropShadow()
+        view.configureContent(title: title, body: body, iconImage: iconImage)
+        view.button?.isHidden = true
+        view.backgroundColor = bannerColor
+        view.layoutMarginAdditions = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    
+        SwiftMessages.show(view: view)
+    }
+    
+}

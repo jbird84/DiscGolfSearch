@@ -5,11 +5,11 @@
 //  Created by Kinney Kare on 2/19/24.
 //
 
-import Foundation
+import UIKit
 
 
 protocol AlertPresenterProtocol {
     
-    func showAlert(title: String, body: String, handler: (() -> Void)?)
+    func showAlert(title: String, body: String, iconImage: UIImage, bannerColor: UIColor, handler: (() -> Void)?)
     
 }

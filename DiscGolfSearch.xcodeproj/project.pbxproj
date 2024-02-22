@@ -51,6 +51,10 @@
 		DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */; };
 		DADED48D2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DADED48B2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld */; };
 		DADF925B2B1EA74D00AD5378 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */; };
+		DAEC3B562B83F35600171A7C /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = DAEC3B552B83F35600171A7C /* SwiftMessages */; };
+		DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */; };
+		DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */; };
+		DAEC3B622B85A23800171A7C /* DiscInBagInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEC3B612B85A23800171A7C /* DiscInBagInfo.storyboard */; };
 		DAEE2C8C2B01B89B005D289D /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */; };
 		DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C8E2B01B8AD005D289D /* Eureka */; };
 		DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C912B01B8B6005D289D /* SwiftSpinner */; };
@@ -121,6 +125,9 @@
 		DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDiscCell.swift; sourceTree = "<group>"; };
 		DADED48C2B1C201F00B9950D /* DiscGolfSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiscGolfSearch.xcdatamodel; sourceTree = "<group>"; };
 		DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
+		DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		DAEC3B612B85A23800171A7C /* DiscInBagInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscInBagInfo.storyboard; sourceTree = "<group>"; };
 		DAEE2C962B01D481005D289D /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
 		DAEE2C992B025BB6005D289D /* AddBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBag.storyboard; sourceTree = "<group>"; };
 		DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +143,7 @@
 				DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */,
 				DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */,
 				DAEE2C952B01B8E9005D289D /* Lottie in Frameworks */,
+				DAEC3B562B83F35600171A7C /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,7 @@
 			children = (
 				DA1DF4102B39054400CA783F /* Bag.storyboard */,
 				DA1DF4122B3905DF00CA783F /* BagViewController.swift */,
+				DAEC3B5E2B85A0FB00171A7C /* DiscInBagInfo */,
 			);
 			path = Bag;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 		DAD4820F2ACCFDB60051D89A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DAEC3B5B2B83F64C00171A7C /* Banner Help */,
 				DA22722D2B0A5088005A107C /* Eureka Files */,
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
@@ -373,6 +383,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DAEC3B5B2B83F64C00171A7C /* Banner Help */ = {
+			isa = PBXGroup;
+			children = (
+				DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */,
+				DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */,
+			);
+			path = "Banner Help";
+			sourceTree = "<group>";
+		};
+		DAEC3B5E2B85A0FB00171A7C /* DiscInBagInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DAEC3B612B85A23800171A7C /* DiscInBagInfo.storyboard */,
+			);
+			path = DiscInBagInfo;
+			sourceTree = "<group>";
+		};
 		DAEE2C982B025B93005D289D /* Add Bag  */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +431,7 @@
 				DAEE2C8E2B01B8AD005D289D /* Eureka */,
 				DAEE2C912B01B8B6005D289D /* SwiftSpinner */,
 				DAEE2C942B01B8E9005D289D /* Lottie */,
+				DAEC3B552B83F35600171A7C /* SwiftMessages */,
 			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
@@ -438,6 +466,7 @@
 				DAEE2C8D2B01B8AD005D289D /* XCRemoteSwiftPackageReference "Eureka" */,
 				DAEE2C902B01B8B6005D289D /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
 				DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
@@ -457,6 +486,7 @@
 				DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */,
 				DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */,
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
+				DAEC3B622B85A23800171A7C /* DiscInBagInfo.storyboard in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
 				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
@@ -472,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */,
+				DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */,
 				DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */,
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
 				DADED48D2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld in Sources */,
@@ -499,6 +530,7 @@
 				DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */,
 				DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
+				DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */,
@@ -747,6 +779,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
@@ -782,6 +822,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DAEC3B552B83F35600171A7C /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
 		DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;

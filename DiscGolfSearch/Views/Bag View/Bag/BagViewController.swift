@@ -102,7 +102,8 @@ class BagViewController: UIViewController {
         case .failure(let error):
             // Handle the error appropriately, e.g., show an alert or log the error
             print("Error fetching discs: \(error.localizedDescription)")
-            K.showAlert(title: "Error", message: "Failed to fetch discs. Please try again later.", presentingViewController: self)
+            AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch discs. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
+            }
         }
     }
 
