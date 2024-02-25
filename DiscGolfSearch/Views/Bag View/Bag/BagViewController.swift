@@ -152,6 +152,17 @@ extension BagViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let disc = currentBagDiscs[indexPath.item]
+        
+        let storyboard = UIStoryboard(name: "DiscInBagInfo", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "discInBagInfo") as? DiscInBagInfoViewController {
+            vc.disc = disc
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
 //MARK: Empty Data Source Delegates
