@@ -137,92 +137,6 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="B2Y-0l-lN0">
                                         <rect key="frame" x="0.0" y="356.66666666666663" width="327" height="55.333333333333314"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="UgX-39-aUC">
-                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="55.333333333333336"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA9-rp-P2F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="27.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="SpeedL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-Z4-GzF">
-                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="63.666666666666664" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="P3Z-f2-KBd">
-                                                <rect key="frame" x="84.333333333333343" y="0.0" width="74.333333333333343" height="55.333333333333336"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glide:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-kF-zcb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="27.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="GlideL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sa-pL-pKj">
-                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="53.333333333333336" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QAX-LX-haj">
-                                                <rect key="frame" x="168.66666666666666" y="0.0" width="74" height="55.333333333333336"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nb-ue-WOT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="27.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="TurnL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ame-vA-hA4">
-                                                        <rect key="frame" x="0.0" y="30.333333333333371" width="48" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-VS-XoY">
-                                                <rect key="frame" x="252.66666666666671" y="0.0" width="74.333333333333343" height="55.333333333333336"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Fade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-vt-H0G">
-                                                        <rect key="frame" x="0.0" y="0.0" width="58.333333333333336" height="29.666666666666668"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FadeL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-na-Vho">
-                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="51" height="22.666666666666671"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="shadowOffset" width="2" height="1"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -244,11 +158,8 @@
                     <connections>
                         <outlet property="companyLabel" destination="Va3-gI-3f4" id="T2E-DP-VNN"/>
                         <outlet property="discLabel" destination="KfQ-yf-nHq" id="fZB-ss-EeW"/>
-                        <outlet property="fadeLabel" destination="C0E-na-Vho" id="XtF-7V-Sda"/>
-                        <outlet property="glideLabel" destination="2Sa-pL-pKj" id="PNj-GI-goh"/>
                         <outlet property="plasticLabel" destination="3hC-tI-eb5" id="hXk-We-aXa"/>
-                        <outlet property="speedLabel" destination="AaJ-Z4-GzF" id="VJ8-ad-BGT"/>
-                        <outlet property="turnLabel" destination="Ame-vA-hA4" id="9pV-Ap-Lq3"/>
+                        <outlet property="stackView" destination="B2Y-0l-lN0" id="3gn-lu-3bt"/>
                         <outlet property="typeLabel" destination="GPw-yk-Qxb" id="cBR-h4-zfi"/>
                         <outlet property="weightLabel" destination="SS1-Ib-BXi" id="FMA-cA-2Gu"/>
                     </connections>

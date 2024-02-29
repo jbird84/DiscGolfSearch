@@ -13,10 +13,7 @@ class DiscInBagInfoViewController: UIViewController {
     @IBOutlet weak var discLabel: UILabel!
     @IBOutlet weak var plasticLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var speedLabel: UILabel!
-    @IBOutlet weak var glideLabel: UILabel!
-    @IBOutlet weak var turnLabel: UILabel!
-    @IBOutlet weak var fadeLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var typeLabel: UILabel!
     
     var disc: DiscDataModel?
@@ -29,11 +26,41 @@ class DiscInBagInfoViewController: UIViewController {
             discLabel.text = disc.name
             plasticLabel.text = disc.plastic ?? "NA"
             weightLabel.text = disc.weight ?? "NA"
-            speedLabel.text = disc.speed
-            glideLabel.text = disc.glide
-            turnLabel.text = disc.turn
-            fadeLabel.text = disc.fade
-            typeLabel.text = disc.stability 
+            typeLabel.text = disc.stability
+            
+            // Create bars for speed, glide, turn, and fade
+            addBar(title: "Speed", value: disc.speed)
+            addBar(title: "Glide", value: disc.glide)
+            addBar(title: "Turn", value: disc.turn)
+            addBar(title: "Fade", value: disc.fade)
         }
     }
+    
+    private func addBar(title: String, value: String) {
+        let barView = UIView()
+        let barHeight: CGFloat = 20 // Adjust this as needed
+        let barWidth = CGFloat((value as NSString).floatValue) * 20 // You can adjust the multiplier to control the bar length
+        barView.backgroundColor = UIColor.blue // Change color as needed
+        barView.translatesAutoresizingMaskIntoConstraints = false
+        barView.heightAnchor.constraint(equalToConstant: barHeight).isActive = true
+        barView.widthAnchor.constraint(equalToConstant: barWidth).isActive = true
+        
+        let valueLabel = UILabel()
+        valueLabel.text = value
+        valueLabel.textAlignment = .center
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.textAlignment = .center
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let stack = UIStackView(arrangedSubviews: [barView, valueLabel, titleLabel])
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.spacing = 5 // Adjust spacing between components
+        
+        stackView.addArrangedSubview(stack)
+    }
+    
 }
