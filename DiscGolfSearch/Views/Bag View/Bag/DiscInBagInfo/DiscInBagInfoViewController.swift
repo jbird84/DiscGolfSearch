@@ -8,59 +8,61 @@
 import UIKit
 
 class DiscInBagInfoViewController: UIViewController {
-
+    
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var discLabel: UILabel!
     @IBOutlet weak var plasticLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    @IBOutlet weak var speedProgressBar: ProgressBar!
+    @IBOutlet weak var glideProgressBar: ProgressBar!
+    @IBOutlet weak var turnProgressBar: ProgressBar!
+    @IBOutlet weak var fadeProgressBar: ProgressBar!
     
     var disc: DiscDataModel?
+    var progressTimers: [ProgressBar: CGFloat] = [:]
+    let timerInterval: TimeInterval = 0.1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let disc = disc {
             companyLabel.text = disc.brand
             discLabel.text = disc.name
             plasticLabel.text = disc.plastic ?? "NA"
             weightLabel.text = disc.weight ?? "NA"
             typeLabel.text = disc.stability
-            
-            // Create bars for speed, glide, turn, and fade
-            addBar(title: "Speed", value: disc.speed)
-            addBar(title: "Glide", value: disc.glide)
-            addBar(title: "Turn", value: disc.turn)
-            addBar(title: "Fade", value: disc.fade)
+            speedProgressBar.progressText = disc.speed
+            glideProgressBar.progressText = disc.glide
+            fadeProgressBar.progressText = disc.fade
+            turnProgressBar.progressText = disc.turn
         }
+        
+        startProgressTimer(for: speedProgressBar)
+        startProgressTimer(for: glideProgressBar)
+        startProgressTimer(for: turnProgressBar)
+        startProgressTimer(for: fadeProgressBar)
     }
     
-    private func addBar(title: String, value: String) {
-        let barView = UIView()
-        let barHeight: CGFloat = 20 // Adjust this as needed
-        let barWidth = CGFloat((value as NSString).floatValue) * 20 // You can adjust the multiplier to control the bar length
-        barView.backgroundColor = UIColor.blue // Change color as needed
-        barView.translatesAutoresizingMaskIntoConstraints = false
-        barView.heightAnchor.constraint(equalToConstant: barHeight).isActive = true
-        barView.widthAnchor.constraint(equalToConstant: barWidth).isActive = true
-        
-        let valueLabel = UILabel()
-        valueLabel.text = value
-        valueLabel.textAlignment = .center
-        valueLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.textAlignment = .center
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let stack = UIStackView(arrangedSubviews: [barView, valueLabel, titleLabel])
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 5 // Adjust spacing between components
-        
-        stackView.addArrangedSubview(stack)
+    func startProgressTimer(for progressBar: ProgressBar) {
+        let timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { [weak self] timer in
+            guard let self = self else {
+                timer.invalidate()
+                return
+            }
+            if let count = self.progressTimers[progressBar] {
+                self.progressTimers[progressBar] = count + 1
+                DispatchQueue.main.async {
+                    progressBar.progress = min(0.03 * count, 1)
+                    if progressBar.progress == 1 {
+                        timer.invalidate()
+                    }
+                }
+            }
+        }
+        progressTimers[progressBar] = 0
+        timer.fire()
     }
-    
 }

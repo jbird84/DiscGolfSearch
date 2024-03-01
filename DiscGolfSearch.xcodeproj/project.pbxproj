@@ -13,6 +13,7 @@
 		DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF4122B3905DF00CA783F /* BagViewController.swift */; };
 		DA1DF4172B3A1C1C00CA783F /* DiscDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF4162B3A1C1C00CA783F /* DiscDataModel.swift */; };
 		DA1DF4192B3A66B100CA783F /* DiscInBagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF4182B3A66B100CA783F /* DiscInBagCell.swift */; };
+		DA20B67A2B9172B000841351 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA20B6792B9172B000841351 /* ProgressBar.swift */; };
 		DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272192B055BDC005A107C /* ViewController+Ext.swift */; };
 		DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721B2B05B713005A107C /* GridColorPicker.swift */; };
 		DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721D2B08DC13005A107C /* BagDatabaseService.swift */; };
@@ -86,6 +87,7 @@
 		DA1DF4122B3905DF00CA783F /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
 		DA1DF4162B3A1C1C00CA783F /* DiscDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDataModel.swift; sourceTree = "<group>"; };
 		DA1DF4182B3A66B100CA783F /* DiscInBagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagCell.swift; sourceTree = "<group>"; };
+		DA20B6792B9172B000841351 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		DA2272192B055BDC005A107C /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		DA22721B2B05B713005A107C /* GridColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColorPicker.swift; sourceTree = "<group>"; };
 		DA22721D2B08DC13005A107C /* BagDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDatabaseService.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 				DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */,
+				DA20B6792B9172B000841351 /* ProgressBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */,
+				DA20B67A2B9172B000841351 /* ProgressBar.swift in Sources */,
 				DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */,
 				DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */,
 				DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */,
