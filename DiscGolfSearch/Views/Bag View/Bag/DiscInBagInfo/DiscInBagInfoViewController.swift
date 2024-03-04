@@ -9,13 +9,9 @@ import UIKit
 
 class DiscInBagInfoViewController: UIViewController {
     
-    @IBOutlet weak var companyLabel: UILabel!
-    @IBOutlet weak var discLabel: UILabel!
-    @IBOutlet weak var plasticLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
-    
+    @IBOutlet weak var stackView1: UIStackView!
+    @IBOutlet weak var stackView2: UIStackView!
+    @IBOutlet weak var stackView3: UIStackView!
     @IBOutlet weak var speedProgressBar: ProgressBar!
     @IBOutlet weak var glideProgressBar: ProgressBar!
     @IBOutlet weak var turnProgressBar: ProgressBar!
@@ -25,15 +21,19 @@ class DiscInBagInfoViewController: UIViewController {
     var progressTimers: [ProgressBar: CGFloat] = [:]
     let timerInterval: TimeInterval = 0.1
     
+    //Setup Views
+    let discCompanyNameView = ImageHeaderSubheaderView()
+    let discNameView = ImageHeaderSubheaderView()
+    let discPlasticView = ImageHeaderSubheaderView()
+    let discWeightView = ImageHeaderSubheaderView()
+    let discTypeView = ImageHeaderSubheaderView()
+    let usedForView = ImageHeaderSubheaderView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Disc Info"
         if let disc = disc {
-            companyLabel.text = disc.brand
-            discLabel.text = disc.name
-            plasticLabel.text = disc.plastic ?? "NA"
-            weightLabel.text = disc.weight ?? "NA"
-            typeLabel.text = disc.stability
+            setupViewsForDisc(disc: disc)
             speedProgressBar.progressText = disc.speed
             glideProgressBar.progressText = disc.glide
             fadeProgressBar.progressText = disc.fade
@@ -44,6 +44,24 @@ class DiscInBagInfoViewController: UIViewController {
         startProgressTimer(for: glideProgressBar)
         startProgressTimer(for: turnProgressBar)
         startProgressTimer(for: fadeProgressBar)
+    }
+    
+    private func setupViewsForDisc(disc: DiscDataModel) {
+   
+        discCompanyNameView.configure(image: UIImage(systemName: "house.lodge.fill"), headerText: "Company", subheaderText: disc.brand)
+        discNameView.configure(image: UIImage(systemName: "circle.fill"), headerText: "Name", subheaderText: disc.name)
+        discPlasticView.configure(image: UIImage(systemName: "creditcard.fill"), headerText: "Plastic", subheaderText: disc.plastic ?? "No plastic specified.")
+        discWeightView.configure(image: UIImage(systemName: "scalemass.fill"), headerText: "Weight", subheaderText: disc.weight ?? "No weight specified.")
+        discTypeView.configure(image: UIImage(systemName: "scale.3d"), headerText: "Stability", subheaderText: disc.stability)
+        
+        usedForView.configure(image: UIImage(systemName: "signpost.right.and.left.fill"), headerText: "Primary Use", subheaderText: disc.usedFor)
+        
+        stackView1.addArrangedSubview(discCompanyNameView)
+        stackView1.addArrangedSubview(discNameView)
+        stackView2.addArrangedSubview(discPlasticView)
+        stackView2.addArrangedSubview(discWeightView)
+        stackView3.addArrangedSubview(discTypeView)
+        stackView3.addArrangedSubview(usedForView)
     }
     
     func startProgressTimer(for progressBar: ProgressBar) {
