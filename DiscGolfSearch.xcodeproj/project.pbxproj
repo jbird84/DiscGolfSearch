@@ -24,6 +24,8 @@
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
+		DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */; };
+		DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C2C2B97F86600BBB1F7 /* ChartData.swift */; };
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
 		DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */; };
 		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
@@ -99,6 +101,8 @@
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* BagDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDataModel.swift; sourceTree = "<group>"; };
 		DA363D3D2B0183960050840A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDimensionalBar.swift; sourceTree = "<group>"; };
+		DA422C2C2B97F86600BBB1F7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagInfoViewController.swift; sourceTree = "<group>"; };
 		DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraphView.swift; sourceTree = "<group>"; };
@@ -246,11 +250,13 @@
 			path = "To Bag";
 			sourceTree = "<group>";
 		};
-		DA22722D2B0A5088005A107C /* Eureka Files */ = {
+		DA22722D2B0A5088005A107C /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				DA422C2B2B97F83400BBB1F7 /* ChartsDataModels */,
+				DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */,
 			);
-			path = "Eureka Files";
+			path = Charts;
 			sourceTree = "<group>";
 		};
 		DA363D332B016E5B0050840A /* Bag View */ = {
@@ -263,6 +269,14 @@
 				DA363D362B016EC30050840A /* BagListViewController.swift */,
 			);
 			path = "Bag View";
+			sourceTree = "<group>";
+		};
+		DA422C2B2B97F83400BBB1F7 /* ChartsDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA422C2C2B97F86600BBB1F7 /* ChartData.swift */,
+			);
+			path = ChartsDataModels;
 			sourceTree = "<group>";
 		};
 		DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */ = {
@@ -297,7 +311,7 @@
 			children = (
 				DA20B67B2B9541EF00841351 /* Custom Views */,
 				DAEC3B5B2B83F64C00171A7C /* Banner Help */,
-				DA22722D2B0A5088005A107C /* Eureka Files */,
+				DA22722D2B0A5088005A107C /* Charts */,
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 				DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */,
@@ -530,6 +544,7 @@
 				DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */,
 				DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */,
 				DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */,
+				DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */,
 				DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */,
 				DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */,
 				DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */,
@@ -552,6 +567,7 @@
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */,
+				DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */,
 				DA20B67A2B9172B000841351 /* ProgressBar.swift in Sources */,
 				DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */,
 				DA20B67D2B95421B00841351 /* ImageHeaderSubheaderView.swift in Sources */,
