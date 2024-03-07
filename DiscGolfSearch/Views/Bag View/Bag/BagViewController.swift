@@ -12,7 +12,6 @@ import SwiftUI
 class BagViewController: UIViewController {
     
     @IBOutlet weak var segControl: UISegmentedControl!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView!
     
     var coreDataManager: CoreDataManager!
