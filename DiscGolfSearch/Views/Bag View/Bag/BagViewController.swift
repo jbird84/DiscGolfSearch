@@ -14,6 +14,18 @@ class BagViewController: UIViewController {
     @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    private let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.backgroundColor = .brown
+        return sv
+    }()
+    
+    private let contentView: UIView = {
+        let v = UIView()
+        v.backgroundColor = .purple
+        return v
+    }()
+    
     var coreDataManager: CoreDataManager!
     var bag: BagDataModel?
     var allDiscs: [DiscDataModel] = []
@@ -102,42 +114,61 @@ class BagViewController: UIViewController {
     
     private func createGraphs() {
         // Create scatter chart view if it doesn't exist
-        let controller = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
-        guard let newChartView = controller.view else { return }
-        
-        scrollView.addSubview(newChartView)
+        let scatterChartViewController = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
+        guard let newChartView = scatterChartViewController.view else { return }
         scatterChartView = newChartView
+        scatterChartView?.translatesAutoresizingMaskIntoConstraints = false
         
-        newChartView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            newChartView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 15),
-            newChartView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            newChartView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            newChartView.heightAnchor.constraint(equalToConstant: 400)
-        ])
-        
-        // Ensure the scatter chart view is correctly sized and laid out
-        controller.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-        controller.view.layoutIfNeeded()
-        
+        //create oneDimensionalBar
         let oneDimensionalBar = OneDimensionalBar(isOverview: false)
-        let swiftUIController = UIHostingController(rootView: oneDimensionalBar)
-        swiftUIController.view.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(swiftUIController.view)
+        let oneDimensionalBarController = UIHostingController(rootView: oneDimensionalBar)
+        guard let newOneDimensionalBarView = oneDimensionalBarController.view else { return }
+        oneDimensionalBarView = newOneDimensionalBarView
+        oneDimensionalBarView?.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            swiftUIController.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            swiftUIController.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            swiftUIController.view.topAnchor.constraint(equalTo: newChartView.bottomAnchor),
-            swiftUIController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
-        ])
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(contentView)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addChild(swiftUIController)
-        swiftUIController.didMove(toParent: self)
-        
-        // Assign SwiftUI view to property
-        oneDimensionalBarView = swiftUIController.view
-        oneDimensionalBarView?.isHidden = true // Initially hide the SwiftUI view
+        // Safely unwrap scatterChartView
+        if let scatterChartView = scatterChartView, let oneDimensionalBarView = oneDimensionalBarView {
+            contentView.addSubview(scatterChartView)
+            contentView.addSubview(oneDimensionalBarView)
+            
+            let contentViewHConst = contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+            NSLayoutConstraint.activate([
+                //ScrollView Constraints
+                scrollView.topAnchor.constraint(equalTo: segControl.bottomAnchor, constant: 10),
+                scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+                scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            
+                //ContentView Constraints
+                contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+                contentViewHConst,
+                
+                //ScatterChartView Constraints
+                scatterChartView.topAnchor.constraint(equalTo: contentView.topAnchor),
+                scatterChartView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                scatterChartView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                scatterChartView.heightAnchor.constraint(equalToConstant: 400),
+                
+                //oneDimensionalBarView Constraints
+                oneDimensionalBarView.topAnchor.constraint(equalTo: scatterChartView.bottomAnchor),
+                oneDimensionalBarView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                oneDimensionalBarView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                oneDimensionalBarView.heightAnchor.constraint(equalToConstant: 300)
+            ])
+        }
+        // Ensure the scatter chart view is correctly sized and laid out
+        scatterChartViewController.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        scatterChartViewController.view.layoutIfNeeded()
     }
     
     private func filterDiscByBagId() {

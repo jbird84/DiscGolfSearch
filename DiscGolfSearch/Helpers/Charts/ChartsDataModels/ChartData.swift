@@ -22,10 +22,10 @@ struct DataUsageData {
     }
 
     static let example: [Series] = [
-        .init(stability: "Overstable", numberOfDiscs: 7),
-        .init(stability: "Very Overstable", numberOfDiscs: 3),
+        .init(stability: "O-stable", numberOfDiscs: 7),
+        .init(stability: "VO-stable", numberOfDiscs: 3),
         .init(stability: "Stable", numberOfDiscs: 2),
-        .init(stability: "Understable", numberOfDiscs: 3),
-        .init(stability: "Very Understable", numberOfDiscs: 0)
+        .init(stability: "U-stable", numberOfDiscs: 3),
+        .init(stability: "VU-stable", numberOfDiscs: 0)
     ]
 }
