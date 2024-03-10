@@ -16,13 +16,13 @@ class BagViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
         let sv = UIScrollView()
-        sv.backgroundColor = .brown
+        sv.backgroundColor = .clear
         return sv
     }()
     
     private let contentView: UIView = {
         let v = UIView()
-        v.backgroundColor = .purple
+        v.backgroundColor = .clear
         return v
     }()
     
@@ -73,25 +73,16 @@ class BagViewController: UIViewController {
     
     private func showDiscList() {
         tableView.isHidden = false
-        scatterChartView?.isHidden = true
-        oneDimensionalBarView?.isHidden = true
+        scrollView.removeFromSuperview()
+        //scatterChartView?.isHidden = true
+       // oneDimensionalBarView?.isHidden = true
     }
     
     private func showCharts() {
         
         // Hide table view
         tableView.isHidden = true
-        
-        if let scatterChartView = scatterChartView {
-            // Reuse existing scatter chart view
-            scatterChartView.isHidden = false
-        } else {
-            createGraphs()
-        }
-        
-        if let oneDimensionalBarView = oneDimensionalBarView {
-            oneDimensionalBarView.isHidden = false
-        }
+        createGraphs()
     }
     
     private func getDiscs() {
@@ -120,7 +111,7 @@ class BagViewController: UIViewController {
         scatterChartView?.translatesAutoresizingMaskIntoConstraints = false
         
         //create oneDimensionalBar
-        let oneDimensionalBar = OneDimensionalBar(isOverview: false)
+        let oneDimensionalBar = OneDimensionalBar(isOverview: false, currentBagDiscs: currentBagDiscs)
         let oneDimensionalBarController = UIHostingController(rootView: oneDimensionalBar)
         guard let newOneDimensionalBarView = oneDimensionalBarController.view else { return }
         oneDimensionalBarView = newOneDimensionalBarView

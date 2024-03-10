@@ -18,7 +18,7 @@ class GridColorPickerViewController: UIViewController, UICollectionViewDataSourc
         UIColor(hex: "#FFD700"), UIColor(hex: "#32CD32"), UIColor(hex: "#8A2BE2"),
         .systemTeal, UIColor(hex: "#FF6347"), UIColor(hex: "#00FA9A"), UIColor(hex: "#4169E1"),
         UIColor(hex: "#FF4500"), UIColor(hex: "#8B4513"), UIColor(hex: "#2E8B57"),
-        UIColor(hex: "#9932CC"), UIColor(hex: "#FF8C00"), .cyan, .magenta, .lightGray,
+        UIColor(hex: "#9932CC"), UIColor(hex: "#FF8C00"), .cyan, .magenta, UIColor(hex: "#7393B3"),
         .systemIndigo,
        ]
 
