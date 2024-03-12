@@ -18,7 +18,7 @@ struct BagScatterGraph: View {
     
     var body: some View {
         Chart(discs) { savingModel in
-            PointMark(x: .value("Turn + Fade", savingModel.turn + savingModel.fade), y: .value("Speed", savingModel.speed))
+            PointMark(x: .value("Turn + Fade", savingModel.turn + savingModel.fade), y: .value("Speed", 10))/*savingModel.speed))*/
                 .foregroundStyle(Color(hex: savingModel.selectedColor))
                 
         }
