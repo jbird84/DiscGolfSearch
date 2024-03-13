@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct scatterPlot: View {
+struct ScatterPlot: View {
+  var discName: String
+  var discSelectedColor: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Circle()
+                .foregroundColor(Color(hex: discSelectedColor))
+                .frame(width: 10, height: 10)
+            Text(discName)
+                .font(.caption2)
+        }
     }
-}
-
-#Preview {
-    scatterPlot()
 }
