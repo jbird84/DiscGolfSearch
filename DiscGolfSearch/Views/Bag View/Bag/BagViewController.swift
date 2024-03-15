@@ -30,6 +30,7 @@ class BagViewController: UIViewController {
     var bag: BagDataModel?
     var allDiscs: [DiscDataModel] = []
     var currentBagDiscs: [DiscDataModel] = []
+    var areDiscNamesShowing: Bool = true
     
     private var chartView: UIView?
     private var scatterChartView: UIView?
@@ -74,8 +75,6 @@ class BagViewController: UIViewController {
     private func showDiscList() {
         tableView.isHidden = false
         scrollView.removeFromSuperview()
-        //scatterChartView?.isHidden = true
-       // oneDimensionalBarView?.isHidden = true
     }
     
     private func showCharts() {
@@ -105,7 +104,7 @@ class BagViewController: UIViewController {
     
     private func createGraphs() {
         // Create scatter chart view if it doesn't exist
-        let scatterChartViewController = UIHostingController(rootView: BagScatterGraph(discs: currentBagDiscs))
+        let scatterChartViewController = UIHostingController(rootView: BagScatterGraph( discs: currentBagDiscs, areNamesShowing: areDiscNamesShowing))
         guard let newChartView = scatterChartViewController.view else { return }
         scatterChartView = newChartView
         scatterChartView?.translatesAutoresizingMaskIntoConstraints = false

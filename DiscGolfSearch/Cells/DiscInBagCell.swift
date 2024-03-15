@@ -18,16 +18,19 @@ class DiscInBagCell: UITableViewCell {
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var fadeLabel: UILabel!
     
+    @IBOutlet weak var mainFlightView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        mainFlightView.layer.cornerRadius = 20
     }
     
     func configure(with disc: DiscDataModel) {

@@ -24,7 +24,6 @@
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
-		DA3865822BA0F114003B6454 /* ScatterPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3865812BA0F114003B6454 /* ScatterPlot.swift */; };
 		DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */; };
 		DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C2C2B97F86600BBB1F7 /* ChartData.swift */; };
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
@@ -102,7 +101,6 @@
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* BagDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDataModel.swift; sourceTree = "<group>"; };
 		DA363D3D2B0183960050840A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
-		DA3865812BA0F114003B6454 /* ScatterPlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterPlot.swift; sourceTree = "<group>"; };
 		DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDimensionalBar.swift; sourceTree = "<group>"; };
 		DA422C2C2B97F86600BBB1F7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagInfoViewController.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 			children = (
 				DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */,
 				DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */,
-				DA3865812BA0F114003B6454 /* ScatterPlot.swift */,
 			);
 			path = "Bag Seg Controller Views";
 			sourceTree = "<group>";
@@ -568,7 +565,6 @@
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
 				DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
-				DA3865822BA0F114003B6454 /* ScatterPlot.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */,
 				DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */,
