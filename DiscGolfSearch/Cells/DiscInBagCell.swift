@@ -30,7 +30,7 @@ class DiscInBagCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        mainFlightView.layer.cornerRadius = 20
+        mainFlightView.layer.cornerRadius = 10
     }
     
     func configure(with disc: DiscDataModel) {
