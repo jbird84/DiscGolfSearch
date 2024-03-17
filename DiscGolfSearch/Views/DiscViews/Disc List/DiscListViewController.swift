@@ -185,7 +185,7 @@ class DiscListViewController: UIViewController {
         self.title = "Select Your Disc Speed"
         
         if let navigationBar = navigationController?.navigationBar {
-            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue]
+            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         }
         navigationItem.rightBarButtonItem = toggleButton
     }

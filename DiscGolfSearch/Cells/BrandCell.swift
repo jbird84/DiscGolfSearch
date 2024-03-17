@@ -16,7 +16,7 @@ class BrandCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .systemPink
+        label.textColor = .white
         return label
     }()
     

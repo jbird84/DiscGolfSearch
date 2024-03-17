@@ -196,6 +196,30 @@ extension BagViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let discToDelete = currentBagDiscs[indexPath.row]
+            
+            // Fetch discs from Core Data
+            let result = coreDataManager.fetch(DiscEntity.self, predicate: NSPredicate(format: "disc_name = %@", discToDelete.name))
+            
+            switch result {
+            case .success(let discsFromCoreData):
+                if let discEntity = discsFromCoreData.first {
+                    // Delete the first disc entity
+                    coreDataManager.delete(discEntity)
+                }
+            case .failure(let error):
+                // Handle the error
+                print("Error fetching disc entities: \(error.localizedDescription)")
+                K.showAlert(title: "Error Deleting Disc", message: "We encountered an issue while attempting to delete this disc. If the problem persists, please try again later.", presentingViewController: self)
+            }
+
+            currentBagDiscs.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
 }
 
 //MARK: Empty Data Source Delegates
