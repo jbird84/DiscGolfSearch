@@ -27,6 +27,7 @@
 		DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */; };
 		DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C2C2B97F86600BBB1F7 /* ChartData.swift */; };
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
+		DA9B7CD42BA7BD960040E44D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DA9B7CD32BA7BD960040E44D /* Lottie */; };
 		DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */; };
 		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
 		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
@@ -63,7 +64,6 @@
 		DAEE2C8C2B01B89B005D289D /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */; };
 		DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C8E2B01B8AD005D289D /* Eureka */; };
 		DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C912B01B8B6005D289D /* SwiftSpinner */; };
-		DAEE2C952B01B8E9005D289D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DAEE2C942B01B8E9005D289D /* Lottie */; };
 		DAEE2C972B01D481005D289D /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C962B01D481005D289D /* ImageView+Ext.swift */; };
 		DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE2C992B025BB6005D289D /* AddBag.storyboard */; };
 		DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */; };
@@ -149,10 +149,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9B7CD42BA7BD960040E44D /* Lottie in Frameworks */,
 				DAEE2C8C2B01B89B005D289D /* DZNEmptyDataSet in Frameworks */,
 				DAEE2C8F2B01B8AD005D289D /* Eureka in Frameworks */,
 				DAEE2C922B01B8B6005D289D /* SwiftSpinner in Frameworks */,
-				DAEE2C952B01B8E9005D289D /* Lottie in Frameworks */,
 				DAEC3B562B83F35600171A7C /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,8 +461,8 @@
 				DAEE2C8B2B01B89B005D289D /* DZNEmptyDataSet */,
 				DAEE2C8E2B01B8AD005D289D /* Eureka */,
 				DAEE2C912B01B8B6005D289D /* SwiftSpinner */,
-				DAEE2C942B01B8E9005D289D /* Lottie */,
 				DAEC3B552B83F35600171A7C /* SwiftMessages */,
+				DA9B7CD32BA7BD960040E44D /* Lottie */,
 			);
 			productName = DiscGolfSearch;
 			productReference = DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */;
@@ -496,8 +496,8 @@
 				DAEE2C8A2B01B89B005D289D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
 				DAEE2C8D2B01B8AD005D289D /* XCRemoteSwiftPackageReference "Eureka" */,
 				DAEE2C902B01B8B6005D289D /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
-				DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				DA9B7CD22BA7BD960040E44D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = DADB721E2AADFCDC0083B13B /* Products */;
 			projectDirPath = "";
@@ -815,6 +815,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA9B7CD22BA7BD960040E44D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 		DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
@@ -847,17 +855,14 @@
 				minimumVersion = 2.2.0;
 			};
 		};
-		DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.3.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA9B7CD32BA7BD960040E44D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9B7CD22BA7BD960040E44D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		DAEC3B552B83F35600171A7C /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEC3B542B83F35500171A7C /* XCRemoteSwiftPackageReference "SwiftMessages" */;
@@ -877,11 +882,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DAEE2C902B01B8B6005D289D /* XCRemoteSwiftPackageReference "SwiftSpinner" */;
 			productName = SwiftSpinner;
-		};
-		DAEE2C942B01B8E9005D289D /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAEE2C932B01B8E9005D289D /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
