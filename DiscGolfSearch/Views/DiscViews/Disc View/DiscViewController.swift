@@ -41,7 +41,7 @@ class DiscViewController: UIViewController {
     var disc: DiscGolfDisc?
     var similarDiscs: [DiscGolfDisc] = []
     let flightDiscImageView = UIImageView()
-    
+    var discTypesView: DiscTypesView?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,8 +52,9 @@ class DiscViewController: UIViewController {
         setupAddDiscToView()
         createSimilarDiscsCollection(disc: disc)
         // Add a "Select All" button to the navigation bar
-        let selectAllButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
-        navigationItem.rightBarButtonItem = selectAllButton
+        let addDiscToNavButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
+        let showFlightColorView = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
+        navigationItem.rightBarButtonItems = [showFlightColorView, addDiscToNavButton]
         navigationController?.navigationBar.backgroundColor = .clear
     }
     
@@ -186,6 +187,7 @@ class DiscViewController: UIViewController {
     }
     
     @objc private func addDiscTapped() {
+        discTypesView?.isHidden = true
         dropDownView.isHidden.toggle()
     }
     
@@ -207,6 +209,42 @@ class DiscViewController: UIViewController {
             navigateToFlightNumberViewController(with: 4)
         default:
             break
+        }
+    }
+    
+    @objc func toggleDiscTypesView(_ sender: UIBarButtonItem) {
+        dropDownView.isHidden = true
+        if discTypesView == nil {
+            // Load the DiscTypes.xib view if it's not already loaded
+            if let loadedView = Bundle.main.loadNibNamed("DiscTypes", owner: self, options: nil)?.first as? DiscTypesView {
+                discTypesView = loadedView
+                discTypesView?.navigationController = self.navigationController // Set the navigation controller reference
+                // Calculate the width as the screen width minus 20
+                let viewWidth = 139
+                let viewHeight = 556
+                
+                let screenWidth = UIScreen.main.bounds.width
+                
+                // Calculate the y-coordinate to be 5 points below the navigation bar
+                var y: CGFloat = 0.0
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                    let statusBarManager = windowScene.statusBarManager
+                    y = (statusBarManager?.statusBarFrame.height ?? 0) + 40
+                }
+                
+                // Set the frame for the discTypesView
+                discTypesView?.frame = CGRect(
+                    x: Int(screenWidth - 150), // Center horizontally
+                    y: Int(y), // Center vertically
+                    width: viewWidth,
+                    height: viewHeight
+                )
+                discTypesView?.layer.cornerRadius = 20
+                view.addSubview(discTypesView!)
+            }
+        } else {
+            // Toggle the visibility of the DiscTypes.xib view
+            discTypesView?.isHidden = !discTypesView!.isHidden
         }
     }
     
