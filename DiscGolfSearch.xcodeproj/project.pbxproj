@@ -28,6 +28,7 @@
 		DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C2C2B97F86600BBB1F7 /* ChartData.swift */; };
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
 		DA9B7CD42BA7BD960040E44D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DA9B7CD32BA7BD960040E44D /* Lottie */; };
+		DA9B7CD72BAD0BDA0040E44D /* StableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */; };
 		DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */; };
 		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
 		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
@@ -104,6 +105,7 @@
 		DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDimensionalBar.swift; sourceTree = "<group>"; };
 		DA422C2C2B97F86600BBB1F7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagInfoViewController.swift; sourceTree = "<group>"; };
+		DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableVC.swift; sourceTree = "<group>"; };
 		DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraphView.swift; sourceTree = "<group>"; };
 		DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDatabaseService.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		DA2272202B099AD4005A107C /* DiscViews */ = {
 			isa = PBXGroup;
 			children = (
+				DA9B7CD52BAD0B960040E44D /* Disc Info Views */,
 				DA2272242B099B57005A107C /* Search Discs */,
 				DA2272232B099B32005A107C /* Disc Types */,
 				DA2272222B099B0F005A107C /* Disc List */,
@@ -277,6 +280,16 @@
 				DA422C2C2B97F86600BBB1F7 /* ChartData.swift */,
 			);
 			path = ChartsDataModels;
+			sourceTree = "<group>";
+		};
+		DA9B7CD52BAD0B960040E44D /* Disc Info Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
+				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
+				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
+			);
+			path = "Disc Info Views";
 			sourceTree = "<group>";
 		};
 		DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */ = {
@@ -407,8 +420,6 @@
 				DA363D332B016E5B0050840A /* Bag View */,
 				DABE00D12AF9CE5600C2ABEB /* CartView */,
 				DADB72242AADFCDC0083B13B /* ViewController.swift */,
-				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
-				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -545,6 +556,7 @@
 				DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */,
 				DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */,
 				DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */,
+				DA9B7CD72BAD0BDA0040E44D /* StableVC.swift in Sources */,
 				DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */,
 				DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */,
 				DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */,

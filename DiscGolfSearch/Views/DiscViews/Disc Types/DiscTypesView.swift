@@ -41,17 +41,29 @@ class DiscTypesView: UIView {
         }
         
         private func addTapGesture(to label: UILabel) {
+            
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
             label.isUserInteractionEnabled = true
             label.addGestureRecognizer(tapGesture)
         }
         
         @objc private func labelTapped(_ gesture: UITapGestureRecognizer) {
+            guard let tappedLabel = gesture.view as? UILabel else { return }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
-                // Push to StabilityViewController
-                self.navigationController?.pushViewController(vc, animated: true)
+                
+            if tappedLabel == stableLabel {
+                    if let stableVC = storyboard.instantiateViewController(withIdentifier: "stableVC") as? StableVC {
+                        // Push to StabilityViewController
+                        self.navigationController?.pushViewController(stableVC, animated: true)
+                    }
+            } else {
+                if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
+                    // Push to StabilityViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
+
+           
         }
         
 }

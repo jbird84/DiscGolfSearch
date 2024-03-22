@@ -611,7 +611,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-ZD-c94">
                                                     <rect key="frame" x="16" y="25.000000000000007" width="128" height="86.666666666666686"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
                                                             <rect key="frame" x="6" y="0.0" width="116" height="42.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="115.67" id="13q-cS-u3S"/>
@@ -620,7 +620,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
                                                             <rect key="frame" x="25" y="45.333333333333329" width="78" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -719,14 +719,14 @@
         <scene sceneID="Fgq-6P-SsX">
             <objects>
                 <viewController storyboardIdentifier="stability" id="4XT-y4-EE8" customClass="StabilityViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NSm-AC-K7h">
+                    <view key="view" contentMode="scaleToFill" id="NSm-AC-K7h" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="4600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-th-x0h">
                                 <rect key="frame" x="0.0" y="59" width="393" height="4507"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-kR-2xR">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-kR-2xR" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="4800"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-n0-tWx">
@@ -1004,22 +1004,116 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyd-LH-sox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3249.6183206106871" y="-1152.1126760563382"/>
+            <point key="canvasLocation" x="3262" y="-1166"/>
         </scene>
-        <!--View Controller-->
+        <!--StableVC-->
         <scene sceneID="HSW-TT-0kz">
             <objects>
-                <viewController id="QPr-hr-fdw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stableVC" id="QPr-hr-fdw" customClass="StableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n7s-j0-BLC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1690"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-zu-7vc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="1597"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-9O-oHL" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-Fe-1y8">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WgZ-Iz-8ye"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTn-QE-u34">
+                                                <rect key="frame" x="16" y="50" width="361" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="E7z-St-0ZK"/>
+                                                </constraints>
+                                                <string key="text">Stable discs will spin similarly to an overstable disc but will not turn much, if at all. This means the flight path should be fairly straight.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalStabPath" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-Ke-DBJ">
+                                                <rect key="frame" x="76.666666666666686" y="250" width="240" height="236"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="236" id="To7-ud-S25"/>
+                                                    <constraint firstAttribute="width" constant="240" id="b6I-67-mxJ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-0k-xoR">
+                                                <rect key="frame" x="16" y="486" width="361" height="909"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="909" id="4Iz-CU-mbC"/>
+                                                </constraints>
+                                                <mutableString key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
+
+*Consistent Fade: They have a moderate and predictable fade, smoothly curving at the end of their flight.
+
+*Control and Accuracy: Stable discs offer excellent control and accuracy, making them a popular choice for both beginners and experienced players.
+
+*Versatility: They are versatile and can handle various throwing techniques, making them suitable for a wide range of shots.
+
+*Reliable in Wind: Stable discs are dependable even in mild wind conditions, offering consistent performance.
+
+*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</mutableString>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="A7Q-Fe-1y8" firstAttribute="top" secondItem="OHw-9O-oHL" secondAttribute="top" id="2zA-Bl-M79"/>
+                                            <constraint firstItem="BIe-0k-xoR" firstAttribute="top" secondItem="0Bo-Ke-DBJ" secondAttribute="bottom" id="4fz-8K-1xb"/>
+                                            <constraint firstAttribute="trailing" secondItem="A7Q-Fe-1y8" secondAttribute="trailing" id="Peo-8G-Hhs"/>
+                                            <constraint firstItem="0Bo-Ke-DBJ" firstAttribute="top" secondItem="tTn-QE-u34" secondAttribute="bottom" constant="-50" id="Q26-YX-fyE"/>
+                                            <constraint firstAttribute="trailing" secondItem="BIe-0k-xoR" secondAttribute="trailing" constant="16" id="Qwz-m9-TLY"/>
+                                            <constraint firstAttribute="height" constant="1500" id="TZy-mx-eUM"/>
+                                            <constraint firstItem="tTn-QE-u34" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" constant="16" id="UcD-JA-YS8"/>
+                                            <constraint firstItem="BIe-0k-xoR" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" constant="16" id="dHc-sc-TjD"/>
+                                            <constraint firstAttribute="trailing" secondItem="tTn-QE-u34" secondAttribute="trailing" constant="16" id="fKV-bB-Lv5"/>
+                                            <constraint firstItem="tTn-QE-u34" firstAttribute="top" secondItem="A7Q-Fe-1y8" secondAttribute="bottom" id="fP6-a7-Czb"/>
+                                            <constraint firstItem="0Bo-Ke-DBJ" firstAttribute="centerX" secondItem="OHw-9O-oHL" secondAttribute="centerX" id="jcE-53-2L4"/>
+                                            <constraint firstItem="A7Q-Fe-1y8" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" id="vUj-Xa-Tpf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="top" secondItem="QEr-zu-7vc" secondAttribute="top" id="5jW-8b-0Ve"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="top" secondItem="Chp-iW-ybQ" secondAttribute="top" id="F6b-Jv-aXj"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="leading" secondItem="Chp-iW-ybQ" secondAttribute="leading" id="FzS-WT-Ew6"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="width" secondItem="Rhf-0a-qOR" secondAttribute="width" id="SVg-S6-DSL"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="bottom" secondItem="Chp-iW-ybQ" secondAttribute="bottom" id="SWF-pl-GL0"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="leading" secondItem="QEr-zu-7vc" secondAttribute="leading" id="m0U-Cs-066"/>
+                                    <constraint firstAttribute="trailing" secondItem="OHw-9O-oHL" secondAttribute="trailing" id="ofp-v1-UVY"/>
+                                    <constraint firstAttribute="bottom" secondItem="OHw-9O-oHL" secondAttribute="bottom" id="pzJ-IL-76h"/>
+                                    <constraint firstItem="OHw-9O-oHL" firstAttribute="trailing" secondItem="Chp-iW-ybQ" secondAttribute="trailing" id="qvB-Vr-ql0"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Chp-iW-ybQ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Rhf-0a-qOR"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mvd-vJ-cdM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QEr-zu-7vc" firstAttribute="leading" secondItem="mvd-vJ-cdM" secondAttribute="leading" id="5Lg-W2-ifF"/>
+                            <constraint firstItem="QEr-zu-7vc" firstAttribute="top" secondItem="mvd-vJ-cdM" secondAttribute="top" id="QOD-gC-vEn"/>
+                            <constraint firstItem="mvd-vJ-cdM" firstAttribute="bottom" secondItem="QEr-zu-7vc" secondAttribute="bottom" id="gU3-Ol-yyM"/>
+                            <constraint firstItem="QEr-zu-7vc" firstAttribute="trailing" secondItem="mvd-vJ-cdM" secondAttribute="trailing" id="id1-dU-qbR"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="393" height="1690"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxO-sx-1Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4164" y="-2471"/>
+            <point key="canvasLocation" x="4163" y="-2191"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dyB-GS-h6P">
@@ -1523,9 +1617,6 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
         <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
