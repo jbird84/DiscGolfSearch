@@ -56,7 +56,13 @@ class DiscTypesView: UIView {
                         // Push to StabilityViewController
                         self.navigationController?.pushViewController(stableVC, animated: true)
                     }
-            } else {
+            } else if tappedLabel == understableLabel {
+                if let underStableVC = storyboard.instantiateViewController(withIdentifier: "underStableVC") as? UnderstableVC {
+                    self.navigationController?.pushViewController(underStableVC, animated: true)
+                }
+            }
+            
+            else {
                 if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
                     // Push to StabilityViewController
                     self.navigationController?.pushViewController(vc, animated: true)

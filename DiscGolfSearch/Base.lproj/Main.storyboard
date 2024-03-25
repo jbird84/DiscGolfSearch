@@ -779,16 +779,6 @@
                                                     <constraint firstAttribute="height" constant="334" id="z94-bX-gXp"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-Ut-qgK">
-                                                <rect key="frame" x="0.0" y="1374" width="393" height="55"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="Brt-Zn-RCm"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-7q-4Y5">
                                                 <rect key="frame" x="0.0" y="849" width="393" height="525"/>
                                                 <constraints>
@@ -809,88 +799,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-6f-Wl4">
-                                                <rect key="frame" x="0.0" y="1429" width="393" height="178"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="178" id="xVh-Et-GeT"/>
-                                                </constraints>
-                                                <string key="text">Stable discs will spin similarly to an overstable disc but will not turn much, if at all. This means the flight path should be fairly straight.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalStabPath" translatesAutoresizingMaskIntoConstraints="NO" id="MHC-tP-ibJ">
-                                                <rect key="frame" x="76.666666666666686" y="1578" width="240" height="211"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="Ydl-ej-xdP"/>
-                                                    <constraint firstAttribute="height" constant="211" id="zGo-ko-Gnc"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h79-2N-ptP">
-                                                <rect key="frame" x="2" y="1797" width="389" height="534"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="534" id="Ad6-aM-afM"/>
-                                                </constraints>
-                                                <string key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
-
-*Consistent Fade: They have a moderate and predictable fade, smoothly curving at the end of their flight.
-
-*Control and Accuracy: Stable discs offer excellent control and accuracy, making them a popular choice for both beginners and experienced players.
-
-*Versatility: They are versatile and can handle various throwing techniques, making them suitable for a wide range of shots.
-
-*Reliable in Wind: Stable discs are dependable even in mild wind conditions, offering consistent performance.
-
-*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNDERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbV-G3-tki">
-                                                <rect key="frame" x="0.0" y="2331" width="393" height="55"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="7YZ-h1-uMz"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
-                                                <color key="textColor" systemColor="systemRedColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-OY-Oyn">
-                                                <rect key="frame" x="3" y="2394" width="387" height="543.66666666666652"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="543.66999999999996" id="cIf-Rd-yYa"/>
-                                                </constraints>
-                                                <string key="text">An understable disc is characterized by its tendency to veer significantly to the right right after it's thrown. A highly understable disc usually exhibits minimal fade at the end of its flight. These discs are particularly well-suited for novice players who may not possess the arm strength required to throw more overstable discs effectively. When a player can't generate enough velocity, most discs tend to behave in an overstable manner for beginners.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="understablePath" translatesAutoresizingMaskIntoConstraints="NO" id="9I0-PC-Hgx">
-                                                <rect key="frame" x="66" y="2945" width="261" height="257"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="257" id="pwD-V7-zta"/>
-                                                    <constraint firstAttribute="width" constant="261" id="qZt-jE-X4b"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBS-Wl-N5r">
-                                                <rect key="frame" x="3" y="3210" width="387" height="439.33333333333348"/>
-                                                <string key="text">*Smooth Curves: Understable discs in disc golf veer right (for right-handed throwers) before curving back left at the end of their flight.
-
-*Low Fade: They exhibit minimal leftward curve (fade), making them ideal for long, straight shots.
-
-*Beginner-Friendly: Understable discs are great for beginners as they require less power to achieve distance and control.
-
-*Tailwind Advantage: They perform well with a tailwind, gaining extra distance.
-
-*Hyzer Flip: Skilled players can use understable discs for the "hyzer flip" technique, creating graceful S-curve shots.
-
-*Versatile Choices: These discs are versatile and can suit various shot types, making them a valuable part of a disc golfer's toolkit.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8V-7U-bQJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8V-7U-bQJ">
                                                 <rect key="frame" x="0.0" y="3669.3333333333335" width="393" height="55"/>
                                                 <color key="backgroundColor" red="0.65098039220000004" green="0.30588235289999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -900,13 +809,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-LN-gjX">
-                                                <rect key="frame" x="2" y="3744.3333333333335" width="389" height="754.33333333333348"/>
-                                                <string key="text">Understable Discs:
-
-Hyzer Flip: This is a throw where you release the disc with an anhyzer angle, causing it to flip up to flat and glide right (for right-handed backhand throwers). It's a great choice for long, controlled drives.
-
-Turnover Shot: This throw involves releasing the disc with an anhyzer angle, causing it to turn to the right (for right-handed backhand throwers) throughout its flight. It's useful for navigating tight fairways or shaping shots.
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-LN-gjX">
+                                                <rect key="frame" x="2" y="3744.3333333333339" width="389" height="754.33333333333212"/>
+                                                <mutableString key="text">
 
 Overstable Discs:
 
@@ -918,7 +823,7 @@ Stable Discs:
 
 Straight Shot: Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.
 
-Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.</string>
+Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.</mutableString>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -927,50 +832,27 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="NYu-xq-9LB" secondAttribute="trailing" id="14q-js-SvN"/>
-                                            <constraint firstItem="h79-2N-ptP" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="2" id="25N-eH-AIM"/>
-                                            <constraint firstItem="h79-2N-ptP" firstAttribute="top" secondItem="MHC-tP-ibJ" secondAttribute="bottom" constant="8" id="2iR-mb-tuU"/>
                                             <constraint firstItem="NYu-xq-9LB" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="3LK-89-pg2"/>
                                             <constraint firstItem="OoW-7q-4Y5" firstAttribute="top" secondItem="2c4-kR-2xR" secondAttribute="top" constant="849" id="68H-9t-fjS"/>
                                             <constraint firstAttribute="trailing" secondItem="7p2-a9-WWQ" secondAttribute="trailing" constant="8" id="7Xb-jh-Spc"/>
-                                            <constraint firstItem="GbV-G3-tki" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="8e9-nb-gAr"/>
                                             <constraint firstItem="O7r-3t-7Dv" firstAttribute="top" secondItem="oX0-n0-tWx" secondAttribute="bottom" constant="183" id="8wB-ye-rvU"/>
                                             <constraint firstItem="OoW-7q-4Y5" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="9ik-7e-VIU"/>
-                                            <constraint firstItem="9I0-PC-Hgx" firstAttribute="top" secondItem="C8s-OY-Oyn" secondAttribute="bottom" constant="7.3300000000000001" id="EuP-xL-k3E"/>
-                                            <constraint firstAttribute="trailing" secondItem="Cl5-6f-Wl4" secondAttribute="trailing" id="Hdt-I9-MQ1"/>
-                                            <constraint firstItem="Cl5-6f-Wl4" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="Iwl-uN-bLl"/>
                                             <constraint firstItem="Yx4-LN-gjX" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="2" id="KcS-oj-ebJ"/>
                                             <constraint firstItem="7p2-a9-WWQ" firstAttribute="top" secondItem="O7r-3t-7Dv" secondAttribute="bottom" id="MHn-nH-c3O"/>
                                             <constraint firstItem="GHk-5R-dHv" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="113" id="MMS-HD-DGi"/>
-                                            <constraint firstItem="Cl5-6f-Wl4" firstAttribute="top" secondItem="4FD-Ut-qgK" secondAttribute="bottom" id="N77-dg-7wm"/>
-                                            <constraint firstItem="MHC-tP-ibJ" firstAttribute="top" secondItem="4FD-Ut-qgK" secondAttribute="bottom" constant="149" id="Qwx-nf-eP0"/>
-                                            <constraint firstItem="SBS-Wl-N5r" firstAttribute="top" secondItem="9I0-PC-Hgx" secondAttribute="bottom" constant="8" id="SlV-B5-qLz"/>
                                             <constraint firstItem="dtt-XY-2xx" firstAttribute="centerX" secondItem="O7r-3t-7Dv" secondAttribute="centerX" id="Spx-MU-lJz"/>
                                             <constraint firstItem="l8V-7U-bQJ" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="T0p-ok-Qpx"/>
                                             <constraint firstItem="7p2-a9-WWQ" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="8" id="UJ0-C9-r1X"/>
-                                            <constraint firstItem="SBS-Wl-N5r" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="3" id="WfB-xR-m23"/>
-                                            <constraint firstItem="9I0-PC-Hgx" firstAttribute="centerX" secondItem="2c4-kR-2xR" secondAttribute="centerX" id="XBO-ea-P8W"/>
-                                            <constraint firstItem="C8s-OY-Oyn" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="3" id="agn-5o-skF"/>
                                             <constraint firstItem="NYu-xq-9LB" firstAttribute="top" secondItem="oX0-n0-tWx" secondAttribute="bottom" id="ah7-me-zn6"/>
                                             <constraint firstItem="oX0-n0-tWx" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="anO-xQ-D4V"/>
                                             <constraint firstAttribute="trailing" secondItem="Yx4-LN-gjX" secondAttribute="trailing" constant="2" id="cIo-iG-RA5"/>
-                                            <constraint firstAttribute="trailing" secondItem="h79-2N-ptP" secondAttribute="trailing" constant="2" id="cK5-ko-GfF"/>
                                             <constraint firstItem="O7r-3t-7Dv" firstAttribute="centerX" secondItem="2c4-kR-2xR" secondAttribute="centerX" id="duT-qp-ayl"/>
                                             <constraint firstAttribute="trailing" secondItem="GHk-5R-dHv" secondAttribute="trailing" constant="31" id="fIo-6m-0LI"/>
-                                            <constraint firstItem="GbV-G3-tki" firstAttribute="top" secondItem="h79-2N-ptP" secondAttribute="bottom" id="gRV-fH-RwD"/>
-                                            <constraint firstItem="MHC-tP-ibJ" firstAttribute="centerX" secondItem="2c4-kR-2xR" secondAttribute="centerX" id="gfo-T5-qwL"/>
                                             <constraint firstItem="GHk-5R-dHv" firstAttribute="top" secondItem="2c4-kR-2xR" secondAttribute="top" constant="556" id="iWg-Fm-O8h"/>
-                                            <constraint firstAttribute="trailing" secondItem="SBS-Wl-N5r" secondAttribute="trailing" constant="3" id="pyv-Dm-853"/>
                                             <constraint firstItem="dtt-XY-2xx" firstAttribute="top" secondItem="O7r-3t-7Dv" secondAttribute="top" id="qPq-7H-jgL"/>
-                                            <constraint firstAttribute="trailing" secondItem="GbV-G3-tki" secondAttribute="trailing" id="r5l-S5-A8q"/>
-                                            <constraint firstItem="4FD-Ut-qgK" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="rSF-N6-NUo"/>
                                             <constraint firstAttribute="trailing" secondItem="oX0-n0-tWx" secondAttribute="trailing" id="rxk-J7-sDH"/>
-                                            <constraint firstItem="C8s-OY-Oyn" firstAttribute="top" secondItem="GbV-G3-tki" secondAttribute="bottom" constant="8" id="u4c-zG-Tey"/>
                                             <constraint firstItem="Yx4-LN-gjX" firstAttribute="top" secondItem="l8V-7U-bQJ" secondAttribute="bottom" constant="20" id="u8U-uq-v2k"/>
-                                            <constraint firstAttribute="trailing" secondItem="4FD-Ut-qgK" secondAttribute="trailing" id="uRf-Tq-GcX"/>
                                             <constraint firstAttribute="trailing" secondItem="OoW-7q-4Y5" secondAttribute="trailing" id="w0U-wZ-WM7"/>
-                                            <constraint firstAttribute="trailing" secondItem="C8s-OY-Oyn" secondAttribute="trailing" constant="3" id="was-gI-wXJ"/>
-                                            <constraint firstItem="l8V-7U-bQJ" firstAttribute="top" secondItem="SBS-Wl-N5r" secondAttribute="bottom" constant="20" id="wnQ-8K-nD8"/>
-                                            <constraint firstItem="4FD-Ut-qgK" firstAttribute="top" secondItem="OoW-7q-4Y5" secondAttribute="bottom" id="xUB-wu-Dyh"/>
                                             <constraint firstItem="oX0-n0-tWx" firstAttribute="top" secondItem="2c4-kR-2xR" secondAttribute="top" id="xvo-hL-SjV"/>
                                             <constraint firstAttribute="trailing" secondItem="l8V-7U-bQJ" secondAttribute="trailing" id="za8-Z6-ZDt"/>
                                             <constraint firstAttribute="height" constant="4800" id="zfZ-lb-Yeq"/>
@@ -1011,11 +893,11 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
             <objects>
                 <viewController storyboardIdentifier="stableVC" id="QPr-hr-fdw" customClass="StableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n7s-j0-BLC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1690"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1684"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-zu-7vc">
-                                <rect key="frame" x="0.0" y="59" width="393" height="1597"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="1591"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-9O-oHL" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
@@ -1110,14 +992,153 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
                             <constraint firstItem="QEr-zu-7vc" firstAttribute="trailing" secondItem="mvd-vJ-cdM" secondAttribute="trailing" id="id1-dU-qbR"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="393" height="1690"/>
+                    <size key="freeformSize" width="393" height="1684"/>
                     <connections>
                         <outlet property="scrollView" destination="QEr-zu-7vc" id="c0P-3U-iKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxO-sx-1Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4163" y="-2191"/>
+            <point key="canvasLocation" x="4083" y="-2194"/>
+        </scene>
+        <!--UnderstableVC-->
+        <scene sceneID="E45-9W-beO">
+            <objects>
+                <viewController storyboardIdentifier="underStableVC" id="6eq-Jr-lOh" customClass="UnderstableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vdl-Q9-6LO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="2141"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7F-yd-h9p">
+                                <rect key="frame" x="0.0" y="59" width="393" height="2048"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-hB-Fea" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2850"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNDERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-On-VfL">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="Ag2-iD-uva"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-2M-ngI">
+                                                <rect key="frame" x="3" y="55" width="387" height="640"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="640" id="iW4-ir-jS8"/>
+                                                </constraints>
+                                                <string key="text">An understable disc is characterized by its tendency to veer significantly to the right right after it's thrown. A highly understable disc usually exhibits minimal fade at the end of its flight. These discs are particularly well-suited for novice players who may not possess the arm strength required to throw more overstable discs effectively. When a player can't generate enough velocity, most discs tend to behave in an overstable manner for beginners.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="understablePath" translatesAutoresizingMaskIntoConstraints="NO" id="qhn-56-v4E">
+                                                <rect key="frame" x="71.666666666666686" y="653" width="250" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="FWb-Jj-hzt"/>
+                                                    <constraint firstAttribute="width" constant="250" id="b4u-Bi-5sG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzV-6v-HHk">
+                                                <rect key="frame" x="8" y="868" width="377" height="793"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="793" id="MAA-0J-5sF"/>
+                                                </constraints>
+                                                <mutableString key="text">*Smooth Curves: Understable discs in disc golf veer right (for right-handed throwers) before curving back left at the end of their flight.
+
+*Low Fade: They exhibit minimal leftward curve (fade), making them ideal for long, straight shots.
+
+*Beginner-Friendly: Understable discs are great for beginners as they require less power to achieve distance and control.
+
+*Tailwind Advantage: They perform well with a tailwind, gaining extra distance.
+
+*Hyzer Flip: Skilled players can use understable discs for the "hyzer flip" technique, creating graceful S-curve shots.
+
+*Versatile Choices: These discs are versatile and can suit various shot types, making them a valuable part of a disc golfer's toolkit.</mutableString>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shots Based On Stability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIn-72-AUn">
+                                                <rect key="frame" x="0.0" y="1661" width="393" height="55"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="CVe-ss-vD9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-ER-cfL">
+                                                <rect key="frame" x="0.0" y="1716" width="393" height="280"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="280" id="h6M-Jq-paE"/>
+                                                </constraints>
+                                                <string key="text">Hyzer Flip: This is a throw where you release the disc with an anhyzer angle, causing it to flip up to flat and glide right (for right-handed backhand throwers). It's a great choice for long, controlled drives.
+
+Turnover Shot: This throw involves releasing the disc with an anhyzer angle, causing it to turn to the right (for right-handed backhand throwers) throughout its flight. It's useful for navigating tight fairways or shaping shots.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="AzV-6v-HHk" firstAttribute="top" secondItem="qhn-56-v4E" secondAttribute="bottom" constant="-45" id="11F-Px-zvU"/>
+                                            <constraint firstItem="0Oz-ER-cfL" firstAttribute="top" secondItem="WIn-72-AUn" secondAttribute="bottom" id="8C4-hx-HTm"/>
+                                            <constraint firstAttribute="height" constant="2850" id="AXW-gs-7Qf"/>
+                                            <constraint firstItem="L5C-On-VfL" firstAttribute="top" secondItem="ozg-hB-Fea" secondAttribute="top" id="C3b-QD-4r8"/>
+                                            <constraint firstItem="0Oz-ER-cfL" firstAttribute="leading" secondItem="ozg-hB-Fea" secondAttribute="leading" id="F87-BF-tMm"/>
+                                            <constraint firstAttribute="trailing" secondItem="mY0-2M-ngI" secondAttribute="trailing" constant="3" id="Ho8-cx-1Rs"/>
+                                            <constraint firstAttribute="trailing" secondItem="WIn-72-AUn" secondAttribute="trailing" id="IPb-wV-3yZ"/>
+                                            <constraint firstItem="mY0-2M-ngI" firstAttribute="leading" secondItem="ozg-hB-Fea" secondAttribute="leading" constant="3" id="Oxk-83-lmj"/>
+                                            <constraint firstItem="mY0-2M-ngI" firstAttribute="top" secondItem="L5C-On-VfL" secondAttribute="bottom" id="REa-s4-yD5"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Oz-ER-cfL" secondAttribute="trailing" id="SF5-6n-Xpy"/>
+                                            <constraint firstAttribute="trailing" secondItem="AzV-6v-HHk" secondAttribute="trailing" constant="8" id="UeJ-Z4-iTB"/>
+                                            <constraint firstItem="L5C-On-VfL" firstAttribute="leading" secondItem="ozg-hB-Fea" secondAttribute="leading" id="UsP-m4-FTZ"/>
+                                            <constraint firstItem="qhn-56-v4E" firstAttribute="top" secondItem="mY0-2M-ngI" secondAttribute="bottom" constant="-42" id="gBQ-7O-XLy"/>
+                                            <constraint firstItem="qhn-56-v4E" firstAttribute="centerX" secondItem="ozg-hB-Fea" secondAttribute="centerX" id="jgq-u9-jV8"/>
+                                            <constraint firstItem="AzV-6v-HHk" firstAttribute="leading" secondItem="ozg-hB-Fea" secondAttribute="leading" constant="8" id="onl-gc-ROC"/>
+                                            <constraint firstAttribute="trailing" secondItem="L5C-On-VfL" secondAttribute="trailing" id="v4g-ym-Eq5"/>
+                                            <constraint firstItem="WIn-72-AUn" firstAttribute="top" secondItem="AzV-6v-HHk" secondAttribute="bottom" id="wYh-Fj-4wN"/>
+                                            <constraint firstItem="WIn-72-AUn" firstAttribute="leading" secondItem="ozg-hB-Fea" secondAttribute="leading" id="zNA-uN-hzt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="top" secondItem="A3i-1L-Xq0" secondAttribute="top" id="73b-rf-FQt"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="trailing" secondItem="A3i-1L-Xq0" secondAttribute="trailing" constant="393" id="9qn-Sq-JOa"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="leading" secondItem="A3i-1L-Xq0" secondAttribute="leading" id="Qb7-aa-f5c"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="leading" secondItem="d7F-yd-h9p" secondAttribute="leading" id="RKz-4N-XHI"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="top" secondItem="d7F-yd-h9p" secondAttribute="top" id="XDg-q7-y85"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="width" secondItem="CLV-z1-9SJ" secondAttribute="width" id="d8r-S1-SZG"/>
+                                    <constraint firstItem="ozg-hB-Fea" firstAttribute="bottom" secondItem="A3i-1L-Xq0" secondAttribute="bottom" constant="759" id="tRp-17-iL3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="A3i-1L-Xq0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="CLV-z1-9SJ"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XjP-8j-chv"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d7F-yd-h9p" firstAttribute="bottom" secondItem="XjP-8j-chv" secondAttribute="bottom" id="Cww-2K-LZ2"/>
+                            <constraint firstItem="d7F-yd-h9p" firstAttribute="trailing" secondItem="XjP-8j-chv" secondAttribute="trailing" id="Pqt-12-A5a"/>
+                            <constraint firstItem="d7F-yd-h9p" firstAttribute="top" secondItem="XjP-8j-chv" secondAttribute="top" id="QJ8-1h-EVg"/>
+                            <constraint firstItem="d7F-yd-h9p" firstAttribute="leading" secondItem="XjP-8j-chv" secondAttribute="leading" id="T7W-HN-sz1"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="2141"/>
+                    <connections>
+                        <outlet property="scrollView" destination="d7F-yd-h9p" id="PSa-hN-8mA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbt-1E-Unl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5043.5114503816794" y="-2065.8450704225352"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dyB-GS-h6P">
@@ -1622,25 +1643,25 @@ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, w
         <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
