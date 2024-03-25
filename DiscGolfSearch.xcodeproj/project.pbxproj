@@ -36,7 +36,7 @@
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
 		DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */; };
-		DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */; };
+		DAD4820E2ACA4AEB0051D89A /* OverstableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */; };
 		DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD482102ACCFDCB0051D89A /* Constants.swift */; };
 		DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */; };
 		DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72202AADFCDC0083B13B /* AppDelegate.swift */; };
@@ -114,7 +114,7 @@
 		DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscSwiftDataModel.swift; sourceTree = "<group>"; };
 		DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
-		DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityViewController.swift; sourceTree = "<group>"; };
+		DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC.swift; sourceTree = "<group>"; };
 		DAD482102ACCFDCB0051D89A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNumbersViewController.swift; sourceTree = "<group>"; };
 		DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscGolfSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +287,7 @@
 		DA9B7CD52BAD0B960040E44D /* Disc Info Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAD4820D2ACA4AEB0051D89A /* StabilityViewController.swift */,
+				DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */,
 				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
 				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
 				DA8172C32BB10969005D56E5 /* UnderstableVC.swift */,
@@ -548,7 +548,7 @@
 			files = (
 				DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */,
 				DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */,
-				DAD4820E2ACA4AEB0051D89A /* StabilityViewController.swift in Sources */,
+				DAD4820E2ACA4AEB0051D89A /* OverstableVC.swift in Sources */,
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
 				DADED48D2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld in Sources */,
 				DADF925B2B1EA74D00AD5378 /* CoreDataManager.swift in Sources */,

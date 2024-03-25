@@ -38,3 +38,13 @@ extension StableVC: UIScrollViewDelegate {
         }
     }
 }
+
+
+//This goes in storyboard for stable then delete here:
+/*
+ Stable Discs:
+
+ Straight Shot: Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.
+
+ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.
+ */

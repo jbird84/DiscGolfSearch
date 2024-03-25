@@ -50,26 +50,25 @@ class DiscTypesView: UIView {
         @objc private func labelTapped(_ gesture: UITapGestureRecognizer) {
             guard let tappedLabel = gesture.view as? UILabel else { return }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
-            if tappedLabel == stableLabel {
+            
+            if tappedLabel == overstableLabel || tappedLabel == veryOverstableLabel {
+                if let vc = storyboard.instantiateViewController(withIdentifier: "overStableVC") as? OverstableVC {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            } else if tappedLabel == stableLabel {
                     if let stableVC = storyboard.instantiateViewController(withIdentifier: "stableVC") as? StableVC {
-                        // Push to StabilityViewController
                         self.navigationController?.pushViewController(stableVC, animated: true)
                     }
-            } else if tappedLabel == understableLabel {
+            } else if tappedLabel == understableLabel || tappedLabel == veryUnderstableLabel  {
                 if let underStableVC = storyboard.instantiateViewController(withIdentifier: "underStableVC") as? UnderstableVC {
                     self.navigationController?.pushViewController(underStableVC, animated: true)
                 }
             }
             
             else {
-                if let vc = storyboard.instantiateViewController(withIdentifier: "stability") as? StabilityViewController {
-                    // Push to StabilityViewController
+                if let vc = storyboard.instantiateViewController(withIdentifier: "overStableVC") as? OverstableVC {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
-
-           
         }
-        
 }

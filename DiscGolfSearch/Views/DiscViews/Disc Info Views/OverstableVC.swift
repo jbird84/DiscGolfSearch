@@ -7,16 +7,17 @@
 
 import UIKit
 
-class StabilityViewController: UIViewController {
+class OverstableVC: UIViewController {
 
     
     @IBOutlet weak var discView: UIView!
-    
     @IBOutlet weak var discImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.delegate = self
         startRotation()
     }
     
@@ -35,4 +36,25 @@ class StabilityViewController: UIViewController {
         discImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
 
+}
+
+extension OverstableVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        
+        // Define the threshold where you want to change the appearance
+        let threshold: CGFloat = 50
+        
+        if offset > threshold {
+            // Set navigation bar background color to orange
+            navigationController?.navigationBar.barTintColor = .systemGreen
+            // Show navigation bar title
+            navigationItem.title = "OVERSTABLE"
+        } else {
+            // Revert navigation bar to its original appearance
+            navigationController?.navigationBar.barTintColor = .clear
+            // Hide navigation bar title
+            navigationItem.title = nil
+        }
+    }
 }
