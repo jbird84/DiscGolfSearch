@@ -720,14 +720,14 @@
             <objects>
                 <viewController storyboardIdentifier="overStableVC" id="4XT-y4-EE8" customClass="OverstableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NSm-AC-K7h" userLabel="MainView">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="4600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="2317"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-th-x0h">
-                                <rect key="frame" x="0.0" y="59" width="393" height="4507"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="2224"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-kR-2xR" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2150"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-n0-tWx">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
@@ -848,7 +848,7 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                                             <constraint firstAttribute="trailing" secondItem="Yx4-LN-gjX" secondAttribute="trailing" id="xZb-Uf-wMU"/>
                                             <constraint firstItem="oX0-n0-tWx" firstAttribute="top" secondItem="2c4-kR-2xR" secondAttribute="top" id="xvo-hL-SjV"/>
                                             <constraint firstAttribute="trailing" secondItem="l8V-7U-bQJ" secondAttribute="trailing" id="yzb-m9-U9v"/>
-                                            <constraint firstAttribute="height" constant="2130" id="zfZ-lb-Yeq"/>
+                                            <constraint firstAttribute="height" constant="2150" id="zfZ-lb-Yeq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -871,7 +871,7 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                             <constraint firstItem="1O8-th-x0h" firstAttribute="bottom" secondItem="9e5-Hw-RfA" secondAttribute="bottom" id="vrC-rp-fd9"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="393" height="4600"/>
+                    <size key="freeformSize" width="393" height="2317"/>
                     <connections>
                         <outlet property="discImageView" destination="dtt-XY-2xx" id="3gd-Qm-o0o"/>
                         <outlet property="discView" destination="O7r-3t-7Dv" id="BTo-gy-rJ5"/>
@@ -880,21 +880,21 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyd-LH-sox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3261.8320610687019" y="-1166.1971830985915"/>
+            <point key="canvasLocation" x="3261.8320610687019" y="-2391.1971830985917"/>
         </scene>
         <!--StableVC-->
         <scene sceneID="HSW-TT-0kz">
             <objects>
                 <viewController storyboardIdentifier="stableVC" id="QPr-hr-fdw" customClass="StableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n7s-j0-BLC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1684"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="2136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="QEr-zu-7vc">
-                                <rect key="frame" x="0.0" y="59" width="393" height="1591"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="2043"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-9O-oHL" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1800"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-Fe-1y8">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
@@ -943,20 +943,48 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYe-aI-7A4">
+                                                <rect key="frame" x="0.0" y="1395" width="393" height="55"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="cpe-iO-bHJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRu-aR-Ezz">
+                                                <rect key="frame" x="3" y="1458" width="387" height="268"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="268" id="Cuf-oq-YJY"/>
+                                                </constraints>
+                                                <string key="text">Straight Shot: Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.
+
+ Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="xRu-aR-Ezz" firstAttribute="top" secondItem="FYe-aI-7A4" secondAttribute="bottom" constant="8" symbolic="YES" id="0NT-U9-Xru"/>
                                             <constraint firstItem="A7Q-Fe-1y8" firstAttribute="top" secondItem="OHw-9O-oHL" secondAttribute="top" id="2zA-Bl-M79"/>
                                             <constraint firstItem="BIe-0k-xoR" firstAttribute="top" secondItem="0Bo-Ke-DBJ" secondAttribute="bottom" id="4fz-8K-1xb"/>
+                                            <constraint firstItem="xRu-aR-Ezz" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" constant="3" id="Edj-td-lBJ"/>
                                             <constraint firstAttribute="trailing" secondItem="A7Q-Fe-1y8" secondAttribute="trailing" id="Peo-8G-Hhs"/>
                                             <constraint firstItem="0Bo-Ke-DBJ" firstAttribute="top" secondItem="tTn-QE-u34" secondAttribute="bottom" constant="-50" id="Q26-YX-fyE"/>
+                                            <constraint firstAttribute="trailing" secondItem="xRu-aR-Ezz" secondAttribute="trailing" constant="3" id="QU2-yl-bS4"/>
                                             <constraint firstAttribute="trailing" secondItem="BIe-0k-xoR" secondAttribute="trailing" constant="16" id="Qwz-m9-TLY"/>
-                                            <constraint firstAttribute="height" constant="1500" id="TZy-mx-eUM"/>
+                                            <constraint firstItem="FYe-aI-7A4" firstAttribute="top" secondItem="BIe-0k-xoR" secondAttribute="bottom" id="RtX-Jg-lF1"/>
+                                            <constraint firstAttribute="height" constant="1800" id="TZy-mx-eUM"/>
                                             <constraint firstItem="tTn-QE-u34" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" constant="16" id="UcD-JA-YS8"/>
+                                            <constraint firstAttribute="trailing" secondItem="FYe-aI-7A4" secondAttribute="trailing" id="Yfy-fH-mop"/>
                                             <constraint firstItem="BIe-0k-xoR" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" constant="16" id="dHc-sc-TjD"/>
                                             <constraint firstAttribute="trailing" secondItem="tTn-QE-u34" secondAttribute="trailing" constant="16" id="fKV-bB-Lv5"/>
                                             <constraint firstItem="tTn-QE-u34" firstAttribute="top" secondItem="A7Q-Fe-1y8" secondAttribute="bottom" id="fP6-a7-Czb"/>
                                             <constraint firstItem="0Bo-Ke-DBJ" firstAttribute="centerX" secondItem="OHw-9O-oHL" secondAttribute="centerX" id="jcE-53-2L4"/>
+                                            <constraint firstItem="FYe-aI-7A4" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" id="odf-Tb-04s"/>
                                             <constraint firstItem="A7Q-Fe-1y8" firstAttribute="leading" secondItem="OHw-9O-oHL" secondAttribute="leading" id="vUj-Xa-Tpf"/>
                                         </constraints>
                                     </view>
@@ -986,14 +1014,14 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                             <constraint firstItem="QEr-zu-7vc" firstAttribute="trailing" secondItem="mvd-vJ-cdM" secondAttribute="trailing" id="id1-dU-qbR"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="393" height="1684"/>
+                    <size key="freeformSize" width="393" height="2136"/>
                     <connections>
                         <outlet property="scrollView" destination="QEr-zu-7vc" id="c0P-3U-iKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxO-sx-1Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4083" y="-2194"/>
+            <point key="canvasLocation" x="3991.6030534351144" y="-2452.1126760563379"/>
         </scene>
         <!--UnderstableVC-->
         <scene sceneID="E45-9W-beO">
@@ -1056,7 +1084,7 @@ Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing th
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shots Based On Stability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIn-72-AUn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIn-72-AUn">
                                                 <rect key="frame" x="0.0" y="1661" width="393" height="55"/>
                                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                 <constraints>
@@ -1132,7 +1160,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbt-1E-Unl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5043.5114503816794" y="-2065.8450704225352"/>
+            <point key="canvasLocation" x="4689" y="-2450"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dyB-GS-h6P">
