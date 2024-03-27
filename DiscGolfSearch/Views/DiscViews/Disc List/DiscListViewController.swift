@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class DiscListViewController: UIViewController {
     
@@ -35,6 +36,8 @@ class DiscListViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         setupCollectionView()
+        collectionView.emptyDataSetSource = self
+        collectionView.emptyDataSetDelegate = self
         oneToThreeSpeedButton.tag = 3
         fourSpeedButton.tag = 4
         fiveSpeedButton.tag = 5
@@ -244,4 +247,35 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+}
+
+
+//MARK: Empty Data Source Delegates
+extension DiscListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "noDiscGolfDisc")
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "No Discs Found With Selected Speed"
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
+        if userInterfaceStyle != .dark {
+            return UIColor.label
+        } else {
+            return UIColor.secondaryLabel
+        }
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Please try selecting a differnt speed number."
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
 }
