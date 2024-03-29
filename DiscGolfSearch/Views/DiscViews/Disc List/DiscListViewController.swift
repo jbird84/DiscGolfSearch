@@ -254,7 +254,7 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
 extension DiscListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-        return UIImage(named: "noDiscGolfDisc")
+        return UIImage(named: "noDiscForThisSpeed")
     }
     
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
