@@ -611,7 +611,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-ZD-c94">
                                                     <rect key="frame" x="16" y="25.000000000000007" width="128" height="86.666666666666686"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
                                                             <rect key="frame" x="6" y="0.0" width="116" height="42.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="115.67" id="13q-cS-u3S"/>
@@ -620,7 +620,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
                                                             <rect key="frame" x="25" y="45.333333333333329" width="78" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -635,13 +635,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
                                                                     <rect key="frame" x="22.666666666666664" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
                                                                     <rect key="frame" x="45.333333333333336" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -1540,12 +1540,9 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="superBK" translatesAutoresizingMaskIntoConstraints="NO" id="eSO-jk-2UN">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-wx-3Ky">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNB-wx-3Ky">
                                 <rect key="frame" x="10" y="74" width="373" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46999999999999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TIK-Hu-D0W"/>
                                 </constraints>
@@ -1554,39 +1551,76 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pj-Ie6">
-                                <rect key="frame" x="10" y="154" width="373" height="20.333333333333343"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.46999999999999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-6J-Sit">
+                                <rect key="frame" x="10" y="144" width="373" height="654"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pj-Ie6">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="114.66666666666667"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-an-9qT">
+                                        <rect key="frame" x="0.0" y="134.66666666666669" width="373" height="115"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyg-ft-3TY">
+                                        <rect key="frame" x="0.0" y="269.66666666666669" width="373" height="114.66666666666669"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-Oa-Zij">
+                                        <rect key="frame" x="0.0" y="404.33333333333337" width="373" height="115"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-JQ-5My">
+                                        <rect key="frame" x="0.0" y="539.33333333333337" width="373" height="114.66666666666663"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ya6-cD-2Gs"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ya6-cD-2Gs" firstAttribute="bottom" secondItem="2Af-6J-Sit" secondAttribute="bottom" constant="20" id="7An-eg-JAa"/>
                             <constraint firstItem="VNB-wx-3Ky" firstAttribute="top" secondItem="Ya6-cD-2Gs" secondAttribute="top" constant="15" id="7ab-sc-iRH"/>
-                            <constraint firstItem="eSO-jk-2UN" firstAttribute="top" secondItem="O9D-Hc-waS" secondAttribute="top" id="BDz-qk-gfV"/>
-                            <constraint firstItem="Ya6-cD-2Gs" firstAttribute="trailing" secondItem="KBd-pj-Ie6" secondAttribute="trailing" constant="10" id="HdV-bd-ne7"/>
-                            <constraint firstAttribute="bottom" secondItem="eSO-jk-2UN" secondAttribute="bottom" id="Ocq-A6-AmM"/>
-                            <constraint firstItem="eSO-jk-2UN" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" id="P69-MM-sjI"/>
-                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="top" secondItem="VNB-wx-3Ky" secondAttribute="bottom" constant="30" id="Qnu-Lr-kSF"/>
-                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" constant="10" id="UA4-DG-fLc"/>
+                            <constraint firstItem="Ya6-cD-2Gs" firstAttribute="trailing" secondItem="2Af-6J-Sit" secondAttribute="trailing" constant="10" id="AMr-Zv-i6Q"/>
+                            <constraint firstItem="2Af-6J-Sit" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" constant="10" id="RN0-rZ-QfY"/>
                             <constraint firstItem="Ya6-cD-2Gs" firstAttribute="trailing" secondItem="VNB-wx-3Ky" secondAttribute="trailing" constant="10" id="dOD-Vz-Mxv"/>
-                            <constraint firstItem="KBd-pj-Ie6" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ya6-cD-2Gs" secondAttribute="bottom" id="gyQ-sj-atl"/>
+                            <constraint firstItem="2Af-6J-Sit" firstAttribute="top" secondItem="VNB-wx-3Ky" secondAttribute="bottom" constant="20" id="fOy-HJ-mru"/>
                             <constraint firstItem="VNB-wx-3Ky" firstAttribute="leading" secondItem="Ya6-cD-2Gs" secondAttribute="leading" constant="10" id="i0o-ZU-XqP"/>
-                            <constraint firstItem="eSO-jk-2UN" firstAttribute="trailing" secondItem="Ya6-cD-2Gs" secondAttribute="trailing" id="uR3-Sg-GoU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="KBd-pj-Ie6" id="Qd7-Ln-VyJ"/>
                         <outlet property="flightNumberCategoryLabel" destination="VNB-wx-3Ky" id="eXK-ZM-Z1c"/>
+                        <outletCollection property="descriptionLabels" destination="KBd-pj-Ie6" collectionClass="NSMutableArray" id="4ze-BB-Thz"/>
+                        <outletCollection property="descriptionLabels" destination="TmI-an-9qT" collectionClass="NSMutableArray" id="kMW-wb-8w9"/>
+                        <outletCollection property="descriptionLabels" destination="iyg-ft-3TY" collectionClass="NSMutableArray" id="b9l-C0-QIz"/>
+                        <outletCollection property="descriptionLabels" destination="hLl-Oa-Zij" collectionClass="NSMutableArray" id="JJl-ev-61K"/>
+                        <outletCollection property="descriptionLabels" destination="jwC-JQ-5My" collectionClass="NSMutableArray" id="i0x-i1-rd7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKe-NJ-GBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5015" y="-608"/>
+            <point key="canvasLocation" x="5014.5038167938928" y="-608.45070422535218"/>
         </scene>
         <!--Disc-->
         <scene sceneID="IqZ-fn-U2b">
@@ -1607,11 +1641,11 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
             </objects>
             <point key="canvasLocation" x="309" y="285"/>
         </scene>
-        <!--Ref-Guide-->
+        <!--Wind-Guide-->
         <scene sceneID="8yO-6w-W2X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mzp-TE-NHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ref-Guide" image="note.text" catalog="system" selectedImage="note.text" id="UCM-94-zmf">
+                    <tabBarItem key="tabBarItem" title="Wind-Guide" image="note.text" catalog="system" selectedImage="note.text" id="UCM-94-zmf">
                         <color key="badgeColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1662,25 +1696,24 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
         <image name="nowLoadingBlankDisc" width="166.66667175292969" height="166.33332824707031"/>
         <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
         <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
-        <image name="superBK" width="282.66665649414062" height="299.33334350585938"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
