@@ -54,8 +54,10 @@ class DiscViewController: UIViewController {
         // Add a "Select All" button to the navigation bar
         let addDiscToNavButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         let showFlightColorView = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
+        
         navigationItem.rightBarButtonItems = [showFlightColorView, addDiscToNavButton]
-        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.navigationBar.scrollEdgeAppearance = .none
     }
     
     private func setupAddDiscToView() {
@@ -364,6 +366,8 @@ extension DiscViewController: AddDiscToViewDelegate {
         } else {
             AlertPresenter.instance.showAlert(title: "Issues Saving Disc", body: "We ran into a problem attempting to save the disc.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }
+        }
+        AlertPresenter.instance.showAlert(title: "Disc Saved To Cart", body: "You successfully saved your disc to your cart. You can view you cart by tapping the cart at the bottom of the app.", iconImage: UIImage(systemName: "checkmark.circle.fill")!, bannerColor: .green) {
         }
     }
     

@@ -36,7 +36,13 @@
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
 		DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */; };
-		DAD4820E2ACA4AEB0051D89A /* OverstableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */; };
+		DAC153592BB89FC500FD9A80 /* StabilityInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC153582BB89FC500FD9A80 /* StabilityInfo.storyboard */; };
+		DAC1535B2BB8A1C200FD9A80 /* OverstableVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1535A2BB8A1C200FD9A80 /* OverstableVC1.swift */; };
+		DAC1535D2BB8A1D000FD9A80 /* OverstableVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1535C2BB8A1D000FD9A80 /* OverstableVC2.swift */; };
+		DAC1535F2BB8A1DA00FD9A80 /* OverstableVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1535E2BB8A1DA00FD9A80 /* OverstableVC3.swift */; };
+		DAC153612BB8A1E600FD9A80 /* OverstableVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC153602BB8A1E600FD9A80 /* OverstableVC4.swift */; };
+		DAC153632BB8A1F100FD9A80 /* OverstableVC5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC153622BB8A1F100FD9A80 /* OverstableVC5.swift */; };
+		DAD4820E2ACA4AEB0051D89A /* OverstablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D2ACA4AEB0051D89A /* OverstablePageViewController.swift */; };
 		DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD482102ACCFDCB0051D89A /* Constants.swift */; };
 		DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */; };
 		DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB72202AADFCDC0083B13B /* AppDelegate.swift */; };
@@ -114,7 +120,13 @@
 		DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscSwiftDataModel.swift; sourceTree = "<group>"; };
 		DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
-		DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC.swift; sourceTree = "<group>"; };
+		DAC153582BB89FC500FD9A80 /* StabilityInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StabilityInfo.storyboard; sourceTree = "<group>"; };
+		DAC1535A2BB8A1C200FD9A80 /* OverstableVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC1.swift; sourceTree = "<group>"; };
+		DAC1535C2BB8A1D000FD9A80 /* OverstableVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC2.swift; sourceTree = "<group>"; };
+		DAC1535E2BB8A1DA00FD9A80 /* OverstableVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC3.swift; sourceTree = "<group>"; };
+		DAC153602BB8A1E600FD9A80 /* OverstableVC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC4.swift; sourceTree = "<group>"; };
+		DAC153622BB8A1F100FD9A80 /* OverstableVC5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstableVC5.swift; sourceTree = "<group>"; };
+		DAD4820D2ACA4AEB0051D89A /* OverstablePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverstablePageViewController.swift; sourceTree = "<group>"; };
 		DAD482102ACCFDCB0051D89A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNumbersViewController.swift; sourceTree = "<group>"; };
 		DADB721D2AADFCDC0083B13B /* DiscGolfSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscGolfSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +205,6 @@
 		DA2272202B099AD4005A107C /* DiscViews */ = {
 			isa = PBXGroup;
 			children = (
-				DA9B7CD52BAD0B960040E44D /* Disc Info Views */,
 				DA2272242B099B57005A107C /* Search Discs */,
 				DA2272232B099B32005A107C /* Disc Types */,
 				DA2272222B099B0F005A107C /* Disc List */,
@@ -284,17 +295,6 @@
 			path = ChartsDataModels;
 			sourceTree = "<group>";
 		};
-		DA9B7CD52BAD0B960040E44D /* Disc Info Views */ = {
-			isa = PBXGroup;
-			children = (
-				DAD4820D2ACA4AEB0051D89A /* OverstableVC.swift */,
-				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
-				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
-				DA8172C32BB10969005D56E5 /* UnderstableVC.swift */,
-			);
-			path = "Disc Info Views";
-			sourceTree = "<group>";
-		};
 		DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +320,31 @@
 				DABE00D22AF9CE7A00C2ABEB /* CartTableViewCell.swift */,
 			);
 			path = CartView;
+			sourceTree = "<group>";
+		};
+		DAC153572BB89F5F00FD9A80 /* DiscInfoViews */ = {
+			isa = PBXGroup;
+			children = (
+				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
+				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
+				DA8172C32BB10969005D56E5 /* UnderstableVC.swift */,
+				DAC153582BB89FC500FD9A80 /* StabilityInfo.storyboard */,
+				DAC153642BB8A1FB00FD9A80 /* Overstable VCs */,
+			);
+			path = DiscInfoViews;
+			sourceTree = "<group>";
+		};
+		DAC153642BB8A1FB00FD9A80 /* Overstable VCs */ = {
+			isa = PBXGroup;
+			children = (
+				DAD4820D2ACA4AEB0051D89A /* OverstablePageViewController.swift */,
+				DAC1535A2BB8A1C200FD9A80 /* OverstableVC1.swift */,
+				DAC1535C2BB8A1D000FD9A80 /* OverstableVC2.swift */,
+				DAC1535E2BB8A1DA00FD9A80 /* OverstableVC3.swift */,
+				DAC153602BB8A1E600FD9A80 /* OverstableVC4.swift */,
+				DAC153622BB8A1F100FD9A80 /* OverstableVC5.swift */,
+			);
+			path = "Overstable VCs";
 			sourceTree = "<group>";
 		};
 		DAD4820F2ACCFDB60051D89A /* Helpers */ = {
@@ -419,6 +444,7 @@
 		DADB72442AB69C3E0083B13B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAC153572BB89F5F00FD9A80 /* DiscInfoViews */,
 				DA2272202B099AD4005A107C /* DiscViews */,
 				DA363D332B016E5B0050840A /* Bag View */,
 				DABE00D12AF9CE5600C2ABEB /* CartView */,
@@ -533,6 +559,7 @@
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
 				DAEC3B622B85A23800171A7C /* DiscInBagInfo.storyboard in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
+				DAC153592BB89FC500FD9A80 /* StabilityInfo.storyboard in Resources */,
 				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
 				DA1DF4112B39054400CA783F /* Bag.storyboard in Resources */,
@@ -548,13 +575,15 @@
 			files = (
 				DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */,
 				DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */,
-				DAD4820E2ACA4AEB0051D89A /* OverstableVC.swift in Sources */,
+				DAD4820E2ACA4AEB0051D89A /* OverstablePageViewController.swift in Sources */,
 				DADB72352AADFD890083B13B /* Disc.swift in Sources */,
 				DADED48D2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld in Sources */,
 				DADF925B2B1EA74D00AD5378 /* CoreDataManager.swift in Sources */,
+				DAC153612BB8A1E600FD9A80 /* OverstableVC4.swift in Sources */,
 				DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */,
 				DA363D372B016EC30050840A /* BagListViewController.swift in Sources */,
 				DADBE2522AC0C8C700E2095A /* SearchDiscViewController.swift in Sources */,
+				DAC1535F2BB8A1DA00FD9A80 /* OverstableVC3.swift in Sources */,
 				DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */,
 				DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */,
 				DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */,
@@ -579,6 +608,7 @@
 				DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */,
 				DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
+				DAC1535D2BB8A1D000FD9A80 /* OverstableVC2.swift in Sources */,
 				DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
@@ -587,8 +617,10 @@
 				DA20B67A2B9172B000841351 /* ProgressBar.swift in Sources */,
 				DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */,
 				DA20B67D2B95421B00841351 /* ImageHeaderSubheaderView.swift in Sources */,
+				DAC1535B2BB8A1C200FD9A80 /* OverstableVC1.swift in Sources */,
 				DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */,
 				DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */,
+				DAC153632BB8A1F100FD9A80 /* OverstableVC5.swift in Sources */,
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,

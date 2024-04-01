@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Overstable Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="overstablePageViewController" id="Y6W-OH-hqX" customClass="OverstablePageViewController" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -20,9 +21,326 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79" y="-16"/>
+        </scene>
+        <!--OverstableVC1-->
+        <scene sceneID="QE3-cH-DGK">
+            <objects>
+                <viewController storyboardIdentifier="overstableVC1" id="dOd-YY-ayy" customClass="OverstableVC1" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AWP-Zt-2Z0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1H-t5-JLz">
+                                <rect key="frame" x="0.0" y="63" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gg2-vP-ePh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overstable discs will spin right and turn left when thrown on a back hand with the right hand (BHRH). " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeV-iO-oUY">
+                                <rect key="frame" x="40" y="153" width="313" height="250"/>
+                                <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Z92-g1-m9N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OverstableDisc" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-7f-d2O">
+                                <rect key="frame" x="56.666666666666657" y="453" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="aZ6-Bc-MDS"/>
+                                    <constraint firstAttribute="height" constant="280" id="vFB-K7-sWq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TTB-nL-HgP"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9ho-7f-d2O" firstAttribute="top" secondItem="WeV-iO-oUY" secondAttribute="bottom" constant="50" id="AWC-4B-Vzo"/>
+                            <constraint firstItem="TTB-nL-HgP" firstAttribute="trailing" secondItem="WeV-iO-oUY" secondAttribute="trailing" constant="40" id="GME-Em-KZN"/>
+                            <constraint firstItem="TTB-nL-HgP" firstAttribute="trailing" secondItem="x1H-t5-JLz" secondAttribute="trailing" id="Td5-uH-w1n"/>
+                            <constraint firstItem="x1H-t5-JLz" firstAttribute="leading" secondItem="TTB-nL-HgP" secondAttribute="leading" id="e8W-5P-U3A"/>
+                            <constraint firstItem="WeV-iO-oUY" firstAttribute="leading" secondItem="TTB-nL-HgP" secondAttribute="leading" constant="40" id="ebX-ne-Gd1"/>
+                            <constraint firstItem="x1H-t5-JLz" firstAttribute="top" secondItem="TTB-nL-HgP" secondAttribute="top" constant="4" id="efd-gK-pe4"/>
+                            <constraint firstItem="WeV-iO-oUY" firstAttribute="top" secondItem="x1H-t5-JLz" secondAttribute="bottom" constant="40" id="loN-2n-g9A"/>
+                            <constraint firstItem="9ho-7f-d2O" firstAttribute="centerX" secondItem="AWP-Zt-2Z0" secondAttribute="centerX" id="z7n-Vg-rUa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="WeV-iO-oUY" id="axD-NY-Lvg"/>
+                        <outlet property="spinningDiscImageView" destination="9ho-7f-d2O" id="mSS-xd-NvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjz-li-0yZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1538.1679389312976" y="729.57746478873241"/>
+        </scene>
+        <!--OverstableVC2-->
+        <scene sceneID="AVt-yN-KkK">
+            <objects>
+                <viewController storyboardIdentifier="overstableVC2" id="Nto-CV-c5L" customClass="OverstableVC2" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TbW-md-tJd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWK-8h-3MM">
+                                <rect key="frame" x="0.0" y="63" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CVh-Eh-75j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yv-my-dni">
+                                <rect key="frame" x="40" y="153" width="313" height="270"/>
+                                <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="xpT-Bf-AeD"/>
+                                </constraints>
+                                <string key="text">Right-hand forehand throws will have the opposite effect, causing the disc to spin left and turn right. Here is a basic flight path of a overstable disc when thrown BHRH. </string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overstablePath" translatesAutoresizingMaskIntoConstraints="NO" id="znj-qj-JDK">
+                                <rect key="frame" x="89" y="423" width="215" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="Efr-YX-xcC"/>
+                                    <constraint firstAttribute="width" constant="215" id="U9J-MI-HbK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iJ3-yV-Dw8"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iJ3-yV-Dw8" firstAttribute="trailing" secondItem="6Yv-my-dni" secondAttribute="trailing" constant="40" id="DiK-44-v4G"/>
+                            <constraint firstItem="znj-qj-JDK" firstAttribute="centerX" secondItem="TbW-md-tJd" secondAttribute="centerX" id="QjN-gb-ayX"/>
+                            <constraint firstItem="6Yv-my-dni" firstAttribute="top" secondItem="UWK-8h-3MM" secondAttribute="bottom" constant="40" id="VhF-tV-ynS"/>
+                            <constraint firstItem="znj-qj-JDK" firstAttribute="top" secondItem="6Yv-my-dni" secondAttribute="bottom" id="YE5-rj-z8e"/>
+                            <constraint firstItem="6Yv-my-dni" firstAttribute="leading" secondItem="iJ3-yV-Dw8" secondAttribute="leading" constant="40" id="bMb-Q1-a4V"/>
+                            <constraint firstItem="UWK-8h-3MM" firstAttribute="leading" secondItem="iJ3-yV-Dw8" secondAttribute="leading" id="eXi-ed-Vvx"/>
+                            <constraint firstItem="UWK-8h-3MM" firstAttribute="top" secondItem="iJ3-yV-Dw8" secondAttribute="top" constant="4" id="fpc-EM-Pic"/>
+                            <constraint firstItem="iJ3-yV-Dw8" firstAttribute="trailing" secondItem="UWK-8h-3MM" secondAttribute="trailing" id="guh-Fl-nUk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="6Yv-my-dni" id="uyy-Gy-mwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ny5-KN-Ca3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802.29007633587787" y="729.57746478873241"/>
+        </scene>
+        <!--OverstableVC3-->
+        <scene sceneID="dCP-z7-ZOB">
+            <objects>
+                <viewController storyboardIdentifier="overstableVC3" id="zKP-pK-HjO" customClass="OverstableVC3" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uej-m4-4Lt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-HL-h1j">
+                                <rect key="frame" x="0.0" y="63" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NeU-nw-LMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-WS-hJN">
+                                <rect key="frame" x="40" y="153" width="313" height="515"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-Jm-ont">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="170"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="wKR-I7-Hi6"/>
+                                        </constraints>
+                                        <string key="text">Predictable Flight: Overstable discs in disc golf follow a reliable flight path, starting straight and ending with a sharp left curve (for right-handed throwers).
+
+</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Fade: They have a strong tendency to curve left (fade) at the end of their flight, offering precise control." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkA-Ci-Rs4">
+                                        <rect key="frame" x="0.0" y="210" width="313" height="150"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="vkV-zy-1Bo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Resistant: Overstable discs excel in windy conditions, maintaining stability and control." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIW-ev-V3x">
+                                        <rect key="frame" x="0.0" y="400" width="313" height="115"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CMz-zP-6nD"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hJ-WS-hJN" firstAttribute="top" secondItem="UCZ-HL-h1j" secondAttribute="bottom" constant="40" id="9L7-qN-YRl"/>
+                            <constraint firstItem="UCZ-HL-h1j" firstAttribute="leading" secondItem="CMz-zP-6nD" secondAttribute="leading" id="Fk9-uW-Q2N"/>
+                            <constraint firstItem="8hJ-WS-hJN" firstAttribute="leading" secondItem="CMz-zP-6nD" secondAttribute="leading" constant="40" id="QOg-Bp-pCQ"/>
+                            <constraint firstItem="UCZ-HL-h1j" firstAttribute="top" secondItem="CMz-zP-6nD" secondAttribute="top" constant="4" id="efC-H4-SWw"/>
+                            <constraint firstItem="CMz-zP-6nD" firstAttribute="trailing" secondItem="8hJ-WS-hJN" secondAttribute="trailing" constant="40" id="f42-Iz-qo0"/>
+                            <constraint firstItem="CMz-zP-6nD" firstAttribute="bottom" secondItem="8hJ-WS-hJN" secondAttribute="bottom" constant="150" id="f4Q-bt-MIF"/>
+                            <constraint firstItem="CMz-zP-6nD" firstAttribute="trailing" secondItem="UCZ-HL-h1j" secondAttribute="trailing" id="wnv-vu-7ZK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel1" destination="1Pr-Jm-ont" id="yPL-la-4AQ"/>
+                        <outlet property="textLabel2" destination="QkA-Ci-Rs4" id="wmD-2q-5FO"/>
+                        <outlet property="textLabel3" destination="OIW-ev-V3x" id="v3f-Lc-XxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVs-Ml-z2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51.145038167938928" y="729.57746478873241"/>
+        </scene>
+        <!--OverstableVC4-->
+        <scene sceneID="pdu-Ie-sd7">
+            <objects>
+                <viewController storyboardIdentifier="overstableVC4" id="YIL-Lh-1JX" customClass="OverstableVC4" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Scj-nI-16h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-Th-DFq">
+                                <rect key="frame" x="0.0" y="63" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gKR-gH-9gx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dRn-Of-iBV">
+                                <rect key="frame" x="40" y="153" width="313" height="411"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy: These discs are favored for accurate throws and navigating obstacles on the course." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY7-FG-UCG">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="110.33333333333333"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For All Skill Levels: Suitable for both beginners and experienced players, they provide consistency and reliability." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-yZ-N3J">
+                                        <rect key="frame" x="0.0" y="150.33333333333331" width="313" height="110.33333333333331"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versatile Tools: Disc golfers carry overstable discs to handle specific course challenges and make controlled approach shots." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKM-iW-Wop">
+                                        <rect key="frame" x="0.0" y="300.66666666666669" width="313" height="110.33333333333331"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t86-6K-puV"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1NS-Th-DFq" firstAttribute="top" secondItem="t86-6K-puV" secondAttribute="top" constant="4" id="2yJ-Zu-aoj"/>
+                            <constraint firstItem="dRn-Of-iBV" firstAttribute="top" secondItem="1NS-Th-DFq" secondAttribute="bottom" constant="40" id="3do-yC-ak9"/>
+                            <constraint firstItem="1NS-Th-DFq" firstAttribute="leading" secondItem="t86-6K-puV" secondAttribute="leading" id="4hZ-Eg-V5Q"/>
+                            <constraint firstItem="t86-6K-puV" firstAttribute="trailing" secondItem="dRn-Of-iBV" secondAttribute="trailing" constant="40" id="NBd-wo-Set"/>
+                            <constraint firstItem="dRn-Of-iBV" firstAttribute="leading" secondItem="t86-6K-puV" secondAttribute="leading" constant="40" id="hKg-nA-Psl"/>
+                            <constraint firstItem="t86-6K-puV" firstAttribute="trailing" secondItem="1NS-Th-DFq" secondAttribute="trailing" id="i1z-s1-2tS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel1" destination="BY7-FG-UCG" id="e5h-ar-a3B"/>
+                        <outlet property="textLabel2" destination="QJk-yZ-N3J" id="vNW-Lb-dlr"/>
+                        <outlet property="textLabel3" destination="cKM-iW-Wop" id="XI3-ma-w4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OrT-Pg-1qI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713.74045801526711" y="729.57746478873241"/>
+        </scene>
+        <!--OverstableVC5-->
+        <scene sceneID="7W1-om-uQM">
+            <objects>
+                <viewController storyboardIdentifier="overstableVC5" id="Fxs-YG-OIv" customClass="OverstableVC5" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWf-nG-aqg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-h5-qgV">
+                                <rect key="frame" x="0.0" y="63" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="N54-x9-yuA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kfH-uI-Nrm">
+                                <rect key="frame" x="40" y="153" width="313" height="465"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-Nz-IsX">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="212.66666666666666"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Forehand (Flick) Throw: An overstable disc is often used for forehand throws (also called flick throws). The disc's natural fade helps it come back to the left (for right-handed forehand throwers) at the end of the flight.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-eF-TwC">
+                                        <rect key="frame" x="1.6666666666666572" y="252.66666666666669" width="310" height="212.33333333333331"/>
+                                        <color key="backgroundColor" red="0.1030416861" green="0.1033740863" blue="0.113954477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing the disc to spike into the ground, especially when approaching or putting.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jq7-N8-QCd"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hxW-h5-qgV" firstAttribute="leading" secondItem="jq7-N8-QCd" secondAttribute="leading" id="8Vj-Tv-RLy"/>
+                            <constraint firstItem="kfH-uI-Nrm" firstAttribute="leading" secondItem="jq7-N8-QCd" secondAttribute="leading" constant="40" id="JxI-vS-ecV"/>
+                            <constraint firstItem="hxW-h5-qgV" firstAttribute="top" secondItem="jq7-N8-QCd" secondAttribute="top" constant="4" id="Pm1-ts-RrA"/>
+                            <constraint firstItem="jq7-N8-QCd" firstAttribute="trailing" secondItem="hxW-h5-qgV" secondAttribute="trailing" id="V5o-gW-ixZ"/>
+                            <constraint firstItem="jq7-N8-QCd" firstAttribute="bottom" secondItem="kfH-uI-Nrm" secondAttribute="bottom" constant="200" id="inR-kN-9kY"/>
+                            <constraint firstAttribute="trailing" secondItem="kfH-uI-Nrm" secondAttribute="trailing" constant="40" id="rxg-Vk-gqu"/>
+                            <constraint firstItem="kfH-uI-Nrm" firstAttribute="top" secondItem="hxW-h5-qgV" secondAttribute="bottom" constant="40" id="uDU-1x-6qx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel1" destination="gGe-Nz-IsX" id="VVJ-nw-axN"/>
+                        <outlet property="textLabel2" destination="bL4-eF-TwC" id="tdU-kD-TpM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZP-g1-sGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507.6335877862596" y="728.87323943661977"/>
         </scene>
     </scenes>
     <resources>
+        <image name="OverstableDisc" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

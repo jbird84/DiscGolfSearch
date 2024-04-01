@@ -8,22 +8,33 @@
 import UIKit
 
 class OverstableVC1: UIViewController {
+    
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var spinningDiscImageView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        infoLabel.layer.cornerRadius = 10
+        infoLabel.layer.masksToBounds = true
+        startRotation()
     }
-    */
-
+    
+    private func startRotation() {
+        // Create a CABasicAnimation for continuous rotation
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        
+        // Set the animation properties
+        rotationAnimation.fromValue = 0.0
+        rotationAnimation.toValue = CGFloat.pi * 2.0 // Full circle (360 degrees)
+        rotationAnimation.duration = 1.0 // Duration of one full rotation in seconds
+        rotationAnimation.repeatCount = .infinity // Repeat indefinitely
+        
+        // Add the animation to the image view's layer
+        spinningDiscImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+    }
 }

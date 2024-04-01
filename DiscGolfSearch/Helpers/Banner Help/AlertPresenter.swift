@@ -23,8 +23,10 @@ final class AlertPresenter: AlertPresenterProtocol {
         view.button?.isHidden = true
         view.backgroundColor = bannerColor
         view.layoutMarginAdditions = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-    
-        SwiftMessages.show(view: view)
+        
+        var config = SwiftMessages.defaultConfig
+            config.duration = .seconds(seconds: 6)
+                
+        SwiftMessages.show(config: config, view: view)
     }
-    
 }

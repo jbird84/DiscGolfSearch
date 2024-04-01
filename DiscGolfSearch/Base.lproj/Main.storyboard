@@ -715,173 +715,6 @@
             </objects>
             <point key="canvasLocation" x="2322.9007633587785" y="-471.12676056338029"/>
         </scene>
-        <!--OverstableVC-->
-        <scene sceneID="Fgq-6P-SsX">
-            <objects>
-                <viewController storyboardIdentifier="overStableVC" id="4XT-y4-EE8" customClass="OverstableVC" customModule="DiscGolfSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NSm-AC-K7h" userLabel="MainView">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="2317"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-th-x0h">
-                                <rect key="frame" x="0.0" y="59" width="393" height="2224"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-kR-2xR" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2150"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERSTABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-n0-tWx">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="FbN-J0-c1m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overstable discs will spin right and turn left when thrown on a back hand with the right hand (BHRH). " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYu-xq-9LB">
-                                                <rect key="frame" x="0.0" y="55" width="393" height="190"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="190" id="DhI-Hy-P4j"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7r-3t-7Dv">
-                                                <rect key="frame" x="113" y="238" width="167" height="166"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="167" id="paM-gL-vww"/>
-                                                    <constraint firstAttribute="height" constant="166" id="x1L-aL-t5s"/>
-                                                </constraints>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OverstableDisc" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-XY-2xx">
-                                                <rect key="frame" x="113.66666666666669" y="238" width="166" height="166"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="166" id="eBU-Vw-JmD"/>
-                                                    <constraint firstAttribute="width" constant="166" id="pSd-KI-9O3"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p2-a9-WWQ">
-                                                <rect key="frame" x="8" y="404" width="377" height="210"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="210" id="2KU-lP-SqQ"/>
-                                                </constraints>
-                                                <string key="text">Right-hand forehand throws will have the opposite effect, causing the disc to spin left and turn right. Here is a basic flight path of a overstable disc when thrown BHRH. </string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overstablePath" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-5R-dHv">
-                                                <rect key="frame" x="113.33333333333333" y="556" width="166.66666666666669" height="334"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="334" id="z94-bX-gXp"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-7q-4Y5">
-                                                <rect key="frame" x="5" y="881" width="383" height="750"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="750" id="g0V-rJ-ZaD"/>
-                                                </constraints>
-                                                <string key="text">*Predictable Flight: Overstable discs in disc golf follow a reliable flight path, starting straight and ending with a sharp left curve (for right-handed throwers).
-
-*High Fade: They have a strong tendency to curve left (fade) at the end of their flight, offering precise control.
-
-*Wind Resistant: Overstable discs excel in windy conditions, maintaining stability and control.
-
-*Accuracy: These discs are favored for accurate throws and navigating obstacles on the course.
-
-*For All Skill Levels: Suitable for both beginners and experienced players, they provide consistency and reliability.
-
-*Versatile Tools: Disc golfers carry overstable discs to handle specific course challenges and make controlled approach shots.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOTS BASED ON STABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8V-7U-bQJ">
-                                                <rect key="frame" x="0.0" y="1631" width="393" height="55"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="kko-iq-GTh"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-LN-gjX">
-                                                <rect key="frame" x="0.0" y="1686" width="393" height="278"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="278" id="QpI-zO-POM"/>
-                                                </constraints>
-                                                <string key="text">Forehand (Flick) Throw: An overstable disc is often used for forehand throws (also called flick throws). The disc's natural fade helps it come back to the left (for right-handed forehand throwers) at the end of the flight.
-
-Spike Hyzer: This throw is used to get a quick and sharp hyzer angle, causing the disc to spike into the ground, especially when approaching or putting.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="NYu-xq-9LB" secondAttribute="trailing" id="14q-js-SvN"/>
-                                            <constraint firstItem="Yx4-LN-gjX" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="2iA-6z-cc3"/>
-                                            <constraint firstItem="NYu-xq-9LB" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="3LK-89-pg2"/>
-                                            <constraint firstItem="GHk-5R-dHv" firstAttribute="top" secondItem="7p2-a9-WWQ" secondAttribute="bottom" constant="-58" id="3uE-pa-zHU"/>
-                                            <constraint firstItem="OoW-7q-4Y5" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="5" id="6oC-wJ-gDc"/>
-                                            <constraint firstAttribute="trailing" secondItem="7p2-a9-WWQ" secondAttribute="trailing" constant="8" id="7Xb-jh-Spc"/>
-                                            <constraint firstAttribute="trailing" secondItem="OoW-7q-4Y5" secondAttribute="trailing" constant="5" id="7zy-Qd-FbD"/>
-                                            <constraint firstItem="OoW-7q-4Y5" firstAttribute="top" secondItem="GHk-5R-dHv" secondAttribute="bottom" constant="-9" id="Gd7-YY-A1P"/>
-                                            <constraint firstItem="dtt-XY-2xx" firstAttribute="top" secondItem="NYu-xq-9LB" secondAttribute="bottom" constant="-7" id="LTu-M5-sH6"/>
-                                            <constraint firstItem="7p2-a9-WWQ" firstAttribute="top" secondItem="O7r-3t-7Dv" secondAttribute="bottom" id="MHn-nH-c3O"/>
-                                            <constraint firstItem="dtt-XY-2xx" firstAttribute="centerX" secondItem="O7r-3t-7Dv" secondAttribute="centerX" id="Spx-MU-lJz"/>
-                                            <constraint firstItem="l8V-7U-bQJ" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="U8f-nJ-KRn"/>
-                                            <constraint firstItem="7p2-a9-WWQ" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" constant="8" id="UJ0-C9-r1X"/>
-                                            <constraint firstItem="l8V-7U-bQJ" firstAttribute="top" secondItem="OoW-7q-4Y5" secondAttribute="bottom" id="Vdr-TL-3h9"/>
-                                            <constraint firstItem="NYu-xq-9LB" firstAttribute="top" secondItem="oX0-n0-tWx" secondAttribute="bottom" id="ah7-me-zn6"/>
-                                            <constraint firstItem="oX0-n0-tWx" firstAttribute="leading" secondItem="2c4-kR-2xR" secondAttribute="leading" id="anO-xQ-D4V"/>
-                                            <constraint firstItem="O7r-3t-7Dv" firstAttribute="centerX" secondItem="2c4-kR-2xR" secondAttribute="centerX" id="duT-qp-ayl"/>
-                                            <constraint firstItem="Yx4-LN-gjX" firstAttribute="top" secondItem="l8V-7U-bQJ" secondAttribute="bottom" id="p8s-aj-4sa"/>
-                                            <constraint firstItem="dtt-XY-2xx" firstAttribute="top" secondItem="O7r-3t-7Dv" secondAttribute="top" id="qPq-7H-jgL"/>
-                                            <constraint firstItem="GHk-5R-dHv" firstAttribute="centerX" secondItem="2c4-kR-2xR" secondAttribute="centerX" id="rrs-I8-uz6"/>
-                                            <constraint firstAttribute="trailing" secondItem="oX0-n0-tWx" secondAttribute="trailing" id="rxk-J7-sDH"/>
-                                            <constraint firstAttribute="trailing" secondItem="Yx4-LN-gjX" secondAttribute="trailing" id="xZb-Uf-wMU"/>
-                                            <constraint firstItem="oX0-n0-tWx" firstAttribute="top" secondItem="2c4-kR-2xR" secondAttribute="top" id="xvo-hL-SjV"/>
-                                            <constraint firstAttribute="trailing" secondItem="l8V-7U-bQJ" secondAttribute="trailing" id="yzb-m9-U9v"/>
-                                            <constraint firstAttribute="height" constant="2150" id="zfZ-lb-Yeq"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="2c4-kR-2xR" firstAttribute="leading" secondItem="1O8-th-x0h" secondAttribute="leading" id="4A9-59-bPw"/>
-                                    <constraint firstItem="2c4-kR-2xR" firstAttribute="top" secondItem="1O8-th-x0h" secondAttribute="top" id="uTT-8S-0kb"/>
-                                    <constraint firstAttribute="trailing" secondItem="2c4-kR-2xR" secondAttribute="trailing" id="v2i-Lu-rna"/>
-                                    <constraint firstAttribute="bottom" secondItem="2c4-kR-2xR" secondAttribute="bottom" constant="2007" id="v80-Sa-ds5"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="9e5-Hw-RfA"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="1O8-th-x0h" firstAttribute="top" secondItem="9e5-Hw-RfA" secondAttribute="top" id="5gW-JC-wdr"/>
-                            <constraint firstItem="1O8-th-x0h" firstAttribute="trailing" secondItem="9e5-Hw-RfA" secondAttribute="trailing" id="6fi-eP-w7k"/>
-                            <constraint firstItem="2c4-kR-2xR" firstAttribute="width" secondItem="NSm-AC-K7h" secondAttribute="width" id="NPx-wb-ACl"/>
-                            <constraint firstItem="1O8-th-x0h" firstAttribute="leading" secondItem="9e5-Hw-RfA" secondAttribute="leading" id="d2B-Mm-hQI"/>
-                            <constraint firstItem="1O8-th-x0h" firstAttribute="bottom" secondItem="9e5-Hw-RfA" secondAttribute="bottom" id="vrC-rp-fd9"/>
-                        </constraints>
-                    </view>
-                    <size key="freeformSize" width="393" height="2317"/>
-                    <connections>
-                        <outlet property="discImageView" destination="dtt-XY-2xx" id="3gd-Qm-o0o"/>
-                        <outlet property="discView" destination="O7r-3t-7Dv" id="BTo-gy-rJ5"/>
-                        <outlet property="scrollView" destination="1O8-th-x0h" id="bRj-Rl-yr5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pyd-LH-sox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3261.8320610687019" y="-2391.1971830985917"/>
-        </scene>
         <!--StableVC-->
         <scene sceneID="HSW-TT-0kz">
             <objects>
@@ -1212,7 +1045,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1340"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHS-Zm-433">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="eHS-Zm-433">
                                 <rect key="frame" x="0.0" y="59" width="393" height="1247"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15c-t3-dft" userLabel="mainView">
@@ -1551,11 +1384,11 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-6J-Sit">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Af-6J-Sit">
                                 <rect key="frame" x="10" y="144" width="373" height="654"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBd-pj-Ie6">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="114.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="73.333333333333329"/>
                                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1563,7 +1396,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-an-9qT">
-                                        <rect key="frame" x="0.0" y="134.66666666666669" width="373" height="115"/>
+                                        <rect key="frame" x="0.0" y="93.333333333333343" width="373" height="73"/>
                                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1571,7 +1404,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyg-ft-3TY">
-                                        <rect key="frame" x="0.0" y="269.66666666666669" width="373" height="114.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="186.33333333333331" width="373" height="73.333333333333314"/>
                                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1579,7 +1412,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-Oa-Zij">
-                                        <rect key="frame" x="0.0" y="404.33333333333337" width="373" height="115"/>
+                                        <rect key="frame" x="0.0" y="279.66666666666669" width="373" height="73"/>
                                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1587,7 +1420,7 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-JQ-5My">
-                                        <rect key="frame" x="0.0" y="539.33333333333337" width="373" height="114.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="372.66666666666663" width="373" height="281.33333333333337"/>
                                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1684,7 +1517,6 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
         </scene>
     </scenes>
     <resources>
-        <image name="OverstableDisc" width="166.66667175292969" height="166.66667175292969"/>
         <image name="backpack" catalog="system" width="100" height="128"/>
         <image name="bag" width="217" height="299.33334350585938"/>
         <image name="blankDisc" width="500" height="500"/>
@@ -1694,14 +1526,10 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="nowLoadingBlankDisc" width="166.66667175292969" height="166.33332824707031"/>
-        <image name="overstablePath" width="166.66667175292969" height="166.66667175292969"/>
         <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
