@@ -75,6 +75,7 @@
 		DAEE2C972B01D481005D289D /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C962B01D481005D289D /* ImageView+Ext.swift */; };
 		DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE2C992B025BB6005D289D /* AddBag.storyboard */; };
 		DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */; };
+		DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */; };
 		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		DAEE2C962B01D481005D289D /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
 		DAEE2C992B025BB6005D289D /* AddBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBag.storyboard; sourceTree = "<group>"; };
 		DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagViewController.swift; sourceTree = "<group>"; };
+		DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StablePagingScrollView.swift; sourceTree = "<group>"; };
 		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 		DAC153572BB89F5F00FD9A80 /* DiscInfoViews */ = {
 			isa = PBXGroup;
 			children = (
+				DAF2A0F12BBCE3A30009B923 /* StableViews */,
 				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
 				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
 				DA8172C32BB10969005D56E5 /* UnderstableVC.swift */,
@@ -480,6 +483,14 @@
 			path = "Add Bag ";
 			sourceTree = "<group>";
 		};
+		DAF2A0F12BBCE3A30009B923 /* StableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */,
+			);
+			path = StableViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -624,6 +635,7 @@
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
+				DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */,
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
 				DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */,
 				DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */,
