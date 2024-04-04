@@ -19,42 +19,44 @@ struct CarouselView: View {
     var views: [CarouselViewChild] = placeholderCarouselChildView
     
     var body: some View {
-        VStack {
-            Text("Stable Discs") // Text added here
-                .font(.title)
-                .foregroundColor(.white)
-                .padding(.top, 20)
-            ZStack {
-                Color.black
-                    .ignoresSafeArea()
-                ForEach(views) { view in
-                    view
-                        .scaleEffect(1.0 - abs(distance(view.id)) * 0.2)
-                        .opacity(1.0 - abs(distance(view.id)) * 0.3)
-                        .offset(x: getOffset(view.id), y: 0)
-                        .zIndex(1.0 - abs(distance(view.id)) * 0.1)
-                }
-            }
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        draggingItem = snappedItem + value.translation.width / 100
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            VStack {
+                Text("Stable Discs") // Text added here
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding(.bottom, 80)
+                ZStack {
+                    ForEach(views) { view in
+                        view
+                            .scaleEffect(1.0 - abs(distance(view.id)) * 0.2)
+                            .opacity(1.0 - abs(distance(view.id)) * 0.3)
+                            .offset(x: getOffset(view.id), y: 0)
+                            .zIndex(1.0 - abs(distance(view.id)) * 0.1)
                     }
-                    .onEnded { value in
-                        withAnimation {
-                            draggingItem = snappedItem + value.predictedEndTranslation.width / 100
-                            draggingItem = round(draggingItem).remainder(dividingBy: Double(views.count))
-                            snappedItem = draggingItem
-                            self.activeIndex = views.count + Int(draggingItem)
-                            if self.activeIndex > views.count || Int(draggingItem) >= 0 {
-                                self.activeIndex = Int(draggingItem)
+                }
+                .gesture(
+                    DragGesture()
+                        .onChanged { value in
+                            draggingItem = snappedItem + value.translation.width / 100
+                        }
+                        .onEnded { value in
+                            withAnimation {
+                                draggingItem = snappedItem + value.predictedEndTranslation.width / 100
+                                draggingItem = round(draggingItem).remainder(dividingBy: Double(views.count))
+                                snappedItem = draggingItem
+                                self.activeIndex = views.count + Int(draggingItem)
+                                if self.activeIndex > views.count || Int(draggingItem) >= 0 {
+                                    self.activeIndex = Int(draggingItem)
+                                }
                             }
                         }
-                    }
-            )
-            
+                )
+                
+            }
         }
-        
+    }
         func distance(_ item: Int) -> Double {
             return (draggingItem - Double(item).remainder(dividingBy: Double(views.count)))
         }
@@ -88,18 +90,6 @@ struct CarouselView: View {
                 }
             }
             .frame(width: 250, height: 350)
-        }),
-        
-        CarouselViewChild(id: 2, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
         }),
         
         CarouselViewChild(id: 3, content: {
@@ -179,7 +169,7 @@ struct CarouselView: View {
             .frame(width: 250, height: 250)
         }),
         
-        CarouselViewChild(id: 9, content: {
+        CarouselViewChild(id: 2, content: {
             ZStack {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
@@ -192,6 +182,17 @@ struct CarouselView: View {
                         .foregroundStyle(.white)
                         .padding()
                 }
+            }
+            .frame(width: 250, height: 250)
+        }),
+        CarouselViewChild(id: 9, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                Text("Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.")
+                    .font(.title3)
+                    .foregroundStyle(.white)
+                    .padding()
             }
             .frame(width: 250, height: 250)
         })
