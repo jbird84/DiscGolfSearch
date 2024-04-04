@@ -76,6 +76,8 @@
 		DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE2C992B025BB6005D289D /* AddBag.storyboard */; };
 		DAEE2C9C2B025BC4005D289D /* AddBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */; };
 		DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */; };
+		DAF2A0F52BBE52A60009B923 /* StableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */; };
+		DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */; };
 		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +161,8 @@
 		DAEE2C992B025BB6005D289D /* AddBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBag.storyboard; sourceTree = "<group>"; };
 		DAEE2C9B2B025BC4005D289D /* AddBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBagViewController.swift; sourceTree = "<group>"; };
 		DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StablePagingScrollView.swift; sourceTree = "<group>"; };
+		DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableCarouselView.swift; sourceTree = "<group>"; };
+		DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
 		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -487,6 +491,8 @@
 			isa = PBXGroup;
 			children = (
 				DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */,
+				DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */,
+				DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */,
 			);
 			path = StableViews;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				DAC1535B2BB8A1C200FD9A80 /* OverstableVC1.swift in Sources */,
 				DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */,
 				DADB72392AAE0FD50083B13B /* BrandCell.swift in Sources */,
+				DAF2A0F52BBE52A60009B923 /* StableCarouselView.swift in Sources */,
 				DAC153632BB8A1F100FD9A80 /* OverstableVC5.swift in Sources */,
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
@@ -639,6 +646,7 @@
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
 				DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */,
 				DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */,
+				DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -749,19 +749,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalStabPath" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-Ke-DBJ">
-                                                <rect key="frame" x="76.666666666666686" y="250" width="240" height="236"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="236" id="To7-ud-S25"/>
-                                                    <constraint firstAttribute="width" constant="240" id="b6I-67-mxJ"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-0k-xoR">
                                                 <rect key="frame" x="16" y="486" width="361" height="909"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="909" id="4Iz-CU-mbC"/>
                                                 </constraints>
-                                                <string key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
+                                                <mutableString key="text">*Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.
 
 *Consistent Fade: They have a moderate and predictable fade, smoothly curving at the end of their flight.
 
@@ -771,7 +764,7 @@
 
 *Reliable in Wind: Stable discs are dependable even in mild wind conditions, offering consistent performance.
 
-*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</string>
+*Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.</mutableString>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -798,6 +791,13 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finalStabPath" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-Ke-DBJ">
+                                                <rect key="frame" x="76" y="250" width="240" height="236"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="236" id="To7-ud-S25"/>
+                                                    <constraint firstAttribute="width" constant="240" id="b6I-67-mxJ"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1529,19 +1529,19 @@ Turnover Shot: This throw involves releasing the disc with an anhyzer angle, cau
         <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
         <image name="understablePath" width="133.66667175292969" height="205.66667175292969"/>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
