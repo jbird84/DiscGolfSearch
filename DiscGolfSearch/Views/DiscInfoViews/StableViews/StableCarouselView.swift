@@ -23,7 +23,7 @@ struct CarouselView: View {
             Color.black
                 .ignoresSafeArea()
             VStack {
-                Text("Stable Discs") // Text added here
+                Text("Stable Discs")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .padding(.bottom, 80)
@@ -83,73 +83,15 @@ struct CarouselView: View {
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                 VStack {
                     Text("Stable discs will spin similarly to an overstable disc but will not turn much, if at all. This means the flight path should be fairly straight.")
-                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .font(.largeTitle)
                         .foregroundStyle(.white)
                         .padding()
                     Image("finalStabPath")
+                        .padding(.bottom, 10)
                 }
             }
-            .frame(width: 250, height: 350)
-        }),
-        
-        CarouselViewChild(id: 3, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Consistent Fade: They have a moderate and predictable fade, smoothly curving at the end of their flight.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
-        }),
-        
-        CarouselViewChild(id: 4, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Control and Accuracy: Stable discs offer excellent control and accuracy, making them a popular choice for both beginners and experienced players.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
-        }),
-        
-        CarouselViewChild(id: 5, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Versatility: They are versatile and can handle various throwing techniques, making them suitable for a wide range of shots.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
-        }),
-        
-        CarouselViewChild(id: 6, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Reliable in Wind: Stable discs are dependable even in mild wind conditions, offering consistent performance.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
-        }),
-        
-        CarouselViewChild(id: 7, content: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Foundation Disc: Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
-            }
-            .frame(width: 250, height: 250)
+            .frame(width: 320, height: 550)
         }),
         
         CarouselViewChild(id: 8, content: {
@@ -157,16 +99,119 @@ struct CarouselView: View {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                 VStack {
-                    Text("SHOTS BASED ON STABILITY")
-                        .font(.headline)
+                    Text("Consistent Fade")
+                        .font(.largeTitle)
                         .foregroundStyle(.white)
-                    Text("Straight Shot: Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.")
-                        .font(.callout)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                Text("They have a moderate and predictable fade, smoothly curving at the end of their flight.")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
+        }
+            .frame(width: 320, height: 500)
+        }),
+        
+        CarouselViewChild(id: 4, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                VStack {
+                    Text("Control and Accuracy")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                    Text("Stable discs offer excellent control and accuracy, making them a popular choice for both beginners and experienced players.")
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
                         .foregroundStyle(.white)
                         .padding()
                 }
             }
-            .frame(width: 250, height: 250)
+            .frame(width: 320, height: 500)
+        }),
+        
+        CarouselViewChild(id: 5, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                VStack {
+                    Text("Versatility")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                    Text("They are versatile and can handle various throwing techniques, making them suitable for a wide range of shots.")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                }
+            }
+            .frame(width: 320, height: 500)
+        }),
+        
+        CarouselViewChild(id: 6, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                VStack {
+                    Text("Reliable in Wind")
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .underline()
+                    Text("Stable discs are dependable even in mild wind conditions, offering consistent performance.")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                }
+            }
+            .frame(width: 320, height: 500)
+        }),
+        
+        CarouselViewChild(id: 7, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                VStack {
+                    Text("Foundation Disc")
+                        .font(.largeTitle)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(.white)
+                    Text("Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                }
+            }
+            .frame(width: 320, height: 500)
+        }),
+        
+        CarouselViewChild(id: 3, content: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
+                VStack {
+                    Text("Straight Shot")
+                        .font(.largeTitle)
+                        .underline()
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                    Text("Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                }
+            }
+            .frame(width: 320, height: 550)
         }),
         
         CarouselViewChild(id: 2, content: {
@@ -174,27 +219,38 @@ struct CarouselView: View {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                 VStack {
-                    Text("SHOTS BASED ON STABILITY")
-                        .font(.headline)
+                    Text("Tunnel Shot")
+                        .font(.largeTitle)
                         .foregroundStyle(.white)
-                    Text("Tunnel Shot: Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.")
-                        .font(.callout)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                    Text("Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.")
+                        .font(.largeTitle)
                         .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
                         .padding()
                 }
             }
-            .frame(width: 250, height: 250)
+            .frame(width: 320, height: 550)
         }),
         CarouselViewChild(id: 9, content: {
             ZStack {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                Text("Straight Flight: Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.")
-                    .font(.title3)
-                    .foregroundStyle(.white)
-                    .padding()
+                VStack {
+                    Text("Straight Flight")
+                        .multilineTextAlignment(.center)
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .underline()
+                    Text("Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.")
+                        .multilineTextAlignment(.center)
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .padding()
+                }
             }
-            .frame(width: 250, height: 250)
+            .frame(width: 320, height: 500)
         })
         
     ]
