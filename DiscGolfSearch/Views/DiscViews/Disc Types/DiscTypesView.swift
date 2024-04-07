@@ -58,7 +58,7 @@ class DiscTypesView: UIView {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             } else if tappedLabel == stableLabel {
-                let carouselView = CarouselView() // Instantiate CarouselView
+                let carouselView = StableCarouselView() // Instantiate CarouselView
                 self.navigationController?.pushViewController(UIHostingController(rootView: carouselView), animated: true)
             } else if tappedLabel == understableLabel || tappedLabel == veryUnderstableLabel  {
                 if let underStableVC = storyboard.instantiateViewController(withIdentifier: "underStableVC") as? UnderstableVC {

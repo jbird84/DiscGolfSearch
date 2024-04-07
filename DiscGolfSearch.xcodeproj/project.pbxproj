@@ -78,6 +78,7 @@
 		DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */; };
 		DAF2A0F52BBE52A60009B923 /* StableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */; };
 		DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */; };
+		DAF2A0FA2BC308E60009B923 /* UnderStableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */; };
 		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		DAF2A0F22BBCE3FC0009B923 /* StablePagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StablePagingScrollView.swift; sourceTree = "<group>"; };
 		DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableCarouselView.swift; sourceTree = "<group>"; };
 		DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
+		DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderStableCarouselView.swift; sourceTree = "<group>"; };
 		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -331,11 +333,11 @@
 		DAC153572BB89F5F00FD9A80 /* DiscInfoViews */ = {
 			isa = PBXGroup;
 			children = (
+				DAF2A0F82BC3087C0009B923 /* UnderstableViews */,
 				DAF2A0F12BBCE3A30009B923 /* StableViews */,
 				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
 				DA9B7CD62BAD0BDA0040E44D /* StableVC.swift */,
 				DA8172C32BB10969005D56E5 /* UnderstableVC.swift */,
-				DAC153582BB89FC500FD9A80 /* StabilityInfo.storyboard */,
 				DAC153642BB8A1FB00FD9A80 /* Overstable VCs */,
 			);
 			path = DiscInfoViews;
@@ -344,6 +346,7 @@
 		DAC153642BB8A1FB00FD9A80 /* Overstable VCs */ = {
 			isa = PBXGroup;
 			children = (
+				DAC153582BB89FC500FD9A80 /* StabilityInfo.storyboard */,
 				DAD4820D2ACA4AEB0051D89A /* OverstablePageViewController.swift */,
 				DAC1535A2BB8A1C200FD9A80 /* OverstableVC1.swift */,
 				DAC1535C2BB8A1D000FD9A80 /* OverstableVC2.swift */,
@@ -497,6 +500,14 @@
 			path = StableViews;
 			sourceTree = "<group>";
 		};
+		DAF2A0F82BC3087C0009B923 /* UnderstableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */,
+			);
+			path = UnderstableViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,6 +619,7 @@
 				DA9B7CD72BAD0BDA0040E44D /* StableVC.swift in Sources */,
 				DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */,
 				DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */,
+				DAF2A0FA2BC308E60009B923 /* UnderStableCarouselView.swift in Sources */,
 				DA22721E2B08DC13005A107C /* BagDatabaseService.swift in Sources */,
 				DA8172C42BB10969005D56E5 /* UnderstableVC.swift in Sources */,
 				DA1DF4192B3A66B100CA783F /* DiscInBagCell.swift in Sources */,

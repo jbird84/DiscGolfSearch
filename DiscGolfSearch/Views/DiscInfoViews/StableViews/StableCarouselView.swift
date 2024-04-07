@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CarouselView: View {
+struct StableCarouselView: View {
     
     var xDistance: Int = 150
     
@@ -83,7 +83,7 @@ struct CarouselView: View {
     
     struct CarouselView_Previews: PreviewProvider {
         static var previews: some View {
-            CarouselView()
+            StableCarouselView()
         }
     }
     
