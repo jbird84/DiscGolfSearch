@@ -31,9 +31,11 @@ struct CarouselView: View {
                     ForEach(views) { view in
                         view
                             .scaleEffect(1.0 - abs(distance(view.id)) * 0.2)
-                            .opacity(1.0 - abs(distance(view.id)) * 0.3)
+                           // .opacity(1.0 - abs(distance(view.id)) * 0.3)
                             .offset(x: getOffset(view.id), y: 0)
                             .zIndex(1.0 - abs(distance(view.id)) * 0.1)
+                            .blur(radius: addBlur(distance: abs(distance(view.id))))
+                            .shadow(color: .white, radius: addShadow(distance: abs(distance(view.id))))
                     }
                 }
                 .gesture(
@@ -60,6 +62,16 @@ struct CarouselView: View {
         func distance(_ item: Int) -> Double {
             return (draggingItem - Double(item).remainder(dividingBy: Double(views.count)))
         }
+    
+    func addBlur(distance: Double) -> Double {
+        let blurRadius: Double = distance == 0 ? 0 : 2.8
+        return blurRadius
+    }
+    
+    func addShadow(distance: Double) -> Double {
+        let shadowRadius: Double = distance == 0 ? 1 : 0
+        return shadowRadius
+    }
         
         func getOffset(_ item: Int) -> Double {
             let angle = Double.pi * 2 / Double(views.count) * distance(item)
@@ -119,7 +131,7 @@ struct CarouselView: View {
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                 VStack {
-                    Text("Control and Accuracy")
+                    Text("Control & Accuracy")
                         .font(.largeTitle)
                         .foregroundStyle(.white)
                         .underline()
