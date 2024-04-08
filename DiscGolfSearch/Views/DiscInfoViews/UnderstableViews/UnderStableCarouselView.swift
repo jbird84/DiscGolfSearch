@@ -22,7 +22,7 @@ struct UnderStableCarouselView: View {
                 Color.black
                     .ignoresSafeArea()
                 VStack {
-                    Text("Stable Discs")
+                    Text("Overstable Discs")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .padding(.bottom, 80)
@@ -92,34 +92,26 @@ struct UnderStableCarouselView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
-                    VStack {
-                        Text("Stable discs will spin similarly to an overstable disc but will not turn much, if at all. This means the flight path should be fairly straight.")
+                        Text("An understable disc is characterized by its tendency to veer significantly to the right right after it's thrown. A highly understable disc usually exhibits minimal fade at the end of its flight. These discs are particularly well-suited for novice players who may not possess the arm strength required to throw more overstable discs effectively. When a player can't generate enough velocity, most discs tend to behave in an overstable manner for beginners.")
                             .multilineTextAlignment(.center)
-                            .font(.largeTitle)
+                            .font(.title2)
                             .foregroundStyle(.white)
                             .padding()
-                        Image("finalStabPath")
-                            .padding(.bottom, 10)
-                    }
                 }
-                .frame(width: 320, height: 550)
+                .frame(width: 335, height: 565)
             }),
             
-            CarouselViewChild(id: 8, content: {
+            CarouselViewChild(id: 9, content: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Consistent Fade")
+                        Text("This is a typical flight path for an overstable disc.")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
-                            .underline()
                             .multilineTextAlignment(.center)
-                    Text("They have a moderate and predictable fade, smoothly curving at the end of their flight.")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .padding()
+                        Image("understablePath")
+                            .padding(.bottom, 10)
                 }
             }
                 .frame(width: 320, height: 500)
@@ -130,12 +122,12 @@ struct UnderStableCarouselView: View {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Control & Accuracy")
+                        Text("Smooth Curves")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .underline()
                             .multilineTextAlignment(.center)
-                        Text("Stable discs offer excellent control and accuracy, making them a popular choice for both beginners and experienced players.")
+                        Text("Understable discs in disc golf veer right (for right-handed throwers) before curving back left at the end of their flight.")
                             .font(.largeTitle)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.white)
@@ -150,12 +142,12 @@ struct UnderStableCarouselView: View {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Versatility")
+                        Text("Low Fade")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .underline()
                             .multilineTextAlignment(.center)
-                        Text("They are versatile and can handle various throwing techniques, making them suitable for a wide range of shots.")
+                        Text("They exhibit minimal leftward curve (fade), making them ideal for long, straight shots.")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
@@ -170,12 +162,12 @@ struct UnderStableCarouselView: View {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Reliable in Wind")
+                        Text("Beginner-Friendly")
                             .font(.largeTitle)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.white)
                             .underline()
-                        Text("Stable discs are dependable even in mild wind conditions, offering consistent performance.")
+                        Text("Understable discs are great for beginners as they require less power to achieve distance and control.")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
@@ -190,12 +182,12 @@ struct UnderStableCarouselView: View {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Foundation Disc")
+                        Text("Tailwind Advantage")
                             .font(.largeTitle)
                             .underline()
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.white)
-                        Text("Many disc golfers start with stable discs to build fundamental throwing skills before experimenting with overstable and understable discs.")
+                        Text("They perform well with a tailwind, gaining extra distance.")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
@@ -210,13 +202,13 @@ struct UnderStableCarouselView: View {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Straight Shot")
+                        Text("Hyzer Flip")
                             .font(.largeTitle)
                             .underline()
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
-                        Text("Stable discs are ideal for throwing straight shots, where you release the disc flat, and it maintains a relatively straight path throughout its flight.")
-                            .font(.largeTitle)
+                        Text("Understable discs can be used for the hyzer flip technique, creating graceful S-curve shots.This is a throw where you release the disc with an anhyzer angle, causing it to flip up to flat and glide right. It's a great choice for long, controlled drives.")
+                            .font(.title2)
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
                             .padding()
@@ -225,17 +217,17 @@ struct UnderStableCarouselView: View {
                 .frame(width: 320, height: 550)
             }),
             
-            CarouselViewChild(id: 2, content: {
+            CarouselViewChild(id: 8, content: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Tunnel Shot")
+                        Text("Versatile Choices")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .underline()
                             .multilineTextAlignment(.center)
-                        Text("Stable discs are great for navigating tight tunnel-like fairways, where you need precision and control to stay on the desired path. These shots require accuracy and minimal lateral movement.")
+                        Text("These discs are versatile and can suit various shot types, making them a valuable part of a disc golfer's toolkit.")
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
@@ -244,19 +236,19 @@ struct UnderStableCarouselView: View {
                 }
                 .frame(width: 320, height: 550)
             }),
-            CarouselViewChild(id: 9, content: {
+            CarouselViewChild(id: 2, content: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(UIColor(named: "textBackgroundBox") ?? .blue))
                     VStack {
-                        Text("Straight Flight")
+                        Text("Turnover Shot")
                             .multilineTextAlignment(.center)
                             .font(.largeTitle)
                             .foregroundStyle(.white)
                             .underline()
-                        Text("Stable discs in disc golf maintain a relatively straight flight path without significant veering to the left or right.")
+                        Text("This throw involves releasing the disc with an anhyzer angle, causing it to turn to the right (for right-handed backhand throwers) throughout its flight. It's useful for navigating tight fairways or shaping shots.")
                             .multilineTextAlignment(.center)
-                            .font(.largeTitle)
+                            .font(.title)
                             .foregroundStyle(.white)
                             .padding()
                     }
