@@ -26,6 +26,7 @@ struct UnderStableCarouselView: View {
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .padding(.bottom, 80)
+            
                     ZStack {
                         ForEach(views) { view in
                             view
