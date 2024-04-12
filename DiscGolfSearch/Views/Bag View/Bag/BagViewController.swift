@@ -57,6 +57,7 @@ class BagViewController: UIViewController {
         }
         coreDataManager = appDelegate.coreDataManager
         
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         segControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
     }
     
@@ -104,13 +105,13 @@ class BagViewController: UIViewController {
     
     private func createGraphs() {
         // Create scatter chart view if it doesn't exist
-        let scatterChartViewController = UIHostingController(rootView: BagScatterGraph( discs: currentBagDiscs, areNamesShowing: areDiscNamesShowing))
+        let scatterChartViewController = UIHostingController(rootView: BagScatterGraph( discs: currentBagDiscs, areNamesShowing: areDiscNamesShowing).environment(\.colorScheme, .dark))
         guard let newChartView = scatterChartViewController.view else { return }
         scatterChartView = newChartView
         scatterChartView?.translatesAutoresizingMaskIntoConstraints = false
         
         //create oneDimensionalBar
-        let oneDimensionalBar = OneDimensionalBar(isOverview: false, currentBagDiscs: currentBagDiscs)
+        let oneDimensionalBar = OneDimensionalBar(isOverview: false, currentBagDiscs: currentBagDiscs).environment(\.colorScheme, .dark)
         let oneDimensionalBarController = UIHostingController(rootView: oneDimensionalBar)
         guard let newOneDimensionalBarView = oneDimensionalBarController.view else { return }
         oneDimensionalBarView = newOneDimensionalBarView

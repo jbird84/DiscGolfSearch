@@ -264,12 +264,7 @@ extension DiscListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
     
     func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
-        if userInterfaceStyle != .dark {
-            return UIColor.label
-        } else {
-            return UIColor.secondaryLabel
-        }
+        return .white
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {

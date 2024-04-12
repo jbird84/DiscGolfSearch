@@ -38,27 +38,27 @@ struct OneDimensionalBar: View {
     }
 
     var body: some View {
-        if isOverview {
-            VStack {
-                HStack {
-                    Text("Total Bag Stability")
-                Spacer()
-                }
-                    chart
-            }
-        } else {
-            List {
-                Section {
-                    VStack {
-                        HStack {
-                            Text("Total Bag Stability")
+            if isOverview {
+                VStack {
+                    HStack {
+                        Text("Total Bag Stability")
                         Spacer()
-                            Text("\(currentBagDiscs.count) discs in bag")
-                                .foregroundColor(.secondary)
-                        }
-                        chart
                     }
+                    chart
                 }
+            } else {
+                List {
+                    Section {
+                        VStack {
+                            HStack {
+                                Text("Total Bag Stability")
+                                Spacer()
+                                Text("\(currentBagDiscs.count) discs in bag")
+                                    .foregroundColor(.secondary)
+                            }
+                            chart
+                        }
+                    }
             }
         }
     }
@@ -80,7 +80,7 @@ struct OneDimensionalBar: View {
                 #if os(macOS)
                 .background(Color.gray.opacity(0.2))
                 #else
-                .background(Color(.systemFill))
+                .background(Color(.black))
                 #endif
                 .cornerRadius(8)
         }
