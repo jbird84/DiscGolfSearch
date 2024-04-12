@@ -29,7 +29,7 @@
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
 		DA9B7CD42BA7BD960040E44D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DA9B7CD32BA7BD960040E44D /* Lottie */; };
 		DAA30B122B64A2D700C533F3 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */; };
-		DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */; };
+		DABAE3AC2BC94D5D001291FC /* FlightNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABAE3AB2BC94D5D001291FC /* FlightNumber.storyboard */; };
 		DABE00CC2AF7CE7800C2ABEB /* DiscDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */; };
 		DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */; };
 		DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */; };
@@ -115,7 +115,7 @@
 		DA422C2C2B97F86600BBB1F7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagInfoViewController.swift; sourceTree = "<group>"; };
 		DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
-		DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraphView.swift; sourceTree = "<group>"; };
+		DABAE3AB2BC94D5D001291FC /* FlightNumber.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlightNumber.storyboard; sourceTree = "<group>"; };
 		DABE00CB2AF7CE7800C2ABEB /* DiscDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDatabaseService.swift; sourceTree = "<group>"; };
 		DABE00CD2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscSwiftDataModel.swift; sourceTree = "<group>"; };
 		DABE00CF2AF8771B00C2ABEB /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +275,7 @@
 			children = (
 				DA422C2B2B97F83400BBB1F7 /* ChartsDataModels */,
 				DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */,
+				DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -282,7 +283,7 @@
 		DA363D332B016E5B0050840A /* Bag View */ = {
 			isa = PBXGroup;
 			children = (
-				DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */,
+				DA22722D2B0A5088005A107C /* Charts */,
 				DA1DF40F2B39053600CA783F /* Bag */,
 				DAEE2C982B025B93005D289D /* Add Bag  */,
 				DA363D342B016EA20050840A /* BagListTableViewCell.swift */,
@@ -299,13 +300,13 @@
 			path = ChartsDataModels;
 			sourceTree = "<group>";
 		};
-		DAA5A0972B5A0EFF005BAE1C /* Bag Seg Controller Views */ = {
+		DABAE3AD2BC94E51001291FC /* FlightNumberInfo */ = {
 			isa = PBXGroup;
 			children = (
-				DAA5A0982B5A0F43005BAE1C /* BagScatterGraphView.swift */,
-				DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */,
+				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
+				DABAE3AB2BC94D5D001291FC /* FlightNumber.storyboard */,
 			);
-			path = "Bag Seg Controller Views";
+			path = FlightNumberInfo;
 			sourceTree = "<group>";
 		};
 		DABE00CA2AF7CE6600C2ABEB /* Services */ = {
@@ -329,7 +330,7 @@
 		DAC153572BB89F5F00FD9A80 /* DiscInfoViews */ = {
 			isa = PBXGroup;
 			children = (
-				DAD482122ACE47D50051D89A /* FlightNumbersViewController.swift */,
+				DABAE3AD2BC94E51001291FC /* FlightNumberInfo */,
 				DAF2A0F82BC3087C0009B923 /* UnderstableViews */,
 				DAF2A0F12BBCE3A30009B923 /* StableViews */,
 				DAC153642BB8A1FB00FD9A80 /* Overstable VCs */,
@@ -356,7 +357,6 @@
 			children = (
 				DA20B67B2B9541EF00841351 /* Custom Views */,
 				DAEC3B5B2B83F64C00171A7C /* Banner Help */,
-				DA22722D2B0A5088005A107C /* Charts */,
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 				DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */,
@@ -585,6 +585,7 @@
 				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
 				DA1DF4112B39054400CA783F /* Bag.storyboard in Resources */,
+				DABAE3AC2BC94D5D001291FC /* FlightNumber.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +650,6 @@
 				DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */,
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,
 				DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */,
-				DAA5A0992B5A0F43005BAE1C /* BagScatterGraphView.swift in Sources */,
 				DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

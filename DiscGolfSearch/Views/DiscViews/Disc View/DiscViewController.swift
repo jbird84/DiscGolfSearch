@@ -251,7 +251,7 @@ class DiscViewController: UIViewController {
     }
     
     private func navigateToFlightNumberViewController(with flightDigit: Int) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "FlightNumber", bundle: nil)
         if let flightNumberVC = storyboard.instantiateViewController(withIdentifier: "flight") as? FlightNumbersViewController {
             flightNumberVC.flightDigit = flightDigit
             navigationController?.pushViewController(flightNumberVC, animated: true)

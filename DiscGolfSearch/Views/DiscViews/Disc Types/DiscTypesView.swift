@@ -50,7 +50,6 @@ class DiscTypesView: UIView {
         
         @objc private func labelTapped(_ gesture: UITapGestureRecognizer) {
             guard let tappedLabel = gesture.view as? UILabel else { return }
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let stabilityStoryboard = UIStoryboard(name: "StabilityInfo", bundle: nil)
             
             if tappedLabel == overstableLabel || tappedLabel == veryOverstableLabel {
