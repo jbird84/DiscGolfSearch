@@ -16,6 +16,22 @@ struct K {
         static let turn = ["-5", "-4.5", "-4", "-3.5", "-3", "-2.5", "-2", "-1.5", "-1", "-0.5", "0", "0.5", "1"]
         static let fade = ["0", "1", "1.5", "2", "2.5", "3", "3.5", "4", "4.5", "5"]
     }
+    
+    enum HexColor {
+        static let gold = "#FFD700"
+        static let limeGreen = "#32CD32"
+        static let blueViolet = "#8A2BE2"
+        static let tomato = "#FF6347"
+        static let mediumSpringGreen = "#00FA9A"
+        static let royalBlue = "#4169E1"
+        static let orangeRed = "#FF4500"
+        static let saddleBrown = "#8B4513"
+        static let seaGreen = "#2E8B57"
+        static let darkOrchid = "#9932CC"
+        static let darkOrange = "#FF8C00"
+        static let grayishBlue = "#7393B3"
+    }
+                                            
 
     static func setDiscColorBasedOnStability(stability: Stability) -> UIColor {
         switch stability {
