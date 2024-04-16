@@ -68,8 +68,8 @@ class FlightNumbersViewController: UIViewController {
         flightNumberCategoryLabel.text = characteristic.category
         for (index, description) in characteristic.descriptions.enumerated() {
             descriptionLabels[index].text = description
-            descriptionLabels[index].layer.cornerRadius = 10 // Set corner radius
-            descriptionLabels[index].layer.masksToBounds = true // Clip to bounds for corner radius
+            descriptionLabels[index].layer.cornerRadius = 10
+            descriptionLabels[index].layer.masksToBounds = true
         }
     }
 }

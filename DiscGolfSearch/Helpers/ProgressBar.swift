@@ -109,6 +109,5 @@ class ProgressBar: UIView {
     private func didProgressUpdated() {
         textLayer?.string = progressText
         foregroundLayer?.strokeEnd = progress
-        
     }
 }
