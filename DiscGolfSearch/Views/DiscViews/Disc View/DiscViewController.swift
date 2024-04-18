@@ -134,9 +134,8 @@ class DiscViewController: UIViewController {
                         return isSimilarFlight && isSameStability && !isSelectedDiscName
                     }
                     
-                    // Now, you have a list of similar discs in the 'similarDiscs' array
-                    // You can use this array to display the similar discs in your UI
-                    print("SIMMMM \(similarDiscs.count)")
+              //This will print the total disc count for similar discs in the collectionview 
+                    print("Similar Disc Count Is \(similarDiscs.count)")
                 }
             }
             

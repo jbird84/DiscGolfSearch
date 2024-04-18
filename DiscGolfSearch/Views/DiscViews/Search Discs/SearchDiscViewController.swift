@@ -38,25 +38,18 @@ class SearchDiscViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        // Set the title
         self.title = "Search A Disc"
         
         // Customize the navigation bar appearance
         if let navigationBar = self.navigationController?.navigationBar {
-            // Set the background color (if needed)
             navigationBar.barTintColor = UIColor.white
-            
-            // Set the title text color to white
             navigationBar.titleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27)
             ]
-            
-            // Customize the back button color (if needed)
             navigationBar.tintColor = UIColor.white
         }
     }
-    
 }
 
 extension SearchDiscViewController: UITableViewDelegate, UITableViewDataSource {
@@ -100,8 +93,6 @@ extension SearchDiscViewController: UISearchBarDelegate {
                 }
             }
         }
-        
-        // Update the table view
         tableView.reloadData()
     }
     

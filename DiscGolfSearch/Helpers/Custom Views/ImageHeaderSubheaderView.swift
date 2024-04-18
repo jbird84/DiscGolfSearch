@@ -50,19 +50,16 @@ class ImageHeaderSubheaderView: UIView {
     
     //common func to init our view
     private func setupView() {
-        //add the three subviews
         addSubview(imageView)
         addSubview(headerLabel)
         addSubview(subheaderLabel)
         
-        // Set background color and corner radius
         backgroundColor = UIColor(hex: "#1a1b1d")
         layer.cornerRadius = 10
         clipsToBounds = true
     }
     
     // MARK: - Layout
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -85,7 +82,6 @@ class ImageHeaderSubheaderView: UIView {
     }
     
     // MARK: - Public methods
-    
     func configure(image: UIImage?, headerText: String, subheaderText: String) {
         imageView.image = image
         headerLabel.text = headerText
