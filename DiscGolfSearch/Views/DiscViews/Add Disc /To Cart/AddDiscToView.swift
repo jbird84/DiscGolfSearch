@@ -20,22 +20,17 @@ class AddDiscToView: UIView {
     @IBAction func addToCartTapped(_ sender: Any) {
        
         //Send user to fillout form then pop to view
-        print("Added Disc To Cart!")
         delegate?.saveDiscToSwiftData()
         delegate?.dissmiss()
     }
     
-    
     @IBAction func addToBagTapped(_ sender: Any) {
         //Send user to fillout form then pop to view
-        print("Added Disc To Bag!")
         delegate?.saveDiscToBag()
         delegate?.dissmiss()
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        print("Cancel Tapped")
         delegate?.dissmiss()
     }
-    
 }

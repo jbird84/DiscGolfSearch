@@ -98,8 +98,10 @@ class AddDiscToBagViewController: FormViewController {
             $0.title = "Used For"
             $0.selectorTitle = "Mainly Used For:"
             $0.cancelTitle = "Cancel"
-            $0.options = ["General Use", "Roller", "Backhand", "Flick (Forehand)", "Hyzer","Anhyzer", "Tomahawk", "Thumber", "Approach",        "Putt", "Skip Shot", "Scoober", "Grenade", "Flex Shot", "Turnover", "Stall Shot", "Turbo Putt", "Power Grip", "Fan Grip",
-                          "Crane Shot", "Flex Forehand", "Sky Roller", "Wind Breaker", "Roller Putt", "Low Ceiling Shot", "Jump Putt"]
+            $0.options = ["General Use", "Roller", "Backhand", "Flick (Forehand)", "Hyzer","Anhyzer", "Tomahawk",
+                          "Thumber", "Approach", "Putt", "Skip Shot", "Scoober", "Grenade", "Flex Shot",
+                          "Turnover", "Stall Shot", "Turbo Putt", "Power Grip", "Fan Grip", "Crane Shot",
+                          "Flex Forehand", "Sky Roller", "Wind Breaker", "Roller Putt", "Low Ceiling Shot", "Jump Putt"]
             $0.value = "Backhand"
         }.onChange { [weak self] row in
             self?.disc?.usedFor = row.value ?? "Backhand"
@@ -137,7 +139,7 @@ class AddDiscToBagViewController: FormViewController {
         <<< PushRow<String>(CellTags.selectBag.rawValue) {
             $0.title = "Bag"
             $0.options = bags.map { $0.bagTitle }
-            $0.value = bags.first?.bagTitle // Set default value if available
+            $0.value = bags.first?.bagTitle 
             $0.selectorTitle = "Select a Bag"
         }.onChange { [weak self] row in
             if let selectedBagTitle = row.value,
