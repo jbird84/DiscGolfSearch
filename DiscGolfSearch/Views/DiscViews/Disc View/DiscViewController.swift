@@ -25,7 +25,7 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var flightRatingsGlideLabel: UILabel!
     @IBOutlet weak var flightRatingsTurnLabel: UILabel!
     @IBOutlet weak var flightRatingsFadeLabel: UILabel!
-    
+
     @IBOutlet weak var simularDiscsCollectionView: UICollectionView!
     
     //LottieView:
@@ -84,7 +84,7 @@ class DiscViewController: UIViewController {
         flowLayout.scrollDirection = .horizontal
         
         // Calculate the item width based on your desired width
-        let itemWidth: CGFloat = 200.0 // Adjust this value to your preferred width
+        let itemWidth: CGFloat = 200.0
         
         flowLayout.itemSize = CGSize(width: itemWidth, height: simularDiscsCollectionView.frame.height)
         flowLayout.minimumInteritemSpacing = 10.0 // Adjust spacing between items
@@ -133,9 +133,6 @@ class DiscViewController: UIViewController {
                         //return the simular discs collection
                         return isSimilarFlight && isSameStability && !isSelectedDiscName
                     }
-                    
-              //This will print the total disc count for similar discs in the collectionview 
-                    print("Similar Disc Count Is \(similarDiscs.count)")
                 }
             }
             
@@ -343,7 +340,7 @@ extension DiscViewController: AddDiscToViewDelegate {
         if let vc = storyboard.instantiateViewController(withIdentifier: "addDiscToBagVC") as? AddDiscToBagViewController, let disc = disc {
             vc.disc = disc
             vc.hidesBottomBarWhenPushed = true 
-            vc.overrideUserInterfaceStyle = .dark  // Set the overrideUserInterfaceStyle to .dark
+            vc.overrideUserInterfaceStyle = .dark
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -369,7 +366,6 @@ extension DiscViewController: AddDiscToViewDelegate {
         AlertPresenter.instance.showAlert(title: "Disc Saved To Cart", body: "You successfully saved your disc to your cart. You can view you cart by tapping the cart at the bottom of the app.", iconImage: UIImage(systemName: "checkmark.circle.fill")!, bannerColor: .green) {
         }
     }
-    
     
     func dissmiss() {
         dropDownView.isHidden = true

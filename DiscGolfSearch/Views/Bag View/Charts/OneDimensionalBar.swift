@@ -11,22 +11,22 @@ import Charts
 struct OneDimensionalBar: View {
     var isOverview: Bool
     var currentBagDiscs: [DiscDataModel]
-
+    
     private var data: [DataUsageData.Series] {
         let customOrder: [String: Int] = [
-            "Very Overstable": 0, // very overstable
-            "Overstable": 1,  // overstable
-            "Stable": 2,    // stable
-            "Understable": 3,  // understable
-            "Very Understable": 4  // very understable
+            "Very Overstable": 0,
+            "Overstable": 1,
+            "Stable": 2,
+            "Understable": 3,
+            "Very Understable": 4
         ]
-
+        
         let sortedDiscs = currentBagDiscs.sorted { disc1, disc2 in
-               let order1 = customOrder[disc1.stability] ?? Int.max
-               let order2 = customOrder[disc2.stability] ?? Int.max
-               return order1 < order2
-           }
-           
+            let order1 = customOrder[disc1.stability] ?? Int.max
+            let order2 = customOrder[disc2.stability] ?? Int.max
+            return order1 < order2
+        }
+        
         return sortedDiscs.map { disc in
             DataUsageData.Series(stability: disc.stability, numberOfDiscs: Double(currentBagDiscs.count))
         }
@@ -36,33 +36,33 @@ struct OneDimensionalBar: View {
         data
             .reduce(0) { $0 + $1.numberOfDiscs }
     }
-
+    
     var body: some View {
-            if isOverview {
-                VStack {
-                    HStack {
-                        Text("Total Bag Stability")
-                        Spacer()
-                    }
-                    chart
+        if isOverview {
+            VStack {
+                HStack {
+                    Text("Total Bag Stability")
+                    Spacer()
                 }
-            } else {
-                List {
-                    Section {
-                        VStack {
-                            HStack {
-                                Text("Total Bag Stability")
-                                Spacer()
-                                Text("\(currentBagDiscs.count) discs in bag")
-                                    .foregroundColor(.secondary)
-                            }
-                            chart
+                chart
+            }
+        } else {
+            List {
+                Section {
+                    VStack {
+                        HStack {
+                            Text("Total Bag Stability")
+                            Spacer()
+                            Text("\(currentBagDiscs.count) discs in bag")
+                                .foregroundColor(.secondary)
                         }
+                        chart
                     }
+                }
             }
         }
     }
-
+    
     private var chart: some View {
         Chart(data, id: \.stability) { disc in
             Plot {
@@ -77,11 +77,11 @@ struct OneDimensionalBar: View {
         }
         .chartPlotStyle { plotArea in
             plotArea
-                #if os(macOS)
+#if os(macOS)
                 .background(Color.gray.opacity(0.2))
-                #else
+#else
                 .background(Color(.black))
-                #endif
+#endif
                 .cornerRadius(8)
         }
         .accessibilityChartDescriptor(self)
@@ -98,18 +98,18 @@ extension OneDimensionalBar: AXChartDescriptorRepresentable {
     func makeChartDescriptor() -> AXChartDescriptor {
         let min = data.map(\.numberOfDiscs).min() ?? 0
         let max = data.map(\.numberOfDiscs).max() ?? 0
-
+        
         let xAxis = AXCategoricalDataAxisDescriptor(
             title: "Stability",
             categoryOrder: data.map { $0.stability }
         )
-
+        
         let yAxis = AXNumericDataAxisDescriptor(
             title: "Number Of Discs",
             range: Double(min)...Double(max),
             gridlinePositions: []
         ) { value in "\(String(format:"%.2f", value)) GB" }
-
+        
         let series = AXDataSeriesDescriptor(
             name: "Data Usage Example",
             isContinuous: false,
@@ -117,7 +117,7 @@ extension OneDimensionalBar: AXChartDescriptorRepresentable {
                 .init(x: $0.stability, y: $0.numberOfDiscs)
             }
         )
-
+        
         return AXChartDescriptor(
             title: "Data Usage by category",
             summary: nil,
@@ -130,19 +130,18 @@ extension OneDimensionalBar: AXChartDescriptorRepresentable {
     
     func changeStabilityName(stability: String) -> String {
         switch stability {
-            case "Very Overstable":
+        case "Very Overstable":
             return "VO-Stable"
-            case "Overstable":
+        case "Overstable":
             return "O-Stable"
-            case "Stable":
+        case "Stable":
             return "Stable"
-            case "Understable":
+        case "Understable":
             return "U-Stable"
-            case "Very Understable":
+        case "Very Understable":
             return "VU-Stable"
         default:
             return "O-Stable"
         }
-        
     }
 }

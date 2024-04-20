@@ -61,7 +61,6 @@ class BagViewController: UIViewController {
         segControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
     }
     
-    // Function to handle segmented control value changed event
     @objc private func segmentedControlValueChanged() {
         switch segControl.selectedSegmentIndex {
         case 0:
@@ -79,8 +78,6 @@ class BagViewController: UIViewController {
     }
     
     private func showCharts() {
-        
-        // Hide table view
         tableView.isHidden = true
         createGraphs()
     }
@@ -134,8 +131,8 @@ class BagViewController: UIViewController {
                 scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
                 scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            
-            
+                
+                
                 //ContentView Constraints
                 contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                 contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
@@ -164,7 +161,6 @@ class BagViewController: UIViewController {
     
     private func filterDiscByBagId() {
         guard let bagId = bag?.id else { return }
-        
         currentBagDiscs = allDiscs.filter { $0.id == bagId }
     }
 }
@@ -215,12 +211,11 @@ extension BagViewController: UITableViewDelegate, UITableViewDataSource {
                 print("Error fetching disc entities: \(error.localizedDescription)")
                 K.showAlert(title: "Error Deleting Disc", message: "We encountered an issue while attempting to delete this disc. If the problem persists, please try again later.", presentingViewController: self)
             }
-
+            
             currentBagDiscs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-    
 }
 
 //MARK: Empty Data Source Delegates
@@ -250,5 +245,4 @@ extension BagViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
-    
 }
