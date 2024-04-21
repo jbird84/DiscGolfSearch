@@ -49,12 +49,9 @@ class AddBagViewController: FormViewController {
         let addNewBagButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveBag))
         navigationItem.rightBarButtonItem = addNewBagButton
         
-        //setup bag imageView
-        
         // Set the plus sign image to the image view
         imageView.image = UIImage(named: "bag")
         imageView.setImageColor(color: UIColor.systemGray2)
-    
         
         // Calculate the center of the screen
         let centerX = view.bounds.midX
@@ -94,13 +91,10 @@ class AddBagViewController: FormViewController {
             gridColorPickerVC.delegate = self
             self?.present(gridColorPickerVC, animated: true, completion: nil)
         })
-        
-        
     }
     
     @objc private func saveBag() {
         
-        print("Bag Saved")
         if bagName == nil {
             K.showAlert(title: "Bag Name Empty", message: "Please add a name for this bag.", presentingViewController: self)
             return
@@ -134,9 +128,6 @@ extension AddBagViewController: GridColorPickerDelegate {
         self.selectedColor = color.toHexString()
         imageView.setImageColor(color: color)
     }
-    
-    
-    
 }
 
 

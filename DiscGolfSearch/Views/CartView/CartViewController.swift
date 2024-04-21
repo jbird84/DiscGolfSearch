@@ -16,9 +16,9 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       getDiscs()
-       setupTableView()
-       setupNavigationBar()
+        getDiscs()
+        setupTableView()
+        setupNavigationBar()
     }
     
     private func setupNavigationBar() {
@@ -62,28 +62,28 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.discTurnLabel.text = discs[indexPath.row].turn
         cell.discGlideLabel.text = discs[indexPath.row].glide
         cell.discFadeLabel.text = discs[indexPath.row].fade
-        cell.discImageView.image = image 
+        cell.discImageView.image = image
         
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110.0 // Adjust this value to set the desired cell height
     }
     
     // Implement swipe-to-delete functionality:
-        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                // Handle the delete action here.
-
-                K.showAlertWithDeleteAction(title: "Disc will be deleted", message: "Are you sure you want to delete the selected disc?", presentingViewController: self) { [weak self] _ in
-                    guard let self else { return }
-                    DiscDatabaseService.shared.deleteDiscFromCartView(disc: self.discs[indexPath.row])
-                    self.discs.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Handle the delete action here.
+            
+            K.showAlertWithDeleteAction(title: "Disc will be deleted", message: "Are you sure you want to delete the selected disc?", presentingViewController: self) { [weak self] _ in
+                guard let self else { return }
+                DiscDatabaseService.shared.deleteDiscFromCartView(disc: self.discs[indexPath.row])
+                self.discs.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
         }
+    }
 }
 
 //MARK: - Empty Dataset Delegates

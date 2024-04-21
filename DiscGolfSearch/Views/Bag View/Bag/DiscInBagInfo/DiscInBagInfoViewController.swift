@@ -47,7 +47,7 @@ class DiscInBagInfoViewController: UIViewController {
     }
     
     private func setupViewsForDisc(disc: DiscDataModel) {
-   
+        
         discCompanyNameView.configure(image: UIImage(systemName: "house.lodge.fill"), headerText: "Company", subheaderText: disc.brand)
         discNameView.configure(image: UIImage(systemName: "circle.fill"), headerText: "Name", subheaderText: disc.name)
         discPlasticView.configure(image: UIImage(systemName: "creditcard.fill"), headerText: "Plastic", subheaderText: disc.plastic ?? "No plastic specified.")

@@ -63,12 +63,12 @@ class ViewController: UIViewController {
                     self.brands.insert(disc.brand)
                 }
             }
-             
-             DispatchQueue.main.async {
-                 SwiftSpinner.hide()
-                 self.collectionView.reloadData()
-             }
-         }
+            
+            DispatchQueue.main.async {
+                SwiftSpinner.hide()
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     private func saveAllDiscsToUserDefaults() {
@@ -92,7 +92,6 @@ class ViewController: UIViewController {
         }
         
         popup.addAction(retry)
-
         present(popup, animated: true, completion: nil)
     }
     
@@ -110,7 +109,7 @@ class ViewController: UIViewController {
         // Check if there are any selected discs to display
         if selectedCompanyDiscs.isEmpty {
             // Handle the case where no discs match the selected brands
-            print("No discs match the selected brands.")
+            AlertPresenter.instance.showAlert(title: "No Brand Selected", body: "Please select at least one brand and then tap the search button.", iconImage: UIImage(named: "noDiscForThisSpeed")!, bannerColor: .orange, handler: nil)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
             if let vc = storyboard.instantiateViewController(withIdentifier: "discList") as? DiscListViewController {
@@ -123,8 +122,6 @@ class ViewController: UIViewController {
     
     
     @objc func selectAllTapped() {
-        
-        
         
         // Toggle the selection state for all brand names
         if selectedIndices.count == brands.count {
@@ -142,7 +139,6 @@ class ViewController: UIViewController {
         }
         collectionView.reloadData() // Reload the collection view to reflect the changes
     }
-    
 }
 
 
@@ -186,7 +182,6 @@ extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource 
             let brandSlug = brand.lowercased().replacingOccurrences(of: " ", with: "-")
             brandSlugs.insert(brandSlug)
         }
-        
         collectionView.reloadItems(at: [indexPath])
     }
 }

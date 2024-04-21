@@ -42,7 +42,6 @@ class BagListViewController: UIViewController {
         tableView.delegate = self
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
-        
     }
     
     @objc func addNewBag() {
@@ -102,17 +101,17 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             K.showAlertWithDeleteAction(title: "Selected Bag Will Be Deleted", message: "Are you sure you want to delete this bag?", presentingViewController: self) { [weak self] _ in
                 guard let self = self else { return }
-
+                
                 // Get the BagDataModel to be deleted
                 let bagDataModelToDelete = self.bagItems[indexPath.row]
-
+                
                 // Fetch BagEntity instances for deletion
                 switch coreDataManager.fetch(BagEntity.self, predicate: NSPredicate(format: "id == %@", bagDataModelToDelete.id as NSNumber)) {
                 case .success(let bagEntities):
                     if let bagEntityToDelete = bagEntities.first {
                         // Delete the object from Core Data
                         coreDataManager.delete(bagEntityToDelete)
-
+                        
                         // Update the data source and table view
                         self.bagItems.remove(at: indexPath.row)
                         tableView.deleteRows(at: [indexPath], with: .automatic)
