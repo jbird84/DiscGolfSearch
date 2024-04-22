@@ -23,11 +23,9 @@ extension UIViewController {
     func createCircleColorView(with color: UIColor) -> UIImageView {
         var config = UIImage.SymbolConfiguration(font: .systemFont(ofSize: 14))
         config = config.applying(UIImage.SymbolConfiguration(weight: .semibold))
-        //config = config.applying(UIImage.SymbolConfiguration(paletteColors: [.systemGray2]))
         let image = UIImage(systemName: "circle.fill", withConfiguration: config)?.withTintColor(color, renderingMode: .alwaysOriginal)
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleToFill
         return imageView
     }
-    
 }

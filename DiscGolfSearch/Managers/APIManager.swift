@@ -41,10 +41,8 @@ class APIManager {
                     completion(nil)
                     return
                 }
-                
                 completion(data)
             }
-            
             task.resume()
         }
     
