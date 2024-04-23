@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */; };
 		DA087FF32AEBDBA600248BAC /* AddDiscToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */; };
+		DA1B88282BD7F5050078B3B1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B88272BD7F5050078B3B1 /* InfoViewController.swift */; };
 		DA1DF4112B39054400CA783F /* Bag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1DF4102B39054400CA783F /* Bag.storyboard */; };
 		DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF4122B3905DF00CA783F /* BagViewController.swift */; };
 		DA1DF4172B3A1C1C00CA783F /* DiscDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1DF4162B3A1C1C00CA783F /* DiscDataModel.swift */; };
@@ -19,10 +20,12 @@
 		DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22721B2B05B713005A107C /* GridColorPicker.swift */; };
 		DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */; };
 		DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2272292B099D52005A107C /* AddDiscToBag.storyboard */; };
+		DA31FA662BD7F1E500C41B00 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA31FA652BD7F1E500C41B00 /* Info.storyboard */; };
 		DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D342B016EA20050840A /* BagListTableViewCell.swift */; };
 		DA363D372B016EC30050840A /* BagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D362B016EC30050840A /* BagListViewController.swift */; };
 		DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3B2B0181C10050840A /* BagDataModel.swift */; };
 		DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA363D3D2B0183960050840A /* Color+Ext.swift */; };
+		DA38F7982BD7FB57001412A0 /* WindReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38F7972BD7FB57001412A0 /* WindReferenceViewController.swift */; };
 		DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */; };
 		DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA422C2C2B97F86600BBB1F7 /* ChartData.swift */; };
 		DA6FE00D2B88093F00516F82 /* DiscInBagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */; };
@@ -95,6 +98,7 @@
 /* Begin PBXFileReference section */
 		DA087FF02AEBD9D200248BAC /* AddDiscToView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiscToView.xib; sourceTree = "<group>"; };
 		DA087FF22AEBDBA600248BAC /* AddDiscToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToView.swift; sourceTree = "<group>"; };
+		DA1B88272BD7F5050078B3B1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		DA1DF4102B39054400CA783F /* Bag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bag.storyboard; sourceTree = "<group>"; };
 		DA1DF4122B3905DF00CA783F /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
 		DA1DF4162B3A1C1C00CA783F /* DiscDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDataModel.swift; sourceTree = "<group>"; };
@@ -105,10 +109,12 @@
 		DA22721B2B05B713005A107C /* GridColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColorPicker.swift; sourceTree = "<group>"; };
 		DA2272272B099C6E005A107C /* AddDiscToBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscToBagViewController.swift; sourceTree = "<group>"; };
 		DA2272292B099D52005A107C /* AddDiscToBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDiscToBag.storyboard; sourceTree = "<group>"; };
+		DA31FA652BD7F1E500C41B00 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		DA363D342B016EA20050840A /* BagListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListTableViewCell.swift; sourceTree = "<group>"; };
 		DA363D362B016EC30050840A /* BagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListViewController.swift; sourceTree = "<group>"; };
 		DA363D3B2B0181C10050840A /* BagDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDataModel.swift; sourceTree = "<group>"; };
 		DA363D3D2B0183960050840A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		DA38F7972BD7FB57001412A0 /* WindReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindReferenceViewController.swift; sourceTree = "<group>"; };
 		DA422C292B97F75100BBB1F7 /* OneDimensionalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDimensionalBar.swift; sourceTree = "<group>"; };
 		DA422C2C2B97F86600BBB1F7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		DA6FE00C2B88093F00516F82 /* DiscInBagInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscInBagInfoViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +284,16 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		DA31FA642BD7F14D00C41B00 /* InfoTab */ = {
+			isa = PBXGroup;
+			children = (
+				DA31FA652BD7F1E500C41B00 /* Info.storyboard */,
+				DA1B88272BD7F5050078B3B1 /* InfoViewController.swift */,
+				DA38F7972BD7FB57001412A0 /* WindReferenceViewController.swift */,
+			);
+			path = InfoTab;
+			sourceTree = "<group>";
+		};
 		DA363D332B016E5B0050840A /* Bag View */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +343,7 @@
 		DAC153572BB89F5F00FD9A80 /* DiscInfoViews */ = {
 			isa = PBXGroup;
 			children = (
+				DA31FA642BD7F14D00C41B00 /* InfoTab */,
 				DABAE3AD2BC94E51001291FC /* FlightNumberInfo */,
 				DAF2A0F82BC3087C0009B923 /* UnderstableViews */,
 				DAF2A0F12BBCE3A30009B923 /* StableViews */,
@@ -578,6 +595,7 @@
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
 				DAEC3B622B85A23800171A7C /* DiscInBagInfo.storyboard in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,
+				DA31FA662BD7F1E500C41B00 /* Info.storyboard in Resources */,
 				DAC153592BB89FC500FD9A80 /* StabilityInfo.storyboard in Resources */,
 				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
@@ -621,12 +639,14 @@
 				DABE00CE2AF7CF6F00C2ABEB /* DiscSwiftDataModel.swift in Sources */,
 				DA1DF4172B3A1C1C00CA783F /* DiscDataModel.swift in Sources */,
 				DAD482112ACCFDCC0051D89A /* Constants.swift in Sources */,
+				DA38F7982BD7FB57001412A0 /* WindReferenceViewController.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
 				DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */,
 				DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */,
 				DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
 				DAC1535D2BB8A1D000FD9A80 /* OverstableVC2.swift in Sources */,
+				DA1B88282BD7F5050078B3B1 /* InfoViewController.swift in Sources */,
 				DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */,
 				DADB72232AADFCDC0083B13B /* SceneDelegate.swift in Sources */,
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
