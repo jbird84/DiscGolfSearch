@@ -37,7 +37,7 @@ setupView()
     @objc private func windGuideViewTapped() {
         let storyboard = UIStoryboard(name: "Info", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
-        navigationController?.present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     /*
     // MARK: - Navigation

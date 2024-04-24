@@ -76,22 +76,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pocketGuide" translatesAutoresizingMaskIntoConstraints="NO" id="X3J-wD-hzE">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d9v-tR-JUC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="X3J-wD-hzE" secondAttribute="bottom" id="KNB-Cg-1OD"/>
+                            <constraint firstItem="d9v-tR-JUC" firstAttribute="bottom" secondItem="X3J-wD-hzE" secondAttribute="bottom" id="KNB-Cg-1OD"/>
                             <constraint firstItem="X3J-wD-hzE" firstAttribute="trailing" secondItem="d9v-tR-JUC" secondAttribute="trailing" id="Lke-nY-lub"/>
-                            <constraint firstItem="X3J-wD-hzE" firstAttribute="top" secondItem="2et-zH-Haq" secondAttribute="top" id="XaU-r6-Cxh"/>
+                            <constraint firstItem="X3J-wD-hzE" firstAttribute="top" secondItem="d9v-tR-JUC" secondAttribute="top" id="XaU-r6-Cxh"/>
                             <constraint firstItem="X3J-wD-hzE" firstAttribute="leading" secondItem="d9v-tR-JUC" secondAttribute="leading" id="f9w-cZ-xBI"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yve-KR-3eE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670.9923664122136" y="-238.02816901408451"/>
+            <point key="canvasLocation" x="1682" y="-220"/>
         </scene>
         <!--Reference-->
         <scene sceneID="ERA-AA-ecY">
@@ -120,9 +120,6 @@
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
