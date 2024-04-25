@@ -49,12 +49,82 @@
                                     <constraint firstAttribute="width" constant="160" id="zbK-TO-oMu"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-vu-bfi">
+                                <rect key="frame" x="14" y="443" width="365" height="115"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkg-iU-nW4">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overstable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2P-Ua-QM5">
+                                                <rect key="frame" x="9" y="83" width="96" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y9R-q8-gDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.19089331800000001" green="0.19089331800000001" blue="0.19089331800000001" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="RPA-kS-G7B"/>
+                                            <constraint firstAttribute="height" constant="115" id="iEd-jy-zdb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSp-3n-Hcb">
+                                        <rect key="frame" x="125" y="0.0" width="115" height="115"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-0J-1Pf">
+                                                <rect key="frame" x="9" y="83" width="56" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-61-142">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.19089331800000001" green="0.19089331800000001" blue="0.19089331800000001" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="alB-ZC-ZDE"/>
+                                            <constraint firstAttribute="height" constant="115" id="mKZ-fy-wHF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj4-81-EnN">
+                                        <rect key="frame" x="250" y="0.0" width="115" height="115"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Understable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csU-Zq-wFE">
+                                                <rect key="frame" x="9" y="83" width="108" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJZ-cv-fwp">
+                                                <rect key="frame" x="2" y="0.0" width="115" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.19089331800000001" green="0.19089331800000001" blue="0.19089331800000001" alpha="0.59874275659999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="HYe-Io-jbP"/>
+                                            <constraint firstAttribute="height" constant="115" id="llg-yK-Lyj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9X3-tt-7jD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UMQ-01-4O6"/>
                             <constraint firstItem="9X3-tt-7jD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="WqD-eZ-EbG"/>
+                            <constraint firstItem="nPf-vu-bfi" firstAttribute="top" secondItem="9X3-tt-7jD" secondAttribute="bottom" constant="100" id="qWA-2I-UBt"/>
+                            <constraint firstItem="nPf-vu-bfi" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tr0-SQ-SuA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VCU-ci-xt5"/>
