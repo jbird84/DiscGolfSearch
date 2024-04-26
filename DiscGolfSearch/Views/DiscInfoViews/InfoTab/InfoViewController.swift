@@ -10,6 +10,9 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var windGuideView: UIView!
+    @IBOutlet weak var overstableView: UIView!
+    @IBOutlet weak var stableView: UIView!
+    @IBOutlet weak var understableView: UIView!
     
     
     override func viewDidLoad() {
@@ -19,19 +22,22 @@ setupView()
     }
     
     private func setupView() {
-        //Setup wind-guide view
-        windGuideView.layer.cornerRadius = 10
-        windGuideView.layer.shadowColor = UIColor.white.cgColor
-        windGuideView.layer.shadowOpacity = 0.5
-        windGuideView.layer.shadowOffset = CGSize(width: 0, height: 2) 
-        windGuideView.layer.shadowRadius = 4
-        windGuideView.layer.masksToBounds = false
-        windGuideView.layer.shadowPath = UIBezierPath(roundedRect: windGuideView.bounds, cornerRadius: windGuideView.layer.cornerRadius).cgPath
-        windGuideView.layer.borderColor = UIColor.gray.cgColor
-        windGuideView.layer.borderWidth = 1
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(windGuideViewTapped))
-        windGuideView.addGestureRecognizer(tapGesture)
+        //Setup wind-guide view and its tap gesture:
+        let windGuideTapGesture = UITapGestureRecognizer(target: self, action: #selector(windGuideViewTapped))
+        setup(view: windGuideView, with: windGuideTapGesture)
+        
+        //Setup overstable view and its tap gesture:
+        let overstableTapGesture = UITapGestureRecognizer(target: self, action: #selector(overstableViewTapped))
+        setup(view: overstableView, with: overstableTapGesture)
+        
+        //Setup stable view and its tap gesture:
+        let stableTapGesture = UITapGestureRecognizer(target: self, action: #selector(stableViewTapped))
+        setup(view: stableView, with: stableTapGesture)
+        
+        //Setup understable view and its tap gesture:
+        let understableTapGesture = UITapGestureRecognizer(target: self, action: #selector(understableViewTapped))
+        setup(view: understableView, with: understableTapGesture)
     }
     
     @objc private func windGuideViewTapped() {
@@ -39,14 +45,36 @@ setupView()
         let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
         navigationController?.pushViewController(vc, animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc private func overstableViewTapped() {
+        let storyboard = UIStoryboard(name: "Info", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
+    
+    @objc private func stableViewTapped() {
+        let storyboard = UIStoryboard(name: "Info", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func understableViewTapped() {
+        let storyboard = UIStoryboard(name: "Info", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+   
+    private func setup(view: UIView, with tapGesture: UITapGestureRecognizer) {
+        view.layer.cornerRadius = 10
+        view.layer.shadowColor = UIColor.white.cgColor
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 4
+        view.layer.masksToBounds = false
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
+        view.layer.borderColor = UIColor.gray.cgColor
+        view.layer.borderWidth = 1
+        view.addGestureRecognizer(tapGesture)
+    }
 
 }
