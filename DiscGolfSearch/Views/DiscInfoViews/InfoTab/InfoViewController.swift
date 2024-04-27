@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class InfoViewController: UIViewController {
 
@@ -47,21 +48,20 @@ setupView()
     }
     
     @objc private func overstableViewTapped() {
-        let storyboard = UIStoryboard(name: "Info", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
-        navigationController?.pushViewController(vc, animated: true)
+        let stabilityStoryboard = UIStoryboard(name: "StabilityInfo", bundle: nil)
+        if let vc = stabilityStoryboard.instantiateViewController(withIdentifier: "overstablePageViewController") as? OverstablePageViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc private func stableViewTapped() {
-        let storyboard = UIStoryboard(name: "Info", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
-        navigationController?.pushViewController(vc, animated: true)
+        let stableCarouselView = StableCarouselView() // Instantiate CarouselView
+        self.navigationController?.pushViewController(UIHostingController(rootView: stableCarouselView), animated: true)
     }
     
     @objc private func understableViewTapped() {
-        let storyboard = UIStoryboard(name: "Info", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "windGuideVC")
-        navigationController?.pushViewController(vc, animated: true)
+        let understableCarouselView = UnderStableCarouselView() // Instantiate CarouselView
+        self.navigationController?.pushViewController(UIHostingController(rootView: understableCarouselView), animated: true)
     }
    
     private func setup(view: UIView, with tapGesture: UITapGestureRecognizer) {
@@ -76,5 +76,5 @@ setupView()
         view.layer.borderWidth = 1
         view.addGestureRecognizer(tapGesture)
     }
-
 }
+    
