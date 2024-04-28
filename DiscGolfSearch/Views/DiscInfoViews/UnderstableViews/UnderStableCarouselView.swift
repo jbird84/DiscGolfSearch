@@ -22,7 +22,7 @@ struct UnderStableCarouselView: View {
                 Color.black
                     .ignoresSafeArea()
                 VStack {
-                    Text("Overstable Discs")
+                    Text("Understable Discs")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .padding(.bottom, 80)
