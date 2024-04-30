@@ -14,6 +14,10 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var overstableView: UIView!
     @IBOutlet weak var stableView: UIView!
     @IBOutlet weak var understableView: UIView!
+    @IBOutlet weak var speedView: UIView!
+    @IBOutlet weak var glideView: UIView!
+    @IBOutlet weak var turnView: UIView!
+    @IBOutlet weak var fadeView: UIView!
     
     
     override func viewDidLoad() {
@@ -39,6 +43,29 @@ setupView()
         //Setup understable view and its tap gesture:
         let understableTapGesture = UITapGestureRecognizer(target: self, action: #selector(understableViewTapped))
         setup(view: understableView, with: understableTapGesture)
+        
+        //Setup speed view and its tap gesture:
+        let speedTapGesture = UITapGestureRecognizer(target: self, action: #selector(speedViewTapped))
+        setup(view: speedView, with: speedTapGesture)
+        
+        //Setup glide view and its tap gesture:
+        let glideTapGesture = UITapGestureRecognizer(target: self, action: #selector(glideViewTapped))
+        setup(view: glideView, with: glideTapGesture)
+        
+        //Setup turn view and its tap gesture:
+        let turnTapGesture = UITapGestureRecognizer(target: self, action: #selector(turnViewTapped))
+        setup(view: turnView, with: turnTapGesture)
+        
+        //Setup fade view and its tap gesture:
+        let fadeTapGesture = UITapGestureRecognizer(target: self, action: #selector(fadeViewTapped))
+        setup(view: fadeView, with: fadeTapGesture)
+        
+        title = "Disc Reference Guide"
+        // Set the navigation title attributes
+        let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
+
+        // Set the attributes for the navigation bar title
+        self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
     }
     
     @objc private func windGuideViewTapped() {
@@ -63,6 +90,22 @@ setupView()
         let understableCarouselView = UnderStableCarouselView() // Instantiate CarouselView
         self.navigationController?.pushViewController(UIHostingController(rootView: understableCarouselView), animated: true)
     }
+    
+    @objc private func speedViewTapped() {
+        navigateToFlightNumberViewController(with: 1)
+    }
+    
+    @objc private func glideViewTapped() {
+        navigateToFlightNumberViewController(with: 2)
+    }
+    
+    @objc private func turnViewTapped() {
+        navigateToFlightNumberViewController(with: 3)
+    }
+    
+    @objc private func fadeViewTapped() {
+        navigateToFlightNumberViewController(with: 4)
+    }
    
     private func setup(view: UIView, with tapGesture: UITapGestureRecognizer) {
         view.layer.cornerRadius = 10
@@ -75,6 +118,14 @@ setupView()
         view.layer.borderColor = UIColor.gray.cgColor
         view.layer.borderWidth = 1
         view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func navigateToFlightNumberViewController(with flightDigit: Int) {
+        let storyboard = UIStoryboard(name: "FlightNumber", bundle: nil)
+        if let flightNumberVC = storyboard.instantiateViewController(withIdentifier: "flight") as? FlightNumbersViewController {
+            flightNumberVC.flightDigit = flightDigit
+            navigationController?.pushViewController(flightNumberVC, animated: true)
+        }
     }
 }
     

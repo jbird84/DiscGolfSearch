@@ -18,12 +18,19 @@ class CartViewController: UIViewController {
         super.viewWillAppear(animated)
         getDiscs()
         setupTableView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setupNavigationBar()
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        navigationItem.title = "My Cart"
+       // navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        title = "My Cart"
+        let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
+        self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
+
     }
     
     private func setupTableView()  {

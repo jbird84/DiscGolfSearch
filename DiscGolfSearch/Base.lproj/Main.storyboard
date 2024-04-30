@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L38-6b-JqB">
-                                <rect key="frame" x="0.0" y="110" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="112" width="393" height="657"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" rowHeight="150" id="ygb-3B-Wle" customClass="CartTableViewCell" customModule="DiscGolfSearch" customModuleProvider="target">
@@ -232,12 +232,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-Hu-lIo">
-                                <rect key="frame" x="16" y="67" width="361" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-Hu-lIo">
+                                <rect key="frame" x="16" y="64" width="361" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="jRZ-pW-bHY"/>
+                                    <constraint firstAttribute="height" constant="45" id="jRZ-pW-bHY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -249,7 +249,7 @@
                             <constraint firstItem="L38-6b-JqB" firstAttribute="trailing" secondItem="dv4-ky-uga" secondAttribute="trailing" id="7rJ-mo-DpV"/>
                             <constraint firstItem="Ubq-Hu-lIo" firstAttribute="leading" secondItem="dv4-ky-uga" secondAttribute="leading" constant="16" id="8QX-Ri-g4b"/>
                             <constraint firstItem="dv4-ky-uga" firstAttribute="trailing" secondItem="Ubq-Hu-lIo" secondAttribute="trailing" constant="16" id="TMq-1k-zhZ"/>
-                            <constraint firstItem="Ubq-Hu-lIo" firstAttribute="top" secondItem="dv4-ky-uga" secondAttribute="top" constant="8" id="atm-7S-iAA"/>
+                            <constraint firstItem="Ubq-Hu-lIo" firstAttribute="top" secondItem="dv4-ky-uga" secondAttribute="top" constant="5" id="atm-7S-iAA"/>
                             <constraint firstItem="L38-6b-JqB" firstAttribute="top" secondItem="Ubq-Hu-lIo" secondAttribute="bottom" constant="3" id="hfM-BD-i2F"/>
                             <constraint firstItem="L38-6b-JqB" firstAttribute="leading" secondItem="dv4-ky-uga" secondAttribute="leading" id="qf8-zs-shP"/>
                         </constraints>
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6C-Xg-i4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2141.2213740458014" y="986.61971830985919"/>
+            <point key="canvasLocation" x="2517" y="900"/>
         </scene>
         <!--Bag List View Controller-->
         <scene sceneID="CiT-tN-K8T">
@@ -405,9 +405,9 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Companies To Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3j-Bu-6QS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Companies To Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3j-Bu-6QS">
                                 <rect key="frame" x="0.0" y="103" width="393" height="40"/>
-                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -611,7 +611,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-ZD-c94">
                                                     <rect key="frame" x="16" y="25.000000000000007" width="128" height="86.666666666666686"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Company Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-za-Btr">
                                                             <rect key="frame" x="6" y="0.0" width="116" height="42.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="115.67" id="13q-cS-u3S"/>
@@ -620,7 +620,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disc Name " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-Hp-Ath">
                                                             <rect key="frame" x="25" y="45.333333333333329" width="78" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -635,13 +635,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM0-e0-XXZ">
                                                                     <rect key="frame" x="22.666666666666664" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-n4-Dbe">
                                                                     <rect key="frame" x="45.333333333333336" y="0.0" width="17.666666666666664" height="20.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -1168,7 +1168,7 @@
         <image name="nowLoadingBlankDisc" width="166.66667175292969" height="166.33332824707031"/>
         <image name="pocketGuide" width="333.33334350585938" height="666.66668701171875"/>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -45,7 +45,7 @@ class SearchDiscViewController: UIViewController {
             navigationBar.barTintColor = UIColor.white
             navigationBar.titleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 27)
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)
             ]
             navigationBar.tintColor = UIColor.white
         }

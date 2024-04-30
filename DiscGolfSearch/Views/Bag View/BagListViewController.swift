@@ -37,6 +37,8 @@ class BagListViewController: UIViewController {
         let addNewBagButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addNewBag))
         navBarItem.rightBarButtonItem = addNewBagButton
         title = "My Bags"
+        let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
+        self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
         
         tableView.dataSource = self
         tableView.delegate = self
