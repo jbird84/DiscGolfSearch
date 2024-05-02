@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 class InfoViewController: UIViewController {
-
+    
     @IBOutlet weak var windGuideView: UIView!
     @IBOutlet weak var overstableView: UIView!
     @IBOutlet weak var stableView: UIView!
@@ -22,8 +22,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-setupView()
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
     private func setupView() {
@@ -63,7 +62,7 @@ setupView()
         title = "Disc Reference Guide"
         // Set the navigation title attributes
         let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
-
+        
         // Set the attributes for the navigation bar title
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
     }
@@ -106,7 +105,7 @@ setupView()
     @objc private func fadeViewTapped() {
         navigateToFlightNumberViewController(with: 4)
     }
-   
+    
     private func setup(view: UIView, with tapGesture: UITapGestureRecognizer) {
         view.layer.cornerRadius = 10
         view.layer.shadowColor = UIColor.white.cgColor
@@ -128,4 +127,4 @@ setupView()
         }
     }
 }
-    
+
