@@ -48,6 +48,9 @@ class AddBagViewController: FormViewController {
     private func setupView() {
         let addNewBagButton = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveBag))
         navigationItem.rightBarButtonItem = addNewBagButton
+        title = "Add Bag"
+        let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
+        self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
         
         // Set the plus sign image to the image view
         imageView.image = UIImage(named: "bag")
@@ -62,9 +65,12 @@ class AddBagViewController: FormViewController {
         
         // Add the image view to the view hierarchy
         view.addSubview(imageView)
+        view.backgroundColor = .black
     }
     
     private func createForm() {
+        tableView.backgroundColor = .black
+        
         form
         +++ Section(header: "Create a Bag", footer: "The color of the bag image below is your bags color.")
         
@@ -76,13 +82,19 @@ class AddBagViewController: FormViewController {
         
         <<< NameRow(CellTags.bagType.rawValue) {
             $0.title =  "Bag Used For"
-        }.onChange({ [weak self] row in
+            $0.cell.textLabel?.textColor = .white
+        }.cellSetup({ cell, row in
+            cell.backgroundColor = .black
+            cell.textField.textColor = .white
+        })
+        .onChange({ [weak self] row in
             self?.bagType = row.value
         })
         
         
         <<< LabelRow(CellTags.bagColor.rawValue) {
             $0.title = "Tap to change your bags color"
+            $0.cell.textLabel?.textColor = .white
         }.cellUpdate({ [weak self] cell, row in
             cell.accessoryView = self?.createDisclousureIndicatorView()
         }).onCellSelection({ [weak self] cell, row in
