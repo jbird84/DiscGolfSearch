@@ -105,6 +105,12 @@ class AddBagViewController: FormViewController {
         })
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+            header.textLabel?.textColor = UIColor.white
+        }
+    }
+    
     @objc private func saveBag() {
         
         if bagName == nil {
