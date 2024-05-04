@@ -76,16 +76,20 @@ class AddBagViewController: FormViewController {
         
         <<< NameRow(CellTags.bagName.rawValue) {
             $0.title =  "Bag Name"
-        }.onChange({ [weak self] row in
+        }.cellUpdate({ cell, row in
+            cell.backgroundColor = .secondarySystemFill
+            cell.titleLabel?.textColor = .white
+        })
+        .onChange({ [weak self] row in
             self?.bagName = row.value
         })
         
         <<< NameRow(CellTags.bagType.rawValue) {
             $0.title =  "Bag Used For"
-            $0.cell.textLabel?.textColor = .white
-        }.cellSetup({ cell, row in
-            cell.backgroundColor = .black
-            cell.textField.textColor = .white
+        }
+        .cellUpdate({ cell, row in
+            cell.backgroundColor = .secondarySystemFill
+            cell.titleLabel?.textColor = .white
         })
         .onChange({ [weak self] row in
             self?.bagType = row.value
@@ -94,9 +98,10 @@ class AddBagViewController: FormViewController {
         
         <<< LabelRow(CellTags.bagColor.rawValue) {
             $0.title = "Tap to change your bags color"
-            $0.cell.textLabel?.textColor = .white
-        }.cellUpdate({ [weak self] cell, row in
+        }.cellUpdate({ [weak self] cell, _ in
             cell.accessoryView = self?.createDisclousureIndicatorView()
+            cell.backgroundColor = .secondarySystemFill
+            cell.textLabel?.textColor = .white
         }).onCellSelection({ [weak self] cell, row in
             
             let gridColorPickerVC = GridColorPickerViewController()
