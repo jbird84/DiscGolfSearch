@@ -145,11 +145,7 @@ extension BagListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     
     func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
         let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
-        if userInterfaceStyle != .dark {
-            return UIColor.label
-        } else {
-            return UIColor.secondaryLabel
-        }
+        return UIColor.white
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
