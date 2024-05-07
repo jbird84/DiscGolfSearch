@@ -79,6 +79,7 @@ class AddBagViewController: FormViewController {
         }.cellUpdate({ cell, row in
             cell.backgroundColor = .secondarySystemFill
             cell.titleLabel?.textColor = .white
+            cell.textField?.textColor = .white
         })
         .onChange({ [weak self] row in
             self?.bagName = row.value
@@ -90,6 +91,7 @@ class AddBagViewController: FormViewController {
         .cellUpdate({ cell, row in
             cell.backgroundColor = .secondarySystemFill
             cell.titleLabel?.textColor = .white
+            cell.textField?.textColor = .white
         })
         .onChange({ [weak self] row in
             self?.bagType = row.value
