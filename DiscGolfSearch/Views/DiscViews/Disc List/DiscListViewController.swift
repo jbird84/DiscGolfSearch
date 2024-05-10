@@ -148,7 +148,6 @@ class DiscListViewController: UIViewController {
                 return disc.speed.hasPrefix(speed)
             }
         }
-
         collectionView.reloadData()
     }
     
