@@ -61,7 +61,6 @@ class DiscDatabaseService {
     func updateDisc(disc: DiscSwiftDataModel, newDiscName: String){
            let discToBeUpdated = disc
         discToBeUpdated.name = newDiscName
-        //Finish rest of changes here:
        }
     
     //MARK: Delete Disc
