@@ -60,10 +60,7 @@ class InfoViewController: UIViewController {
         setup(view: fadeView, with: fadeTapGesture)
         
         title = "Disc Reference Guide"
-        // Set the navigation title attributes
         let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
-        
-        // Set the attributes for the navigation bar title
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
     }
     
@@ -81,12 +78,12 @@ class InfoViewController: UIViewController {
     }
     
     @objc private func stableViewTapped() {
-        let stableCarouselView = StableCarouselView() // Instantiate CarouselView
+        let stableCarouselView = StableCarouselView()
         self.navigationController?.pushViewController(UIHostingController(rootView: stableCarouselView), animated: true)
     }
     
     @objc private func understableViewTapped() {
-        let understableCarouselView = UnderStableCarouselView() // Instantiate CarouselView
+        let understableCarouselView = UnderStableCarouselView()
         self.navigationController?.pushViewController(UIHostingController(rootView: understableCarouselView), animated: true)
     }
     
