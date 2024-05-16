@@ -91,6 +91,10 @@ class ViewController: UIViewController {
             self.getDiscData()
         }
         
+        let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
+            self.getDiscData()
+        }
+        
         popup.addAction(retry)
         present(popup, animated: true, completion: nil)
     }
