@@ -96,6 +96,7 @@ class ViewController: UIViewController {
         }
         
         popup.addAction(retry)
+        popup.addAction(help)
         present(popup, animated: true, completion: nil)
     }
     

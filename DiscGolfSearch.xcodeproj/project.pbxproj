@@ -65,6 +65,8 @@
 		DADBE2542AC0CB8700E2095A /* SearchDiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */; };
 		DADED48D2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DADED48B2B1C201F00B9950D /* DiscGolfSearch.xcdatamodeld */; };
 		DADF925B2B1EA74D00AD5378 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */; };
+		DAE954782BF7825400B4A062 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE954772BF7825400B4A062 /* HelpViewController.swift */; };
+		DAE9547A2BF7826000B4A062 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE954792BF7826000B4A062 /* Help.storyboard */; };
 		DAEC3B562B83F35600171A7C /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = DAEC3B552B83F35600171A7C /* SwiftMessages */; };
 		DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */; };
 		DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */; };
@@ -155,6 +157,8 @@
 		DADBE2532AC0CB8700E2095A /* SearchDiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDiscCell.swift; sourceTree = "<group>"; };
 		DADED48C2B1C201F00B9950D /* DiscGolfSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiscGolfSearch.xcdatamodel; sourceTree = "<group>"; };
 		DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DAE954772BF7825400B4A062 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		DAE954792BF7826000B4A062 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		DAEC3B612B85A23800171A7C /* DiscInBagInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscInBagInfo.storyboard; sourceTree = "<group>"; };
@@ -462,6 +466,7 @@
 		DADB72442AB69C3E0083B13B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAE954742BF7820A00B4A062 /* Help View */,
 				DAC153572BB89F5F00FD9A80 /* DiscInfoViews */,
 				DA2272202B099AD4005A107C /* DiscViews */,
 				DA363D332B016E5B0050840A /* Bag View */,
@@ -469,6 +474,15 @@
 				DADB72242AADFCDC0083B13B /* ViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DAE954742BF7820A00B4A062 /* Help View */ = {
+			isa = PBXGroup;
+			children = (
+				DAE954772BF7825400B4A062 /* HelpViewController.swift */,
+				DAE954792BF7826000B4A062 /* Help.storyboard */,
+			);
+			path = "Help View";
 			sourceTree = "<group>";
 		};
 		DAEC3B5B2B83F64C00171A7C /* Banner Help */ = {
@@ -601,6 +615,7 @@
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
 				DA1DF4112B39054400CA783F /* Bag.storyboard in Resources */,
 				DABAE3AC2BC94D5D001291FC /* FlightNumber.storyboard in Resources */,
+				DAE9547A2BF7826000B4A062 /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +657,7 @@
 				DA38F7982BD7FB57001412A0 /* WindReferenceViewController.swift in Sources */,
 				DADB72372AAE051C0083B13B /* APIManager.swift in Sources */,
 				DA22721A2B055BDC005A107C /* ViewController+Ext.swift in Sources */,
+				DAE954782BF7825400B4A062 /* HelpViewController.swift in Sources */,
 				DA363D352B016EA20050840A /* BagListTableViewCell.swift in Sources */,
 				DA363D3E2B0183960050840A /* Color+Ext.swift in Sources */,
 				DADB72212AADFCDC0083B13B /* AppDelegate.swift in Sources */,
