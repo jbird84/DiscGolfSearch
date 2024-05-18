@@ -67,6 +67,8 @@
 		DADF925B2B1EA74D00AD5378 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */; };
 		DAE954782BF7825400B4A062 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE954772BF7825400B4A062 /* HelpViewController.swift */; };
 		DAE9547A2BF7826000B4A062 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE954792BF7826000B4A062 /* Help.storyboard */; };
+		DAE96D3F2BF8D94500EF8C8D /* ChooseHelpType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE96D3E2BF8D94500EF8C8D /* ChooseHelpType.storyboard */; };
+		DAE96D412BF8D95B00EF8C8D /* ChooseHelpTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE96D402BF8D95B00EF8C8D /* ChooseHelpTypeViewController.swift */; };
 		DAEC3B562B83F35600171A7C /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = DAEC3B552B83F35600171A7C /* SwiftMessages */; };
 		DAEC3B5A2B83F4C400171A7C /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */; };
 		DAEC3B5D2B83F66C00171A7C /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */; };
@@ -159,6 +161,8 @@
 		DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DAE954772BF7825400B4A062 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DAE954792BF7826000B4A062 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		DAE96D3E2BF8D94500EF8C8D /* ChooseHelpType.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseHelpType.storyboard; sourceTree = "<group>"; };
+		DAE96D402BF8D95B00EF8C8D /* ChooseHelpTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseHelpTypeViewController.swift; sourceTree = "<group>"; };
 		DAEC3B592B83F4C400171A7C /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
 		DAEC3B5C2B83F66C00171A7C /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		DAEC3B612B85A23800171A7C /* DiscInBagInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscInBagInfo.storyboard; sourceTree = "<group>"; };
@@ -481,6 +485,8 @@
 			children = (
 				DAE954772BF7825400B4A062 /* HelpViewController.swift */,
 				DAE954792BF7826000B4A062 /* Help.storyboard */,
+				DAE96D3E2BF8D94500EF8C8D /* ChooseHelpType.storyboard */,
+				DAE96D402BF8D95B00EF8C8D /* ChooseHelpTypeViewController.swift */,
 			);
 			path = "Help View";
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				DAC153592BB89FC500FD9A80 /* StabilityInfo.storyboard in Resources */,
 				DA22722A2B099D52005A107C /* AddDiscToBag.storyboard in Resources */,
 				DADB72282AADFCDC0083B13B /* Main.storyboard in Resources */,
+				DAE96D3F2BF8D94500EF8C8D /* ChooseHelpType.storyboard in Resources */,
 				DA1DF4112B39054400CA783F /* Bag.storyboard in Resources */,
 				DABAE3AC2BC94D5D001291FC /* FlightNumber.storyboard in Resources */,
 				DAE9547A2BF7826000B4A062 /* Help.storyboard in Resources */,
@@ -668,6 +675,7 @@
 				DADBE24E2ABDC42200E2095A /* DiscTypesView.swift in Sources */,
 				DA1DF4132B3905DF00CA783F /* BagViewController.swift in Sources */,
 				DA422C2A2B97F75100BBB1F7 /* OneDimensionalBar.swift in Sources */,
+				DAE96D412BF8D95B00EF8C8D /* ChooseHelpTypeViewController.swift in Sources */,
 				DA20B67A2B9172B000841351 /* ProgressBar.swift in Sources */,
 				DABE00D02AF8771B00C2ABEB /* CartViewController.swift in Sources */,
 				DA20B67D2B95421B00841351 /* ImageHeaderSubheaderView.swift in Sources */,
