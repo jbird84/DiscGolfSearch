@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import Eureka
 
-class HelpViewController: UIViewController {
+class HelpViewController: FormViewController {
+    
+    enum CellTags: String {
+        case customerName
+        case customerEmail
+        case customerPhone
+        case customerSubject
+        case customerMessage
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +25,9 @@ class HelpViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func createContactSupportForm() {
+        form
+        +++ Section("Your Name")
+        
     }
-    */
-
 }
