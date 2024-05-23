@@ -33,23 +33,23 @@ class HelpViewController: FormViewController {
         form
         +++ Section("Your Name")
         <<< TextRow(CellTags.customerName.rawValue) {
-            $0.title =  "Name"
+            $0.placeholder =  "Name"
         }
         +++ Section("Your Email")
         <<< EmailRow(CellTags.customerEmail.rawValue) {
-            $0.title =  "Email"
+            $0.placeholder =  "Email"
         }
         +++ Section("Your Phone Number")
         <<< TextRow(CellTags.customerPhone.rawValue) {
-            $0.title =  "Number"
+            $0.placeholder =  "Number"
         }
         +++ Section("Email Subject")
         <<< TextRow(CellTags.customerSubject.rawValue) {
-            $0.title =  "Subject"
+            $0.placeholder =  "Subject"
         }
         +++ Section("Email Message")
         <<< TextAreaRow(CellTags.customerMessage.rawValue) {
-            $0.title =  "Message"
+            $0.placeholder =  "Message"
         }
     }
     
