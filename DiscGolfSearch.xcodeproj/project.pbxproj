@@ -80,6 +80,7 @@
 		DAF2A0F52BBE52A60009B923 /* StableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */; };
 		DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */; };
 		DAF2A0FA2BC308E60009B923 /* UnderStableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */; };
+		DAF90D752BFC266A00A5329A /* HelpView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF90D742BFC266A00A5329A /* HelpView.storyboard */; };
 		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,7 @@
 		DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableCarouselView.swift; sourceTree = "<group>"; };
 		DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
 		DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderStableCarouselView.swift; sourceTree = "<group>"; };
+		DAF90D742BFC266A00A5329A /* HelpView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpView.storyboard; sourceTree = "<group>"; };
 		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE954772BF7825400B4A062 /* HelpViewController.swift */,
+				DAF90D742BFC266A00A5329A /* HelpView.storyboard */,
 			);
 			path = "Help View";
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				DADB722D2AADFCDF0083B13B /* LaunchScreen.storyboard in Resources */,
 				DAEE2C9A2B025BB6005D289D /* AddBag.storyboard in Resources */,
 				DA087FF12AEBD9D200248BAC /* AddDiscToView.xib in Resources */,
+				DAF90D752BFC266A00A5329A /* HelpView.storyboard in Resources */,
 				DADB722A2AADFCDF0083B13B /* Assets.xcassets in Resources */,
 				DAEC3B622B85A23800171A7C /* DiscInBagInfo.storyboard in Resources */,
 				DADBE24C2ABCDBDF00E2095A /* DiscTypes.xib in Resources */,

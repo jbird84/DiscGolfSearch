@@ -92,7 +92,11 @@ class ViewController: UIViewController {
         }
         
         let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
-            self.getDiscData()
+            let storyboard = UIStoryboard(name: "HelpView", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "helpVC") as? HelpViewController {
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         
         popup.addAction(retry)

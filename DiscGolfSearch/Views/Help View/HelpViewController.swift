@@ -17,11 +17,11 @@ class HelpViewController: FormViewController {
         case customerSubject
         case customerMessage
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       createContactSupportForm()
+        setupView()
+        createContactSupportForm()
     }
     
     private func setupView() {
@@ -32,29 +32,30 @@ class HelpViewController: FormViewController {
     private func createContactSupportForm() {
         form
         +++ Section("Your Name")
-        <<< LabelRow(CellTags.customerName.rawValue) {
+        <<< TextRow(CellTags.customerName.rawValue) {
             $0.title =  "Name"
         }
+        +++ Section("Your Email")
         <<< EmailRow(CellTags.customerEmail.rawValue) {
             $0.title =  "Email"
         }
-        <<< NumericRow(CellTags.customerPhone.rawValue) {
+        +++ Section("Your Phone Number")
+        <<< TextRow(CellTags.customerPhone.rawValue) {
             $0.title =  "Number"
         }
-        <<< LabelRow(CellTags.customerSubject.rawValue) {
+        +++ Section("Email Subject")
+        <<< TextRow(CellTags.customerSubject.rawValue) {
             $0.title =  "Subject"
         }
-        <<< TextRow(CellTags.customerMessage.rawValue) {
+        +++ Section("Email Message")
+        <<< TextAreaRow(CellTags.customerMessage.rawValue) {
             $0.title =  "Message"
         }
     }
     
-    @objc private func saveButtonTapped() {
-        
-       
-            navigationController?.popViewController(animated: true)
-            AlertPresenter.instance.showAlert(title: "Success", body: "Email Sent To Support Successfully!", iconImage: UIImage(systemName: "checkmark.circle.fill")!, bannerColor: .green) {
-            }
+    @objc private func sendButtonTapped() {
+        navigationController?.popViewController(animated: true)
+        AlertPresenter.instance.showAlert(title: "Success", body: "Email Sent To Support Successfully!", iconImage: UIImage(systemName: "checkmark.circle.fill")!, bannerColor: .green) {
         }
     }
 }
