@@ -25,6 +25,7 @@ class HelpViewController: FormViewController {
     }
     
     private func setupView() {
+        title = "Contact Support"
         // Add a "SEND" button to the navigation bar
         let saveButton = UIBarButtonItem(title: "SEND", style: .plain, target: self, action: #selector(sendButtonTapped))
         navigationItem.rightBarButtonItem = saveButton
