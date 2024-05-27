@@ -7,6 +7,8 @@
 
 import UIKit
 import Eureka
+import MessageUI
+
 
 class HelpViewController: FormViewController {
     
@@ -78,6 +80,8 @@ class HelpViewController: FormViewController {
                     present(alertController, animated: true, completion: nil)
                 } else {
                     // Print the information if all required fields are filled
+                    
+                    sendEmail(email: email ?? "Email Not Provided", title: subject ?? "Subject Not Provided", name: name ?? "Name Not Provided", phone: phone ?? "Phone Not Provided", body: message ?? "Message Not Provided")
                     print("Name: \(name ?? "")")
                     print("Email: \(email ?? "")")
                     print("Phone: \(phone ?? "N/A")")
@@ -90,3 +94,25 @@ class HelpViewController: FormViewController {
                 }
             }
         }
+
+extension HelpViewController: MFMailComposeViewControllerDelegate {
+    func sendEmail(email: String, title: String, name: String, phone: String, body: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setPreferredSendingEmailAddress(email)
+            mail.setToRecipients(["joshkinney@kinneykare.com"])
+            mail.setSubject(title)
+            mail.setMessageBody("<p> Date: \(Date())</p> <br /> <p> \(title)</p> <br /> <p> \(name)</p> <br /> <p> \(phone)</p> <br /> <p> Body: \(body)</p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            //TODO: show failure alert
+            
+        }
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
