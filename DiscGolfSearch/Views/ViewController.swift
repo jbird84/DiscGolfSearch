@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
         navigationItem.rightBarButtonItem = selectAllButton
+        
+        let contactSupport = UIBarButtonItem(title: "Get Help", style: .plain, target: self, action: #selector(getHelpTapped))
+        navigationItem.leftBarButtonItem = contactSupport
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -133,6 +136,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func getHelpTapped() {
+        let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
+            let storyboard = UIStoryboard(name: "HelpView", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "helpVC") as? HelpViewController {
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
     
     @objc func selectAllTapped() {
         
