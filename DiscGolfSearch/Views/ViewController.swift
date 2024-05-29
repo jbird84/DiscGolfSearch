@@ -137,14 +137,30 @@ class ViewController: UIViewController {
     }
     
     @objc func getHelpTapped() {
-        let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
+            presentContactSupportAlert()
+        }
+
+        private func presentContactSupportAlert() {
+            let alertController = UIAlertController(title: "Support", message: "Would you like to contact support?", preferredStyle: .alert)
+            
+            let helpAction = UIAlertAction(title: "Contact Support", style: .default) { _ in
+                self.navigateToHelpViewController()
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alertController.addAction(helpAction)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
+
+        private func navigateToHelpViewController() {
             let storyboard = UIStoryboard(name: "HelpView", bundle: nil)
             if let vc = storyboard.instantiateViewController(withIdentifier: "helpVC") as? HelpViewController {
-                
-                self.navigationController?.pushViewController(vc, animated: true)
+                vc.hidesBottomBarWhenPushed = true // Optional, if you want to hide the bottom bar
+                navigationController?.pushViewController(vc, animated: true)
             }
         }
-    }
     
     @objc func selectAllTapped() {
         
