@@ -54,6 +54,18 @@ class AddDiscToBagViewController: FormViewController {
         disc?.usedFor = "Back Hand"
         disc?.plasticType = "Unknown"
         disc?.discWeight = "Unknown"
+        
+        self.title = "Add Disc To Bag"
+        
+        // Set the navigation bar title text color to white
+            if let navigationBar = navigationController?.navigationBar {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+                appearance.backgroundColor = navigationBar.backgroundColor // retain the existing background color
+                navigationBar.standardAppearance = appearance
+                navigationBar.scrollEdgeAppearance = appearance
+            }
     }
     
     private func getBags() {
