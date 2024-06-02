@@ -107,8 +107,9 @@ extension HelpViewController: MFMailComposeViewControllerDelegate {
             
             present(mail, animated: true)
         } else {
-            //TODO: show failure alert
-            
+            let alertController = UIAlertController(title: "Error Contacting Support", message: "Please make sure you have internet and try again.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
         }
     }
     
