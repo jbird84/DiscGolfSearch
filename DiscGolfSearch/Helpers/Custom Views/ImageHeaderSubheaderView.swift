@@ -41,7 +41,6 @@ class ImageHeaderSubheaderView: UIView {
         setupView()
     }
     
-    //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()

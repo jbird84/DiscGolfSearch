@@ -29,14 +29,14 @@ class HelpViewController: FormViewController {
     private func setupView() {
         title = "Contact Support"
         // Set the navigation bar title text color to white
-            if let navigationBar = navigationController?.navigationBar {
-                let appearance = UINavigationBarAppearance()
-                appearance.configureWithOpaqueBackground()
-                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-                appearance.backgroundColor = navigationBar.backgroundColor // retain the existing background color
-                navigationBar.standardAppearance = appearance
-                navigationBar.scrollEdgeAppearance = appearance
-            }
+//            if let navigationBar = navigationController?.navigationBar {
+//                let appearance = UINavigationBarAppearance()
+//                appearance.configureWithOpaqueBackground()
+//                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//                appearance.backgroundColor = navigationBar.backgroundColor // retain the existing background color
+//                navigationBar.standardAppearance = appearance
+//                navigationBar.scrollEdgeAppearance = appearance
+//            }
         
         let saveButton = UIBarButtonItem(title: "SEND", style: .plain, target: self, action: #selector(sendButtonTapped))
         navigationItem.rightBarButtonItem = saveButton

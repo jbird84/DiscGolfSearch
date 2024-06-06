@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
             let storyboard = UIStoryboard(name: "HelpView", bundle: nil)
             if let vc = storyboard.instantiateViewController(withIdentifier: "helpVC") as? HelpViewController {
-                
+                vc.overrideUserInterfaceStyle = .dark
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
