@@ -34,8 +34,6 @@ class ImageHeaderSubheaderView: UIView {
     }()
     
     // MARK: - Initialization
-    
-    //initWithFrame to init view from code
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
