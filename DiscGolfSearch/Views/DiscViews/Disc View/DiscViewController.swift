@@ -51,7 +51,8 @@ class DiscViewController: UIViewController {
         setupAnimationView()
         setupAddDiscToView()
         createSimilarDiscsCollection(disc: disc)
-        // Add a "Select All" button to the navigation bar
+        
+        
         let addDiscToNavButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
         let showFlightColorView = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
         
