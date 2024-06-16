@@ -10,7 +10,7 @@ protocol GridColorPickerDelegate: AnyObject {
     func colorWasSelected(selectedColor: UIColor)
 }
 
-class GridColorPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GridColorPickerViewController: UIViewController {
 
     let colors: [UIColor] = [
         .systemRed, .brown, .systemOrange, .systemGreen,
@@ -62,8 +62,10 @@ class GridColorPickerViewController: UIViewController, UICollectionViewDataSourc
                     collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
                 ])
     }
+}
 
-    // MARK: - UICollectionViewDataSource
+// MARK: - UICollectionView Delegate Methods
+extension GridColorPickerViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
     }
@@ -74,7 +76,7 @@ class GridColorPickerViewController: UIViewController, UICollectionViewDataSourc
         return cell
     }
 
-    // MARK: - UICollectionViewDelegate
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedColor = colors[indexPath.item]
         delegate?.colorWasSelected(selectedColor: selectedColor)
@@ -82,10 +84,8 @@ class GridColorPickerViewController: UIViewController, UICollectionViewDataSourc
         dismiss(animated: true, completion: nil)
     }
 
-    // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = (collectionView.bounds.width - 32) / 4 // Adjust spacing as needed
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }
-
