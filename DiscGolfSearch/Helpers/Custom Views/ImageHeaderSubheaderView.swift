@@ -11,7 +11,6 @@ import UIKit
 class ImageHeaderSubheaderView: UIView {
     
     // MARK: - Properties
-    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -62,7 +61,7 @@ class ImageHeaderSubheaderView: UIView {
         
         // Calculate sizes and positions
         let imageSize = CGSize(width: bounds.height * 0.8, height: bounds.height * 0.8)
-        let labelWidth = bounds.width - imageSize.width - 20 // Adjust the 20 as per your preference
+        let labelWidth = bounds.width - imageSize.width - 20
         
         imageView.frame = CGRect(origin: CGPoint(x: 10, y: (bounds.height - imageSize.height) / 2),
                                  size: imageSize)
