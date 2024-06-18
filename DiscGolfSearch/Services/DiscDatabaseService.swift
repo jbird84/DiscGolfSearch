@@ -35,7 +35,7 @@ class DiscDatabaseService {
                  context.insert(discToBeSaved)
             } else {
             print("ERROR SAVING DISC!")
-                // Show an alert to the user
+           
                 let alert = UIAlertController(title: "Error", message: "An error occurred while saving the disc data.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 viewController.present(alert, animated: true, completion: nil)

@@ -9,7 +9,5 @@ import UIKit
 
 
 protocol AlertPresenterProtocol {
-    
     func showAlert(title: String, body: String, iconImage: UIImage, bannerColor: UIColor, handler: (() -> Void)?)
-    
 }
