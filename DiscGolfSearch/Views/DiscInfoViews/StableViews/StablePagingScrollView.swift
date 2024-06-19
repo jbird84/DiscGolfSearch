@@ -21,7 +21,6 @@ struct StablePagingScrollView: View {
                             .opacity(phase.isIdentity ? 1 : 0)
                             .offset(x: phase.isIdentity ? 0 : -100)
                     }
-                  // .containerRelativeFrame(.vertical, alignment: .center)
             }
         }
         .ignoresSafeArea()

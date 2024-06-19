@@ -31,7 +31,6 @@ struct StableCarouselView: View {
                     ForEach(views) { view in
                         view
                             .scaleEffect(1.0 - abs(distance(view.id)) * 0.2)
-                           // .opacity(1.0 - abs(distance(view.id)) * 0.3)
                             .offset(x: getOffset(view.id), y: 0)
                             .zIndex(1.0 - abs(distance(view.id)) * 0.1)
                             .blur(radius: addBlur(distance: abs(distance(view.id))))

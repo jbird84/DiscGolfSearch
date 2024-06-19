@@ -29,7 +29,7 @@ class OverstablePageViewController: UIPageViewController {
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
         
         // create an array of viewController
-        let storyboard = UIStoryboard(name: "StabilityInfo", bundle: nil) // Update "Main" to your storyboard name
+        let storyboard = UIStoryboard(name: "StabilityInfo", bundle: nil)
         
         if let page1 = storyboard.instantiateViewController(withIdentifier: "overstableVC1") as? OverstableVC1,
            let page2 = storyboard.instantiateViewController(withIdentifier: "overstableVC2") as? OverstableVC2,
@@ -50,7 +50,6 @@ class OverstablePageViewController: UIPageViewController {
     
     func style() {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        //pageControl.currentPageIndicatorTintColor = .black
         pageControl.pageIndicatorTintColor = .systemGray2
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = initialPage
@@ -64,7 +63,6 @@ class OverstablePageViewController: UIPageViewController {
         NSLayoutConstraint.activate([
             pageControl.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
             pageControl.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            // You can adjust the height as needed
             pageControl.heightAnchor.constraint(equalToConstant: 20),
             // Match the width of the view controller's view
             pageControl.widthAnchor.constraint(equalTo: safeArea.widthAnchor)
