@@ -796,7 +796,26 @@ class AnimationHelper {
             "x2": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy-X2.json",
             "x3": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy-X3.json",
             "x4": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_X4.json",
-            "x5": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_X5.json",
+            "x5": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_X5.json"
+        ],
+        "Prodiscus": [
+            "amulet": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_AMULET.json",
+            "empire": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_EMPIRE.json",
+            "fasti": "",
+            "flipperi": "",
+            "jokeri": "",
+            "jokerix": "",
+            "laseri": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus%20_LASERI.json",
+            "legenda": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_LEGENDA.json",
+            "midari": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_MIDARI.json",
+            "origo": "",
+            "razeri": "",
+            "respecti": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_RESPECTI.json",
+            "slaidi": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_SLAIDI.json",
+            "sparta": "",
+            "stari": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_STARI.json",
+            "talisman": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_TALISMAN.json",
+            "titan": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus-TITAN.json"
         ],
         "RPM": [
             "huia": "https://storage.googleapis.com/disc-animation/RPM/RPM_HUIA.json",
