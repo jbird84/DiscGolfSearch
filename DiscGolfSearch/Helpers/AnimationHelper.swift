@@ -22,10 +22,10 @@ class AnimationHelper {
             "cedar":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/CEDAR_ABOVE%20GROUND%20LEVEL.json",
            // "douglas-fir":"https://imagizer.imageshack.com/img923/2956/guYiNY.png",
             "locust":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/LOCUST_ABOVE%20GROUND%20LEVEL.json",
-            //"madrone":"https://imagizer.imageshack.com/img922/7901/Ss5mfO.png",
+            "madrone":"https://storage.googleapis.com/disc-animation/Speed%203/Above%20teh%20Ground_%20Madore.json",
             "magnolia":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/MAGNOLIA_ABOVE%20GROUND%20LEVEL.json",
-            //"manzanita":"https://imagizer.imageshack.com/img923/4905/uZDr3H.png",
-            //"ponderosa":"https://imagizer.imageshack.com/img924/1954/SxLVjp.png",
+            "manzanita":"https://storage.googleapis.com/disc-animation/Speed%203/Above%20the%20Ground_%20Mazanita.json",
+            "ponderosa":"https://storage.googleapis.com/disc-animation/Speed%203/Above%20Ground%20Level_%20Ponderosa.json",
             "redwood":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/REDWOOD_ABOVE%20GROUND%20LEVEL.json",
             "spruce":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/SPRUCE_ABOVE%20GROUND%20LEVEL.json",
             "sycamore":"https://storage.googleapis.com/disc-animation/AboveGroundLevel/SYCAMORE_ABOVE%20GROUND%20LEVEL.json"
@@ -36,7 +36,7 @@ class AnimationHelper {
             "crave": "https://storage.googleapis.com/disc-animation/Axiom/CRAVE_AXIOM%20DISCS.json",
             "defy": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_DEFY.json",
             //"delirium": "https://imagizer.imageshack.com/img924/2766/QiBcWc.png",
-            //"envy": "https://imagizer.imageshack.com/img922/1839/tgDBcT.png",
+            "envy": "https://storage.googleapis.com/disc-animation/Speed%203/Axoim_Envy.json",
             "excite": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_EXCITE.json",
             "fireball": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_FireBall.json",
             "hex": "https://storage.googleapis.com/disc-animation/Axiom/HEX_AXIOM%20DISCS.json",
@@ -45,7 +45,7 @@ class AnimationHelper {
             "mayhem": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_MAYHEM.json",
             "panic": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_PANIC.json",
             "paradox": "https://storage.googleapis.com/disc-animation/Axiom/PARADOX_AXIOM%20DISCS.json",
-           // "proxy": "",
+            "proxy": "https://storage.googleapis.com/disc-animation/Speed%203/Axiom_Proxy.json",
             "pyro": "https://storage.googleapis.com/disc-animation/Axiom/PYRO_AXIOM%20DISCS.json",
             "rhythm": "https://storage.googleapis.com/disc-animation/Axiom/RHYTHM_AXIOM%20DISCS.json",
             "tantrum": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_TANTRUM.json",
@@ -61,7 +61,7 @@ class AnimationHelper {
         "Clash Discs": [
             "berry": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_BERRY.json",
             //"butter": "",
-            //"candy": "",
+            "candy": "https://storage.googleapis.com/disc-animation/Speed%203/Clash%20Discs_Candy.json",
             "cinnamon": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_CINNAMON.json",
             "cookie": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_COOKIE.json",
             //"fudge": "",
@@ -73,7 +73,7 @@ class AnimationHelper {
             "peach": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_PEACH.json",
             "pepper": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_PEPPER.json",
             "peppermint": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_PEPPERMINT.json",
-            //"popcorn": "",
+            "popcorn": "https://storage.googleapis.com/disc-animation/Speed%203/Clash%20Discs_Popcorn.json",
             "salt": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_SALT.json",
             "soda": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_SODA.json",
             "spice": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_SPICE.json",
@@ -834,6 +834,12 @@ class AnimationHelper {
             "tara-iti": "https://storage.googleapis.com/disc-animation/RPM/RPM_TARA%20ITI.json",
            // "tui": ""
           ],
+        "Sacred Discs": [
+            "arrowhead": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_ARROWHEAD.json",
+            "gnome": "",
+            "oracle": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_Oracle.json",
+            "starship": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Starship.json"
+        ],
         "Streamline": [
             "ascend": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ASCEND.json",
             "drift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_DRIFT.json",
