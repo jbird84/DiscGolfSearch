@@ -742,7 +742,7 @@ class AnimationHelper {
             "d2-pro": "https://storage.googleapis.com/disc-animation/Prodigy/D2%20Pro.json",
             "d2-signature-falcor": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_Falcor.json",
             "d3-new": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_D3%20(NEW).json",
-            "d3-max": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_D3%20Max.json",
+            "d3-max": "https://storage.googleapis.com/disc-animation/Prodigy/D3-Max.json",
             "d4": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_D4.json",
             "d4-max": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_D4%20Max.json",
             "d6": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_D6.json",
