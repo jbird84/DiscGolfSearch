@@ -44,6 +44,8 @@ class AnimationHelper {
             "inspire": "https://storage.googleapis.com/disc-animation/Axiom/INSPIRE_AXIOM%20DISCS.json",
             "mayhem": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_MAYHEM.json",
             "panic": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_PANIC.json",
+            "pitch": "https://storage.googleapis.com/disc-animation/Putters/Axiom%20Discs_Pitch.json",
+            "pixel": "https://storage.googleapis.com/disc-animation/Putters/Axiom%20Discs_Pixel.json",
             "paradox": "https://storage.googleapis.com/disc-animation/Axiom/PARADOX_AXIOM%20DISCS.json",
             "proxy": "https://storage.googleapis.com/disc-animation/Speed%203/Axiom_Proxy.json",
             "pyro": "https://storage.googleapis.com/disc-animation/Axiom/PYRO_AXIOM%20DISCS.json",
@@ -395,6 +397,12 @@ class AnimationHelper {
           //  "warlock": "",
             "warrior-gateway": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_WARRIOR%20(GATEWAY).json",
            // "wizard": ""
+        ],
+        "Hooligan Discs": [
+            "flip": "https://storage.googleapis.com/disc-animation/Hooligan%20Discs/Hooligan-Discs_Flip.json",
+            "thread": "https://storage.googleapis.com/disc-animation/Hooligan%20Discs/Hooligan-Discs_Thread.json",
+            "vibe": "https://storage.googleapis.com/disc-animation/Hooligan%20Discs/Hooligan-Discs_Vibe.json",
+            "yeet": "https://storage.googleapis.com/disc-animation/Hooligan%20Discs/Hooligan-Discs_Yeet.json"
         ],
         "Infinite Discs": [
             //"alpaca": "",
@@ -785,7 +793,7 @@ class AnimationHelper {
             "p-model-s": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Disc_%20P%20Model%20S.json",
             "p-model-us": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy_P%20Modle%20US.json",
             "pa1": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Discs_PA1.json",
-            "pa2": "",
+            "pa2": "https://storage.googleapis.com/disc-animation/Speed%203/Produgy%20Discs_PA2.json",
             "pa3": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Discs_PA3.json",
             "pa4": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Disc_PA4.json",
             "pa5": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy_PA-5.json",
@@ -836,7 +844,7 @@ class AnimationHelper {
           ],
         "Sacred Discs": [
             "arrowhead": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_ARROWHEAD.json",
-            "gnome": "",
+            "gnome": "https://storage.googleapis.com/disc-animation/Putters/Scared%20Discs_Gnome.json",
             "oracle": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_Oracle.json",
             "starship": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Starship.json"
         ],
@@ -852,7 +860,36 @@ class AnimationHelper {
             "runway": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_RUNWAY.json",
             //"stabilizer": "",
             "trace": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_%20TRACE.json"
-          ]
+          ],
+        "Thought Space Athletics": [
+            "alter": "https://storage.googleapis.com/disc-animation/Speed%203/Thought%20Space%20Atheletics_Alter.json",
+            "animus": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Animus.json",
+            "coalesce": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Coalesce.json",
+            "construct": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Construct.json",
+            "mana": "",
+            "mantra": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Mantra.json",
+            "muse": "https://storage.googleapis.com/disc-animation/Speed%203/Thought%20Space%20Athletics_Muse.json",
+            "omen": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought-Space-Athletics_Omen.json",
+            "pathfinder": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Pathfinder.json",
+            "pneuma": "https://storage.googleapis.com/disc-animation/Putters/THOUGHT%20SPACE%20ATHLETIC_Pneuma.json",
+            "praxis": "https://storage.googleapis.com/disc-animation/Speed%203/Throught%20Space%20Athletics_Praxis.json",
+            "synapse": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Synapse.json",
+            "temple": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Temple.json",
+            "votum": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Votum.json"
+        ],
+        "Viking": [
+            "axe": "https://storage.googleapis.com/disc-animation/Vikings/Viking_AXE.json",
+            "barbarian": "https://storage.googleapis.com/disc-animation/Vikings/Viking_BARBARIAN.json",
+            "berserker": "https://storage.googleapis.com/disc-animation/Vikings/Viking_BERSERKER.json",
+            "cosmos": "https://storage.googleapis.com/disc-animation/Vikings/Viking_COSMOS.json",
+            "fenrir": "https://storage.googleapis.com/disc-animation/Vikings/Viking_FENRIR.json",
+            "knife": "https://storage.googleapis.com/disc-animation/Putters/Viking_Knife.json",
+            "odin": "https://storage.googleapis.com/disc-animation/Vikings/Viking_ODIN.json",
+            "ragnarok": "https://storage.googleapis.com/disc-animation/Vikings/Viking_RAGNAROK.json",
+            "rune": "https://storage.googleapis.com/disc-animation/Putters/Viking_Rune.json",
+            "thor": "https://storage.googleapis.com/disc-animation/Vikings/Viking_THOR.json",
+            "warrior-viking": "https://storage.googleapis.com/disc-animation/Vikings/Viking_WARRIOR.json"
+        ]
         
     ]
     
