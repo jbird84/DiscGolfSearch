@@ -375,20 +375,27 @@ class AnimationHelper {
             "witness": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_WITNESS.json"
         ],
         "Elevation Disc Golf": [
-            //   "arowana": "",
+            "arowana": "https://storage.googleapis.com/disc-animation/Speed%203/Elevation%20disc%20Golf_Arowana.json",
             "binx-newcomer": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_BINX%2C%20NEWCOMER.json",
             "binx-ecoflex": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_BINX%2C%20ECOFLEX.json",
             "gecko": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_GECKO.json",
             "interceptor": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_OG%20BINX.json",
-            // "koi": "",
-            "og-binx": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_OG%20BINX.json"
+            "koi": "https://storage.googleapis.com/disc-animation/Speed%203/Elevation%20Disc%20Golf-Koi.json",
+            //"nimbus": "",
+            "og-binx": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_OG%20BINX.json",
+            //"psychic": ""
+            
         ],
-        
+        "EV-7": [
+            "mobius": "https://storage.googleapis.com/disc-animation/Putters/EV-7_Mobius.json",
+            "penrose": "https://storage.googleapis.com/disc-animation/Putters/EV-7_Penrose.json",
+            "telos": "https://storage.googleapis.com/disc-animation/Putters/EV-7_Telos.json"
+        ],
         "Finish Line": [
             "daytona":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_DAYTONA.json",
             "era":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_ERA.json",
             "interval":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_INTERVAL.json",
-            // "pace":"",
+            "pace":"https://storage.googleapis.com/disc-animation/Putters/Finish%20Line_Pace.json",
             "rally":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_RALLY.json",
             "supra":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_SUPRA.json",
             "torque":"https://storage.googleapis.com/disc-animation/Finish%20Line/Finish%20Line_TORQUE.json"
@@ -401,21 +408,21 @@ class AnimationHelper {
             "assassin": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_ASSASSIN.json",
             "blade": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_BLADE.json",
             "blaze": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_BLAZE.json",
-            //    "chief": "",
-            //   "chief-os": "",
+            "chief": "https://storage.googleapis.com/disc-animation/Speed%203/Gateway_Chief.json", 
+            "chief-os": "https://storage.googleapis.com/disc-animation/Speed%203/Gateway_Chief%20OS.json",
             "demon": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_DEMON.json",
-            //   "devil-hawk": "",
+            "devil-hawk": "https://storage.googleapis.com/disc-animation/Speed%203/Gateway_Devil%20hawk.json",
             "diablo": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_DIABLO.json",
             "diablo-dt": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_DIABLO%20DT.json",
             "ether": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_ETHER.json",
             "element": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_ELEMENT.json",
             "g-one": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_G-ONE.json",
-            //   "houdini": "",
+           "houdini": "https://storage.googleapis.com/disc-animation/Speed%203/Gateway_Houdini.json",
             "illusion": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_ILLUSION.json",
             "journey": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_JOURNEY.json",
             "karma": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_KARMA.json",
-            //   "magic": "",
             "mystic": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_MYSTIC.json",
+            "magic": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Magic.json",
             "ninja": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_NINJA.json",
             "prophecy": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_PROPHECY.json",
             "rage": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_RAGE.json",
@@ -423,17 +430,17 @@ class AnimationHelper {
             "sabre": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SABRE.json",
             "samurai": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SAMURAI.json",
             "scout": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SCOUT.json",
-            //  "shaman": "",
+            "shaman": "https://storage.googleapis.com/disc-animation/Speed%203/Gateway_Shaman.json",
             "slayer": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SLAYER.json",
             "spear": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPEAR.json",
             "speed-demon": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPEED%20DEMON.json",
             "spell": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPELL.json",
             "spirit": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPIRIT.json",
-            //   "voodoo": "",
+            "voodoo": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Voodoo.json",
             //   "war-spear": "",
-            //  "warlock": "",
+            "warlock": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Warlock.json",
             "warrior-gateway": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_WARRIOR%20(GATEWAY).json",
-            // "wizard": ""
+            "wizard": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Wizard.json"
         ],
         "Hooligan Discs": [
             "flip": "https://storage.googleapis.com/disc-animation/Hooligan%20Discs/Hooligan-Discs_Flip.json",
