@@ -462,6 +462,8 @@ class AnimationHelper {
             "exodus": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_EXODUS.json",
             "inca": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_INCA.json",
             "glyph": "https://storage.googleapis.com/disc-animation/Putters/Infinite%20Discs_Glyph.json",
+            //"galleon": "",
+            //"khonsu": "",
             "kon-tiki": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_KON%20TIKI.json",
             "maya": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_MAYA.json",
             "myth": "https://storage.googleapis.com/disc-animation/Putters/Infinite%20Discs_Myth.json",
@@ -603,6 +605,12 @@ class AnimationHelper {
             "yeti-aviar": "https://storage.googleapis.com/disc-animation/Putters/Innova_Yeti%20Pro%20Aviar.json",
             "zephyr": "https://storage.googleapis.com/disc-animation/Putters/Innova_Zephyr.json"
         ],
+//        "Jester Disc Golf": [
+//            "dream-weaver": "",
+//            "love": "",
+//            "love-touch": "",
+//            "peace-train": ""
+//        ],
         "Kastaplast": [
             "alva": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_ALVA.json",
             "berg": "https://storage.googleapis.com/disc-animation/Putters/Kastaplast_Berg.json",
@@ -623,7 +631,7 @@ class AnimationHelper {
             "reko": "https://storage.googleapis.com/disc-animation/Speed%203/Kastplast_Reko.json",
             "reko-x": "https://storage.googleapis.com/disc-animation/Speed%203/Kastaplast_Reko%20X.json",
             "stal": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_STAL.json",
-            // "stig": "",
+            "stig": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_Stig.json",
             "svea": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast%20_SVEA.json",
             "vass": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_VASS.json"
         ],
@@ -659,7 +667,7 @@ class AnimationHelper {
             "anchor": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20ANCHOR.json",
             //  "ballista": "",
             //  "ballista-pro": "",
-            //"beetle": "",
+            "beetle": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Beetle.json", //
             //  "bolt": "",
             //  "bryce": "",
             // "caltrop": "",
@@ -698,13 +706,13 @@ class AnimationHelper {
             "pearl": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20PEARL.json",
             // "pioneer": "",
             "pirate": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20PIRATE.json",
-            //  "pure": "",
+            "pure": "https://storage.googleapis.com/disc-animation/Speed%203/Latitiude%2064_Pure.json", //
             //  "raketen": "",
             // "recoil": "",
             // "rive": "",
             "river": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20RIVER.json",
             "river-pro": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20RIVER%20PRO.json",
-            // "ruby": "",
+             "ruby": "https://storage.googleapis.com/disc-animation/Speed%203/Latitude%2064_Ruby.json", //
             // "saint": "",
             "saint-pro": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20SAINT%20PRO.json",
             //  "sapphire": "",
