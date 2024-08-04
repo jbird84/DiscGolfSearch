@@ -670,13 +670,13 @@ class AnimationHelper {
             "beetle": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Beetle.json", //
             //  "bolt": "",
             //  "bryce": "",
-            // "caltrop": "",
+            "caltrop": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Caltrop.json", //
             "claymore": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20CLAYMORE.json",
             "compass": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_COMPASS.json",
             "core": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20CORE.json",
             // "culverin": "",
             // "cutlass": "",
-            // "dagger": "",
+            "dagger": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Dagger.json", //
             "diamond": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_DIAMOND.json",
             "explorer": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20EXPLORER.json",
             // "faith": "",
@@ -685,7 +685,7 @@ class AnimationHelper {
             "fuji": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20FUJI.json",
             // "fury": "",
             "fuse": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20FUSE.json",
-            //  "gauntlet": "",
+            "gauntlet": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Gauntlet.json", //
             // "gladiator": "",
             "glory": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20GLORY.json",
             "gobi": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20GOBI.json",
@@ -693,16 +693,17 @@ class AnimationHelper {
             //  "halo": "",
             //   "havoc": "",
             //  "honor": "",
-            //  "hope-royal-pro": "",
+            "hope-royal-pro": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Hope%20(Royal%20Prototype).json", //
             //  "jade": "",
-            //  "keystone": "",
+            "keystone": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Keystone.json", //
             //  "knight": "",
-            //  "macana": "",
+            "macana": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Macana.json", //
             //  "mace": "",
             "maul": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20MAUL.json",
-            // "mercy": "",
+            "mercy": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Mercy.json", //
             //  "missilen": "",
             // "musket": "",
+            "muse": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Muse.json", //
             "pearl": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20PEARL.json",
             // "pioneer": "",
             "pirate": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20PIRATE.json",
@@ -716,12 +717,12 @@ class AnimationHelper {
             // "saint": "",
             "saint-pro": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20SAINT%20PRO.json",
             //  "sapphire": "",
-            // "sarek": "",
+            "sarek": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Sarek.json", //
             "savior": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_SAVIOR.json",
             //   "scythe": "",
-            //  "sinus": "",
+            "sinus": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Sinus.json", //
             "spark": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20SPARK.json",
-            //  "spike": "",
+            "spike": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Spike.json", //
             // "stiletto": "",
             "striker": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20STRIKER.json",
             "trident": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20TRIDENT.json",
