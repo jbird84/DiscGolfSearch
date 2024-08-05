@@ -643,7 +643,7 @@ class AnimationHelper {
             "clozer": "https://storage.googleapis.com/disc-animation/Putters/Legacy_Clozer.json",
             "clutch": "https://storage.googleapis.com/disc-animation/Putters/Legacy_Clutch.json",
             "enemy": "https://storage.googleapis.com/disc-animation/Legacy/Legacy_ENEMY.json",
-            //"fighter": "",
+            "fighter": "https://storage.googleapis.com/disc-animation/Legacy/Legacy_Fighter.json",
             "gauge": "https://storage.googleapis.com/disc-animation/Legacy/Legacy_GAUGE.json",
             "ghost": "https://storage.googleapis.com/disc-animation/Legacy/Legacy-GHOST.json",
             "hunter": "https://storage.googleapis.com/disc-animation/Putters/Legacy_Hunter.json",
@@ -744,18 +744,18 @@ class AnimationHelper {
             "xenon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_XENON.json",
         ],
         "Lone Star Discs": [
-            // "armadillo": "",
+            "armadillo": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Armadillo.json", //
             "artemis": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_ARTEMIS.json",
             "bb6": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BB6.json",
             //"bayonet": "",
             "bearkat": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BEARKAT.json",
-            // "benny": "",
-            // "bluebonnet": "",
+            "benny": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_Benny.json", //
+            "bluebonnet": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Bluebonnet.json", //
             //"bowie": "",
             "brazos": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BRAZOS.json",
-            //"bull-snake": "",
+            "bull-snake": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_Bull%20Snake.json", //
             "chupacabra": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_CHUPACABRA.json",
-            // "copperhead": "",
+            "copperhead": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20star%20Discs_Copperhead.json", //
             // "crockett": "",
             "curl": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_CURL.json",
             "dos-x": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_DOS%20X.json",
@@ -765,23 +765,26 @@ class AnimationHelper {
             "harpoon": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_HARPOON.json",
             // "harrier": "",
             "horny-toad": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_HORNY%20TOAD.json",
-            //"jack-rabbit": "",
+            "jack-rabbit": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Disc_%20Jack%20Rabbit.json", //
             "lariat": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_LARIAT.json",
             "lone-wolf": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_LONE%20WOLF.json",
             "mad-cat": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_MAD%20CAT.json",
             "middy": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_MIDDY.json",
             "mockingbird": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_MOCKINGBIRD.json",
             "nimitz": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_NIMITZ.json",
-            //"penny-putter-premium": "",
-            // "penny-putter-victor": "",
+            "penny-putter-premium": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_%20Oenny%20Putter.json", //
+            "penny-putter-victor": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_%20Oenny%20Putter.json", //
             //"seguin": "",
             "texas-ranger": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_TEXAS%20RANGER.json",
             "the-dome": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_THE%20DOME.json",
             //  "tombstone": "",
             "tumbleweed": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_TUMBLEWEED.json",
+            "yellow rose": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Yellow%20Rose.json", //
             "walker": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WALKER.json",
             "warbird": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WARBIRD.json"
         ],
+//        "MVP": [
+//        ],
         "Millennium": [
             // "aquarius": "",
             //  "aries": "",
@@ -795,9 +798,9 @@ class AnimationHelper {
             //  "marksman": "",
             "moab": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20MOAB.json",
             "mortar": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20MORTAR.json",
-            //  "omega": "",
-            //"omega-big-bead": "",
-            //  "omega4": "",
+            "omega": "https://storage.googleapis.com/disc-animation/Putters/MILLENNIUM_Omega%20Super%20Soft%20Putter.json", //
+            "omega-big-bead": "https://storage.googleapis.com/disc-animation/Putters/MILLENNIUM_Omega%20Big%20Bead.json", //
+            "omega4": "https://storage.googleapis.com/disc-animation/Putters/MILLENNIUM_OmegaA4.json", //
             "orion-lf": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_ORION%20LF.json",
             "orion-ls": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_ORION%20LS.json",
             "polaris-lf": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20POLARIS%20LF.json",
@@ -807,7 +810,7 @@ class AnimationHelper {
             "scorpius": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20SCORPIUS.json",
             "sentinel": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20SENTINEL.json",
             "solstice": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20SOLSTICE.json",
-            //   "tank": "",
+            "tank": "https://storage.googleapis.com/disc-animation/Putters/MILLENNIUM_Tank.json", //
             "taurus": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_TAURUS.json",
             "vela": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20VELA.json",
             "veteran": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_VETERAN.json"
