@@ -904,7 +904,7 @@ class AnimationHelper {
             "mx-1": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_MX-1.json",
             "mx-2": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy%20Disc_MX2.json",
             "mx-3": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy%20Disc_MX3.json",
-            "p-model-os": "",
+            "p-model-os": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy_P%20Model%20OS.json",
             "p-model-s": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Disc_%20P%20Model%20S.json",
             "p-model-us": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy_P%20Modle%20US.json",
             "pa1": "https://storage.googleapis.com/disc-animation/Speed%203/Prodigy%20Discs_PA1.json",
