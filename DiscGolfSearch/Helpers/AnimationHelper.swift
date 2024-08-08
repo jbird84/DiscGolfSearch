@@ -828,25 +828,25 @@ class AnimationHelper {
             "gila": "https://storage.googleapis.com/disc-animation/Other/Other_GILA.json",
             "golem": "https://storage.googleapis.com/disc-animation/Other/Other_GOLEM.json",
             "i-one": "https://storage.googleapis.com/disc-animation/Other/Other_I-ONE.json",
-            // "iridium": "",
+            "iridium": "https://storage.googleapis.com/disc-animation/Putters/Other_Iridium.json", //
             "kgb": "https://storage.googleapis.com/disc-animation/Other/Other_KGB.json",
             "kraken": "https://storage.googleapis.com/disc-animation/Other/Other_KRAKEN.json",
             "lawin": "https://storage.googleapis.com/disc-animation/Other/Other_LAWIN.json",
             "leviathan": "https://storage.googleapis.com/disc-animation/Other/Other_LEVIATHAN.json",
-            // "marvel": "",
+            "marvel": "https://storage.googleapis.com/disc-animation/Putters/Other_Marvel.json", //
             "minotaur": "https://storage.googleapis.com/disc-animation/Other/Other_MINOTAUR.json",
-            //"narwhal": "",
+            "narwhal": "https://storage.googleapis.com/disc-animation/Speed%203/Divergent%20Discs_Narwhal.json", //
             "nice": "https://storage.googleapis.com/disc-animation/Other/Other_NICE!.json",
             "pure-og": "https://storage.googleapis.com/disc-animation/Other/Other_PURE%20OG.json",
-            // "scale": "",
-            //"serpent": "",
+            "scale": "https://storage.googleapis.com/disc-animation/Putters/Other_Scale.json", //
+            "serpent": "https://storage.googleapis.com/disc-animation/Putters/Other_Serpent.json", //
             //  "stego": "",
             "strike": "https://storage.googleapis.com/disc-animation/Other/Other_STRIKE.json",
             "tiyanak": "https://storage.googleapis.com/disc-animation/Other/Other_TIYANAK.json",
             "tyrant": "https://storage.googleapis.com/disc-animation/Other/Other_TYRANT.json",
             "ultra": "https://storage.googleapis.com/disc-animation/Other/Other_ULTRA.json",
-            //    "white-widow": "",
-            //  "zeal": ""
+            "white-widow": "https://storage.googleapis.com/disc-animation/Putters/Other_White%20Widow.json", //
+            "zeal": "https://storage.googleapis.com/disc-animation/Speed%203/Universal%20Play%20Disc%20Golf-Zeal.json" //
         ],
         "Prodigy" : [
             "a1": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy%20Disc_A1.json",
@@ -951,17 +951,25 @@ class AnimationHelper {
             "kotuku": "https://storage.googleapis.com/disc-animation/RPM/RPM_KOTUKU.json",
             "pekapeka": "https://storage.googleapis.com/disc-animation/RPM/RPM_PEKAPEKA.json",
             "piwakawaka": "https://storage.googleapis.com/disc-animation/RPM/RPM_PIWAKAWAKA.json",
-            //  "ruru": "",
-            //  "takapu": "",
+            "ruru": "https://storage.googleapis.com/disc-animation/Speed%203/RPM%20Discs_Ruru.json", //
+            "takapu": "https://storage.googleapis.com/disc-animation/Putters/RPM_Takapu(PA3).json", //
             "taniwha": "https://storage.googleapis.com/disc-animation/RPM/RPM_TANIWHA.json",
             "tara-iti": "https://storage.googleapis.com/disc-animation/RPM/RPM_TARA%20ITI.json",
-            // "tui": ""
+            "tui": "https://storage.googleapis.com/disc-animation/Speed%203/RPM%20Discs_Tui.json" //
         ],
         "Sacred Discs": [
             "arrowhead": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_ARROWHEAD.json",
             "gnome": "https://storage.googleapis.com/disc-animation/Putters/Scared%20Discs_Gnome.json",
             "oracle": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_Oracle.json",
             "starship": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Starship.json"
+        ],
+        
+        "       ": [
+            "abyss": "https://storage.googleapis.com/disc-animation/Strom/Strom_ABYSS.json",
+            "radar": "https://storage.googleapis.com/disc-animation/Putters/Storm_Radar.png.json",
+            "the-crater": "https://storage.googleapis.com/disc-animation/Speed%203/Strom%20Disc%20Golf_The%20Crater.json",
+            "the-eye": "https://storage.googleapis.com/disc-animation/Strom/Strom_THE%20EYE.json",
+            "wall-cloud": "https://storage.googleapis.com/disc-animation/Strom/Strom_WALL%20CLOUD.json"
         ],
         "Streamline": [
             "ascend": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ASCEND.json",
