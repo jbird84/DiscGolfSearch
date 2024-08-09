@@ -975,13 +975,13 @@ class AnimationHelper {
             "ascend": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ASCEND.json",
             "drift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_DRIFT.json",
             "echo": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ECHO.json",
-            // "electron-stabilizer": "",
+            // "electron-stabilizer": "",//
             // "flare": "",
             "jet": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_JET.json",
             "lift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_LIFT.json",
-            // "pilot": "",
+            "pilot": "https://storage.googleapis.com/disc-animation/Putters/Stream%20Line_Pilot.json", //
             "runway": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_RUNWAY.json",
-            //"stabilizer": "",
+            "stabilizer": "https://storage.googleapis.com/disc-animation/Speed%203/Stremline_Stabilizer.json", //
             "trace": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_%20TRACE.json"
         ],
         "Thought Space Athletics": [
@@ -989,7 +989,7 @@ class AnimationHelper {
             "animus": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Animus.json",
             "coalesce": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Coalesce.json",
             "construct": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Construct.json",
-            "mana": "",
+            "mana": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Mana.json",
             "mantra": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Mantra.json",
             "muse": "https://storage.googleapis.com/disc-animation/Speed%203/Thought%20Space%20Athletics_Muse.json",
             "omen": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought-Space-Athletics_Omen.json",
@@ -999,6 +999,11 @@ class AnimationHelper {
             "synapse": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Synapse.json",
             "temple": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Temple.json",
             "votum": "https://storage.googleapis.com/disc-animation/Thought%20Space%20Athletics/Thought%20Space%20Athletics_Votum.json"
+        ],
+        "Trash Panda": [
+            "dune": "https://storage.googleapis.com/disc-animation/Trash%20Panda/Trash-Panda_Dune.json",
+            "inner-core": "https://storage.googleapis.com/disc-animation/Putters/Trash%20Panda_Inner%20Core.json",
+            "ozone": "https://storage.googleapis.com/disc-animation/Trash%20Panda/Trash-Panda_OZONE.json"
         ],
         "Viking": [
             "axe": "https://storage.googleapis.com/disc-animation/Vikings/Viking_AXE.json",
