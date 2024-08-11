@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import DZNEmptyDataSet
 
 class DiscViewController: UIViewController {
     
@@ -78,6 +79,8 @@ class DiscViewController: UIViewController {
     private func setupCollectionView() {
         simularDiscsCollectionView.dataSource = self
         simularDiscsCollectionView.delegate = self
+        simularDiscsCollectionView.emptyDataSetSource = self
+        simularDiscsCollectionView.emptyDataSetDelegate = self
         
         let flowLayout = UICollectionViewFlowLayout()
         
@@ -128,10 +131,10 @@ class DiscViewController: UIViewController {
                         //Chck to make sure discs have same stability
                         let isSameStability = disc.stability == selectedDisc.stability
                         
-                        //Check to make sure current disc does not appear in the simular discs collection.
+                        //Check to make sure current disc does not appear in the similar discs collection.
                         let isSelectedDiscName = disc.name == selectedDisc.name
                         
-                        //return the simular discs collection
+                        //return the similar discs collection
                         return isSimilarFlight && isSameStability && !isSelectedDiscName
                     }
                 }
@@ -371,4 +374,51 @@ extension DiscViewController: AddDiscToViewDelegate {
     func dissmiss() {
         dropDownView.isHidden = true
     }
+}
+
+extension DiscViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "noDiscForThisSpeed")
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "No Similar Discs Available"
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
+        return UIColor.white
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Issues finding discs with similar flight characteristics."
+        let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+//    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+//            let text = "No Similar Discs"
+//            let attributes: [NSAttributedString.Key: Any] = [
+//                .font: UIFont.systemFont(ofSize: 18),
+//                .foregroundColor: UIColor.gray
+//            ]
+//            return NSAttributedString(string: text, attributes: attributes)
+//        }
+//
+//        func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+//            let text = "We couldn't find any discs with similar flight characteristics."
+//            let attributes: [NSAttributedString.Key: Any] = [
+//                .font: UIFont.systemFont(ofSize: 14),
+//                .foregroundColor: UIColor.lightGray
+//            ]
+//            return NSAttributedString(string: text, attributes: attributes)
+//        }
+//
+//        func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+//            return UIImage(systemName: "plus") //UIImage(named: "empty_state_image") // Replace with your image
+//        }
+    
 }
