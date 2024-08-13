@@ -1005,6 +1005,25 @@ class AnimationHelper {
             "inner-core": "https://storage.googleapis.com/disc-animation/Putters/Trash%20Panda_Inner%20Core.json",
             "ozone": "https://storage.googleapis.com/disc-animation/Trash%20Panda/Trash-Panda_OZONE.json"
         ],
+        "Vibram": [
+            "arch": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_ARCH.json",
+            "crag": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_Crag.json",
+            "ibex": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_IBEX.json",
+            "lace": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_LACE.json",
+            "launch": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_LAUNCH.json",
+            "notch": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_NOTCH.json",
+            "o-lace": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_O-LACE.json",
+            "obex": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_OBEX.json",
+            "onyx": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_ONYX.json",
+            "ridge": "https://storage.googleapis.com/disc-animation/Putters/Vibram_Ridge.json",
+            "solace": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_SOLACE.json",
+            "sole": "https://storage.googleapis.com/disc-animation/Putters/Vibram_Sole.json",
+            "summit": "https://storage.googleapis.com/disc-animation/Putters/Vibram_Summit.json",
+            "unlace": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_UNLACE.json",
+            "vp": "https://storage.googleapis.com/disc-animation/Putters/Vibram_VP.json",
+            "valley": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_VALLEY.json",
+            "vamp": "https://storage.googleapis.com/disc-animation/Vibram/Vibram_VAMP.json"
+        ],
         "Viking": [
             "axe": "https://storage.googleapis.com/disc-animation/Vikings/Viking_AXE.json",
             "barbarian": "https://storage.googleapis.com/disc-animation/Vikings/Viking_BARBARIAN.json",
@@ -1069,7 +1088,7 @@ class AnimationHelper {
         "Yikun": [
             "bi": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Bi.json",
             "claws": "https://storage.googleapis.com/disc-animation/Putters/YIKun_Claws.json",
-           // "crossbow": "",
+            "crossbow": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Crossbow.json",
             "dae": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Da'E.json",
             "fu": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Fu.json",
             "gou": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Fu%202.json",
