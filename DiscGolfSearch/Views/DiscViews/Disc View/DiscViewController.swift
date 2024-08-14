@@ -19,7 +19,7 @@ class DiscViewController: UIViewController {
     @IBOutlet weak var fadeLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var discView: UIView!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var flightRatingsSpeedLabel: UILabel!
@@ -53,13 +53,8 @@ class DiscViewController: UIViewController {
         setupAddDiscToView()
         createSimilarDiscsCollection(disc: disc)
         
-        
-        let addDiscToNavButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
-        let showFlightColorView = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
-        
-        navigationItem.rightBarButtonItems = [showFlightColorView, addDiscToNavButton]
-        navigationController?.navigationBar.backgroundColor = .black
-        navigationController?.navigationBar.scrollEdgeAppearance = .none
+   
+        setupNavBarAppearance()
     }
     
     private func setupAddDiscToView() {
@@ -74,6 +69,15 @@ class DiscViewController: UIViewController {
         dropDownView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 25).isActive = true
         dropDownView.widthAnchor.constraint(equalToConstant: 249).isActive = true
         dropDownView.heightAnchor.constraint(equalToConstant: 115).isActive = true
+    }
+    
+    private func setupNavBarAppearance() {
+        let addDiscToNavButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addDiscTapped))
+        let showFlightColorView = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
+        
+        navigationItem.rightBarButtonItems = [showFlightColorView, addDiscToNavButton]
+        navigationController?.navigationBar.backgroundColor = .black
+        navigationController?.navigationBar.scrollEdgeAppearance = .none
     }
     
     private func setupCollectionView() {
