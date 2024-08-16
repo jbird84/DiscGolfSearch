@@ -67,6 +67,9 @@ class AnimationHelper {
             "virus": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_VIRUS.json",
             "wrath": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_WRATH.json"
         ],
+        "Birdie": [
+            "reach": "https://storage.googleapis.com/disc-animation/Birdie/Birdie_Reach.jpg.json"
+        ],
         "Clash Discs": [
             "berry": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_BERRY.json",
             "butter": "https://storage.googleapis.com/disc-animation/Putters/Clash%20Discs_Butter.json",
@@ -345,14 +348,14 @@ class AnimationHelper {
             "fugitive-supreme": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_FUGITIVE%20(SUPREME).json",
             "gavel": "https://storage.googleapis.com/disc-animation/Speed%203/Dymanic%20Discs_Gavel.json",
             "getaway": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_GETAWAY.json",
-            // "general": "",
+            "general": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic%20Disc%20_General.json",
             "guard": "https://storage.googleapis.com/disc-animation/Putters/Dynamic%20Discs_Guard.json",
             "judge": "https://storage.googleapis.com/disc-animation/Putters/Dynamic%20Discs_Judge.json",
             "justice": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_JUSTICE.json",
             "jury": "https://storage.googleapis.com/disc-animation/Putters/Dynamic%20Discs_Jury.json",
             "marshal": "https://storage.googleapis.com/disc-animation/Speed%203/Dynamic%20Discs%20Marshal.json",
             "maverick": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_MAVERICK.json",
-            //  "patrol": "",
+            "patrol": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic%20Discs%20-%20Patrol.json",
             "proof": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_PROOF.json",
             "raider": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_RAIDER.json",
             "renegade": "https://storage.googleapis.com/disc-animation/Dynamic-Discs/Dynamic-Discs_RENEGADE.json",
@@ -1097,7 +1100,7 @@ class AnimationHelper {
             "hu": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Hu.json",
             "jiao": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Jiao.json",
             "jun": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Jun.json",
-            "kang": "https://storage.googleapis.com/disc-animation/Speed%203/Yikun_Kang.json",
+            "kang": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Kang.json",
             "kui": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Kui.json",
             "ling": "https://storage.googleapis.com/disc-animation/Putters/YIKun_Ling.json",
             "long": "https://storage.googleapis.com/disc-animation/Yikun/Yikun_Long.json",
