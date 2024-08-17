@@ -80,7 +80,6 @@ extension GridColorPickerViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedColor = colors[indexPath.item]
         delegate?.colorWasSelected(selectedColor: selectedColor)
-        print("Selected color: \(selectedColor)")
         dismiss(animated: true, completion: nil)
     }
 
