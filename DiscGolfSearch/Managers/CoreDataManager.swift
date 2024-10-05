@@ -20,10 +20,10 @@ class CoreDataManager {
     init(modelName: String, persistentContainer: NSPersistentCloudKitContainer) {
         self.modelName = modelName
         self.persistentContainer = persistentContainer
+        loadPersistentStores()
     }
 
     // MARK: - Core Data Operations
-    
     func saveContext() {
         guard persistentContainer.viewContext.hasChanges else { return }
         
@@ -140,4 +140,13 @@ class CoreDataManager {
         persistentContainer.viewContext.delete(object)
         saveContext()
     }
+    
+    private func loadPersistentStores() {
+            persistentContainer.loadPersistentStores { (storeDescription, error) in
+                if let error = error as NSError? {
+                    // Handle the error appropriately
+                    fatalError("Unresolved error \(error), \(error.userInfo)")
+                }
+            }
+        }
 }

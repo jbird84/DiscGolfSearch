@@ -34,8 +34,8 @@
         <attribute name="brandSlug" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="color" optional="YES" attributeType="String"/>
-        <attribute name="discColor" optional="YES" attributeType="String"/>
-        <attribute name="discWeight" optional="YES" attributeType="String"/>
+        <attribute name="discColor" optional="YES" attributeType="String" defaultValueString="#FF0000"/>
+        <attribute name="discWeight" optional="YES" attributeType="String" defaultValueString="0.0"/>
         <attribute name="fade" optional="YES" attributeType="String"/>
         <attribute name="glide" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
@@ -43,10 +43,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="nameSlug" optional="YES" attributeType="String"/>
         <attribute name="pic" optional="YES" attributeType="String"/>
-        <attribute name="plasticType" optional="YES" attributeType="String"/>
+        <attribute name="plasticType" optional="YES" attributeType="String" defaultValueString="N/A"/>
         <attribute name="speed" optional="YES" attributeType="String"/>
         <attribute name="stability" optional="YES" attributeType="String"/>
         <attribute name="turn" optional="YES" attributeType="String"/>
-        <attribute name="usedFor" optional="YES" attributeType="String"/>
+        <attribute name="usedFor" optional="YES" attributeType="String" defaultValueString="Backhand"/>
     </entity>
 </model>
