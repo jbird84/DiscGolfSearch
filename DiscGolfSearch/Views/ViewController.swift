@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         setupCollectionView()
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
+        // Add a "Select All" button to the navigation bar
+        let refreshDiscs = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refreshDiscList))
         navigationItem.rightBarButtonItem = selectAllButton
         
         let contactSupport = UIBarButtonItem(title: "Get Help", style: .plain, target: self, action: #selector(getHelpTapped))
@@ -193,6 +195,29 @@ class ViewController: UIViewController {
             })
         }
         collectionView.reloadData() // Reload the collection view to reflect the changes
+    }
+    
+    @objc func refreshDiscList() {
+        APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
+            guard let self = self else { return }
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.showAlert()
+                }
+                print("Error fetching data: \(error.localizedDescription)")
+            } else if let discs = discs {
+                self.allDiscs = discs
+                CoreDataManager.shared.saveAllDiscs(discs) // Save to Core Data
+                for disc in discs {
+                    self.brands.insert(disc.brand)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                SwiftSpinner.hide()
+                self.collectionView.reloadData()
+            }
+            }
     }
 }
 
