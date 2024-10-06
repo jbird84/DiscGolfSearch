@@ -23,9 +23,13 @@ class ViewController: UIViewController {
         setupCollectionView()
         // Add a "Select All" button to the navigation bar
         let selectAllButton = UIBarButtonItem(title: "Select All", style: .plain, target: self, action: #selector(selectAllTapped))
-        // Add a "Select All" button to the navigation bar
-        let refreshDiscs = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refreshDiscList))
         navigationItem.rightBarButtonItem = selectAllButton
+        
+        // Add a "Refresh Disc" button to the navigation bar
+        let refreshDiscs = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.square.fill"), style: .plain, target: self, action: #selector(refreshDiscList))
+       
+        // Set both buttons to the rightBarButtonItems
+        navigationItem.rightBarButtonItems = [refreshDiscs, selectAllButton]
         
         let contactSupport = UIBarButtonItem(title: "Get Help", style: .plain, target: self, action: #selector(getHelpTapped))
         navigationItem.leftBarButtonItem = contactSupport
@@ -198,6 +202,7 @@ class ViewController: UIViewController {
     }
     
     @objc func refreshDiscList() {
+        SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
         APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
             guard let self = self else { return }
             if let error = error {
@@ -212,12 +217,11 @@ class ViewController: UIViewController {
                     self.brands.insert(disc.brand)
                 }
             }
-            
-            DispatchQueue.main.async {
-                SwiftSpinner.hide()
-                self.collectionView.reloadData()
             }
-            }
+        DispatchQueue.main.async {
+            SwiftSpinner.hide()
+            self.collectionView.reloadData()
+        }
     }
 }
 
