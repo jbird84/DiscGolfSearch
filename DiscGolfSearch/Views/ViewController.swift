@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getDiscData()
+        loadDiscData()
     }
     
     private func setupCollectionView() {
@@ -60,62 +60,22 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = flowLayout
     }
     
-    private func getDiscData() {
-        SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
-        
-        // Try to fetch discs from Core Data
-            let result = CoreDataManager.shared.fetchAllDiscs()
-            if !result.isEmpty {
-                // If data exists, use it
-                allDiscs = result
-                brands = Set(allDiscs.map { $0.brand })
-                DispatchQueue.main.async {
-                    SwiftSpinner.hide()
-                    self.collectionView.reloadData()
-                }
-            } else {
-                // If no data found, fetch from the API
-                APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
-                    guard let self = self else { return }
-                    if let error = error {
-                        DispatchQueue.main.async {
-                            self.showAlert()
-                        }
-                        print("Error fetching data: \(error.localizedDescription)")
-                    } else if let discs = discs {
-                        self.allDiscs = discs
-                        CoreDataManager.shared.saveAllDiscs(discs) // Save to Core Data
-                        for disc in discs {
-                            self.brands.insert(disc.brand)
-                        }
-                    }
-                    
-                    DispatchQueue.main.async {
-                        SwiftSpinner.hide()
-                        self.collectionView.reloadData()
-                    }
-                    }
-                }
-            }
-  
-        private func saveAllDiscsToUserDefaults() {
-        do {
-            let encoder = JSONEncoder()
-            
-            let data = try encoder.encode(allDiscs)
-            
-            UserDefaults.standard.setValue(data, forKey: "allDiscs")
-            
-        } catch {
-            print("Unable to Encode all discs (\(error)")
-        }
-    }
+       
+       private func saveAllDiscsToUserDefaults(_ discs: [DiscGolfDisc]) {
+           do {
+               let encoder = JSONEncoder()
+               let data = try encoder.encode(discs)
+               UserDefaults.standard.set(data, forKey: "allDiscs")
+           } catch {
+               print("Unable to encode discs to UserDefaults: \(error)")
+           }
+       }
     
     private func showAlert() {
         let popup = UIAlertController(title: "Site is down ☹️", message: "It looks like the site where the disc data comes from is currently down. Please close app and check back in later.", preferredStyle: .alert)
         
         let retry = UIAlertAction(title: "Try Refreshing", style: .default) { _ in
-            self.getDiscData()
+            self.loadDiscData()
         }
         
         let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
@@ -131,7 +91,48 @@ class ViewController: UIViewController {
         present(popup, animated: true, completion: nil)
     }
     
+    private func loadDiscData() {
+            SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
+            
+            if let discsData = UserDefaults.standard.data(forKey: "allDiscs") {
+                do {
+                    let decoder = JSONDecoder()
+                    allDiscs = try decoder.decode([DiscGolfDisc].self, from: discsData)
+                    brands = Set(allDiscs.map { $0.brand })
+                    DispatchQueue.main.async {
+                        SwiftSpinner.hide()
+                        self.collectionView.reloadData()
+                    }
+                } catch {
+                    print("Error decoding discs from UserDefaults: \(error)")
+                }
+            } else {
+                fetchDiscsFromAPI()
+            }
+        }
     
+    private func fetchDiscsFromAPI() {
+            APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
+                guard let self = self else { return }
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self.showAlert()
+                    }
+                    print("Error fetching data: \(error.localizedDescription)")
+                } else if let discs = discs {
+                    self.allDiscs = discs
+                    self.saveAllDiscsToUserDefaults(discs)
+                    for disc in discs {
+                        self.brands.insert(disc.brand)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        SwiftSpinner.hide()
+                        self.collectionView.reloadData()
+                    }
+                }
+            }
+        }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         let selectedCompanyDiscs: [DiscGolfDisc] = allDiscs.filter { disc in
@@ -203,25 +204,7 @@ class ViewController: UIViewController {
     
     @objc func refreshDiscList() {
         SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
-        APIManager.shared.fetchDiscGolfData(param: "disc") { [weak self] discs, error in
-            guard let self = self else { return }
-            if let error = error {
-                DispatchQueue.main.async {
-                    self.showAlert()
-                }
-                print("Error fetching data: \(error.localizedDescription)")
-            } else if let discs = discs {
-                self.allDiscs = discs
-                CoreDataManager.shared.saveAllDiscs(discs) // Save to Core Data
-                for disc in discs {
-                    self.brands.insert(disc.brand)
-                }
-            }
-            }
-        DispatchQueue.main.async {
-            SwiftSpinner.hide()
-            self.collectionView.reloadData()
-        }
+        fetchDiscsFromAPI()
     }
 }
 
