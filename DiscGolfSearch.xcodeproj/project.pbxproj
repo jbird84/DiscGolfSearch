@@ -80,6 +80,8 @@
 		DAF2A0F52BBE52A60009B923 /* StableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */; };
 		DAF2A0F72BBE54020009B923 /* CarouselViewChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */; };
 		DAF2A0FA2BC308E60009B923 /* UnderStableCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */; };
+		DAF86DE92CB5612D00BB4E45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF86DE82CB5612300BB4E45 /* UserDefaultsManager.swift */; };
+		DAF86DEC2CB563BA00BB4E45 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF86DEB2CB563B300BB4E45 /* AlertUtils.swift */; };
 		DAF90D752BFC266A00A5329A /* HelpView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF90D742BFC266A00A5329A /* HelpView.storyboard */; };
 		DAFF75662B5D9FE100C11199 /* BagScatterGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,8 @@
 		DAF2A0F42BBE52A60009B923 /* StableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableCarouselView.swift; sourceTree = "<group>"; };
 		DAF2A0F62BBE54020009B923 /* CarouselViewChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewChild.swift; sourceTree = "<group>"; };
 		DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderStableCarouselView.swift; sourceTree = "<group>"; };
+		DAF86DE82CB5612300BB4E45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		DAF86DEB2CB563B300BB4E45 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		DAF90D742BFC266A00A5329A /* HelpView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpView.storyboard; sourceTree = "<group>"; };
 		DAFF75652B5D9FE100C11199 /* BagScatterGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScatterGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -373,8 +377,8 @@
 		DAD4820F2ACCFDB60051D89A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DAF86DEA2CB563AA00BB4E45 /* Utils */,
 				DA20B67B2B9541EF00841351 /* Custom Views */,
-				DAEC3B5B2B83F64C00171A7C /* Banner Help */,
 				DAD482102ACCFDCB0051D89A /* Constants.swift */,
 				DA22721B2B05B713005A107C /* GridColorPicker.swift */,
 				DAA30B112B64A2D700C533F3 /* AnimationHelper.swift */,
@@ -445,6 +449,7 @@
 		DADB72422AB69C160083B13B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DAF86DE82CB5612300BB4E45 /* UserDefaultsManager.swift */,
 				DADB72362AAE051C0083B13B /* APIManager.swift */,
 				DADF925A2B1EA74D00AD5378 /* CoreDataManager.swift */,
 			);
@@ -528,6 +533,15 @@
 				DAF2A0F92BC308E60009B923 /* UnderStableCarouselView.swift */,
 			);
 			path = UnderstableViews;
+			sourceTree = "<group>";
+		};
+		DAF86DEA2CB563AA00BB4E45 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DAEC3B5B2B83F64C00171A7C /* Banner Help */,
+				DAF86DEB2CB563B300BB4E45 /* AlertUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,6 +653,7 @@
 				DAC1535F2BB8A1DA00FD9A80 /* OverstableVC3.swift in Sources */,
 				DA2272282B099C6E005A107C /* AddDiscToBagViewController.swift in Sources */,
 				DA363D3C2B0181C10050840A /* BagDataModel.swift in Sources */,
+				DAF86DEC2CB563BA00BB4E45 /* AlertUtils.swift in Sources */,
 				DAD482132ACE47D50051D89A /* FlightNumbersViewController.swift in Sources */,
 				DA422C2D2B97F86600BBB1F7 /* ChartData.swift in Sources */,
 				DABE00D32AF9CE7A00C2ABEB /* CartTableViewCell.swift in Sources */,
@@ -678,6 +693,7 @@
 				DAC153632BB8A1F100FD9A80 /* OverstableVC5.swift in Sources */,
 				DADB723B2AB32C780083B13B /* DiscListViewController.swift in Sources */,
 				DADB723E2AB33F630083B13B /* Data+Ext.swift in Sources */,
+				DAF86DE92CB5612D00BB4E45 /* UserDefaultsManager.swift in Sources */,
 				DADB72412AB351AB0083B13B /* DiscCell.swift in Sources */,
 				DAF2A0F32BBCE3FC0009B923 /* StablePagingScrollView.swift in Sources */,
 				DA22721C2B05B713005A107C /* GridColorPicker.swift in Sources */,

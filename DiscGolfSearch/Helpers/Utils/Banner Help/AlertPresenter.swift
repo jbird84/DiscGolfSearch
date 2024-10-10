@@ -9,7 +9,7 @@ import UIKit
 import SwiftMessages
 
 
-final class AlertPresenter: AlertPresenterProtocol {
+final class AlertPresenter: @preconcurrency AlertPresenterProtocol {
     
     static public let instance: AlertPresenter = AlertPresenter()
     
