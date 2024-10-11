@@ -44,6 +44,7 @@ class BagViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getDiscs()
+        
     }
     
     private func setupView() {
@@ -66,7 +67,10 @@ class BagViewController: UIViewController {
         case 0:
             showDiscList()
         case 1:
-            showCharts()
+            if !allDiscs.isEmpty {
+                showCharts()
+            }
+            
         default:
             break
         }
