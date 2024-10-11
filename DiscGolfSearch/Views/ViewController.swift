@@ -64,26 +64,6 @@ class ViewController: UIViewController {
            userDefaultsManager.saveData(discs, for: .allDiscs)
        }
     
-//    private func showAlert() {
-//        let popup = UIAlertController(title: "Site is down ☹️", message: "It looks like the site where the disc data comes from is currently down. Please close app and check back in later.", preferredStyle: .alert)
-//        
-//        let retry = UIAlertAction(title: "Try Refreshing", style: .default) { _ in
-//            self.loadDiscData()
-//        }
-//        
-//        let help = UIAlertAction(title: "Contact Support", style: .default) { _ in
-//            let storyboard = UIStoryboard(name: "HelpView", bundle: nil)
-//            if let vc = storyboard.instantiateViewController(withIdentifier: "helpVC") as? HelpViewController {
-//                vc.overrideUserInterfaceStyle = .dark
-//                self.navigationController?.pushViewController(vc, animated: true)
-//            }
-//        }
-//        
-//        popup.addAction(retry)
-//        popup.addAction(help)
-//        present(popup, animated: true, completion: nil)
-//    }
-    
     private func loadDiscData() {
             SwiftSpinner.show("Loading A Disc Golf Company List...", animated: true)
             
@@ -104,8 +84,7 @@ class ViewController: UIViewController {
                 guard let self = self else { return }
                 if let error = error {
                     DispatchQueue.main.async {
-                        self.showAlert()
-                       // 111 AlertUtils.showSiteDownAlert(on: self) { self.loadDiscData() }
+                        AlertUtils.showSiteDownAlert(on: self) { self.loadDiscData() }
                     }
                     print("Error fetching data: \(error.localizedDescription)")
                 } else if let discs = discs {
@@ -147,22 +126,7 @@ class ViewController: UIViewController {
     }
     
     @objc func getHelpTapped() {
-            presentContactSupportAlert()
-        // 111 AlertUtils.showSupportAlert(on: self)
-        }
-
-        private func presentContactSupportAlert() {
-            let alertController = UIAlertController(title: "Support", message: "Would you like to contact support?", preferredStyle: .alert)
-            
-            let helpAction = UIAlertAction(title: "Contact Support", style: .default) { _ in
-                self.navigateToHelpViewController()
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            alertController.addAction(helpAction)
-            alertController.addAction(cancelAction)
-            
-            present(alertController, animated: true, completion: nil)
+         AlertUtils.showSupportAlert(on: self)
         }
 
         private func navigateToHelpViewController() {
