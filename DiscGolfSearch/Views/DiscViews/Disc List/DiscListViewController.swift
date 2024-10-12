@@ -35,41 +35,8 @@ class DiscListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        setupView()
         setupCollectionView()
-        collectionView.emptyDataSetSource = self
-        collectionView.emptyDataSetDelegate = self
-        oneToThreeSpeedButton.tag = 3
-        fourSpeedButton.tag = 4
-        fiveSpeedButton.tag = 5
-        sixSpeedButton.tag = 6
-        sevenSpeedButton.tag = 7
-        eightSpeedButton.tag = 8
-        nineSpeedButton.tag = 9
-        tenSpeedButton.tag = 10
-        elevenSpeedButton.tag = 11
-        twelveSpeedButton.tag = 12
-        thirteenSpeedButton.tag = 13
-        fourteenSpeedButton.tag = 14
-        
-        let buttons = [
-            oneToThreeSpeedButton,
-            fourSpeedButton,
-            fiveSpeedButton,
-            sixSpeedButton,
-            sevenSpeedButton,
-            eightSpeedButton,
-            nineSpeedButton,
-            tenSpeedButton,
-            elevenSpeedButton,
-            twelveSpeedButton,
-            thirteenSpeedButton,
-            fourteenSpeedButton
-        ]
-        
-        for button in buttons {
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(_:)))
-            button?.addGestureRecognizer(tapGesture)
-        }
     }
     
     
@@ -182,6 +149,41 @@ class DiscListViewController: UIViewController {
         }
     }
     
+    private func setupView() {
+        oneToThreeSpeedButton.tag = 3
+        fourSpeedButton.tag = 4
+        fiveSpeedButton.tag = 5
+        sixSpeedButton.tag = 6
+        sevenSpeedButton.tag = 7
+        eightSpeedButton.tag = 8
+        nineSpeedButton.tag = 9
+        tenSpeedButton.tag = 10
+        elevenSpeedButton.tag = 11
+        twelveSpeedButton.tag = 12
+        thirteenSpeedButton.tag = 13
+        fourteenSpeedButton.tag = 14
+        
+        let buttons = [
+            oneToThreeSpeedButton,
+            fourSpeedButton,
+            fiveSpeedButton,
+            sixSpeedButton,
+            sevenSpeedButton,
+            eightSpeedButton,
+            nineSpeedButton,
+            tenSpeedButton,
+            elevenSpeedButton,
+            twelveSpeedButton,
+            thirteenSpeedButton,
+            fourteenSpeedButton
+        ]
+        
+        for button in buttons {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(_:)))
+            button?.addGestureRecognizer(tapGesture)
+        }
+    }
+    
     private func setupNavBar() {
         let toggleButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
         self.title = "Select Your Disc Speed"
@@ -195,6 +197,8 @@ class DiscListViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.emptyDataSetSource = self
+        collectionView.emptyDataSetDelegate = self
         
         let flowLayout = UICollectionViewFlowLayout()
         let padding: CGFloat = 5.0
