@@ -32,6 +32,8 @@ class DiscListViewController: UIViewController {
     var filteredDiscs: [DiscGolfDisc] = []
     var selectedSpeed: String?
     
+    var buttons: [UIButton] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
@@ -82,7 +84,6 @@ class DiscListViewController: UIViewController {
                     selectedButton?.isSelected = false
                 }
                 
-                // Toggle the selection of the tapped button
                 tappedButton.isSelected.toggle()
                 
                 // Update the selected button reference
@@ -129,23 +130,8 @@ class DiscListViewController: UIViewController {
     }
     
     private func resetButtons() {
-        let buttons = [
-            oneToThreeSpeedButton,
-            fourSpeedButton,
-            fiveSpeedButton,
-            sixSpeedButton,
-            sevenSpeedButton,
-            eightSpeedButton,
-            nineSpeedButton,
-            tenSpeedButton,
-            elevenSpeedButton,
-            twelveSpeedButton,
-            thirteenSpeedButton,
-            fourteenSpeedButton
-        ]
-        
         for button in buttons {
-            button?.isSelected = false
+            button.isSelected = false
         }
     }
     
@@ -163,7 +149,7 @@ class DiscListViewController: UIViewController {
         thirteenSpeedButton.tag = 13
         fourteenSpeedButton.tag = 14
         
-        let buttons = [
+        self.buttons = [
             oneToThreeSpeedButton,
             fourSpeedButton,
             fiveSpeedButton,
@@ -180,7 +166,7 @@ class DiscListViewController: UIViewController {
         
         for button in buttons {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(_:)))
-            button?.addGestureRecognizer(tapGesture)
+            button.addGestureRecognizer(tapGesture)
         }
     }
     
@@ -275,5 +261,4 @@ extension DiscListViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
-    
 }
