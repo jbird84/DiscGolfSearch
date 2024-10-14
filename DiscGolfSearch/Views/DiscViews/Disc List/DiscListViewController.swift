@@ -78,35 +78,33 @@ class DiscListViewController: UIViewController {
     }
     
     @objc func buttonTapped(_ sender: UITapGestureRecognizer) {
-            if let tappedButton = sender.view as? UIButton {
-                if tappedButton != selectedButton {
-                    // A different button is tapped, unselect the currently selected button
-                    selectedButton?.isSelected = false
-                }
-                
-                tappedButton.isSelected.toggle()
-                
-                // Update the selected button reference
-                selectedButton = tappedButton
-                
-                if tappedButton.isSelected {
-                    // Button is selected, filter discs based on speed
-                    let speed = "\(tappedButton.tag)"
-                    filterDiscsBySpeed(speed)
-                } else {
-                    // Button is unselected, show all discs
-                    selectedSpeed = nil
-                    filteredDiscs = selectedCompanyDiscs
-                }
-                
-                collectionView.reloadData()
-                printPrettyResponse(discs: filteredDiscs)
+        if let tappedButton = sender.view as? UIButton {
+            if tappedButton != selectedButton {
+                // A different button is tapped, unselect the currently selected button
+                selectedButton?.isSelected = false
             }
+            
+            tappedButton.isSelected.toggle()
+            selectedButton = tappedButton
+            
+            if tappedButton.isSelected {
+                // Button is selected, filter discs based on speed
+                let speed = "\(tappedButton.tag)"
+                filterDiscsBySpeed(speed)
+            } else {
+                // Button is unselected, show all discs
+                selectedSpeed = nil
+                filteredDiscs = selectedCompanyDiscs
+            }
+            
+            collectionView.reloadData()
+            printPrettyResponse(discs: filteredDiscs)
         }
+    }
     
     func filterDiscsBySpeed(_ speed: String) {
         selectedSpeed = speed
-
+        
         if speed == "3" {
             filteredDiscs = selectedCompanyDiscs.filter { disc in
                 return disc.speed == "1" || disc.speed.hasPrefix("2") || disc.speed.hasPrefix("3")
@@ -202,7 +200,6 @@ class DiscListViewController: UIViewController {
 }
 
 extension DiscListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredDiscs.count
     }
@@ -210,9 +207,7 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "discCell", for: indexPath) as! DiscCell
-        
         let disc = filteredDiscs[indexPath.item]
-        
         cell.companyNameLabel.text = disc.displayedBrand
         cell.discNameLabel.text = disc.name
         cell.speedlabel.text = disc.speed
@@ -228,9 +223,8 @@ extension DiscListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let disc = filteredDiscs[indexPath.item]
-        
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if let vc = storyboard.instantiateViewController(withIdentifier: "discVC") as? DiscViewController {
             vc.disc = disc
             navigationController?.pushViewController(vc, animated: true)
