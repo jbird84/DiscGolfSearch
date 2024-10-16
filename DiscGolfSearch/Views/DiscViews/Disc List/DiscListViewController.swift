@@ -22,16 +22,13 @@ class DiscListViewController: UIViewController {
     @IBOutlet weak var twelveSpeedButton: UIButton!
     @IBOutlet weak var thirteenSpeedButton: UIButton!
     @IBOutlet weak var fourteenSpeedButton: UIButton!
-    
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var discTypesView: DiscTypesView?
     var selectedButton: UIButton? // To keep track of the selected button
     var selectedCompanyDiscs: [DiscGolfDisc] = []
     var filteredDiscs: [DiscGolfDisc] = []
     var selectedSpeed: String?
-    
     var buttons: [UIButton] = []
     
     override func viewDidLoad() {
@@ -40,144 +37,150 @@ class DiscListViewController: UIViewController {
         setupView()
         setupCollectionView()
     }
-    
-    
-    @objc func toggleDiscTypesView(_ sender: UIBarButtonItem) {
-        if discTypesView == nil {
-            // Load the DiscTypes.xib view if it's not already loaded
-            if let loadedView = Bundle.main.loadNibNamed("DiscTypes", owner: self, options: nil)?.first as? DiscTypesView {
-                discTypesView = loadedView
-                discTypesView?.navigationController = self.navigationController // Set the navigation controller reference
-                // Calculate the width as the screen width minus 20
-                let viewWidth = 139
-                let viewHeight = 556
-                
-                let screenWidth = UIScreen.main.bounds.width
-                
-                // Calculate the y-coordinate to be 5 points below the navigation bar
-                var y: CGFloat = 0.0
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-                    let statusBarManager = windowScene.statusBarManager
-                    y = (statusBarManager?.statusBarFrame.height ?? 0) + 40
+}
+
+//MARK: Private Methods
+extension DiscListViewController {
+        @objc private func toggleDiscTypesView(_ sender: UIBarButtonItem) {
+            if discTypesView == nil {
+                // Load the DiscTypes.xib view if it's not already loaded
+                if let loadedView = Bundle.main.loadNibNamed("DiscTypes", owner: self, options: nil)?.first as? DiscTypesView {
+                    discTypesView = loadedView
+                    discTypesView?.navigationController = self.navigationController // Set the navigation controller reference
+                    // Calculate the width as the screen width minus 20
+                    let viewWidth = 139
+                    let viewHeight = 556
+                    
+                    let screenWidth = UIScreen.main.bounds.width
+                    
+                    // Calculate the y-coordinate to be 5 points below the navigation bar
+                    var y: CGFloat = 0.0
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                        let statusBarManager = windowScene.statusBarManager
+                        y = (statusBarManager?.statusBarFrame.height ?? 0) + 40
+                    }
+                    
+                    // Set the frame for the discTypesView
+                    discTypesView?.frame = CGRect(
+                        x: Int(screenWidth - 150), // Center horizontally
+                        y: Int(y), // Center vertically
+                        width: viewWidth,
+                        height: viewHeight
+                    )
+                    discTypesView?.layer.cornerRadius = 20
+                    view.addSubview(discTypesView!)
+                }
+            } else {
+                // Toggle the visibility of the DiscTypes.xib view
+                discTypesView?.isHidden = !discTypesView!.isHidden
+            }
+        }
+        
+        @objc private func buttonTapped(_ sender: UITapGestureRecognizer) {
+            if let tappedButton = sender.view as? UIButton {
+                if tappedButton != selectedButton {
+                    // A different button is tapped, unselect the currently selected button
+                    selectedButton?.isSelected = false
                 }
                 
-                // Set the frame for the discTypesView
-                discTypesView?.frame = CGRect(
-                    x: Int(screenWidth - 150), // Center horizontally
-                    y: Int(y), // Center vertically
-                    width: viewWidth,
-                    height: viewHeight
-                )
-                discTypesView?.layer.cornerRadius = 20
-                view.addSubview(discTypesView!)
+                tappedButton.isSelected.toggle()
+                selectedButton = tappedButton
+                
+                if tappedButton.isSelected {
+                    // Button is selected, filter discs based on speed
+                    let speed = "\(tappedButton.tag)"
+                    filterDiscsBySpeed(speed)
+                } else {
+                    // Button is unselected, show all discs
+                    selectedSpeed = nil
+                    filteredDiscs = selectedCompanyDiscs
+                }
+                
+                collectionView.reloadData()
+                printPrettyResponse(discs: filteredDiscs)
             }
-        } else {
-            // Toggle the visibility of the DiscTypes.xib view
-            discTypesView?.isHidden = !discTypesView!.isHidden
         }
-    }
-    
-    @objc func buttonTapped(_ sender: UITapGestureRecognizer) {
-        if let tappedButton = sender.view as? UIButton {
-            if tappedButton != selectedButton {
-                // A different button is tapped, unselect the currently selected button
-                selectedButton?.isSelected = false
-            }
+        
+        private func filterDiscsBySpeed(_ speed: String) {
+            selectedSpeed = speed
             
-            tappedButton.isSelected.toggle()
-            selectedButton = tappedButton
-            
-            if tappedButton.isSelected {
-                // Button is selected, filter discs based on speed
-                let speed = "\(tappedButton.tag)"
-                filterDiscsBySpeed(speed)
+            if speed == "3" {
+                filteredDiscs = selectedCompanyDiscs.filter { disc in
+                    return disc.speed == "1" || disc.speed.hasPrefix("2") || disc.speed.hasPrefix("3")
+                }
             } else {
-                // Button is unselected, show all discs
-                selectedSpeed = nil
-                filteredDiscs = selectedCompanyDiscs
+                filteredDiscs = selectedCompanyDiscs.filter { disc in
+                    return disc.speed.hasPrefix(speed)
+                }
             }
-            
             collectionView.reloadData()
-            printPrettyResponse(discs: filteredDiscs)
         }
-    }
-    
-    func filterDiscsBySpeed(_ speed: String) {
-        selectedSpeed = speed
         
-        if speed == "3" {
-            filteredDiscs = selectedCompanyDiscs.filter { disc in
-                return disc.speed == "1" || disc.speed.hasPrefix("2") || disc.speed.hasPrefix("3")
-            }
-        } else {
-            filteredDiscs = selectedCompanyDiscs.filter { disc in
-                return disc.speed.hasPrefix(speed)
+        private func printPrettyResponse(discs: [DiscGolfDisc]) {
+            for disc in discs {
+                print("Disc Name: \(disc.name)")
+                print("Brand: \(disc.brand)")
+                print("Category: \(disc.category)")
+                print("Speed: \(disc.speed)")
+                print("------")
             }
         }
-        collectionView.reloadData()
-    }
-    
-    func printPrettyResponse(discs: [DiscGolfDisc]) {
-        for disc in discs {
-            print("Disc Name: \(disc.name)")
-            print("Brand: \(disc.brand)")
-            print("Category: \(disc.category)")
-            print("Speed: \(disc.speed)")
-            print("------")
-        }
-    }
-    
-    private func resetButtons() {
-        for button in buttons {
-            button.isSelected = false
-        }
-    }
-    
-    private func setupView() {
-        oneToThreeSpeedButton.tag = 3
-        fourSpeedButton.tag = 4
-        fiveSpeedButton.tag = 5
-        sixSpeedButton.tag = 6
-        sevenSpeedButton.tag = 7
-        eightSpeedButton.tag = 8
-        nineSpeedButton.tag = 9
-        tenSpeedButton.tag = 10
-        elevenSpeedButton.tag = 11
-        twelveSpeedButton.tag = 12
-        thirteenSpeedButton.tag = 13
-        fourteenSpeedButton.tag = 14
         
-        self.buttons = [
-            oneToThreeSpeedButton,
-            fourSpeedButton,
-            fiveSpeedButton,
-            sixSpeedButton,
-            sevenSpeedButton,
-            eightSpeedButton,
-            nineSpeedButton,
-            tenSpeedButton,
-            elevenSpeedButton,
-            twelveSpeedButton,
-            thirteenSpeedButton,
-            fourteenSpeedButton
-        ]
-        
-        for button in buttons {
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(_:)))
-            button.addGestureRecognizer(tapGesture)
+        private func resetButtons() {
+            for button in buttons {
+                button.isSelected = false
+            }
         }
-    }
-    
-    private func setupNavBar() {
-        let toggleButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
-        self.title = "Select Your Disc Speed"
         
-        if let navigationBar = navigationController?.navigationBar {
-            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        private func setupNavBar() {
+            let toggleButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .done, target: self, action: #selector(toggleDiscTypesView(_ :)))
+            self.title = "Select Your Disc Speed"
+            
+            if let navigationBar = navigationController?.navigationBar {
+                navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            }
+            navigationItem.rightBarButtonItem = toggleButton
         }
-        navigationItem.rightBarButtonItem = toggleButton
-    }
-    
+        
+        private func setupView() {
+            oneToThreeSpeedButton.tag = 3
+            fourSpeedButton.tag = 4
+            fiveSpeedButton.tag = 5
+            sixSpeedButton.tag = 6
+            sevenSpeedButton.tag = 7
+            eightSpeedButton.tag = 8
+            nineSpeedButton.tag = 9
+            tenSpeedButton.tag = 10
+            elevenSpeedButton.tag = 11
+            twelveSpeedButton.tag = 12
+            thirteenSpeedButton.tag = 13
+            fourteenSpeedButton.tag = 14
+            
+            self.buttons = [
+                oneToThreeSpeedButton,
+                fourSpeedButton,
+                fiveSpeedButton,
+                sixSpeedButton,
+                sevenSpeedButton,
+                eightSpeedButton,
+                nineSpeedButton,
+                tenSpeedButton,
+                elevenSpeedButton,
+                twelveSpeedButton,
+                thirteenSpeedButton,
+                fourteenSpeedButton
+            ]
+            
+            for button in buttons {
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonTapped(_:)))
+                button.addGestureRecognizer(tapGesture)
+            }
+        }
+}
+
+//MARK: Collection View Delegates
+extension DiscListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+   
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -197,13 +200,10 @@ class DiscListViewController: UIViewController {
         
         collectionView.collectionViewLayout = flowLayout
     }
-}
-
-extension DiscListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredDiscs.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "discCell", for: indexPath) as! DiscCell
