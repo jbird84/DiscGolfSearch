@@ -84,7 +84,7 @@ extension GridColorPickerViewController: UICollectionViewDataSource, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = (collectionView.bounds.width - 32) / 4 // Adjust spacing as needed
+        let cellWidth = (collectionView.bounds.width - 32) / 4
         return CGSize(width: cellWidth, height: cellWidth)
     }
 }
