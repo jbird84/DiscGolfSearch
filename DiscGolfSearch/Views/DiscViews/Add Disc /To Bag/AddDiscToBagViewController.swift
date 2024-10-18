@@ -89,7 +89,6 @@ class AddDiscToBagViewController: FormViewController {
         case .failure(let error):
             // Log the error for developers
              os_log("Error fetching bags: %@", log: OSLog.default, type: .error, error.localizedDescription)
-                //   print("Error fetching bags: \(error.localizedDescription)")
             AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch bags. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }
         }
