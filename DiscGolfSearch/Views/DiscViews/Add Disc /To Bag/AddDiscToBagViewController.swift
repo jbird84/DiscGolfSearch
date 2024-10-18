@@ -8,6 +8,7 @@
 import UIKit
 import Eureka
 import CoreData
+import OSLog
 
 class AddDiscToBagViewController: FormViewController {
     
@@ -86,7 +87,8 @@ class AddDiscToBagViewController: FormViewController {
                 tableView?.reloadData()
             }
         case .failure(let error):
-        //TODO: make this a better way of presenting the error the the dev
+            // Log the error for developers
+             os_log("Error fetching bags: %@", log: OSLog.default, type: .error, error.localizedDescription)
                 //   print("Error fetching bags: \(error.localizedDescription)")
             AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch bags. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }

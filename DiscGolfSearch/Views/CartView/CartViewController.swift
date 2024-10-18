@@ -107,12 +107,11 @@ extension CartViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     }
     
     func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
         return UIColor.white
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let str = "Go to the disc tab, find a disc, click the + button and tap \"Add Disc To Cart\" to add your first disc to your cart.."
+        let str = "Go to the disc tab, find a disc, click the + button and tap \"Add Disc To Cart\" to add your first disc to your cart."
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body)]
         return NSAttributedString(string: str, attributes: attrs)
     }
