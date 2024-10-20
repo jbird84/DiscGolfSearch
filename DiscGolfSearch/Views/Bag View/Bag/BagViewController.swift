@@ -8,6 +8,7 @@
 import UIKit
 import DZNEmptyDataSet
 import SwiftUI
+import OSLog
 
 class BagViewController: UIViewController {
     
@@ -97,8 +98,7 @@ class BagViewController: UIViewController {
             filterDiscByBagId()
             tableView.reloadData()
         case .failure(let error):
-            // Handle the error appropriately, e.g., show an alert or log the error
-            print("Error fetching discs: \(error.localizedDescription)")
+            os_log("Error fetching discs: %@", log: OSLog.default, type: .error, error.localizedDescription)
             AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch discs. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }
         }
