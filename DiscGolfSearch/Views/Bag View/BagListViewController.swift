@@ -8,6 +8,7 @@
 import UIKit
 import DZNEmptyDataSet
 import CoreData
+import OSLog
 
 class BagListViewController: UIViewController {
     
@@ -66,6 +67,7 @@ class BagListViewController: UIViewController {
             }
         case .failure(let error):
             // Handle the error appropriately, e.g., show an alert or log the error
+            
             print("Error fetching bags: \(error.localizedDescription)")
             AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch bags. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }

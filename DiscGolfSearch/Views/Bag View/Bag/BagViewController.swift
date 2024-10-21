@@ -212,7 +212,7 @@ extension BagViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             case .failure(let error):
                 // Handle the error
-                print("Error fetching disc entities: \(error.localizedDescription)")
+                os_log("Error fetching disc entitie: %@", log: OSLog.default, type: .error, error.localizedDescription)
                 K.showAlert(title: "Error Deleting Disc", message: "We encountered an issue while attempting to delete this disc. If the problem persists, please try again later.", presentingViewController: self)
             }
             
