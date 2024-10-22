@@ -67,8 +67,7 @@ class BagListViewController: UIViewController {
             }
         case .failure(let error):
             // Handle the error appropriately, e.g., show an alert or log the error
-            
-            print("Error fetching bags: \(error.localizedDescription)")
+            os_log("Error fetching bags: %@", log: OSLog.default, type: .error, error.localizedDescription)
             AlertPresenter.instance.showAlert(title: "Error", body: "Failed to fetch bags. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
             }
         }
@@ -123,7 +122,7 @@ extension BagListViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 case .failure(let error):
                     // Handle the error appropriately, e.g., show an alert or log the error
-                    print("Error fetching bag entities for deletion: \(error.localizedDescription)")
+                    os_log("Error fetching bag entities for deletion: %@", log: OSLog.default, type: .error, error.localizedDescription)
                     AlertPresenter.instance.showAlert(title: "Error", body: "Failed to delete bag. Please try again later.", iconImage: UIImage(systemName: "exclamationmark.circle.fill")!, bannerColor: .red) {
                     }
                 }

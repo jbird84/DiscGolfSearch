@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftSpinner
+import OSLog
 
 class ViewController: UIViewController {
     
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async {
                         AlertUtils.showSiteDownAlert(on: self) { self.loadDiscData() }
                     }
-                    print("Error fetching data: \(error.localizedDescription)")
+                    os_log("Error fetching data: %@", log: OSLog.default, type: .error, error.localizedDescription)
                 } else if let discs = discs {
                     self.allDiscs = discs
                     self.saveAllDiscsToUserDefaults(discs)

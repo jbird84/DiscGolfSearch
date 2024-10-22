@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import OSLog
 
 extension Notification.Name {
     static let persistentStoreLoadError = Notification.Name("persistentStoreLoadError")
@@ -59,7 +60,7 @@ class CoreDataManager {
             let result = try persistentContainer.viewContext.fetch(fetchRequest)
             return .success(result)
         } catch {
-            print("Error fetching data: \(error.localizedDescription)")
+            os_log("Error fetching data: %@", log: OSLog.default, type: .error, error.localizedDescription)
             return .failure(error)
         }
     }
@@ -74,8 +75,7 @@ class CoreDataManager {
         persistentContainer.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 // Log the error
-                print("Unresolved error \(error), \(error.userInfo)")
-                
+                os_log("Unresolved error: %@", log: OSLog.default, type: .error, error.userInfo)
                 // Post a notification for error handling
                 NotificationCenter.default.post(name: .persistentStoreLoadError, object: nil, userInfo: ["error": error])
             }
