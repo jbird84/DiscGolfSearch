@@ -10,6 +10,7 @@ import Foundation
 
 import Lottie
 import UIKit
+import OSLog
 
 class AnimationHelper {
     
@@ -1160,14 +1161,14 @@ class AnimationHelper {
                     if let imageData = imageData, let image = UIImage(data: imageData) {
                         completion(image)
                     } else {
-                        print("Failed to create UIImage from image data")
+                        os_log("Issues getting image from data: %@", log: OSLog.default, type: .error, "Failed to create UIImage from image data")
                         completion(UIImage(named: "noFlightPath"))
                     }
                 }
             }
         } else {
             DispatchQueue.main.async {
-                print("Failed to create URL from web link")
+                os_log("Issues getting URL from web link: %@", log: OSLog.default, type: .error, "Failed to create URL from web link")
                 completion(UIImage(named: "noFlightPath"))
             }
         }

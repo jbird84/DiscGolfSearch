@@ -7,6 +7,7 @@
 //
 import UIKit
 import SwiftData
+import OSLog
 
 
 class DiscDatabaseService {
@@ -23,7 +24,7 @@ class DiscDatabaseService {
                 context = ModelContext(container)
             }
         } catch {
-            print("Swift Data Error: \(error)")
+            os_log("Swift Data Error: %@", log: OSLog.default, type: .error, error as CVarArg)
         }
     }
     
@@ -34,7 +35,7 @@ class DiscDatabaseService {
                 let discToBeSaved = DiscSwiftDataModel(id: UUID().uuidString, name: discName, imageData: discImageData, stability: discStability, speed: discSpeed, glide: discGlide, turn: discTurn, fade: discFade, brand: discBrand)
                  context.insert(discToBeSaved)
             } else {
-            print("ERROR SAVING DISC!")
+                os_log("Issues Saving Disc: %@", log: OSLog.default, type: .error, "ERROR SAVING DISC!")
            
                 let alert = UIAlertController(title: "Error", message: "An error occurred while saving the disc data.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
