@@ -7,6 +7,7 @@
 
 import UIKit
 import DZNEmptyDataSet
+import OSLog
 
 class CartViewController: UIViewController {
     
@@ -46,7 +47,7 @@ class CartViewController: UIViewController {
                 self?.discs = data
                 self?.tableView.reloadData()
             } else if let error = error {
-                print("There was a problem getting your discs. ERROR: \(error)")
+                os_log("There was a problem getting your discs. ERROR: %@", log: OSLog.default, type: .error, " \(error)")
             }
         }
     }

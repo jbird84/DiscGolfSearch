@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import DZNEmptyDataSet
+import OSLog
 
 class DiscViewController: UIViewController {
     
@@ -272,18 +273,18 @@ class DiscViewController: UIViewController {
                             if let image = UIImage(data: imageData) {
                                 imageView.image = image
                             } else {
-                                print("Failed to create UIImage from image data")
+                                os_log("Issues getting image from data: %@", log: OSLog.default, type: .error, "Failed to create UIImage from image data")
                                 imageView.image = UIImage(named: "noDisc")
                             }
                         } else {
-                            print("Failed to download image")
+                            os_log("Image Download FAILED: %@", log: OSLog.default, type: .error, "Failed to download image")
                             imageView.image = UIImage(named: "noDisc")
                         }
                     }
                 }
             } else {
                 DispatchQueue.main.async {
-                    print("Failed to create URL from web link")
+                    os_log("URL from web link FAILED: %@", log: OSLog.default, type: .error, "Failed to create URL from web link")
                     imageView.image = UIImage(named: "nowLoadingBlankDisc")
                 }
             }
