@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 class UserDefaultsManager {
     
@@ -20,7 +21,7 @@ class UserDefaultsManager {
              let encodedData = try encoder.encode(data)
              UserDefaults.standard.set(encodedData, forKey: key.rawValue)
          } catch {
-             print("Unable to encode data to UserDefaults: \(error)")
+             os_log("Unable to encode data to UserDefaults: %@", log: OSLog.default, type: .error, error as CVarArg)
          }
      }
     
@@ -31,7 +32,7 @@ class UserDefaultsManager {
                     let decodedData = try decoder.decode(T.self, from: data)
                     return decodedData
                 } catch {
-                    print("Error decoding data from UserDefaults: \(error)")
+                    os_log("Error decoding data from UserDefaults: %@", log: OSLog.default, type: .error, error as CVarArg)
                     return nil
                 }
             }

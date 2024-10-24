@@ -36,8 +36,7 @@ class CoreDataManager {
             try persistentContainer.viewContext.save()
         } catch {
             let nsError = error as NSError
-            // Handle error appropriately (e.g., show an alert)
-            print("Unresolved error \(nsError), \(nsError.userInfo)")
+            os_log("Unresolved error: %@", log: OSLog.default, type: .error, nsError.userInfo)
         }
     }
     

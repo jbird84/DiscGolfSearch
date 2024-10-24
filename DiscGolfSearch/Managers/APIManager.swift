@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 class APIManager {
     
@@ -37,7 +38,7 @@ class APIManager {
         func downloadImage(from url: URL, completion: @escaping (Data?) -> Void) {
             let task = URLSession.shared.dataTask(with: url) { data, _, error in
                 if let error = error {
-                    print("Error downloading image: \(error)")
+                    os_log("Error downloading image: %@", log: OSLog.default, type: .error, error as CVarArg)
                     completion(nil)
                     return
                 }
@@ -54,7 +55,7 @@ class APIManager {
                } else {
                    completion(nil)
                    if let error = error {
-                       print("Error downloading Lottie animation: \(error)")
+                       os_log("Error downloading Lottie animation: %@", log: OSLog.default, type: .error, error as CVarArg)
                    }
                }
            }.resume()
