@@ -105,14 +105,15 @@ class InfoViewController: UIViewController {
     
     private func setup(view: UIView, with tapGesture: UITapGestureRecognizer) {
         view.layer.cornerRadius = 10
-        view.layer.shadowColor = UIColor.white.cgColor
-        view.layer.shadowOpacity = 0.5
+        view.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        view.layer.shadowOpacity = 0.3
         view.layer.shadowOffset = CGSize(width: 0, height: 2)
-        view.layer.shadowRadius = 4
+        view.layer.shadowRadius = 6
         view.layer.masksToBounds = false
         view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: view.layer.cornerRadius).cgPath
-        view.layer.borderColor = UIColor.gray.cgColor
+        view.layer.borderColor = UIColor.white.cgColor
         view.layer.borderWidth = 1
+        view.backgroundColor = UIColor.black
         view.addGestureRecognizer(tapGesture)
     }
     
