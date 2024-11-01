@@ -59,6 +59,7 @@ class AnimationHelper {
             "pyro": "https://storage.googleapis.com/disc-animation/Axiom/PYRO_AXIOM%20DISCS.json",
             "rhythm": "https://storage.googleapis.com/disc-animation/Axiom/RHYTHM_AXIOM%20DISCS.json",
             "tantrum": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_TANTRUM.json",
+            "tempo": "https://storage.googleapis.com/disc-animation/Axiom/AXIMIO_Tempo.json",
             "tenacity": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_TENACITY.json",
             "theory": "https://storage.googleapis.com/disc-animation/Axiom/THEORY_AXIOM%20DISCS.json",
             "thrill": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_THRILL.json",
@@ -66,6 +67,7 @@ class AnimationHelper {
             "trance": "https://storage.googleapis.com/disc-animation/Axiom/TRANCE_AXIOM%20DISCS.json",
             "vanish": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_VANISH.json",
             "virus": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_VIRUS.json",
+            "uplink": "https://storage.googleapis.com/disc-animation/Axiom/AXIMIO_Uplink.json",
             "wrath": "https://storage.googleapis.com/disc-animation/Axiom/AXIOM%20DISCS_WRATH.json"
         ],
         "Birdie": [
@@ -78,6 +80,11 @@ class AnimationHelper {
             "cinnamon": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_CINNAMON.json",
             "cookie": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_COOKIE.json",
             "fudge": "https://storage.googleapis.com/disc-animation/Putters/Clash%20Discs_Fudge.json",
+            "guava": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash%20Disc_%20%20Guava.json",
+            "cherry": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash%20Disc_%20%20Cherry.json",
+            "millet": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash%20Disc_%20%20Millet.json",
+            "sage": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash%20Disc_%20%20Sage.json",
+            "wild-honey": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash%20Disc_%C2%A0%C2%A0Wild%C2%A0Honey.json",
             "ginger": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_GINGER.json",
             "honey": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_HONEY.json",
             "lotus": "https://storage.googleapis.com/disc-animation/Clash%20Discs/Clash-Discs_LOTUS.json",
@@ -188,12 +195,15 @@ class AnimationHelper {
             "dd2": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_DD2.json",
             "dd3-new": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_DD3%20(NEW).json",
             "ddx": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_DDX.json",
+            "drop": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_Drop.json",
             "enigma": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_ENIGMA.json",
             "essence": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_ESSENCE.json",
             "fd-new": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_FD%20(NEW).json",
             "fd1": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_FD1.json",
             "fd2": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_FD2.json",
             "fd3": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_FD3.json",
+            "function": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_Function.json",
+            "genius": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_Genius.json",
             "instinct": "https://storage.googleapis.com/disc-animation/Discmania/Discmania_INSTINCT.json",
             "link": "https://storage.googleapis.com/disc-animation/Putters/Discmania_Link.json",
               "logic": "https://storage.googleapis.com/disc-animation/Speed%203/Discminia-Logic.json",
@@ -247,8 +257,10 @@ class AnimationHelper {
             "banger-gt": "https://storage.googleapis.com/disc-animation/Putters/Discraft_Banger-GT.json",
             "buzzz": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20BUZZZ.json",
             "buzzz-os": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20BUZZZ%20OS.json",
+            "buzzz-gt": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20Buzzz%20GT%20.json",
             "buzzz-ss": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20BUZZZ%20SS.json",
             "captains-raptor": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20CAPTAIN'S%20RAPTOR.json",
+            "captains-thrasher": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20Captain%C2%A0Thrasher.json",
             "challenger": "https://storage.googleapis.com/disc-animation/Putters/Discraft_Challenger.json", //
             "challenger-os": "https://storage.googleapis.com/disc-animation/Putters/Discraft_Challenger%20OS.json",
             "challenger-ss": "https://storage.googleapis.com/disc-animation/Putters/Discraft_Challenger%20SS.json",
@@ -258,6 +270,7 @@ class AnimationHelper {
             "crank-ss": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20CRANK%20SS.json",
             "crush": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_CRUSH.json",
             "cyclone": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20CYCLONE.json",
+            "drive": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20Drive.json",
             "drone": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20DRONE.json",
             "fierce": "https://storage.googleapis.com/disc-animation/Speed%203/Discraft_Fierce.json",
             "flash": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_FLASH.json",
@@ -299,6 +312,7 @@ class AnimationHelper {
             "stratus": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20STRATUS.json",
             "surge": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_SURGE.json",
             "surge-ss": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_SURGE%20SS.json",
+            "swarm": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20Swarm.json",
             "talon": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20TALON.json",
             "thrasher": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_THRASHER.json",
             "tracker": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20TRACKER.json",
@@ -316,6 +330,7 @@ class AnimationHelper {
             "zeus": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_ZEUS.json",
             "zombee": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20ZOMBEE.json",
             "zone": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20ZONE.json",
+            "zone-gt-banger-top": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_%20Zone%20GT.json",
             "zone-os": "https://storage.googleapis.com/disc-animation/Discraft/Discraft_ZONE%20OS.json"
         ],
         "Disctroyer": [
@@ -385,9 +400,9 @@ class AnimationHelper {
             "gecko": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_GECKO.json",
             "interceptor": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_OG%20BINX.json",
             "koi": "https://storage.googleapis.com/disc-animation/Speed%203/Elevation%20Disc%20Golf-Koi.json",
-            //"nimbus": "",
+            "nimbus": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_Nimbus.json",
             "og-binx": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_OG%20BINX.json",
-            //"psychic": ""
+            "psychic": "https://storage.googleapis.com/disc-animation/Elevation-%20Disc-%20Golf/Elevation-Disc-Golf_Psychic.json"
             
         ],
         "EV-7": [
@@ -407,6 +422,7 @@ class AnimationHelper {
         
         "Gateway": [
             "apache": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_APACHE.json",
+            "aura": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_Aura.json",
             "apache-retooled": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_APACHE%20(RETOOLED).json",
             "apex": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_APEX.json",
             "assassin": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_ASSASSIN.json",
@@ -466,8 +482,8 @@ class AnimationHelper {
             "exodus": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_EXODUS.json",
             "inca": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_INCA.json",
             "glyph": "https://storage.googleapis.com/disc-animation/Putters/Infinite%20Discs_Glyph.json",
-            //"galleon": "",
-            //"khonsu": "",
+            "galleon": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_Galleon.json",
+            "khonsu": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_Kjomsu.json",
             "kon-tiki": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_KON%20TIKI.json",
             "maya": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_MAYA.json",
             "myth": "https://storage.googleapis.com/disc-animation/Putters/Infinite%20Discs_Myth.json",
@@ -481,6 +497,13 @@ class AnimationHelper {
             "slab": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_SLAB.json",
             "sphinx": "https://storage.googleapis.com/disc-animation/Infinite-%20Discs/Infinite-Discs_SPHINX.json",
             "tomb": "https://storage.googleapis.com/disc-animation/Speed%203/Infinite%20Discs_Tomb.json"
+        ],
+        "Jester Disc Golf": [
+            "dream-weaver": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Dream%20weaver.json",
+            "love": "",
+            "love-touch": "",
+            "peace-train": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Train.json",
+            "wild-thing": ""
         ],
         "Innova": [
             "aero": "https://storage.googleapis.com/disc-animation/Speed%203/Innova_Aero.json",
@@ -526,6 +549,8 @@ class AnimationHelper {
             "gator": "https://storage.googleapis.com/disc-animation/Innova/Innova_GATOR.json",
             "gator3": "https://storage.googleapis.com/disc-animation/Innova/Innova_GATOR3.json",
             "gazelle": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20GAZELLE.json",
+            "gorgon": "https://storage.googleapis.com/disc-animation/Innova/Innova_Gorgon.json",
+            "gorgon-gstar": "https://storage.googleapis.com/disc-animation/Innova/Innova_Gorgon%20Gstar.json",
             "groove": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20GROOVE.json",
             "hawkeye": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20HAWKEYE.json",
             "hydra": "https://storage.googleapis.com/disc-animation/Speed%203/Innova_Hydra.json",
@@ -559,6 +584,7 @@ class AnimationHelper {
             "power-disc": "https://storage.googleapis.com/disc-animation/Innova/Innova_Power-Disc.json",
             "power-disc2": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20POWER%20DISC2.json",
             "python": "https://storage.googleapis.com/disc-animation/Innova/Innova_PYTHON.json",
+            "racer": "https://storage.googleapis.com/disc-animation/Innova/Innova_Racer.json",
             "ram": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20RAM.json",
             "rat": "https://storage.googleapis.com/disc-animation/Innova/Innova_%20RAT.json",
             "rhyno": "https://storage.googleapis.com/disc-animation/Putters/Innova_Rhyno.json",
@@ -745,6 +771,7 @@ class AnimationHelper {
             "bohrium": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_BOHRIUM.json",
             "hydrogen": "https://storage.googleapis.com/disc-animation/Putters/LOFT%20Discs_Hydrogen.json",
             "silicon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_SILICON.json",
+            "titanium": "https://storage.googleapis.com/disc-animation/Loft%20Discs/loft_Titanium.json",
             "xenon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_XENON.json",
         ],
         "Lone Star Discs": [
