@@ -635,12 +635,6 @@ class AnimationHelper {
             "yeti-aviar": "https://storage.googleapis.com/disc-animation/Putters/Innova_Yeti%20Pro%20Aviar.json",
             "zephyr": "https://storage.googleapis.com/disc-animation/Putters/Innova_Zephyr.json"
         ],
-//        "Jester Disc Golf": [
-//            "dream-weaver": "",
-//            "love": "",
-//            "love-touch": "",
-//            "peace-train": ""
-//        ],
         "Kastaplast": [
             "alva": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_ALVA.json",
             "berg": "https://storage.googleapis.com/disc-animation/Putters/Kastaplast_Berg.json",
@@ -650,7 +644,9 @@ class AnimationHelper {
             "grym": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast%20_GRYM.json",
             "grym-x": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_GRYM%20X.json",
             "guld": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_GULD.json",
+            "idog": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_idog.json",
             "jarn": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_JARN.json",
+            "jam": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_Jam.json",
             "kaxe": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_KAXE.json",
             "kaxe-retooled": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_KAXE%20(RETOOLED).json",
             "kaze-z-retired": "https://storage.googleapis.com/disc-animation/Kastaplast/Kastaplast_KAZE%20Z%20(RETIRED).json",
