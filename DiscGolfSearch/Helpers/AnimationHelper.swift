@@ -810,11 +810,55 @@ class AnimationHelper {
             "walker": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WALKER.json",
             "warbird": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WARBIRD.json"
         ],
-//        "MVP": [
-//        ],
+        "MVP": [
+            "amp": "https://storage.googleapis.com/disc-animation/MVP/MVP-AMP.json",
+            "anode": "https://storage.googleapis.com/disc-animation/Speed%203/MVP-Anode.json",
+            "atom": "https://storage.googleapis.com/disc-animation/Putters/MVP_Atom.json",
+            "catalyst": "https://storage.googleapis.com/disc-animation/MVP/MVP_CATALYST.json",
+            "deflector": "https://storage.googleapis.com/disc-animation/MVP/MVP_DEFLECTOR.json",
+            "detour": "https://storage.googleapis.com/disc-animation/MVP/MVP_DETOUR.json",
+            "dimension": "https://storage.googleapis.com/disc-animation/MVP/MVP_DIMENSION.json",
+            "energy": "https://storage.googleapis.com/disc-animation/MVP/MVP_ENERGY.json",
+            "entropy": "https://storage.googleapis.com/disc-animation/MVP/MVP_ENTROPY.json",
+            "glitch": "https://storage.googleapis.com/disc-animation/Putters/MVP_Glitch.json",
+            "impulse": "https://storage.googleapis.com/disc-animation/MVP/MVP-IMPULSE.json",
+            "inertia": "https://storage.googleapis.com/disc-animation/MVP/MVP_INERTIA.json",
+            "ion": "https://storage.googleapis.com/disc-animation/Speed%203/MVP_Ion.json",
+            "limit": "https://storage.googleapis.com/disc-animation/MVP/MVP_LIMIT.json",
+            "matrix": "https://storage.googleapis.com/disc-animation/MVP/MVP_MATRIX.json",
+            "motion": "https://storage.googleapis.com/disc-animation/MVP/MVP_MOTION.json",
+            "nitro": "https://storage.googleapis.com/disc-animation/MVP/MVP_NITRO.json",
+            "nomad": "https://storage.googleapis.com/disc-animation/Putters/MVP_Nomad.json",
+            "octane": "https://storage.googleapis.com/disc-animation/MVP/MVP_OCTANE.json",
+            "ohm": "https://storage.googleapis.com/disc-animation/Putters/MVP_Ohm.json",
+            "orbital": "https://storage.googleapis.com/disc-animation/MVP/MVP_ORBITAL.json",
+            "particle": "https://storage.googleapis.com/disc-animation/Speed%203/MVP_Particle.json",
+            "phase": "https://storage.googleapis.com/disc-animation/MVP/MVP_PHASE.json",
+            "photon": "https://storage.googleapis.com/disc-animation/MVP/MVP_PHOTON.json",
+            "reactor": "https://storage.googleapis.com/disc-animation/MVP/MVP_REACTOR.json",
+            "relativity": "https://storage.googleapis.com/disc-animation/MVP/MVP_RELATIVITY.json",
+            "relay": "https://storage.googleapis.com/disc-animation/MVP/MVP_RELAY.json",
+            "resistor": "https://storage.googleapis.com/disc-animation/MVP/MVP_RESISTOR.json",
+            "servo": "https://storage.googleapis.com/disc-animation/MVP/MVP_SERVO.json",
+            "shock": "https://storage.googleapis.com/disc-animation/MVP/MVP_SHOCK.json",
+            "signal": "https://storage.googleapis.com/disc-animation/MVP/MVP_SIGNAL.json",
+            "spin": "https://storage.googleapis.com/disc-animation/Speed%203/MVP_Spin.json",
+            "switch-oop": "https://storage.googleapis.com/disc-animation/MVP/MVP_SWITCH.json",
+            "tangent": "https://storage.googleapis.com/disc-animation/MVP/MVP-TANGENT.json",
+            "teleport": "https://storage.googleapis.com/disc-animation/MVP/MVP_TELEPORT.json",
+            "terra": "https://storage.googleapis.com/disc-animation/MVP/MVP_TERRA.json",
+            "terra-electron": "https://storage.googleapis.com/disc-animation/MVP/MVP_TERRA%20(ELECTRON).json",
+            "tesla": "https://storage.googleapis.com/disc-animation/MVP/MVP_TESLA.json",
+            "trail": "",
+            "vertex": "https://storage.googleapis.com/disc-animation/MVP/MVP_VERTEX.json",
+            "volt": "https://storage.googleapis.com/disc-animation/MVP/MVP_VOLT.json",
+            "watt": "https://storage.googleapis.com/disc-animation/Putters/MVP_Watt.json",
+            "wave": "https://storage.googleapis.com/disc-animation/MVP/MVP_WAVE.json",
+            "zenith": "https://storage.googleapis.com/disc-animation/MVP/MVP_ZENITH.json"
+        ],
         "Millennium": [
-            // "aquarius": "",
-            //  "aries": "",
+            "aquarius": "https://storage.googleapis.com/disc-animation/Millennium%20/millennium_Aquarius.json",
+            "aries": "https://storage.googleapis.com/disc-animation/Millennium%20/millennium_Aries.json",
             "astra": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_ASTRA.json",
             "astra-x": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20ASTRA-X.json",
             "auroraqms": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_AURORAQMS.json",
@@ -822,7 +866,6 @@ class AnimationHelper {
             "falcon": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20FALCON.json",
             "helio-vela": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20HELIO%20VELA.json",
             "jls": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20JLS.json",
-            //  "marksman": "",
             "moab": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20MOAB.json",
             "mortar": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_%20MORTAR.json",
             "omega": "https://storage.googleapis.com/disc-animation/Putters/MILLENNIUM_Omega%20Super%20Soft%20Putter.json", //
@@ -843,7 +886,23 @@ class AnimationHelper {
             "veteran": "https://storage.googleapis.com/disc-animation/Millennium%20/Millennium_VETERAN.json"
         ],
         "Mint Discs": [
-            "lasso": "https://storage.googleapis.com/disc-animation/Mint%20Disc_Lasso.json"
+            "alpha": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Alpha.json",
+            "bobcat": "",
+            "bullet": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Bullet.json",
+            "diamondback": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Diamond%20BAck.json",
+            "freetail": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint-Freetail.json",
+            "goat": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Goat.json",
+            "goat-eternal": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Eternal.json",
+            "grackle": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Grackle.json",
+            "jackalope": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Jackalope.json",
+            "lasso": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lasso.json",
+            "lobster": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lobster.json",
+            "longhorn": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Horn.json",
+            "mustang": "",
+            "phoenix": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Phoniex.json",
+            "profit": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Profit.json",
+            "taco": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Taco.json",
+            "ufo": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_UFO.json"
         ],
         "Other": [
             // "alpas": "",
@@ -867,7 +926,7 @@ class AnimationHelper {
             "pure-og": "https://storage.googleapis.com/disc-animation/Other/Other_PURE%20OG.json",
             "scale": "https://storage.googleapis.com/disc-animation/Putters/Other_Scale.json", //
             "serpent": "https://storage.googleapis.com/disc-animation/Putters/Other_Serpent.json", //
-            //  "stego": "",
+            "stego": "https://storage.googleapis.com/disc-animation/Other/Other_Stego%20.json",
             "strike": "https://storage.googleapis.com/disc-animation/Other/Other_STRIKE.json",
             "tiyanak": "https://storage.googleapis.com/disc-animation/Other/Other_TIYANAK.json",
             "tyrant": "https://storage.googleapis.com/disc-animation/Other/Other_TYRANT.json",
@@ -970,7 +1029,7 @@ class AnimationHelper {
         "RPM": [
             "huia": "https://storage.googleapis.com/disc-animation/RPM/RPM_HUIA.json",
             "kahu": "https://storage.googleapis.com/disc-animation/RPM/RPM_KAHU.json",
-            //"kahu-os": "",
+            "kahu-os": "https://storage.googleapis.com/disc-animation/RPM/RPM_Kahu%20OS.json",
             "kahu-xg": "https://storage.googleapis.com/disc-animation/RPM/RPM_KAHU%20XG.json",
             "kea": "https://storage.googleapis.com/disc-animation/RPM/RPM_KEA.json",
             "kiwi": "https://storage.googleapis.com/disc-animation/RPM/RPM_KIWI.json",
@@ -990,8 +1049,13 @@ class AnimationHelper {
             "oracle": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Sacred%20Disc_Oracle.json",
             "starship": "https://storage.googleapis.com/disc-animation/Sacred%20Discs/Starship.json"
         ],
-        
-        "       ": [
+        "Stokely Discs": [
+            "ching-juju": "https://storage.googleapis.com/disc-animation/Putters/Stokely-Discs_-Ching-Juju.json",
+            "cardinal": "https://storage.googleapis.com/disc-animation/Stokely/Stokely_Cardinal.json",
+            "owl": "https://storage.googleapis.com/disc-animation/Stokely/Stokely_Owl.json",
+            "wren": "https://storage.googleapis.com/disc-animation/Stokely/Stokely_Wern.json"
+        ],
+        "Storm": [
             "abyss": "https://storage.googleapis.com/disc-animation/Strom/Strom_ABYSS.json",
             "radar": "https://storage.googleapis.com/disc-animation/Putters/Storm_Radar.png.json",
             "the-crater": "https://storage.googleapis.com/disc-animation/Speed%203/Strom%20Disc%20Golf_The%20Crater.json",
@@ -1002,13 +1066,15 @@ class AnimationHelper {
             "ascend": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ASCEND.json",
             "drift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_DRIFT.json",
             "echo": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_ECHO.json",
-            // "electron-stabilizer": "",//
-            // "flare": "",
+            "electron-stabilizer": "https://storage.googleapis.com/disc-animation/Speed%203/Stremline_Stabilizer.json",
+            "flare": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_Flare.json",
             "jet": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_JET.json",
             "lift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_LIFT.json",
-            "pilot": "https://storage.googleapis.com/disc-animation/Putters/Stream%20Line_Pilot.json", //
+            "parachute": "https://storage.googleapis.com/disc-animation/Putters/Streamline_Parachute.json",
+            "pilot": "https://storage.googleapis.com/disc-animation/Putters/Stream%20Line_Pilot.json",
             "runway": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_RUNWAY.json",
-            "stabilizer": "https://storage.googleapis.com/disc-animation/Speed%203/Stremline_Stabilizer.json", //
+            "shift": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_Shift.json",
+            "stabilizer": "https://storage.googleapis.com/disc-animation/Speed%203/Stremline_Stabilizer.json",
             "trace": "https://storage.googleapis.com/disc-animation/Streamline/Streamline_%20TRACE.json"
         ],
         "Thought Space Athletics": [
