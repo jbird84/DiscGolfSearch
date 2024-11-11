@@ -502,10 +502,10 @@ class AnimationHelper {
         ],
         "Jester Disc Golf": [
             "dream-weaver": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Dream%20weaver.json",
-            "love": "",
-            "love-touch": "",
+           // "love": "",
+           // "love-touch": "",
             "peace-train": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Train.json",
-            "wild-thing": ""
+          //  "wild-thing": ""
         ],
         "Innova": [
             "aero": "https://storage.googleapis.com/disc-animation/Speed%203/Innova_Aero.json",
@@ -821,7 +821,7 @@ class AnimationHelper {
             "yellow rose": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Yellow%20Rose.json",
             "walker": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WALKER.json",
             "warbird": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_WARBIRD.json",
-            "wrangler": ""
+          //  "wrangler": ""
         ],
         "MVP": [
             "amp": "https://storage.googleapis.com/disc-animation/MVP/MVP-AMP.json",
@@ -900,7 +900,7 @@ class AnimationHelper {
         ],
         "Mint Discs": [
             "alpha": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Alpha.json",
-            "bobcat": "",
+            //"bobcat": "",
             "bullet": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Bullet.json",
             "diamondback": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Diamond%20BAck.json",
             "freetail": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint-Freetail.json",
@@ -911,7 +911,7 @@ class AnimationHelper {
             "lasso": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lasso.json",
             "lobster": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lobster.json",
             "longhorn": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Horn.json",
-            "mustang": "",
+          //  "mustang": "",
             "phoenix": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Phoniex.json",
             "profit": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Profit.json",
             "taco": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Taco.json",
@@ -1023,8 +1023,8 @@ class AnimationHelper {
         "Prodiscus": [
             "amulet": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_AMULET.json",
             "empire": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus_EMPIRE.json",
-            "fasti": "",
-            "flipperi": "",
+            //"fasti": "",
+            //"flipperi": "",
             "jokeri": "https://storage.googleapis.com/disc-animation/Speed%203/Prodiscus_Jokeri.json",
             "jokerix": "https://storage.googleapis.com/disc-animation/Speed%203/Prodiscus%20Jokerix%20(Beaded).json", //
             "laseri": "https://storage.googleapis.com/disc-animation/Prodiscus/Prodiscus%20_LASERI.json",
