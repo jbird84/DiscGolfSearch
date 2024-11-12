@@ -27,7 +27,6 @@ class CartViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-       // navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         title = "My Cart"
         let navigationTitleAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35)]
         self.navigationController?.navigationBar.titleTextAttributes = navigationTitleAttributes
