@@ -769,7 +769,7 @@ class AnimationHelper {
         "Løft Discs": [
             "bohrium": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_BOHRIUM.json",
             "hydrogen": "https://storage.googleapis.com/disc-animation/Putters/LOFT%20Discs_Hydrogen.json",
-            //"neon": "",
+            "neon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/Loft_Neon.json",
             "silicon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_SILICON.json",
             "titanium": "https://storage.googleapis.com/disc-animation/Loft%20Discs/loft_Titanium.json",
             "xenon": "https://storage.googleapis.com/disc-animation/Loft%20Discs/L%C3%B8ft-Discs_XENON.json",
@@ -779,17 +779,17 @@ class AnimationHelper {
             "artemis": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_ARTEMIS.json",
             "bb6": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BB6.json",
             //"bash": "",
-            //"bayonet": "",
+            "bayonet": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Bayonet.json",
             "bearkat": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BEARKAT.json",
             "benny": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_Benny.json", //
             "bluebonnet": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Bluebonnet.json", //
-            //"bowie": "",
+            "bowie": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Bowie.json",
             "brazos": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_BRAZOS.json",
             "bull-snake": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_Bull%20Snake.json", //
             //"cactus": "",
             "chupacabra": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_CHUPACABRA.json",
             "copperhead": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20star%20Discs_Copperhead.json", //
-            // "crockett": "",
+            "crockett": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Crockett.json",
             "curl": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_CURL.json",
             //"desperado": ""
             "dos-x": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_DOS%20X.json",
@@ -797,7 +797,7 @@ class AnimationHelper {
             "growler": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_GROWLER.json",
             "guadalupe": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_GUADALUPE.json",
             "harpoon": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_HARPOON.json",
-            // "harrier": "",
+            "harrier": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Harrier.json",
             "horny-toad": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_HORNY%20TOAD.json",
             //"houston": "",
             "jack-rabbit": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Disc_%20Jack%20Rabbit.json", //
@@ -810,12 +810,12 @@ class AnimationHelper {
             "penny-putter-premium": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_%20Oenny%20Putter.json", //
             "penny-putter-victor": "https://storage.googleapis.com/disc-animation/Speed%203/Lone%20Star%20Discs_%20Oenny%20Putter.json", //
             //"rio-grande": "",
-            //"seguin": "",
+            "seguin": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Seguin.json",
             //"spur": "",
             //"tex": "",
             "texas-ranger": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_TEXAS%20RANGER.json",
             "the-dome": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_THE%20DOME.json",
-            //  "tombstone": "",
+            "tombstone": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lonestar_Tombstone.json",
             // "trinity": "",
             "tumbleweed": "https://storage.googleapis.com/disc-animation/Lone-%20Star-%20Discs/Lone-Star-Discs_TUMBLEWEED.json",
             "yellow rose": "https://storage.googleapis.com/disc-animation/Putters/Lone%20Star%20Discs_Yellow%20Rose.json",
@@ -862,7 +862,7 @@ class AnimationHelper {
             "terra": "https://storage.googleapis.com/disc-animation/MVP/MVP_TERRA.json",
             "terra-electron": "https://storage.googleapis.com/disc-animation/MVP/MVP_TERRA%20(ELECTRON).json",
             "tesla": "https://storage.googleapis.com/disc-animation/MVP/MVP_TESLA.json",
-            //"trail": "",
+            "trail": "https://storage.googleapis.com/disc-animation/MVP/MVP_Trail.json",
             "vertex": "https://storage.googleapis.com/disc-animation/MVP/MVP_VERTEX.json",
             "volt": "https://storage.googleapis.com/disc-animation/MVP/MVP_VOLT.json",
             "watt": "https://storage.googleapis.com/disc-animation/Putters/MVP_Watt.json",
@@ -900,7 +900,7 @@ class AnimationHelper {
         ],
         "Mint Discs": [
             "alpha": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Alpha.json",
-            //"bobcat": "",
+            "bobcat": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Bobcat.json",
             "bullet": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Bullet.json",
             "diamondback": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Diamond%20BAck.json",
             "freetail": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint-Freetail.json",
@@ -911,7 +911,7 @@ class AnimationHelper {
             "lasso": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lasso.json",
             "lobster": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Lobster.json",
             "longhorn": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Horn.json",
-          //  "mustang": "",
+            "mustang": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Mustang.json",
             "phoenix": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Long%20Phoniex.json",
             "profit": "https://storage.googleapis.com/disc-animation/Putters/Mint%20Discs_Profit.json",
             "taco": "https://storage.googleapis.com/disc-animation/Mint%20Discs/Mint_Taco.json",
@@ -946,6 +946,12 @@ class AnimationHelper {
             "ultra": "https://storage.googleapis.com/disc-animation/Other/Other_ULTRA.json",
             "white-widow": "https://storage.googleapis.com/disc-animation/Putters/Other_White%20Widow.json", //
             "zeal": "https://storage.googleapis.com/disc-animation/Speed%203/Universal%20Play%20Disc%20Golf-Zeal.json" //
+        ],
+        "Neptune Discs": [
+            "marlin": "https://storage.googleapis.com/disc-animation/Neptune%20/NEPTUNE_Marlin.json",
+            "nautilus": "https://storage.googleapis.com/disc-animation/Neptune%20/Nautilus.json",
+            "splash": "https://storage.googleapis.com/disc-animation/Neptune%20/NEPTUNE_Splash.json",
+            "squid": "https://storage.googleapis.com/disc-animation/Neptune%20/NEPTUNE_Squad.json"
         ],
         "Prodigy" : [
             "a1": "https://storage.googleapis.com/disc-animation/Prodigy/Prodigy%20Disc_A1.json",
