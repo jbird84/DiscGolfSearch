@@ -459,7 +459,7 @@ class AnimationHelper {
             "spell": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPELL.json",
             "spirit": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_SPIRIT.json",
             "voodoo": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Voodoo.json",
-            //   "war-spear": "",
+            "war-spear": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_War%20Spear.json",
             "warlock": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Warlock.json",
             "warrior-gateway": "https://storage.googleapis.com/disc-animation/Gateway/Gateway_WARRIOR%20(GATEWAY).json",
             "wizard": "https://storage.googleapis.com/disc-animation/Putters/Gateway_Wizard.json"
@@ -502,10 +502,10 @@ class AnimationHelper {
         ],
         "Jester Disc Golf": [
             "dream-weaver": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Dream%20weaver.json",
-           // "love": "",
-           // "love-touch": "",
+            "love": "https://storage.googleapis.com/disc-animation/Jaster_Disc/Jester%20Disc%20Golf_Love.json",
+            "love-touch": "https://storage.googleapis.com/disc-animation/Jaster_Disc/Jester%20Disc%20Golf_Love(Touch).json",
             "peace-train": "https://storage.googleapis.com/disc-animation/Jaster_Disc/jaster_Train.json",
-          //  "wild-thing": ""
+            "wild-thing": "https://storage.googleapis.com/disc-animation/Jaster_Disc/Wild-Thing.json"
         ],
         "Innova": [
             "aero": "https://storage.googleapis.com/disc-animation/Speed%203/Innova_Aero.json",
@@ -727,11 +727,11 @@ class AnimationHelper {
             "keystone": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Keystone.json",
             "knight": "https://storage.googleapis.com/disc-animation/Latitude-%2064/latitude%C2%A064_Knight%20.json",
             "macana": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Macana.json",
-            //  "mace": "",
+            "mace": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude%2064_Mace.json",
             "maul": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20MAUL.json",
             "mercy": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Mercy.json",
             "missilen-oop": "https://storage.googleapis.com/disc-animation/Latitude-%2064/latitude%2064_Missilen%20OOP.json",
-            // "musket": "",
+            "musket": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude%2064_Musket.json",
             "muse": "https://storage.googleapis.com/disc-animation/Putters/Latitute%2064_Muse.json",
             "pearl": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude-64_%20PEARL.json",
             "pioneer": "https://storage.googleapis.com/disc-animation/Latitude-%2064/Latitude%2064_Pioneer.json",
