@@ -394,7 +394,6 @@ extension DiscViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     }
     
     func imageTintColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        let userInterfaceStyle = scrollView.traitCollection.userInterfaceStyle
         return UIColor.white
     }
     
@@ -403,27 +402,4 @@ extension DiscViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
         let attrs = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .footnote)]
         return NSAttributedString(string: str, attributes: attrs)
     }
-    
-//    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-//            let text = "No Similar Discs"
-//            let attributes: [NSAttributedString.Key: Any] = [
-//                .font: UIFont.systemFont(ofSize: 18),
-//                .foregroundColor: UIColor.gray
-//            ]
-//            return NSAttributedString(string: text, attributes: attributes)
-//        }
-//
-//        func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-//            let text = "We couldn't find any discs with similar flight characteristics."
-//            let attributes: [NSAttributedString.Key: Any] = [
-//                .font: UIFont.systemFont(ofSize: 14),
-//                .foregroundColor: UIColor.lightGray
-//            ]
-//            return NSAttributedString(string: text, attributes: attributes)
-//        }
-//
-//        func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-//            return UIImage(systemName: "plus") //UIImage(named: "empty_state_image") // Replace with your image
-//        }
-    
 }
