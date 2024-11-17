@@ -1237,15 +1237,21 @@ class AnimationHelper {
     private init() {}
     
     func setupFlightPathAnimationView(currentDisc: DiscGolfDisc, discCompanyName: String, discName: String, animationView: LottieAnimationView) {
+        
+        var imageView: UIImageView?
+        
+        // First, remove any existing imageView (if any) from the animationView
+        imageView?.removeFromSuperview()
+        
         // Check if the disc company and disc name exist in the dictionary
         guard let companyDiscs = discURLs[discCompanyName],
               let url = companyDiscs[discName] else {
             // Handle the case when the combination of disc company and disc name is not found
             getFlightPathImageFromLink(disc: currentDisc) { image in
                 // Show the default image if provided
-                let imageView = UIImageView(image: image)
-                imageView.frame = animationView.bounds
-                animationView.addSubview(imageView)
+                imageView = UIImageView(image: image)
+                imageView?.frame = animationView.bounds
+                animationView.addSubview(imageView!)
             }
             return
         }
@@ -1253,6 +1259,7 @@ class AnimationHelper {
         // Load and play the animation using the obtained URL
         guard let animationURL = URL(string: url) else { return }
         DispatchQueue.main.async {
+        
             LottieAnimation.loadedFrom(url: animationURL, closure: { animation in
                 animationView.animation = animation
                 animationView.contentMode = .scaleAspectFit

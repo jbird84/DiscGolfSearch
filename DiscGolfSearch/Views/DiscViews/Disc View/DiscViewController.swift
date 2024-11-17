@@ -172,6 +172,7 @@ class DiscViewController: UIViewController {
     }
     
     private func setupAnimationView() {
+    
         discAnimationView.addSubview(animationView)
         
         NSLayoutConstraint.activate([
@@ -336,6 +337,10 @@ extension DiscViewController: UICollectionViewDelegate, UICollectionViewDataSour
         disc = similarDiscs[indexPath.item]
         
         DispatchQueue.main.async {
+            if self.animationView.subviews.count > 0 {
+                self.animationView.subviews.forEach { $0.removeFromSuperview() }
+            }
+
             self.createSimilarDiscsCollection(disc: self.disc)
             self.setupFlightPathAnimationView()
         }
