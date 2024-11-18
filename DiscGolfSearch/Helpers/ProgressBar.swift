@@ -57,7 +57,6 @@ class ProgressBar: UIView {
         //Text Layer
         textLayer = createTextLayer(rect: rect, textColor: textColor.cgColor)
         
-        //add sub layers to main layer
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(gradientLayer)
         layer.addSublayer(textLayer)
