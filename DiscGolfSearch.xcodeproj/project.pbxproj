@@ -853,6 +853,7 @@
 				DEVELOPMENT_TEAM = R7SHSK6MNC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiscGolfSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyDiscGolfBag;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -887,6 +888,7 @@
 				DEVELOPMENT_TEAM = R7SHSK6MNC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DiscGolfSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyDiscGolfBag;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
